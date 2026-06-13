@@ -4,156 +4,255 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>「喪屍煙彈」裡到底裝了什麼？神經科醫師幫你拆機 — BrainTaiwan</title>
-<meta name="description" content="電子煙裡裝的不是尼古丁，是手術室才有的麻醉誘導劑。神經科醫師解析喪屍煙彈對大腦與腎上腺的雙重傷害。">
+<meta name="description" content="它不是大麻，而是手術室才有的靜脈麻醉誘導劑（依託咪酯 Etomidate）。神經科醫師解析喪屍煙彈對大腦與腎上腺的雙重傷害、遲發性警訊，以及給家長的辨識清單。">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: 'Segoe UI', 'Microsoft JhengHei', 'PingFang TC', Georgia, serif;
-  background: #fafaf8; color: #1a1a1a;
-}
-.topbar {
-  background: linear-gradient(135deg, #004d40, #00695c);
-  padding: 14px 24px;
-}
-.topbar-inner { max-width: 720px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-.topbar a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 9pt; }
-.topbar a:hover { color: white; }
-.topbar-logo { font-weight: 700; font-size: 11pt; color: white; }
+  :root{
+    --bg:#faf7f0;
+    --bg2:#f2ede2;
+    --ink:#1e1e1e;
+    --mid:#4a4a4a;
+    --light:#7a7068;
+    --teal:#24635c;
+    --teal-lt:#e8f3f1;
+    --amber:#b85c1a;
+    --amber-lt:#fdf2e8;
+    --red:#a02020;
+    --red-lt:#fdf0ee;
+    --rule:#d8d0c0;
+    --green:#1d5c33;
+    --green-lt:#ecf5ee;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+    font-size:18px;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:"Noto Serif TC","Songti TC",Georgia,serif;}
 
-main { max-width: 720px; margin: 0 auto; padding: 48px 24px 64px; }
+  /* ─── 回站導覽列 ─── */
+  .topbar{
+    background:linear-gradient(135deg,#004d40,#00695c);
+    padding:14px 24px;
+  }
+  .topbar-inner{max-width:720px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+  .topbar a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:.85rem;}
+  .topbar a:hover{color:#fff;}
+  .topbar-logo{font-weight:700;font-size:1rem;color:#fff;}
 
-.article-tag {
-  display: inline-block; font-size: 8pt; font-weight: 700; padding: 3px 10px;
-  border-radius: 20px; margin-bottom: 16px;
-  background: #fce4ec; color: #880e4f;
-}
-h1 { font-size: 24pt; font-weight: 700; line-height: 1.3; color: #0d1f1c; margin-bottom: 16px; }
-.article-meta {
-  display: flex; align-items: center; gap: 8px;
-  font-size: 9pt; color: #888; margin-bottom: 32px;
-  padding-bottom: 24px; border-bottom: 1px solid #e8e8e8;
-}
-.meta-avatar {
-  width: 32px; height: 32px; border-radius: 50%;
-  background: linear-gradient(135deg, #004d40, #00897b);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 13pt; color: white; font-weight: 700; flex-shrink: 0;
-}
-.meta-name { font-weight: 600; color: #444; }
+  /* ─── Header ─── */
+  .post-header{
+    max-width:720px;margin:0 auto;
+    padding:4rem 1.5rem 2.5rem;
+    border-bottom:2px solid var(--ink);
+  }
+  .post-cat{
+    font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--teal);font-weight:700;margin-bottom:1rem;display:block;
+  }
+  h1{
+    font-family:"Noto Serif TC",Georgia,serif;
+    font-size:clamp(1.9rem,5.5vw,3rem);
+    line-height:1.22;
+    font-weight:700;
+    color:var(--ink);
+    margin-bottom:1.2rem;
+  }
+  .subtitle{
+    font-size:1.05rem;color:var(--mid);
+    line-height:1.75;margin-bottom:1.8rem;
+    max-width:58ch;
+  }
+  .byline{
+    font-size:.85rem;color:var(--light);
+    display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;
+    align-items:center;padding-top:1.2rem;
+    border-top:1px solid var(--rule);
+  }
+  .byline a{color:var(--teal);text-decoration:none;font-weight:600;}
 
-.article-body { font-size: 12pt; line-height: 1.85; color: #2a2a2a; }
-.article-body p { margin-bottom: 20px; }
-.article-body h2 {
-  font-size: 16pt; font-weight: 700; color: #0d1f1c;
-  margin: 36px 0 14px; padding-left: 14px;
-  border-left: 4px solid #880e4f;
-}
-.article-body h3 {
-  font-size: 12.5pt; font-weight: 700; color: #880e4f; margin: 20px 0 8px;
-}
+  /* ─── Body ─── */
+  .post-body{
+    max-width:720px;margin:0 auto;padding:2.5rem 1.5rem 5rem;
+  }
+  p{margin-bottom:1.25rem;color:var(--ink);}
+  strong{color:var(--ink);font-weight:700;}
+  .lead{font-size:1.08rem;color:var(--teal);}
 
-.alert-box {
-  background: #fce4ec; border-radius: 10px; padding: 20px 24px;
-  margin: 28px 0; border-left: 4px solid #c62828;
-}
-.alert-box p { margin-bottom: 0; color: #4a0000; }
-.alert-box strong { color: #7f0000; }
+  h2{
+    font-family:"Noto Serif TC",Georgia,serif;
+    font-size:clamp(1.35rem,3.5vw,1.75rem);
+    font-weight:700;
+    color:var(--ink);
+    margin:3rem 0 .9rem;
+    padding-bottom:.5rem;
+    border-bottom:2px solid var(--ink);
+  }
+  h3{
+    font-size:1.1rem;font-weight:700;
+    color:var(--teal);margin:2rem 0 .5rem;
+  }
 
-.info-box {
-  background: #e0f2f1; border-radius: 10px; padding: 20px 24px;
-  margin: 28px 0; border-left: 4px solid #00695c;
-}
-.info-box p { margin-bottom: 0; color: #002420; }
+  /* ─── 名詞澄清框 ─── */
+  .clarify{
+    background:var(--amber-lt);
+    border:1px solid #d4925a;
+    border-left:4px solid var(--amber);
+    border-radius:6px;
+    padding:1.2rem 1.3rem;
+    margin:1.8rem 0;
+    font-size:.96rem;
+    color:#3a2010;
+  }
+  .clarify .tag{
+    display:inline-block;
+    font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--amber);font-weight:700;margin-bottom:.5rem;
+  }
 
-.drug-card {
-  background: #1a1a2e; border-radius: 12px; padding: 24px;
-  margin: 28px 0; color: white;
-}
-.drug-name { font-size: 18pt; font-weight: 700; color: #ef9a9a; margin-bottom: 6px; }
-.drug-aka  { font-size: 9pt; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
-.drug-desc { font-size: 10.5pt; color: rgba(255,255,255,0.82); line-height: 1.7; }
+  /* ─── 機轉流程卡 ─── */
+  .mech-grid{
+    display:grid;gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    border-radius:8px;overflow:hidden;
+    margin:1.5rem 0;
+  }
+  .mech-card{
+    background:var(--bg);
+    padding:1.1rem 1.3rem;
+    display:grid;grid-template-columns:2.8rem 1fr;gap:.9rem;align-items:start;
+  }
+  .mech-card.amber{background:var(--amber-lt);}
+  .badge{
+    width:2.8rem;height:2.8rem;border-radius:50%;
+    display:grid;place-items:center;
+    font-family:"Noto Serif TC",serif;font-weight:700;font-size:1rem;
+    background:var(--teal);color:#fff;flex-shrink:0;
+  }
+  .mech-card.amber .badge{background:var(--amber);}
+  .mech-card h4{margin:0 0 .3rem;font-size:1rem;color:var(--ink);}
+  .mech-card p{margin:0;font-size:.92rem;color:var(--mid);line-height:1.65;}
+  .mech-arrow{text-align:center;padding:.35rem;background:var(--bg2);color:var(--light);font-size:.9rem;}
 
-.mechanism-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0;
-}
-@media(max-width:520px){ .mechanism-grid{ grid-template-columns:1fr; } }
-.mech-card {
-  border-radius: 10px; padding: 20px;
-}
-.mech-neuro  { background: #e8eaf6; border-top: 4px solid #3949ab; }
-.mech-endo   { background: #fce4ec; border-top: 4px solid #c62828; }
-.mech-title  { font-size: 10pt; font-weight: 700; margin-bottom: 10px; }
-.mech-neuro .mech-title { color: #1a237e; }
-.mech-endo  .mech-title { color: #7f0000; }
-.mech-body  { font-size: 9.5pt; line-height: 1.65; color: #2a2a2a; }
+  /* ─── 症狀時間軸 ─── */
+  .timeline{margin:1.5rem 0;}
+  .t-item{
+    display:grid;grid-template-columns:7rem 1fr;gap:1rem;
+    padding:1rem 0;border-top:1px dashed var(--rule);
+  }
+  .t-item:first-child{border-top:none;}
+  .t-when{
+    font-family:"Noto Serif TC",serif;
+    font-weight:700;font-size:.95rem;color:var(--amber);
+    line-height:1.4;
+  }
+  .t-when small{display:block;color:var(--light);font-size:.75rem;font-weight:400;letter-spacing:.03em;margin-top:.15rem;}
+  .t-body h4{font-size:1rem;font-weight:700;color:var(--ink);margin:0 0 .35rem;}
+  .t-body p{margin:0;font-size:.95rem;color:var(--mid);}
 
-.timeline {
-  background: white; border: 1px solid #ebebeb;
-  border-radius: 12px; padding: 24px; margin: 28px 0;
-}
-.tl-header { font-size: 9pt; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
-.tl-item { display: flex; gap: 16px; margin-bottom: 20px; }
-.tl-item:last-child { margin-bottom: 0; }
-.tl-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
-.tl-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
-.tl-dot-red    { background: #c62828; }
-.tl-dot-orange { background: #e65100; }
-.tl-dot-dark   { background: #37474f; }
-.tl-line { width: 2px; flex: 1; background: #e0e0e0; margin: 4px 0; }
-.tl-item:last-child .tl-line { display: none; }
-.tl-phase { font-size: 8.5pt; font-weight: 700; margin-bottom: 4px; }
-.tl-phase-red    { color: #c62828; }
-.tl-phase-orange { color: #e65100; }
-.tl-phase-dark   { color: #37474f; }
-.tl-content { font-size: 10.5pt; color: #2a2a2a; line-height: 1.6; }
+  /* ─── 表格 ─── */
+  .tbl{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.92rem;}
+  .tbl th{
+    background:var(--ink);color:#fff;
+    text-align:left;padding:.65rem .85rem;
+    font-size:.78rem;letter-spacing:.05em;font-weight:600;
+  }
+  .tbl td{padding:.7rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top;}
+  .tbl tr:nth-child(even) td{background:var(--bg2);}
+  .tbl td:first-child{font-weight:700;color:var(--teal);white-space:nowrap;}
 
-.checklist {
-  background: #fff8e1; border-radius: 12px; padding: 24px; margin: 28px 0;
-  border: 1px solid #ffe082;
-}
-.checklist h3 { font-size: 12pt; font-weight: 700; color: #4a3000; margin-bottom: 16px; }
-.check-item {
-  display: flex; align-items: flex-start; gap: 12px;
-  padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06);
-  font-size: 10.5pt; color: #2a2a2a; line-height: 1.5;
-}
-.check-item:last-child { border-bottom: none; }
-.check-box {
-  width: 20px; height: 20px; border-radius: 4px; flex-shrink: 0;
-  border: 2px solid #f9a825; margin-top: 2px;
-}
+  /* ─── Red flag ─── */
+  .danger{
+    background:var(--red-lt);
+    border:1px solid #c44;
+    border-left:4px solid var(--red);
+    border-radius:6px;padding:1.3rem 1.4rem;margin:2rem 0;
+  }
+  .danger h3{color:var(--red);margin:0 0 .75rem;}
+  .danger ul{padding-left:1.2rem;}
+  .danger li{margin:.45rem 0;color:#3a1010;}
 
-.law-box {
-  background: #37474f; border-radius: 10px; padding: 20px 24px; margin: 28px 0;
-}
-.law-box p { color: rgba(255,255,255,0.85); margin-bottom: 0; font-size: 10.5pt; line-height: 1.7; }
-.law-box strong { color: #80cbc4; }
+  /* ─── 家長辨識清單（主角區塊）─── */
+  .parent-box{
+    background:var(--green-lt);
+    border:1px solid #4caf72;
+    border-left:4px solid var(--green);
+    border-radius:8px;padding:1.6rem 1.5rem;margin:2.5rem 0;
+  }
+  .parent-box .box-title{
+    font-family:"Noto Serif TC",serif;
+    font-size:1.15rem;font-weight:700;color:var(--green);
+    margin-bottom:1.1rem;display:flex;align-items:center;gap:.5rem;
+  }
+  .checklist{list-style:none;padding:0;}
+  .checklist li{
+    display:grid;grid-template-columns:1.5rem 1fr;gap:.5rem;
+    padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,.08);
+    align-items:start;
+    font-size:.97rem;color:#1a3020;
+  }
+  .checklist li:last-child{border-bottom:none;}
+  .checklist .ck{color:var(--green);font-size:1.05rem;line-height:1.9;}
+  .checklist li strong{color:#1a3020;}
+  .checklist .sub{display:block;font-size:.85rem;color:#3a5a40;margin-top:.1rem;}
+  .parent-action{
+    margin-top:1.2rem;padding:1rem;
+    background:rgba(255,255,255,.6);border-radius:6px;
+    font-size:.92rem;color:var(--green);
+    line-height:1.75;
+  }
+  .parent-action strong{color:var(--green);}
 
-.divider { border: none; border-top: 1px solid #e8e8e8; margin: 36px 0; }
+  /* ─── Pull quote ─── */
+  .pq{
+    font-family:"Noto Serif TC",serif;
+    font-size:1.2rem;line-height:1.65;color:var(--teal);
+    border-left:3px solid var(--teal);
+    padding:.2rem 0 .2rem 1.3rem;margin:2rem 0;
+    font-weight:500;
+  }
 
-.author-footer {
-  background: white; border-radius: 10px; padding: 24px;
-  border: 1px solid #ebebeb; display: flex; gap: 16px; align-items: center;
-  margin-top: 48px;
-}
-.af-avatar {
-  width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0;
-  background: linear-gradient(135deg, #004d40, #00897b);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18pt; color: white; font-weight: 700;
-}
-.af-name  { font-size: 11pt; font-weight: 700; color: #0d1f1c; }
-.af-title { font-size: 8.5pt; color: #00695c; font-weight: 600; margin-top: 2px; }
-.af-bio   { font-size: 9pt; color: #666; margin-top: 6px; line-height: 1.6; }
+  /* ─── CTA ─── */
+  .cta{
+    background:var(--teal-lt);
+    border:1px solid #a8ccc8;
+    border-radius:8px;padding:1.4rem 1.5rem;margin:3rem 0 1rem;
+    text-align:center;
+  }
+  .cta p{margin:0;font-size:.97rem;color:var(--teal);}
+  .cta a{color:var(--teal);font-weight:700;text-decoration:none;border-bottom:1px solid var(--teal);}
 
-.back-link { margin-top: 36px; }
-.back-link a { color: #00695c; text-decoration: none; font-size: 9.5pt; font-weight: 600; }
-.back-link a:hover { text-decoration: underline; }
+  /* ─── Tags ─── */
+  .tags{margin:1.5rem 0;display:flex;flex-wrap:wrap;gap:.5rem;}
+  .tag{
+    font-size:.78rem;padding:.3rem .75rem;
+    background:var(--bg2);border:1px solid var(--rule);
+    border-radius:50px;color:var(--light);
+  }
 
-footer {
-  background: #0d1f1c; color: rgba(255,255,255,0.4);
-  text-align: center; padding: 24px; font-size: 8.5pt; margin-top: 40px;
-}
+  /* ─── Footer ─── */
+  footer{
+    background:#16231f;color:#8fa8a2;
+    padding:2.5rem 1.5rem;font-size:.83rem;line-height:1.75;
+  }
+  footer .fin{max-width:720px;margin:0 auto;}
+  footer h4{color:#cfe0db;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 .7rem;}
+  footer ol{padding-left:1.3rem;}
+  footer li{margin:.3rem 0;}
+  footer a{color:#7dbdb5;}
+  .disc{margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.1);font-size:.78rem;color:#6a8882;font-style:italic;}
+
+  @media(max-width:540px){
+    body{font-size:17px;}
+    .t-item{grid-template-columns:1fr;gap:.3rem;}
+    .mech-card{grid-template-columns:2.4rem 1fr;gap:.7rem;}
+    .badge{width:2.4rem;height:2.4rem;font-size:.85rem;}
+  }
 </style>
 </head>
 <body>
@@ -165,148 +264,288 @@ footer {
   </div>
 </div>
 
-<main>
-  <span class="article-tag">時事評論</span>
-  <h1>「喪屍煙彈」裡到底裝了什麼？<br>神經科醫師幫你拆機</h1>
-  <div class="article-meta">
-    <div class="meta-avatar">施</div>
-    <div>
-      <div class="meta-name">施懿恩</div>
-      <div>神經專科醫師 · 2026 年 6 月 10 日</div>
+<div class="post-header">
+  <span class="post-cat">物質濫用 · 神經科衛教</span>
+  <h1>「喪屍煙彈」裡到底裝了什麼？神經科醫師幫你拆機</h1>
+  <p class="subtitle">它被包裝成「放鬆用」「助眠用」「水果口味」，但核心成分是手術室的靜脈麻醉誘導劑。吸一口，你的大腦和腎上腺同時被攻擊。</p>
+  <div class="byline">
+    <span>作者：<a href="https://neuro1n.blogspot.com" target="_blank">神經醫．施懿恩</a></span>
+    <span>2026 年 6 月</span>
+    <span>閱讀約 10 分鐘</span>
+  </div>
+</div>
+
+<div class="post-body">
+
+  <p class="lead">門診進來一個年輕人，主訴是「最近一直很累、手指莫名變黑」。問了半天，才承認他每天在吸一種「幫助放鬆」的電子煙，買自網路，水果口味，同學說不違法。</p>
+
+  <p>這不是個案。「喪屍煙彈」這兩年在台灣擴散速度讓我驚訝——而更讓我擔心的是，多數吸食者、甚至多數家長，根本不知道他們在接觸的其實是一支手術室裡的麻醉誘導劑。</p>
+
+  <p>今天想從神經科的角度，把這個東西完整拆給你看。</p>
+
+  <div class="clarify">
+    <span class="tag">⚠ 先釐清一個常見誤解</span>
+    <p>很多新聞、甚至部分衛教資料，把這類煙彈的成分說成「咪達唑侖（Midazolam）」——那是苯二氮平類鎮靜劑，常用的安眠藥家族。<strong>但實際主成分是依託咪酯（Etomidate）</strong>，一種咪唑類（imidazole）短效靜脈麻醉誘導劑，兩者藥理完全不同。此外，其化學近親美托咪酯（Metomidate）與異丙帕酯也常被混入煙彈，結構只差幾個碳，毒性一樣。</p>
+    <p style="margin:0">本文以 Etomidate 為主軸說明。</p>
+  </div>
+
+  <!-- ────────────── 背景 ────────────── -->
+  <h2>這東西從哪來？</h2>
+
+  <p>依託咪酯原本是很好用的靜脈麻醉誘導劑，醫院裡做急救插管、短時間鎮靜都會用到。它有個優點：幾乎不影響心跳和血壓，對休克病人特別友善。</p>
+
+  <p>問題是：就因為它「起效快、代謝快、藥理單純」，被提煉出來、混進化學原料、做成電子煙油，從中國大陸開始，2023 年起悄悄滲進台灣。販售話術是「放鬆」「助眠」「合法替代大麻」。</p>
+
+  <p>吸一口，30 到 60 秒內作用。撐個 3 到 5 分鐘。然後使用者再吸。如此反覆。</p>
+
+  <p>因為引發的症狀——手抖、身體顫抖、無法控制肢體、表情呆滯——讓旁觀者覺得像殭屍，「喪屍煙彈」這個名字就傳開了。台灣已於 <strong>2024 年 11 月升列第二級毒品</strong>，製造販賣最重無期徒刑。</p>
+
+  <!-- ────────────── 機轉 ────────────── -->
+  <h2>一個藥，同時攻擊兩個地方</h2>
+
+  <p>這是我覺得最值得說清楚的部分。依託咪酯傷害的，不是一個系統，而是<strong>兩條完全獨立的路徑</strong>。神經症狀是一條，內分泌崩壞是另一條。</p>
+
+  <div class="mech-grid">
+    <div class="mech-card">
+      <div class="badge">入</div>
+      <div>
+        <h4>霧化吸入後，劑量完全失控</h4>
+        <p>臨床上靜脈注射是以毫克為單位精準計算的。改成加熱霧化吸入，吸收速率、血中濃度完全不可控，加上「短效→想再吸」的循環，實際暴露量遠超單次臨床劑量。</p>
+      </div>
+    </div>
+    <div class="mech-arrow">↓</div>
+    <div class="mech-card">
+      <div class="badge">A</div>
+      <div>
+        <h4>路徑 A：強化 GABA<sub>A</sub> 受體，全腦踩煞車</h4>
+        <p>依託咪酯作用在 GABA<sub>A</sub> 受體的 β2/β3 次單元，讓抑制性神經傳導加倍。全腦廣泛抑制：意識模糊、無法思考、身體失控。視丘與大腦皮質的訊號失衡，產生標誌性的<strong>肌躍症（myoclonus）</strong>——也就是那個不由自主的抖動，臨床麻醉時發生率就有 30–60%。</p>
+      </div>
+    </div>
+    <div class="mech-arrow">↓</div>
+    <div class="mech-card amber">
+      <div class="badge">B</div>
+      <div>
+        <h4>路徑 B：敲掉 11β-羥化酶，腎上腺生產線停擺</h4>
+        <p>咪唑環上的氮原子會和腎上腺粒線體酵素裡的鐵原子錯合，強力抑制 11β-hydroxylase。這個酵素負責把 11-去氧皮質醇轉成皮質醇——一被抑制，皮質醇斷供。<strong>單次劑量就可以壓制 6–12 小時</strong>。長期反覆吸食，等於給自己製造「後天性 11β-羥化酶缺乏」。</p>
+      </div>
     </div>
   </div>
 
-  <div class="article-body">
+  <p>麻醉學界 1980 年代就因為依託咪酯<strong>持續輸注</strong>造成重症患者腎上腺抑制、死亡率上升，而明確禁止長期使用。「喪屍煙彈」反覆吸食，等於把那個「禁忌的長期暴露」以更不可控的方式，交到了青少年手裡。</p>
 
-    <p>最近急診陸續出現一種特別的病人：年輕人，抽了幾口電子煙之後開始全身顫抖、意識混亂，有的甚至當場癱軟在地。這就是現在在青少年之間流傳的「喪屍煙彈」——名字取得很傳神，效果也確實如此。</p>
+  <div class="pq">皮質醇不足，下視丘–腦垂體–腎上腺軸（HPA axis）失去負回饋，ACTH 代償飆升。ACTH 和黑色素細胞刺激素同源，結果就是：色素沉著出現在手背關節、手肘、膝蓋。那個「手指發黑」不是染到什麼，是身體在告訴你腎上腺已經出問題了。</div>
 
-    <p>問題是，這裡面裝的到底是什麼？很多人以為是大麻，或是某種強效尼古丁。都不是。身為神經科醫師，我來把這個東西拆給你看。</p>
+  <!-- ────────────── 症狀 ────────────── -->
+  <h2>症狀怎麼走？從當下到幾個月後</h2>
 
-    <h2>主角：依託咪酯（Etomidate）</h2>
+  <p>危害分三個時間尺度。急性期的顫抖最顯眼，但真正危險、也最容易被忽略的，是後兩個。</p>
 
-    <div class="drug-card">
-      <div class="drug-name">依託咪酯 Etomidate</div>
-      <div class="drug-aka">俗稱：喪屍藥、zombie drug</div>
-      <div class="drug-desc">
-        這不是街頭合成毒品，而是一種正規的醫療用靜脈麻醉誘導劑，原本用於手術室——麻醉科醫師在全身麻醉前推進靜脈，讓病人在 30 到 60 秒內失去意識。它的特點是作用快、對心血管系統影響小，所以在急重症和手術室用途很廣。現在，同樣的藥被裝進電子煙霧化，讓人用吸的。
+  <div class="timeline">
+    <div class="t-item">
+      <div class="t-when">急性<small>吸食當下 · 數分鐘</small></div>
+      <div class="t-body">
+        <h4>神經抑制、失能、顫抖</h4>
+        <p>30–60 秒起效，意識模糊、與現實抽離、判斷力和行動力同時喪失。肌躍症（手抖、全身顫抖）、站不穩、失去方向感。這段期間發生的意外——車禍、跌倒、溺水——是直接造成死傷的原因。</p>
       </div>
     </div>
-
-    <p>透過肺部吸收，效果非常快——比口服快得多，幾乎接近靜脈注射的速度。這就是為什麼吸幾口就能讓人當場「喪屍化」。</p>
-
-    <h2>它怎麼傷害你的身體</h2>
-
-    <p>依託咪酯對人體的損害走兩條完全不同的路徑，這也是它特別危險的地方——就算你「撐過」急性期，還有另一個地雷在等你。</p>
-
-    <div class="mechanism-grid">
-      <div class="mech-card mech-neuro">
-        <div class="mech-title">🧠 神經路徑：大腦直接被壓制</div>
-        <div class="mech-body">
-          依託咪酯強化大腦的 GABA<sub>A</sub> 受體——也就是讓神經活動「踩煞車」的受體。大量活化後，整個大腦的抑制訊號全面上升，導致意識模糊、肌躍症（不受控的肌肉抽動），嚴重時直接失去意識。這就是喪屍感的來源。
-        </div>
-      </div>
-      <div class="mech-card mech-endo">
-        <div class="mech-title">⚗️ 內分泌路徑：腎上腺被切斷</div>
-        <div class="mech-body">
-          依託咪酯會抑制腎上腺皮質中的 11β-羥化酶，這個酵素是合成皮質醇（cortisol）不可缺少的。皮質醇是壓力賀爾蒙，管血壓、免疫、血糖、色素代謝。長期抑制之後，腎上腺機能不全悄悄發展，後期才爆發症狀。
-        </div>
+    <div class="t-item">
+      <div class="t-when">亞急性<small>反覆使用數週後</small></div>
+      <div class="t-body">
+        <h4>腎上腺機能不全開始浮現</h4>
+        <p>噁心、嘔吐、食慾下降、疲倦、肌肉無力、腹痛、關節痛、低血糖、脫水。情緒上憂鬱、易怒。症狀模糊非特異，很容易被說成「壓力大」「睡不好」，延誤就醫。</p>
       </div>
     </div>
-
-    <h2>症狀不是馬上出現：危害時間軸</h2>
-
-    <div class="timeline">
-      <div class="tl-header">暴露後的身體變化</div>
-
-      <div class="tl-item">
-        <div class="tl-left">
-          <div class="tl-dot tl-dot-red"></div>
-          <div class="tl-line"></div>
-        </div>
-        <div>
-          <div class="tl-phase tl-phase-red">急性期（幾分鐘內）</div>
-          <div class="tl-content">全身顫抖、協調失控、意識改變、可能當場倒地。這是 GABA 受體被大量活化的直接結果。旁觀者看到的就是「喪屍狀態」。</div>
-        </div>
+    <div class="t-item">
+      <div class="t-when">慢性<small>長期濫用（數月以上）</small></div>
+      <div class="t-body">
+        <h4>皮膚發黑、永久性損害</h4>
+        <p>特徵性皮膚色素沉著（手背關節、手肘、膝蓋、黏膜）。腦部與內分泌系統的累積損傷，文獻已記錄<strong>永久性神經損傷</strong>的案例。心理依賴與成癮形成，戒斷困難。</p>
       </div>
-
-      <div class="tl-item">
-        <div class="tl-left">
-          <div class="tl-dot tl-dot-orange"></div>
-          <div class="tl-line"></div>
-        </div>
-        <div>
-          <div class="tl-phase tl-phase-orange">亞急性期（數週後）</div>
-          <div class="tl-content">持續使用後，腎上腺皮質醇合成受損逐漸累積。症狀包括噁心、極度疲倦、食慾下降、莫名的虛弱感。這個階段很容易被忽略，誤以為是「睡眠不足」或「壓力大」。</div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-left">
-          <div class="tl-dot tl-dot-dark"></div>
-        </div>
-        <div>
-          <div class="tl-phase tl-phase-dark">慢性期（數個月以上）</div>
-          <div class="tl-content">皮膚出現色素沉著，尤其是手指關節、嘴唇周圍變黑。腎上腺機能不全持續惡化，可能造成永久性神經損傷，並發展為生理性成癮。</div>
-        </div>
-      </div>
-
-    </div>
-
-    <h2>給家長的辨識清單</h2>
-
-    <p>喪屍煙彈的可怕之處在於：急性期症狀消失後，孩子看起來「沒事了」。但內分泌的破壞正在悄悄進行。以下這些訊號值得注意：</p>
-
-    <div class="checklist">
-      <h3>⚠️ 出現 2 項以上，建議主動與孩子溝通</h3>
-      <div class="check-item"><div class="check-box"></div><div>手指關節或嘴唇周圍出現不明色素沉著（變黑）</div></div>
-      <div class="check-item"><div class="check-box"></div><div>無法解釋的持續疲倦，即使睡了很多也沒精神</div></div>
-      <div class="check-item"><div class="check-box"></div><div>食慾明顯下降，或體重在短期內減輕</div></div>
-      <div class="check-item"><div class="check-box"></div><div>情緒起伏異常，容易焦慮或情緒低落</div></div>
-      <div class="check-item"><div class="check-box"></div><div>曾被目擊短暫失去意識或全身顫抖</div></div>
-      <div class="check-item"><div class="check-box"></div><div>不明原因的金錢支出增加</div></div>
-      <div class="check-item"><div class="check-box"></div><div>行為突然變得隱秘，迴避詢問</div></div>
-      <div class="check-item"><div class="check-box"></div><div>身上或房間出現不明的電子煙器材</div></div>
-    </div>
-
-    <div class="alert-box">
-      <p>⚠️ <strong>色素沉著是重要的遲發性警訊</strong>。急性症狀消失後孩子看起來正常，但手指或嘴唇開始變黑，是腎上腺功能正在受損的外在表現，不要忽視。</p>
-    </div>
-
-    <h2>法律狀況：台灣怎麼規範</h2>
-
-    <div class="law-box">
-      <p>台灣已於 <strong>2024 年 11 月</strong> 將依託咪酯正式列為<strong>第二級毒品</strong>。製造、販賣、轉讓最高可處無期徒刑；持有供己使用，仍屬違法。若未成年人涉案，監護人也可能面臨法律責任。<br><br>
-      值得注意的是：<strong>若主動就醫，醫療資訊受保密保護</strong>。及早就醫不僅能治療腎上腺損傷，也可在法律上提供一定保護。</p>
-    </div>
-
-    <hr class="divider">
-
-    <p>喪屍煙彈的傳播速度很快，因為它「看起來只是電子煙」、「效果刺激但又不像傳統毒品那麼可怕」。但從神經科學的角度來說，一個能在 30 秒內讓人失去意識、並長期破壞內分泌系統的物質，比許多人想像的危險得多。</p>
-
-    <p>了解它是什麼，是保護自己和家人的第一步。</p>
-
-    <div class="info-box">
-      <p>如果你或你認識的人曾使用喪屍煙彈，建議至神經科或內分泌科門診評估腎上腺功能，及早發現損傷、及早治療。</p>
-    </div>
-
-  </div>
-
-  <div class="author-footer">
-    <div class="af-avatar">施</div>
-    <div>
-      <div class="af-name">施懿恩</div>
-      <div class="af-title">神經專科醫師</div>
-      <div class="af-bio">專注於急性中風與腦血管疾病診治。希望用清楚的文字讓更多人了解自己的大腦健康，因為好的醫學知識不該只留在學術圈。</div>
     </div>
   </div>
 
-  <div class="back-link">
-    <a href="/">← 返回所有文章</a>
+  <!-- ────────────── 各系統 ────────────── -->
+  <h2>各器官系統：一張懶人表</h2>
+
+  <table class="tbl">
+    <thead>
+      <tr><th>系統</th><th>機轉</th><th>臨床表現</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>中樞神經</td>
+        <td>GABA<sub>A</sub> 過度抑制、視丘–皮質失衡</td>
+        <td>意識障礙、肌躍症、顫抖、共濟失調；長期：永久性神經損害</td>
+      </tr>
+      <tr>
+        <td>呼吸</td>
+        <td>抑制呼吸中樞</td>
+        <td>呼吸抑制；併酒精或其他鎮靜劑時可致呼吸衰竭、死亡</td>
+      </tr>
+      <tr>
+        <td>內分泌</td>
+        <td>11β-羥化酶抑制 → 皮質醇不足 → ACTH 代償升高</td>
+        <td>腎上腺機能不全、皮膚色素沉著；嚴重：腎上腺危象</td>
+      </tr>
+      <tr>
+        <td>代謝</td>
+        <td>皮質醇缺乏 → 糖質新生受損</td>
+        <td>低血糖、低血壓、脫水、電解質紊亂</td>
+      </tr>
+      <tr>
+        <td>精神</td>
+        <td>反覆強化快感迴路</td>
+        <td>心理依賴、成癮、憂鬱、易怒</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ────────────── 致命併發症 ────────────── -->
+  <h2>最危險的幾種情況</h2>
+
+  <p>顫抖和發黑是外顯徵兆。急診和神經科真正擔心的，是以下幾種：</p>
+
+  <div class="danger">
+    <h3>立即送醫的危險訊號</h3>
+    <ul>
+      <li><strong>腎上腺危象（Adrenal crisis）</strong>——嚴重低血壓、休克、低血糖、意識改變，尤其在生病或身體壓力下被誘發。未及時補充類固醇，致死率極高。</li>
+      <li><strong>呼吸衰竭</strong>——單用就有呼吸抑制風險，合併酒精或任何中樞抑制劑時呈指數倍增，可在無人察覺下停止呼吸。</li>
+      <li><strong>急性失能下的意外創傷</strong>——車禍、跌倒、溺水、從高處墜落，是目前通報事故中最常見的直接死因。</li>
+    </ul>
   </div>
-</main>
+
+  <h3>給臨床同道：怎麼抓這個診斷</h3>
+  <p>面對<strong>不明原因的色素沉著 + 低血壓 + 低血糖 + 低鈉</strong>的年輕病患，先排除自體免疫性腎上腺炎，但一定要主動問電子煙史。它的臨床圖像可以酷似艾迪森氏病（Addison's disease）或先天性腎上腺增生（CAH），但病因是<strong>可逆的外源性酵素抑制</strong>。停止暴露，就是治療第一步。皮質醇、ACTH、電解質，加上一句關於電子煙的問診，常常就能解鎖。</p>
+
+  <!-- ────────────── 家長辨識清單（主角）────────────── -->
+  <h2>家長版：如何辨識孩子在用「喪屍煙彈」</h2>
+
+  <p>這個段落是寫給家長的。不是要你當偵探，而是要你知道什麼訊號值得認真問一句。</p>
+
+  <div class="parent-box">
+    <div class="box-title">
+      <span>👁</span>
+      <span>家長辨識清單——出現 2 項以上，請正面開口問</span>
+    </div>
+
+    <ul class="checklist">
+      <li>
+        <span class="ck">□</span>
+        <span>
+          <strong>手指、手肘、膝蓋或嘴唇附近顏色變深、發黑</strong>
+          <span class="sub">這是腎上腺長期壓制後的色素沉著，不是髒，洗不掉。</span>
+        </span>
+      </li>
+      <li>
+        <span class="ck">□</span>
+        <span>
+          <strong>回家時手抖、腳步不穩、眼神渙散</strong>
+          <span class="sub">GABA 被過度抑制後的急性表現。有時會誤以為「喝酒」，但聞不到酒味。</span>
+        </span>
+      </li>
+      <li>
+        <span class="ck">□</span>
+        <span>
+          <strong>莫名的持續疲倦、食慾很差、體重下降</strong>
+          <span class="sub">皮質醇不足的早期徵兆，常被說成「最近壓力大」「睡不好」。</span>
+        </span>
+      </li>
+      <li>
+        <span class="ck">□</span>
+        <span>
+          <strong>腹痛、關節痛、肌肉無力，找不到明確原因</strong>
+          <span class="sub">腎上腺機能不全的非特異症狀，就醫時容易被漏診。</span>
+        </span>
+      </li>
+      <li>
+        <span class="ck">□</span>
+        <span>
+          <strong>情緒變化明顯：憂鬱、易怒、對原本有興趣的事提不起勁</strong>
+          <span class="sub">既有心理依賴的成癮成分，也有皮質醇不足對情緒的直接影響。</span>
+        </span>
+      </li>
+      <li>
+        <span class="ck">□</span>
+        <span>
+          <strong>房間裡或書包裡出現「水果口味電子煙彈」</strong>
+          <span class="sub">外觀與一般電子煙無異，常見草莓、西瓜、芒果等口味包裝。</span>
+        </span>
+      </li>
+      <li>
+        <span class="ck">□</span>
+        <span>
+          <strong>金錢使用不明，頻繁以現金交易或網購不知名商品</strong>
+          <span class="sub">透過網路或社群私訊販售，使用加密轉帳規避紀錄。</span>
+        </span>
+      </li>
+      <li>
+        <span class="ck">□</span>
+        <span>
+          <strong>聚會後出現短暫「像在夢遊」的表現，事後記憶模糊</strong>
+          <span class="sub">急性期的意識障礙，使用者本人往往記得不清楚。</span>
+        </span>
+      </li>
+    </ul>
+
+    <div class="parent-action">
+      <strong>發現了，然後呢？</strong><br>
+      不要第一句話就是指責——那往往會讓孩子更封閉。先問：「你最近有吸一種電子煙嗎？我在新聞上看到有一種對身體影響很大，想問問你。」說完再帶他去就醫。告訴醫師「可能有使用依託咪酯電子煙」，這個資訊對診斷和治療方向很重要。<br><br>
+      <strong>若出現手抖失控、意識不清、血壓很低、或任何休克徵兆，請直接叫 119。</strong>
+    </div>
+  </div>
+
+  <!-- ────────────── 台灣健保落地 ────────────── -->
+  <h2>台灣現況：法規、就醫、資源</h2>
+
+  <p><strong>法律面</strong>：依託咪酯已於 2024 年 11 月正式列為<strong>第二級毒品</strong>。製造、運輸、販賣者最重無期徒刑；單純持有也有刑責。「買來用不違法」是錯誤認知。</p>
+
+  <p><strong>就醫面</strong>：若懷疑腎上腺功能受損，建議找內分泌科或神經科評估，做 cortisol、ACTH 基礎值與電解質。若有成癮問題，各縣市衛生局的成癮防治中心及醫院的精神科成癮門診是正式資源。不用怕被追究刑責——就醫紀錄有保密保障，醫師的首要責任是幫你。</p>
+
+  <p><strong>健保面</strong>：相關的腎上腺功能檢驗及成癮治療門診，原則上在健保範圍內（待個別確認給付細節）。</p>
+
+  <!-- ────────────── 結語 ────────────── -->
+  <h2>最後說一句</h2>
+
+  <p>依託咪酯的危險，在於它把一個本來要被嚴格管控的麻醉藥，包裝成了零食口味的消費品。它不是「比較沒有害的大麻替代品」，它是手術室裡的工具外洩到街頭。</p>
+
+  <p>如果你或你認識的人，有使用「助眠電子煙」「放鬆電子煙」「上頭電子煙」，或任何宣稱能「讓你飄飄然」的電子煙——這篇文章的重點就是：<strong>那不只是吸進了尼古丁，你的腎上腺正在被壓制。</strong></p>
+
+  <p>盡早就醫，告訴醫師你用了什麼。早一天說，身體多一分機會。</p>
+
+  <!-- ────────────── CTA ────────────── -->
+  <div class="cta">
+    <p>更多神經科臨床觀點，歡迎到 <a href="https://neuro1n.blogspot.com" target="_blank">neuro1n.blogspot.com</a> 閱讀，或追蹤我的 FB 粉專留言給我。<br>如果這篇對你有幫助，歡迎分享給需要的人。</p>
+  </div>
+
+  <!-- ────────────── Tags ────────────── -->
+  <div class="tags">
+    <span class="tag">物質濫用</span>
+    <span class="tag">依託咪酯</span>
+    <span class="tag">喪屍煙彈</span>
+    <span class="tag">電子煙</span>
+    <span class="tag">衛教</span>
+    <span class="tag">神經科</span>
+    <span class="tag">青少年健康</span>
+    <span class="tag">腎上腺</span>
+    <span class="tag">預防醫學</span>
+  </div>
+
+</div><!-- /post-body -->
 
 <footer>
-  © 2026 BrainTaiwan Media · 本文為衛教資訊，不構成個人醫療建議
+  <div class="fin">
+    <h4>參考來源</h4>
+    <ol>
+      <li>臺北市政府衛生局 / 昆明防治中心：依托咪酯濫用衛教新聞稿（2025）。</li>
+      <li>《報導者》：依托咪酯升二級毒品，「喪屍煙彈」如何侵蝕年輕世代（2024/11）。</li>
+      <li>維基百科：依托咪酯條目——台灣管制沿革。</li>
+      <li>StatPearls (NCBI/NIH), <em>Etomidate</em>：11β-hydroxylase 抑制機轉。</li>
+      <li>OpenAnesthesia, <em>Etomidate</em>：GABA<sub>A</sub> β2/β3 機轉與肌躍症（30–60%）。</li>
+      <li><em>Clinical Pharmacokinetics</em> (2021)；<em>CNS Drugs</em> (2024)：Etomidate 藥理與腎上腺毒性回顧。</li>
+      <li><em>Acquired 11β-hydroxylase Deficiency by Inhaled Etomidate</em>（ResearchGate, 2024）：吸入性擬似 CAH 案例。</li>
+    </ol>
+    <p class="disc">本文為衛教與學術討論用途，不能取代個人醫療診斷或治療建議。若您或家人有相關疑慮，請直接就醫。緊急情況請撥 119。</p>
+  </div>
 </footer>
 
 </body>
