@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>「喪屍煙彈」裡到底裝了什麼？神經科醫師幫你拆機 — BrainTaiwan</title>
+<meta name="description" content="電子煙裡裝的不是尼古丁，是手術室才有的麻醉誘導劑。神經科醫師解析喪屍煙彈對大腦與腎上腺的雙重傷害。">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', 'Microsoft JhengHei', 'PingFang TC', Georgia, serif;
+  background: #fafaf8; color: #1a1a1a;
+}
+.topbar {
+  background: linear-gradient(135deg, #004d40, #00695c);
+  padding: 14px 24px;
+}
+.topbar-inner { max-width: 720px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.topbar a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 9pt; }
+.topbar a:hover { color: white; }
+.topbar-logo { font-weight: 700; font-size: 11pt; color: white; }
+
+main { max-width: 720px; margin: 0 auto; padding: 48px 24px 64px; }
+
+.article-tag {
+  display: inline-block; font-size: 8pt; font-weight: 700; padding: 3px 10px;
+  border-radius: 20px; margin-bottom: 16px;
+  background: #fce4ec; color: #880e4f;
+}
+h1 { font-size: 24pt; font-weight: 700; line-height: 1.3; color: #0d1f1c; margin-bottom: 16px; }
+.article-meta {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 9pt; color: #888; margin-bottom: 32px;
+  padding-bottom: 24px; border-bottom: 1px solid #e8e8e8;
+}
+.meta-avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: linear-gradient(135deg, #004d40, #00897b);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13pt; color: white; font-weight: 700; flex-shrink: 0;
+}
+.meta-name { font-weight: 600; color: #444; }
+
+.article-body { font-size: 12pt; line-height: 1.85; color: #2a2a2a; }
+.article-body p { margin-bottom: 20px; }
+.article-body h2 {
+  font-size: 16pt; font-weight: 700; color: #0d1f1c;
+  margin: 36px 0 14px; padding-left: 14px;
+  border-left: 4px solid #880e4f;
+}
+.article-body h3 {
+  font-size: 12.5pt; font-weight: 700; color: #880e4f; margin: 20px 0 8px;
+}
+
+.alert-box {
+  background: #fce4ec; border-radius: 10px; padding: 20px 24px;
+  margin: 28px 0; border-left: 4px solid #c62828;
+}
+.alert-box p { margin-bottom: 0; color: #4a0000; }
+.alert-box strong { color: #7f0000; }
+
+.info-box {
+  background: #e0f2f1; border-radius: 10px; padding: 20px 24px;
+  margin: 28px 0; border-left: 4px solid #00695c;
+}
+.info-box p { margin-bottom: 0; color: #002420; }
+
+.drug-card {
+  background: #1a1a2e; border-radius: 12px; padding: 24px;
+  margin: 28px 0; color: white;
+}
+.drug-name { font-size: 18pt; font-weight: 700; color: #ef9a9a; margin-bottom: 6px; }
+.drug-aka  { font-size: 9pt; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+.drug-desc { font-size: 10.5pt; color: rgba(255,255,255,0.82); line-height: 1.7; }
+
+.mechanism-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0;
+}
+@media(max-width:520px){ .mechanism-grid{ grid-template-columns:1fr; } }
+.mech-card {
+  border-radius: 10px; padding: 20px;
+}
+.mech-neuro  { background: #e8eaf6; border-top: 4px solid #3949ab; }
+.mech-endo   { background: #fce4ec; border-top: 4px solid #c62828; }
+.mech-title  { font-size: 10pt; font-weight: 700; margin-bottom: 10px; }
+.mech-neuro .mech-title { color: #1a237e; }
+.mech-endo  .mech-title { color: #7f0000; }
+.mech-body  { font-size: 9.5pt; line-height: 1.65; color: #2a2a2a; }
+
+.timeline {
+  background: white; border: 1px solid #ebebeb;
+  border-radius: 12px; padding: 24px; margin: 28px 0;
+}
+.tl-header { font-size: 9pt; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+.tl-item { display: flex; gap: 16px; margin-bottom: 20px; }
+.tl-item:last-child { margin-bottom: 0; }
+.tl-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+.tl-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.tl-dot-red    { background: #c62828; }
+.tl-dot-orange { background: #e65100; }
+.tl-dot-dark   { background: #37474f; }
+.tl-line { width: 2px; flex: 1; background: #e0e0e0; margin: 4px 0; }
+.tl-item:last-child .tl-line { display: none; }
+.tl-phase { font-size: 8.5pt; font-weight: 700; margin-bottom: 4px; }
+.tl-phase-red    { color: #c62828; }
+.tl-phase-orange { color: #e65100; }
+.tl-phase-dark   { color: #37474f; }
+.tl-content { font-size: 10.5pt; color: #2a2a2a; line-height: 1.6; }
+
+.checklist {
+  background: #fff8e1; border-radius: 12px; padding: 24px; margin: 28px 0;
+  border: 1px solid #ffe082;
+}
+.checklist h3 { font-size: 12pt; font-weight: 700; color: #4a3000; margin-bottom: 16px; }
+.check-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-size: 10.5pt; color: #2a2a2a; line-height: 1.5;
+}
+.check-item:last-child { border-bottom: none; }
+.check-box {
+  width: 20px; height: 20px; border-radius: 4px; flex-shrink: 0;
+  border: 2px solid #f9a825; margin-top: 2px;
+}
+
+.law-box {
+  background: #37474f; border-radius: 10px; padding: 20px 24px; margin: 28px 0;
+}
+.law-box p { color: rgba(255,255,255,0.85); margin-bottom: 0; font-size: 10.5pt; line-height: 1.7; }
+.law-box strong { color: #80cbc4; }
+
+.divider { border: none; border-top: 1px solid #e8e8e8; margin: 36px 0; }
+
+.author-footer {
+  background: white; border-radius: 10px; padding: 24px;
+  border: 1px solid #ebebeb; display: flex; gap: 16px; align-items: center;
+  margin-top: 48px;
+}
+.af-avatar {
+  width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, #004d40, #00897b);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18pt; color: white; font-weight: 700;
+}
+.af-name  { font-size: 11pt; font-weight: 700; color: #0d1f1c; }
+.af-title { font-size: 8.5pt; color: #00695c; font-weight: 600; margin-top: 2px; }
+.af-bio   { font-size: 9pt; color: #666; margin-top: 6px; line-height: 1.6; }
+
+.back-link { margin-top: 36px; }
+.back-link a { color: #00695c; text-decoration: none; font-size: 9.5pt; font-weight: 600; }
+.back-link a:hover { text-decoration: underline; }
+
+footer {
+  background: #0d1f1c; color: rgba(255,255,255,0.4);
+  text-align: center; padding: 24px; font-size: 8.5pt; margin-top: 40px;
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="topbar-logo">BrainTaiwan</span>
+    <a href="/">← 回首頁</a>
+  </div>
+</div>
+
+<main>
+  <span class="article-tag">時事評論</span>
+  <h1>「喪屍煙彈」裡到底裝了什麼？<br>神經科醫師幫你拆機</h1>
+  <div class="article-meta">
+    <div class="meta-avatar">施</div>
+    <div>
+      <div class="meta-name">施懿恩</div>
+      <div>神經專科醫師 · 2026 年 6 月 10 日</div>
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <p>最近急診陸續出現一種特別的病人：年輕人，抽了幾口電子煙之後開始全身顫抖、意識混亂，有的甚至當場癱軟在地。這就是現在在青少年之間流傳的「喪屍煙彈」——名字取得很傳神，效果也確實如此。</p>
+
+    <p>問題是，這裡面裝的到底是什麼？很多人以為是大麻，或是某種強效尼古丁。都不是。身為神經科醫師，我來把這個東西拆給你看。</p>
+
+    <h2>主角：依託咪酯（Etomidate）</h2>
+
+    <div class="drug-card">
+      <div class="drug-name">依託咪酯 Etomidate</div>
+      <div class="drug-aka">俗稱：喪屍藥、zombie drug</div>
+      <div class="drug-desc">
+        這不是街頭合成毒品，而是一種正規的醫療用靜脈麻醉誘導劑，原本用於手術室——麻醉科醫師在全身麻醉前推進靜脈，讓病人在 30 到 60 秒內失去意識。它的特點是作用快、對心血管系統影響小，所以在急重症和手術室用途很廣。現在，同樣的藥被裝進電子煙霧化，讓人用吸的。
+      </div>
+    </div>
+
+    <p>透過肺部吸收，效果非常快——比口服快得多，幾乎接近靜脈注射的速度。這就是為什麼吸幾口就能讓人當場「喪屍化」。</p>
+
+    <h2>它怎麼傷害你的身體</h2>
+
+    <p>依託咪酯對人體的損害走兩條完全不同的路徑，這也是它特別危險的地方——就算你「撐過」急性期，還有另一個地雷在等你。</p>
+
+    <div class="mechanism-grid">
+      <div class="mech-card mech-neuro">
+        <div class="mech-title">🧠 神經路徑：大腦直接被壓制</div>
+        <div class="mech-body">
+          依託咪酯強化大腦的 GABA<sub>A</sub> 受體——也就是讓神經活動「踩煞車」的受體。大量活化後，整個大腦的抑制訊號全面上升，導致意識模糊、肌躍症（不受控的肌肉抽動），嚴重時直接失去意識。這就是喪屍感的來源。
+        </div>
+      </div>
+      <div class="mech-card mech-endo">
+        <div class="mech-title">⚗️ 內分泌路徑：腎上腺被切斷</div>
+        <div class="mech-body">
+          依託咪酯會抑制腎上腺皮質中的 11β-羥化酶，這個酵素是合成皮質醇（cortisol）不可缺少的。皮質醇是壓力賀爾蒙，管血壓、免疫、血糖、色素代謝。長期抑制之後，腎上腺機能不全悄悄發展，後期才爆發症狀。
+        </div>
+      </div>
+    </div>
+
+    <h2>症狀不是馬上出現：危害時間軸</h2>
+
+    <div class="timeline">
+      <div class="tl-header">暴露後的身體變化</div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-dot tl-dot-red"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div>
+          <div class="tl-phase tl-phase-red">急性期（幾分鐘內）</div>
+          <div class="tl-content">全身顫抖、協調失控、意識改變、可能當場倒地。這是 GABA 受體被大量活化的直接結果。旁觀者看到的就是「喪屍狀態」。</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-dot tl-dot-orange"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div>
+          <div class="tl-phase tl-phase-orange">亞急性期（數週後）</div>
+          <div class="tl-content">持續使用後，腎上腺皮質醇合成受損逐漸累積。症狀包括噁心、極度疲倦、食慾下降、莫名的虛弱感。這個階段很容易被忽略，誤以為是「睡眠不足」或「壓力大」。</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-dot tl-dot-dark"></div>
+        </div>
+        <div>
+          <div class="tl-phase tl-phase-dark">慢性期（數個月以上）</div>
+          <div class="tl-content">皮膚出現色素沉著，尤其是手指關節、嘴唇周圍變黑。腎上腺機能不全持續惡化，可能造成永久性神經損傷，並發展為生理性成癮。</div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>給家長的辨識清單</h2>
+
+    <p>喪屍煙彈的可怕之處在於：急性期症狀消失後，孩子看起來「沒事了」。但內分泌的破壞正在悄悄進行。以下這些訊號值得注意：</p>
+
+    <div class="checklist">
+      <h3>⚠️ 出現 2 項以上，建議主動與孩子溝通</h3>
+      <div class="check-item"><div class="check-box"></div><div>手指關節或嘴唇周圍出現不明色素沉著（變黑）</div></div>
+      <div class="check-item"><div class="check-box"></div><div>無法解釋的持續疲倦，即使睡了很多也沒精神</div></div>
+      <div class="check-item"><div class="check-box"></div><div>食慾明顯下降，或體重在短期內減輕</div></div>
+      <div class="check-item"><div class="check-box"></div><div>情緒起伏異常，容易焦慮或情緒低落</div></div>
+      <div class="check-item"><div class="check-box"></div><div>曾被目擊短暫失去意識或全身顫抖</div></div>
+      <div class="check-item"><div class="check-box"></div><div>不明原因的金錢支出增加</div></div>
+      <div class="check-item"><div class="check-box"></div><div>行為突然變得隱秘，迴避詢問</div></div>
+      <div class="check-item"><div class="check-box"></div><div>身上或房間出現不明的電子煙器材</div></div>
+    </div>
+
+    <div class="alert-box">
+      <p>⚠️ <strong>色素沉著是重要的遲發性警訊</strong>。急性症狀消失後孩子看起來正常，但手指或嘴唇開始變黑，是腎上腺功能正在受損的外在表現，不要忽視。</p>
+    </div>
+
+    <h2>法律狀況：台灣怎麼規範</h2>
+
+    <div class="law-box">
+      <p>台灣已於 <strong>2024 年 11 月</strong> 將依託咪酯正式列為<strong>第二級毒品</strong>。製造、販賣、轉讓最高可處無期徒刑；持有供己使用，仍屬違法。若未成年人涉案，監護人也可能面臨法律責任。<br><br>
+      值得注意的是：<strong>若主動就醫，醫療資訊受保密保護</strong>。及早就醫不僅能治療腎上腺損傷，也可在法律上提供一定保護。</p>
+    </div>
+
+    <hr class="divider">
+
+    <p>喪屍煙彈的傳播速度很快，因為它「看起來只是電子煙」、「效果刺激但又不像傳統毒品那麼可怕」。但從神經科學的角度來說，一個能在 30 秒內讓人失去意識、並長期破壞內分泌系統的物質，比許多人想像的危險得多。</p>
+
+    <p>了解它是什麼，是保護自己和家人的第一步。</p>
+
+    <div class="info-box">
+      <p>如果你或你認識的人曾使用喪屍煙彈，建議至神經科或內分泌科門診評估腎上腺功能，及早發現損傷、及早治療。</p>
+    </div>
+
+  </div>
+
+  <div class="author-footer">
+    <div class="af-avatar">施</div>
+    <div>
+      <div class="af-name">施懿恩</div>
+      <div class="af-title">神經專科醫師</div>
+      <div class="af-bio">專注於急性中風與腦血管疾病診治。希望用清楚的文字讓更多人了解自己的大腦健康，因為好的醫學知識不該只留在學術圈。</div>
+    </div>
+  </div>
+
+  <div class="back-link">
+    <a href="/">← 返回所有文章</a>
+  </div>
+</main>
+
+<footer>
+  © 2026 BrainTaiwan Media · 本文為衛教資訊，不構成個人醫療建議
+</footer>
+
+</body>
+</html>
