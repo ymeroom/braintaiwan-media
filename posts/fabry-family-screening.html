@@ -120,6 +120,40 @@ footer { background: #0d1f1c; color: rgba(255,255,255,0.4); text-align: center; 
   </div>
 </main>
 
+<!-- bt-share: 閱讀時間 + 分享（自動注入） -->
+<div class="bt-share">
+  <span class="bt-rt" id="btReadingTime">⏱ 閱讀時間</span>
+  <div class="bt-share-btns">
+    <span class="bt-share-label">分享</span>
+    <a class="bt-sh bt-fb" id="btFb" target="_blank" rel="noopener" aria-label="分享到 Facebook">f Facebook</a>
+    <a class="bt-sh bt-line" id="btLine" target="_blank" rel="noopener" aria-label="分享到 LINE">LINE</a>
+    <a class="bt-sh bt-x" id="btX" target="_blank" rel="noopener" aria-label="分享到 X">X</a>
+    <button class="bt-sh bt-copy" id="btCopy" type="button">🔗 複製連結</button>
+  </div>
+</div>
+<style>
+.bt-share{max-width:720px;margin:0 auto 2.6rem;padding:1.15rem 1.5rem;display:flex;flex-wrap:wrap;gap:.8rem 1.3rem;align-items:center;justify-content:space-between;border-top:1px solid #d8d0c0;border-bottom:1px solid #d8d0c0}
+.bt-rt{font-size:.92rem;color:#6f6a62;font-weight:600}
+.bt-share-btns{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.bt-share-label{font-size:.85rem;color:#6f6a62;font-weight:700}
+.bt-sh{display:inline-flex;align-items:center;justify-content:center;height:34px;padding:0 .85rem;border-radius:7px;font-size:.84rem;font-weight:700;text-decoration:none;cursor:pointer;border:none;color:#fff;line-height:1}
+.bt-fb{background:#1877f2}.bt-line{background:#06c755}.bt-x{background:#111}.bt-copy{background:#00695c}
+.bt-sh:hover{opacity:.85}
+</style>
+<script>
+(function(){
+  var url=location.href;
+  var title=(document.title||'').replace(/\s*[—|｜-].*$/,'').trim()||document.title;
+  var c=document.querySelector('.article-body, .post-body, main, body');
+  if(c){var n=(c.innerText||c.textContent||'').replace(/\s+/g,'').length;var min=Math.max(1,Math.round(n/420));var rt=document.getElementById('btReadingTime');if(rt)rt.textContent='⏱ 閱讀時間約 '+min+' 分鐘';}
+  var e=encodeURIComponent;
+  var fb=document.getElementById('btFb');if(fb)fb.href='https://www.facebook.com/sharer/sharer.php?u='+e(url);
+  var ln=document.getElementById('btLine');if(ln)ln.href='https://social-plugins.line.me/lineit/share?url='+e(url);
+  var x=document.getElementById('btX');if(x)x.href='https://twitter.com/intent/tweet?url='+e(url)+'&text='+e(title);
+  var cp=document.getElementById('btCopy');if(cp)cp.addEventListener('click',function(){if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){cp.textContent='✓ 已複製';setTimeout(function(){cp.textContent='🔗 複製連結';},1800);});}});
+})();
+</script>
+
 <footer>
   © 2026 BrainTaiwan Media · 本文為衛教資訊，不構成個人醫療建議
 </footer>
