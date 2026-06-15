@@ -160,11 +160,6 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
 </head>
 <body>
 
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous"
-  src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v21.0"
-  nonce="btfb"></script>
-
 <header>
   <div class="header-inner">
     <div class="site-eyebrow">BrainTaiwan · Media</div>
@@ -375,27 +370,51 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
     <span class="section-title">追蹤粉專</span>
     <div class="section-line"></div>
   </div>
-  <div class="fb-follow-box">
-    <p class="fb-follow-lead">新文章、神經科衛教與時事解讀，都會第一時間發在粉專。</p>
-    <a class="fb-follow-btn" href="https://www.facebook.com/FBbraintaiwan" target="_blank" rel="noopener">＋ 在 Facebook 追蹤 BrainTaiwan</a>
-    <div class="fb-embed">
-      <div class="fb-page"
-        data-href="https://www.facebook.com/FBbraintaiwan"
-        data-tabs="timeline" data-width="500" data-height="640"
-        data-small-header="false" data-adapt-container-width="true"
-        data-hide-cover="false" data-show-facepile="true">
-        <blockquote cite="https://www.facebook.com/FBbraintaiwan" class="fb-xfbml-parse-ignore">
-          <a href="https://www.facebook.com/FBbraintaiwan">BrainTaiwan</a>
-        </blockquote>
+  <div class="fb-card">
+    <div class="fb-card-ava">
+      <img src="/ian.jpg" alt="施懿恩">
+      <div class="fb-card-badge">
+        <svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
       </div>
     </div>
+    <div class="fb-card-mid">
+      <div class="fb-card-name">BrainTaiwan
+        <svg class="fb-card-verify" viewBox="0 0 24 24"><path d="M12 2l2.4 1.8 3-.2 1 2.8 2.6 1.5-.8 2.9.8 2.9-2.6 1.5-1 2.8-3-.2L12 22l-2.4-1.8-3 .2-1-2.8L3 16.3l.8-2.9L3 10.5l2.6-1.5 1-2.8 3 .2L12 2zm-1.2 13.4l5-5-1.4-1.4-3.6 3.6-1.6-1.6-1.4 1.4 3 3z"/></svg>
+      </div>
+      <div class="fb-card-handle">@FBbraintaiwan · 神經專科醫師的衛教粉專</div>
+      <div class="fb-card-lead">新文章、神經科衛教與時事解讀，都會第一時間發在這裡。</div>
+      <div class="fb-card-facepile">
+        <div class="fb-card-faces"><span class="fb-f1">🧠</span><span class="fb-f2">👩</span><span class="fb-f3">👨</span><span class="fb-f4">👵</span></div>
+        <span class="fb-card-fnote">和許多重視大腦健康的朋友一起追蹤</span>
+      </div>
+    </div>
+    <a class="fb-card-btn" href="https://www.facebook.com/FBbraintaiwan" target="_blank" rel="noopener">＋ 追蹤</a>
   </div>
   <style>
-  .fb-follow-box{background:#fff;border:1px solid #ebebeb;border-radius:10px;padding:24px;margin-bottom:40px;text-align:center}
-  .fb-follow-lead{font-size:10pt;color:#5a5a5a;line-height:1.7;margin-bottom:16px}
-  .fb-follow-btn{display:inline-block;background:#1877f2;color:#fff;text-decoration:none;font-size:10.5pt;font-weight:700;padding:11px 24px;border-radius:8px;transition:background .2s}
-  .fb-follow-btn:hover{background:#0e5fcc}
-  .fb-embed{margin-top:22px;display:flex;justify-content:center;min-height:60px}
+  .fb-card{background:#fff;border:1px solid #ebebeb;border-radius:14px;padding:28px;margin-bottom:40px;
+    display:flex;align-items:center;gap:24px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+  .fb-card-ava{position:relative;flex-shrink:0;width:84px;height:84px}
+  .fb-card-ava img{width:84px;height:84px;border-radius:50%;object-fit:cover;border:3px solid #e0f2f1}
+  .fb-card-badge{position:absolute;right:-2px;bottom:-2px;width:30px;height:30px;border-radius:50%;
+    background:#1877f2;border:3px solid #fff;display:flex;align-items:center;justify-content:center}
+  .fb-card-badge svg{width:15px;height:15px;fill:#fff}
+  .fb-card-mid{flex:1;min-width:0}
+  .fb-card-name{font-size:13pt;font-weight:700;color:#0d1f1c;display:flex;align-items:center;gap:6px}
+  .fb-card-verify{width:16px;height:16px;fill:#00897b}
+  .fb-card-handle{font-size:8.5pt;color:#999;margin:2px 0 8px}
+  .fb-card-lead{font-size:9.5pt;color:#5a5a5a;line-height:1.6}
+  .fb-card-facepile{display:flex;align-items:center;gap:8px;margin-top:12px}
+  .fb-card-faces{display:flex}
+  .fb-card-faces span{width:26px;height:26px;border-radius:50%;margin-left:-8px;border:2px solid #fff;
+    display:flex;align-items:center;justify-content:center;font-size:11pt}
+  .fb-card-faces span:first-child{margin-left:0}
+  .fb-f1{background:#e0f2f1}.fb-f2{background:#e3f2fd}.fb-f3{background:#fff3e0}.fb-f4{background:#f3e5f5}
+  .fb-card-fnote{font-size:8pt;color:#aaa}
+  .fb-card-btn{flex-shrink:0;background:#1877f2;color:#fff;text-decoration:none;font-size:9.5pt;
+    font-weight:700;padding:12px 22px;border-radius:8px;transition:background .2s}
+  .fb-card-btn:hover{background:#0e5fcc}
+  @media(max-width:600px){.fb-card{flex-direction:column;text-align:center}
+    .fb-card-name,.fb-card-facepile{justify-content:center}}
   </style>
 
 </main>
