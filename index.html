@@ -160,6 +160,11 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
 </head>
 <body>
 
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v21.0"
+  nonce="btfb"></script>
+
 <header>
   <div class="header-inner">
     <div class="site-eyebrow">BrainTaiwan · Media</div>
@@ -364,6 +369,34 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       <div class="author-bio">專長急性中風與腦血管疾病、罕見疾病（如法布瑞氏症）與實證醫學。相信好的醫學知識不該只留在學術圈——用清楚的文字，讓更多人了解自己的大腦健康。<a href="https://braintaiwan.com/cv.html" target="_blank" style="color:#00695c;font-weight:600;text-decoration:none;">完整履歷 →</a> · <a href="https://www.facebook.com/FBbraintaiwan" target="_blank" rel="noopener" style="color:#00695c;font-weight:600;text-decoration:none;">FB 粉專 →</a></div>
     </div>
   </div>
+
+  <!-- FB 粉專 -->
+  <div class="section-header">
+    <span class="section-title">追蹤粉專</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="fb-follow-box">
+    <p class="fb-follow-lead">新文章、神經科衛教與時事解讀，都會第一時間發在粉專。</p>
+    <a class="fb-follow-btn" href="https://www.facebook.com/FBbraintaiwan" target="_blank" rel="noopener">＋ 在 Facebook 追蹤 BrainTaiwan</a>
+    <div class="fb-embed">
+      <div class="fb-page"
+        data-href="https://www.facebook.com/FBbraintaiwan"
+        data-tabs="timeline" data-width="500" data-height="640"
+        data-small-header="false" data-adapt-container-width="true"
+        data-hide-cover="false" data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/FBbraintaiwan" class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/FBbraintaiwan">BrainTaiwan</a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+  <style>
+  .fb-follow-box{background:#fff;border:1px solid #ebebeb;border-radius:10px;padding:24px;margin-bottom:40px;text-align:center}
+  .fb-follow-lead{font-size:10pt;color:#5a5a5a;line-height:1.7;margin-bottom:16px}
+  .fb-follow-btn{display:inline-block;background:#1877f2;color:#fff;text-decoration:none;font-size:10.5pt;font-weight:700;padding:11px 24px;border-radius:8px;transition:background .2s}
+  .fb-follow-btn:hover{background:#0e5fcc}
+  .fb-embed{margin-top:22px;display:flex;justify-content:center;min-height:60px}
+  </style>
 
 </main>
 
