@@ -234,7 +234,7 @@ footer{background:#0d1f1c;color:rgba(255,255,255,.4);text-align:center;padding:2
   <span class="article-tag">失智症 · 衛教</span>
   <h1>${esc(a.title)}</h1>
   <div class="article-meta">
-    <div class="meta-avatar">施</div>
+    <div class="meta-avatar"><img src="/ian.jpg" alt="施懿恩" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block"></div>
     <div>
       <div class="meta-name">施懿恩</div>
       <div>神經專科醫師 · ${DATE}</div>
@@ -248,7 +248,7 @@ ${contentHtml}
 ${seriesBox(items, activeIdx)}
 
   <div class="author-footer">
-    <div class="af-avatar">施</div>
+    <div class="af-avatar"><img src="/ian.jpg" alt="施懿恩" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block"></div>
     <div>
       <div class="af-name">施懿恩</div>
       <div class="af-title">神經專科醫師</div>
