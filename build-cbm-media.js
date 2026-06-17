@@ -191,10 +191,10 @@ h1{font-size:25pt;font-weight:700;line-height:1.3;color:#0d1f1c;margin-bottom:16
 .article-meta{display:flex;align-items:center;gap:8px;font-size:11pt;color:#888;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid #e8e8e8}
 .meta-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#004d40,#00897b);display:flex;align-items:center;justify-content:center;font-size:14pt;color:#fff;font-weight:700}
 .meta-name{font-weight:600;color:#444}
-.article-body{font-size:13.5pt;line-height:1.9;color:#2a2a2a}
+.article-body{font-size:14pt;line-height:1.9;color:#2a2a2a}
 .article-body p{margin-bottom:20px}
-.article-body h2{font-size:17pt;font-weight:700;color:#0d1f1c;margin:36px 0 14px;padding-left:14px;border-left:4px solid #2e7d32}
-.article-body h3{font-size:13.5pt;font-weight:700;color:#1b5e20;margin:26px 0 10px}
+.article-body h2{font-size:18pt;font-weight:700;color:#0d1f1c;margin:36px 0 14px;padding-left:14px;border-left:4px solid #2e7d32}
+.article-body h3{font-size:15pt;font-weight:700;color:#1b5e20;margin:26px 0 10px}
 .article-body strong{color:#0d1f1c}
 .article-body em{font-style:italic;color:#555}
 .article-body a{color:#00695c;text-decoration:none}
@@ -203,11 +203,11 @@ h1{font-size:25pt;font-weight:700;line-height:1.3;color:#0d1f1c;margin-bottom:16
 .article-body ul,.article-body ol{margin:0 0 20px;padding-left:1.5em}
 .article-body li{margin:.4em 0}
 .article-body code{background:#eef2f1;padding:1px 6px;border-radius:5px;font-size:.9em}
-.article-body table{width:100%;border-collapse:collapse;margin:24px 0;font-size:11.5pt;border:1px solid #e0e6e4;border-radius:8px;overflow:hidden}
+.article-body table{width:100%;border-collapse:collapse;margin:24px 0;font-size:12.5pt;border:1px solid #e0e6e4;border-radius:8px;overflow:hidden}
 .article-body th,.article-body td{padding:10px 13px;text-align:left;border-bottom:1px solid #eef2f1;vertical-align:top}
 .article-body th{background:#00695c;color:#fff;font-weight:600}
 .article-body tr:nth-child(even) td{background:#f3f8f6}
-.article-body blockquote{margin:24px 0;padding:16px 20px;background:#eef6f4;border-left:4px solid #00695c;border-radius:0 8px 8px 0;color:#37474f;font-size:12.5pt}
+.article-body blockquote{margin:24px 0;padding:16px 20px;background:#eef6f4;border-left:4px solid #00695c;border-radius:0 8px 8px 0;color:#37474f;font-size:13pt}
 .article-body blockquote p:last-child{margin-bottom:0}
 .article-body blockquote.commentary{background:#fff7e8;border-left-color:#f5a623}
 .article-body blockquote.commentary h3{color:#0d1f1c;margin-top:0}
