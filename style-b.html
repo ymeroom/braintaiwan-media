@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style B — 圓角暖卡版 · BrainTaiwan Media</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --brand: #00695c; --brand-d: #004d40;
+  --ins: #4338ca; --stroke: #047857; --fabry: #15803d; --dem: #b45309; --misc: #be185d;
+  --bg: #faf7f2; --card: #ffffff;
+}
+body {
+  font-family: 'Microsoft JhengHei', 'PingFang TC', 'Noto Sans TC', sans-serif;
+  background: var(--bg); color: #1c1c1c; line-height: 1.65;
+}
+
+/* HEADER */
+header { background: linear-gradient(160deg, #004d40, #00695c); color: white; padding: 22px 20px 18px; }
+.site-eyebrow { font-size: 9.5pt; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; opacity: 0.6; margin-bottom: 6px; }
+.site-title { font-size: 26pt; font-weight: 800; line-height: 1.1; }
+.site-tagline { font-size: 13pt; opacity: 0.8; margin-top: 5px; font-weight: 300; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 14px; }
+nav a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 12pt; padding: 9px 16px; border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; min-height: 44px; display: inline-flex; align-items: center; transition: background 0.15s; }
+nav a.on, nav a:hover { background: rgba(255,255,255,0.2); color: white; }
+
+/* MAIN */
+main { max-width: 640px; margin: 0 auto; padding: 28px 16px 12px; }
+
+/* FEATURED */
+.featured-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.09); margin-bottom: 36px; }
+.featured-stripe { height: 10px; background: linear-gradient(90deg, var(--misc), #f43f8a); }
+.featured-body { padding: 24px; }
+.featured-emoji { font-size: 40pt; margin-bottom: 10px; display: block; }
+.featured-badge { display: inline-block; background: #fff0f6; color: var(--misc); font-size: 10pt; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+.featured-title { font-size: 20pt; font-weight: 800; line-height: 1.35; color: #111; margin-bottom: 14px; }
+.featured-desc { font-size: 13pt; color: #444; line-height: 1.85; margin-bottom: 14px; }
+.featured-meta { font-size: 11pt; color: #888; margin-bottom: 18px; }
+.featured-btn { display: inline-flex; align-items: center; background: var(--misc); color: white; text-decoration: none; padding: 13px 28px; border-radius: 12px; font-size: 13pt; font-weight: 700; min-height: 50px; }
+
+/* SECTION HEADER */
+.sec { display: flex; align-items: center; gap: 12px; margin: 8px 0 16px; }
+.sec-emoji { font-size: 18pt; }
+.sec-title { font-size: 14pt; font-weight: 800; color: #222; }
+.sec-line { flex: 1; height: 1px; background: #e0d9cf; }
+.sec-count { font-size: 10.5pt; color: #b5a89a; font-weight: 600; }
+
+/* CARDS */
+.card-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 44px; }
+.art { display: block; text-decoration: none; color: inherit; background: var(--card); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.06); border: 1px solid #ede9e0; transition: transform 0.15s, box-shadow 0.15s; }
+.art:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+.art-stripe { height: 9px; }
+.s-ins    { background: linear-gradient(90deg, #4338ca, #6366f1); }
+.s-stroke { background: linear-gradient(90deg, #047857, #10b981); }
+.s-fabry  { background: linear-gradient(90deg, #15803d, #22c55e); }
+.s-dem    { background: linear-gradient(90deg, #b45309, #f59e0b); }
+.art-body { padding: 20px; display: flex; gap: 14px; align-items: flex-start; }
+.art-emoji { font-size: 22pt; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+.art-content { flex: 1; min-width: 0; }
+.art-tag { display: inline-block; font-size: 9.5pt; font-weight: 700; padding: 3px 10px; border-radius: 8px; margin-bottom: 8px; }
+.t-ins    { background: #eef0ff; color: var(--ins); }
+.t-stroke { background: #ecfdf5; color: var(--stroke); }
+.t-fabry  { background: #f0fdf4; color: var(--fabry); }
+.t-dem    { background: #fffbeb; color: var(--dem); }
+.art-title { font-size: 15pt; font-weight: 700; line-height: 1.45; color: #111; margin-bottom: 8px; }
+.art-desc { font-size: 12pt; color: #555; line-height: 1.7; }
+.art-meta { font-size: 10pt; color: #bbb; margin-top: 10px; }
+
+/* AUTHOR */
+.author-box { background: white; border-radius: 20px; padding: 24px; border: 1px solid #ede9e0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; gap: 18px; align-items: flex-start; margin-bottom: 36px; }
+.author-avatar { width: 72px; height: 72px; border-radius: 50%; flex-shrink: 0; overflow: hidden; background: var(--brand-d); }
+.author-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
+.author-name { font-size: 16pt; font-weight: 800; color: #111; }
+.author-role { font-size: 11pt; color: var(--brand); font-weight: 600; margin-top: 3px; }
+.author-bio { font-size: 11.5pt; color: #555; line-height: 1.8; margin-top: 8px; }
+.author-links { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; }
+.author-links a { font-size: 11pt; color: var(--brand); font-weight: 700; text-decoration: none; padding: 9px 16px; background: #f0faf8; border: 1px solid #b2dfdb; border-radius: 10px; min-height: 44px; display: inline-flex; align-items: center; }
+
+/* NEWSLETTER */
+.newsletter { background: white; border-radius: 20px; border: 1.5px dashed #b2dfdb; padding: 30px 22px; text-align: center; margin-bottom: 36px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.nl-label { font-size: 10pt; font-weight: 700; color: var(--brand); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+.nl-title { font-size: 18pt; font-weight: 800; color: #111; margin-bottom: 10px; }
+.nl-desc { font-size: 12pt; color: #555; line-height: 1.75; margin-bottom: 18px; }
+.nl-chip { display: inline-block; border: 1.5px solid #b2dfdb; color: #777; font-size: 10pt; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 7px 18px; border-radius: 20px; }
+
+/* FB */
+.fb-block { background: linear-gradient(135deg, #004d40, #00897b); color: white; border-radius: 20px; padding: 30px 22px; text-align: center; margin-bottom: 36px; box-shadow: 0 6px 20px rgba(0,77,64,0.2); }
+.fb-title { font-size: 17pt; font-weight: 800; margin-bottom: 8px; }
+.fb-desc { font-size: 12pt; opacity: 0.85; line-height: 1.7; margin-bottom: 22px; }
+.fb-btn { display: inline-flex; align-items: center; background: white; color: var(--brand); font-size: 13pt; font-weight: 700; padding: 13px 28px; border-radius: 30px; text-decoration: none; min-height: 50px; }
+
+footer { background: #1c1107; color: rgba(255,255,255,0.4); text-align: center; padding: 26px 20px; font-size: 11pt; line-height: 1.8; }
+footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+</style>
+</head>
+<body>
+<header>
+  <div class="site-eyebrow">BrainTaiwan · Media</div>
+  <div class="site-title">神經科學 × 你的生活</div>
+  <div class="site-tagline">神經專科醫師，用你聽得懂的語言說醫學</div>
+  <nav>
+    <a href="https://braintaiwan.com">首頁</a>
+    <a href="https://md.braintaiwan.com">臨床 MD</a>
+    <a href="https://er.braintaiwan.com">急重症 ER</a>
+    <a href="/" class="on">衛教 Media</a>
+  </nav>
+</header>
+<main>
+
+  <div class="featured-card">
+    <div class="featured-stripe"></div>
+    <div class="featured-body">
+      <span class="featured-emoji">🧟</span>
+      <div class="featured-badge">最新 · 家長必讀</div>
+      <div class="featured-title">孩子手指發黑，我以為他只是沒洗手——「喪屍煙彈」家長辨識指南</div>
+      <div class="featured-desc">它不是大麻，是手術室的麻醉藥。神經科醫師用白話告訴家長：它對孩子做了什麼、手指發黑代表什麼，以及出現哪些訊號該帶孩子就醫。</div>
+      <div class="featured-meta">施懿恩 · 神經專科醫師 · 2026.06.10</div>
+      <a href="posts/zombie-vape.html" class="featured-btn">閱讀全文 →</a>
+    </div>
+  </div>
+
+  <div class="sec"><span class="sec-emoji">😴</span><span class="sec-title">失眠 · 睡眠障礙</span><div class="sec-line"></div><span class="sec-count">3 篇</span></div>
+  <div class="card-list">
+    <a href="posts/insomnia-when-to-see-doctor.html" class="art">
+      <div class="art-stripe s-ins"></div>
+      <div class="art-body"><span class="art-emoji">🌙</span><div class="art-content"><div class="art-tag t-ins">失眠 · 衛教</div><div class="art-title">為什麼老是睡不著？什麼樣的失眠該看醫生</div><div class="art-desc">偶爾睡不好很正常，但什麼樣的失眠該看醫生？三個該就醫的訊號，以及看診會做哪些評估。</div><div class="art-meta">施懿恩 · 2026.06.17</div></div></div>
+    </a>
+    <a href="posts/insomnia-sleeping-pills-safety.html" class="art">
+      <div class="art-stripe s-ins"></div>
+      <div class="art-body"><span class="art-emoji">💊</span><div class="art-content"><div class="art-tag t-ins">失眠 · 用藥安全</div><div class="art-title">安眠藥會上癮嗎？醫師談安全用藥與「怎麼減藥」</div><div class="art-desc">安眠藥不是不能吃，而是要會吃。談依賴、反彈失眠，以及為什麼「開始吃就要想好怎麼停」。</div><div class="art-meta">施懿恩 · 2026.06.17</div></div></div>
+    </a>
+    <a href="posts/insomnia-new-drugs.html" class="art">
+      <div class="art-stripe s-ins"></div>
+      <div class="art-body"><span class="art-emoji">🛌</span><div class="art-content"><div class="art-tag t-ins">失眠 · 新藥解析</div><div class="art-title">新型助眠藥和傳統安眠藥差在哪？醫師白話解析</div><div class="art-desc">傳統安眠藥像踩煞車，新藥像鬆開「清醒的油門」——白話解析兩者差別、依賴風險與適合對象。</div><div class="art-meta">施懿恩 · 2026.06.17</div></div></div>
+    </a>
+  </div>
+
+  <div class="sec"><span class="sec-emoji">🧠</span><span class="sec-title">腦中風 · 急救知識</span><div class="sec-line"></div><span class="sec-count">2 篇</span></div>
+  <div class="card-list">
+    <a href="posts/2026-guideline.html" class="art">
+      <div class="art-stripe s-stroke"></div>
+      <div class="art-body"><span class="art-emoji">📋</span><div class="art-content"><div class="art-tag t-stroke">中風治療</div><div class="art-title">2026 中風治療新指引：你需要知道的五件事</div><div class="art-desc">從新藥物到手術時間窗，這次指引更新對病人意味著什麼？</div><div class="art-meta">施懿恩 · 2026.06.11</div></div></div>
+    </a>
+    <a href="posts/golden-hour.html" class="art">
+      <div class="art-stripe s-stroke"></div>
+      <div class="art-body"><span class="art-emoji">⏱️</span><div class="art-content"><div class="art-tag t-stroke">急救知識</div><div class="art-title">中風黃金一小時：到院前你能做什麼</div><div class="art-desc">發現有人中風，接下來的 60 分鐘決定一切。正確的初步處置能救回半條命。</div><div class="art-meta">施懿恩 · 2026.06.11</div></div></div>
+    </a>
+  </div>
+
+  <div class="sec"><span class="sec-emoji">🧬</span><span class="sec-title">法布瑞氏症 · 罕見疾病</span><div class="sec-line"></div><span class="sec-count">5 篇</span></div>
+  <div class="card-list">
+    <a href="posts/fabry-what-is.html" class="art"><div class="art-stripe s-fabry"></div><div class="art-body"><span class="art-emoji">🧬</span><div class="art-content"><div class="art-tag t-fabry">罕見疾病</div><div class="art-title">什麼是法布瑞氏症？傷心、傷腎、傷腦的遺傳病</div><div class="art-desc">缺一把酵素，脂肪堆滿全身血管。男女都會發病，症狀雜到常被當成別的病。</div><div class="art-meta">施懿恩 · 2026.06.14</div></div></div></a>
+    <a href="posts/fabry-early-signs.html" class="art"><div class="art-stripe s-fabry"></div><div class="art-body"><span class="art-emoji">🔎</span><div class="art-content"><div class="art-tag t-fabry">罕見疾病</div><div class="art-title">容易被當成別的病的法布瑞氏症早期警訊</div><div class="art-desc">手腳灼痛、不流汗、皮膚小紅點、反覆腹痛——多個一起出現就該警覺。</div><div class="art-meta">施懿恩 · 2026.06.14</div></div></div></a>
+    <a href="posts/fabry-young-stroke.html" class="art"><div class="art-stripe s-fabry"></div><div class="art-body"><span class="art-emoji">⚡</span><div class="art-content"><div class="art-tag t-fabry">罕見疾病</div><div class="art-title">為什麼年輕人也會中風或腎衰竭？</div><div class="art-desc">脂肪堆在血管壁，腦腎心同時受害。中風好發 20–50 歲，可能是首發警訊。</div><div class="art-meta">施懿恩 · 2026.06.14</div></div></div></a>
+    <a href="posts/fabry-family-screening.html" class="art"><div class="art-stripe s-fabry"></div><div class="art-body"><span class="art-emoji">👨‍👩‍👧‍👦</span><div class="art-content"><div class="art-tag t-fabry">罕見疾病</div><div class="art-title">一人確診、全家受惠：為什麼要做家族檢查</div><div class="art-desc">遺傳病的特性，是一人確診常代表家裡還有人帶因。提早找到，就能保住器官。</div><div class="art-meta">施懿恩 · 2026.06.14</div></div></div></a>
+    <a href="posts/fabry-treatment.html" class="art"><div class="art-stripe s-fabry"></div><div class="art-body"><span class="art-emoji">💉</span><div class="art-content"><div class="art-tag t-fabry">罕見疾病</div><div class="art-title">法布瑞氏症可以治療嗎？酵素替代、口服藥與越早越好</div><div class="art-desc">補酵素或穩定酵素兩種選擇，最重要的原則是：器官壞掉前治療，效果最好。</div><div class="art-meta">施懿恩 · 2026.06.14</div></div></div></a>
+  </div>
+
+  <div class="sec"><span class="sec-emoji">🧓</span><span class="sec-title">失智症 · 大眾衛教</span><div class="sec-line"></div><span class="sec-count">6 篇</span></div>
+  <div class="card-list">
+    <a href="posts/dementia-blood-test.html" class="art"><div class="art-stripe s-dem"></div><div class="art-body"><span class="art-emoji">🩸</span><div class="art-content"><div class="art-tag t-dem">消費提醒</div><div class="art-title">「抽血驗失智症」可信嗎？三分鐘看懂廣告沒說的事</div><div class="art-desc">它驗的其實不是「失智症」，而是腦中的蛋白堆積。沒症狀的人去驗，為什麼常常是虛驚一場？</div><div class="art-meta">施懿恩 · 2026.06.17</div></div></div></a>
+    <a href="posts/dementia-myths.html" class="art"><div class="art-stripe s-dem"></div><div class="art-body"><span class="art-emoji">❓</span><div class="art-content"><div class="art-tag t-dem">失智症 · 衛教</div><div class="art-title">「能對答、能寫字」就不是失智嗎？破解最普遍的迷思</div><div class="art-desc">早期失智仍能對答、簽名，露餡的是即時記憶。為什麼「三個詞」測驗能看出端倪？</div><div class="art-meta">施懿恩 · 2026.06</div></div></div></a>
+    <a href="posts/dementia-handwriting.html" class="art"><div class="art-stripe s-dem"></div><div class="art-body"><span class="art-emoji">✍️</span><div class="art-content"><div class="art-tag t-dem">失智症 · 衛教</div><div class="art-title">簽名漂亮、寫信卻潦草——藏在書寫裡的失智警訊</div><div class="art-desc">為什麼簽名與寫一段話的落差是重要警訊？從失寫症與大腦迴路看懂書寫變化。</div><div class="art-meta">施懿恩 · 2026.06</div></div></div></a>
+    <a href="posts/dementia-anosognosia.html" class="art"><div class="art-stripe s-dem"></div><div class="art-body"><span class="art-emoji">🪞</span><div class="art-content"><div class="art-tag t-dem">失智症 · 衛教</div><div class="art-title">為什麼失智長輩常「不覺得自己生病」？</div><div class="art-desc">不是嘴硬，是大腦的「病識感缺乏」。家屬最常踩的盲點，與面對否認長輩的因應之道。</div><div class="art-meta">施懿恩 · 2026.06</div></div></div></a>
+    <a href="posts/dementia-early-signs.html" class="art"><div class="art-stripe s-dem"></div><div class="art-body"><span class="art-emoji">🔔</span><div class="art-content"><div class="art-tag t-dem">失智症 · 衛教</div><div class="art-title">失智十大警訊與及早就醫：該看哪一科、做哪些檢查</div><div class="art-desc">十大警訊、正常老化 vs 該警覺的退化、該掛哪一科，以及就醫會做哪些評估。</div><div class="art-meta">施懿恩 · 2026.06</div></div></div></a>
+    <a href="posts/dementia-law.html" class="art"><div class="art-stripe s-dem"></div><div class="art-body"><span class="art-emoji">⚖️</span><div class="art-content"><div class="art-tag t-dem">失智症 · 衛教</div><div class="art-title">當失智遇上法律：遺囑、監護宣告與輔助宣告</div><div class="art-desc">遺囑能力、監護 vs 輔助宣告，為何遺產官司常打成「立遺囑時清不清楚」，以及如何及早準備。</div><div class="art-meta">施懿恩 · 2026.06</div></div></div></a>
+  </div>
+
+  <div class="author-box">
+    <div class="author-avatar"><img src="/ian.jpg" alt="施懿恩"></div>
+    <div>
+      <div class="author-name">施懿恩 Ian Shih</div>
+      <div class="author-role">神經專科醫師 · M.D., Ph.D.</div>
+      <div class="author-bio">專長急性中風與腦血管疾病、罕見疾病與實證醫學。相信好的醫學知識不該只留在學術圈。</div>
+      <div class="author-links">
+        <a href="https://braintaiwan.com/cv.html" target="_blank">完整履歷 →</a>
+        <a href="https://www.facebook.com/FBbraintaiwan" target="_blank" rel="noopener">FB 粉專 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="newsletter">
+    <div class="nl-label">電子報 · Newsletter</div>
+    <div class="nl-title">定期收到施懿恩的神經科解讀</div>
+    <div class="nl-desc">每月精選神經科新知與時事評論，直接送進你的信箱。</div>
+    <span class="nl-chip">即將推出 · Coming Soon</span>
+  </div>
+
+  <div class="fb-block">
+    <div class="fb-title">在 Facebook 追蹤 BrainTaiwan</div>
+    <div class="fb-desc">新文章、神經科衛教與時事解讀，都會第一時間發在粉專。</div>
+    <a href="https://www.facebook.com/FBbraintaiwan" target="_blank" rel="noopener" class="fb-btn">前往粉專 →</a>
+  </div>
+
+</main>
+<footer>
+  © 2026 BrainTaiwan Media · <a href="https://braintaiwan.com">braintaiwan.com</a> · <a href="https://www.facebook.com/FBbraintaiwan" target="_blank" rel="noopener">Facebook 粉專</a>
+  <br><br>本站文章為衛教資訊，不構成個人醫療建議，如有症狀請就醫。
+</footer>
+</body>
+</html>
