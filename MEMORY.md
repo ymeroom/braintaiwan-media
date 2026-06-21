@@ -14,8 +14,12 @@ not contain session history, credentials, post IDs, schedules, or commit IDs.
 
 ## Social Content
 
-- For multi-card educational Facebook content, prefer a carousel when the
-  source naturally divides into a short sequence.
+- Carousel is the default BrainTaiwan Facebook format. Prefer an ordered set of
+  4-7 educational cards when the content supports that range.
+- Use a single-image, link, or text-only post only when explicitly requested or
+  when suitable multi-image assets genuinely cannot be produced.
+- Review the caption and numbered image order together before dry-run; any
+  later image or order change requires a new preview.
 - Keep publishing and scheduling behind explicit user approval after preview.
 - Keep tokens and page credentials in Windows User environment variables only.
 
