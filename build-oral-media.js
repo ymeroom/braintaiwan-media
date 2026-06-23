@@ -6,7 +6,7 @@ const path = require('path');
 const SRC = 'D:/claudecode/oral-brain-media-articles';
 const OUT = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026 年 6 月';
+const DATE = '2026.06.21';
 
 const article = {
   md: 'oral-brain-dementia.md',

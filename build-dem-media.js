@@ -7,7 +7,7 @@ const path = require('path');
 const SRC = 'D:/claudecode/dementia-articles';
 const OUT = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026 年 6 月';
+const DATE = '2026.06';
 
 const articles = [
   { md: '01-myths.md',                     out: 'dementia-myths.html',        nav: '① 破解迷思',   desc: '「能對答、能寫字就不是失智」？早期失智仍保留的社交門面與舊技能，以及為何「三個詞」測驗會露餡。' },

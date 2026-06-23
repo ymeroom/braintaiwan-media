@@ -6,7 +6,7 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026 年 6 月';
+const DATE = '2026.06.23';
 
 const article = {
   md:  'tia-brain-warning.md',

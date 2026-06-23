@@ -6,7 +6,7 @@ const path = require('path');
 const SRC = 'D:/claudecode/insomnia-media-articles';
 const OUT = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026 年 6 月';
+const DATE = '2026.06.17';
 
 const articles = [
   { md: 'insomnia-when-to-see-doctor.md',   out: 'insomnia-when-to-see-doctor.html',   nav: '① 該看醫生了嗎', desc: '偶爾睡不好很正常，但什麼樣的失眠該看醫生？談失眠的定義、背後常見原因，以及就醫會做什麼評估。' },

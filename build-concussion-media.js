@@ -6,7 +6,7 @@ const path = require('path');
 const SRC = 'D:/claudecode/concussion-media-articles';
 const OUT = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026 年 6 月';
+const DATE = '2026.06.20';
 
 const articles = [
   { md: 'concussion-what-is.md',  out: 'concussion-what-is.html',  nav: '① 腦震盪是什麼', desc: '頭撞了一下，CT 卻是正常的——腦震盪的傷在軸突，不在影像。從廷伯世界盃事件看腦震盪診斷與「第二衝擊」的風險。' },

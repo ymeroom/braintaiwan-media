@@ -6,7 +6,7 @@ const path = require('path');
 const SRC = 'D:/claudecode/commercial-bbm-article';
 const OUT = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026 年 6 月';
+const DATE = '2026.06.17';
 const ARTICLE_TAG = '失智症 · 消費提醒';
 
 const articles = [
