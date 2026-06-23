@@ -11,7 +11,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:url" content="https://media.braintaiwan.com">
 <meta property="og:title" content="BrainTaiwan Media — 神經科學 × 你的生活">
-<meta property="og:description" content="神經專科醫師用你聽得懂的語言說醫學：中風、罕見疾病、時事神經毒理與健康新知。">
+<meta property="og:description" content="施懿恩醫師用你聽得懂的語言說醫學：中風、罕見疾病、時事健康與腦神經新知。">
 <meta property="og:image" content="https://media.braintaiwan.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -114,10 +114,27 @@ main { max-width: 860px; margin: 0 auto; padding: 40px 24px; }
 
 /* DIVIDER */
 .section-header {
-  display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
+  display: flex; align-items: center; gap: 12px; margin: 30px 0 24px;
 }
 .section-title { font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #666; white-space: nowrap; }
 .section-line { flex: 1; height: 1px; background: #e0e0e0; }
+
+.topic-filter {
+  display: flex; gap: 10px; flex-wrap: wrap; margin: -6px 0 30px;
+}
+.topic-btn {
+  appearance: none; border: 1px solid #d6e4e0; background: #fff; color: #31534d;
+  border-radius: 999px; padding: 9px 14px; font: inherit; font-size: 9pt;
+  font-weight: 700; cursor: pointer; transition: background .15s, color .15s, border-color .15s;
+}
+.topic-btn:hover, .topic-btn.on {
+  background: #00695c; color: #fff; border-color: #00695c;
+}
+.topic-empty {
+  display: none; background: #fff; border: 1px solid #e6ecea; border-radius: 10px;
+  padding: 22px; color: #5a5a5a; font-size: 10pt; line-height: 1.7; margin-bottom: 40px;
+}
+.article-card.is-hidden, .section-header.is-hidden, .article-grid.is-hidden { display: none; }
 
 /* ARTICLE CARDS */
 .article-grid {
@@ -183,9 +200,9 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
 
 <header>
   <div class="header-inner">
-    <div class="site-eyebrow">BrainTaiwan · Media</div>
+    <div class="site-eyebrow">施懿恩醫師 · BrainTaiwan Media</div>
     <div class="site-title">神經科學 × 你的生活</div>
-    <div class="site-tagline">神經專科醫師，用你聽得懂的語言說醫學</div>
+    <div class="site-tagline">好的醫療，不該只停在診間。施懿恩醫師，用你聽得懂的語言說醫學。</div>
     <nav class="site-nav">
       <a href="https://braintaiwan.com" class="nav-a">首頁</a>
       <a href="https://md.braintaiwan.com" class="nav-a">臨床 MD</a>
@@ -224,14 +241,26 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
   </section>
 
   <!-- MORE ARTICLES -->
-  <div class="section-header">
+  <div class="section-header" data-section="latest">
     <span class="section-title">所有文章</span>
     <div class="section-line"></div>
   </div>
 
-  <div class="article-grid">
+  <div class="topic-filter" aria-label="文章主題篩選">
+    <button class="topic-btn on" type="button" data-filter="all" aria-pressed="true">全部</button>
+    <button class="topic-btn" type="button" data-filter="stroke">中風急症</button>
+    <button class="topic-btn" type="button" data-filter="sleep">睡眠用藥</button>
+    <button class="topic-btn" type="button" data-filter="dementia">失智照護</button>
+    <button class="topic-btn" type="button" data-filter="rare">罕見疾病</button>
+    <button class="topic-btn" type="button" data-filter="sports">運動傷害</button>
+    <button class="topic-btn" type="button" data-filter="youth">家長必讀</button>
+  </div>
 
-    <a href="posts/tia-brain-warning.html" class="article-card">
+  <div class="topic-empty" role="status">這個主題目前沒有文章，先看看其他分類。</div>
+
+  <div class="article-grid" data-section="latest">
+
+    <a href="posts/tia-brain-warning.html" class="article-card" data-topic="stroke">
       <div class="card-visual" style="background:linear-gradient(135deg,#1a237e,#3949ab);">⚡</div>
       <div class="card-body">
         <span class="card-tag" style="background:#e8eaf6;color:#283593;">小中風 · 神經急症</span>
@@ -241,57 +270,57 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       </div>
     </a>
 
-    <a href="posts/heatstroke-brain.html" class="article-card">
+    <a href="posts/heatstroke-brain.html" class="article-card" data-topic="stroke">
       <div class="card-visual" style="background:linear-gradient(135deg,#bf360c,#f4511e);">🌡️</div>
       <div class="card-body">
-        <span class="card-tag" style="background:#fff3e0;color:#e65100;">神經科學 · 夏季急症</span>
+        <span class="card-tag" style="background:#fff3e0;color:#e65100;">中暑急症 · 大腦傷害</span>
         <div class="card-title">熱中暑後，有人的大腦再也回不來了</div>
         <div class="card-desc">台灣首次高溫急難演練，老年熱傷害十年新高。中暑超過四十度，小腦、海馬迴、下視丘遭高溫直接損傷，倖存者失智風險是常人三倍。</div>
         <div class="card-meta">施懿恩 · 2026.06.22</div>
       </div>
     </a>
 
-    <a href="posts/oral-brain-dementia.html" class="article-card">
+    <a href="posts/oral-brain-dementia.html" class="article-card" data-topic="dementia">
       <div class="card-visual" style="background:linear-gradient(135deg,#00838f,#26c6da);">🧊</div>
       <div class="card-body">
-        <span class="card-tag" style="background:#e0f7fa;color:#00838f;">感覺神經 · 大腦保養</span>
+        <span class="card-tag" style="background:#e0f7fa;color:#00838f;">口腔健康 · 失智預防</span>
         <div class="card-title">嘴哥一句「真冰涼」，藏著大腦最在意的一件事</div>
         <div class="card-desc">大腦對絕對溫度遲鈍、對落差敏感——「真冰涼」是一場感覺對比的錯覺。而同一套口腔感覺末梢每天替大腦做的事，和你會不會失智有關。</div>
         <div class="card-meta">施懿恩 · 2026.06.21</div>
       </div>
     </a>
 
-    <a href="posts/summer-cardiac-brain.html" class="article-card">
+    <a href="posts/summer-cardiac-brain.html" class="article-card" data-topic="stroke">
       <div class="card-visual" style="background:linear-gradient(135deg,#b71c1c,#e53935);">❤️‍🩹</div>
       <div class="card-body">
-        <span class="card-tag" style="background:#ffebee;color:#b71c1c;">急救 · 夏季健康</span>
+        <span class="card-tag" style="background:#ffebee;color:#b71c1c;">倒下急救 · 夏季健康</span>
         <div class="card-title">夏至晨運他倒下了——最先死去的其實是大腦</div>
         <div class="card-desc">心臟停下的那一刻，最先倒數的是腦。CPR 替腦續氧、AED 才是開機鍵，而「他好像還在喘」常是最致命的誤判。</div>
         <div class="card-meta">施懿恩 · 2026.06.21</div>
       </div>
     </a>
 
-    <a href="posts/iron-fist-brain.html" class="article-card">
+    <a href="posts/iron-fist-brain.html" class="article-card" data-topic="culture">
       <div class="card-visual" style="background:linear-gradient(135deg,#311b92,#7e57c2);">🥊</div>
       <div class="card-body">
-        <span class="card-tag" style="background:#ede7f6;color:#4527a0;">神經科學 · 影劇</span>
+        <span class="card-tag" style="background:#ede7f6;color:#4527a0;">追劇心理 · 大腦機制</span>
         <div class="card-title">看《鐵拳教育》為什麼這麼爽？——神經科醫師解析「爽劇」的大腦機制【含劇透】</div>
         <div class="card-desc">前腦島、多巴胺預測誤差、代理懲罰——那個「終於」的氣聲，是幾個古老大腦迴路同時觸發的結果。</div>
         <div class="card-meta">施懿恩 · 2026.06.20</div>
       </div>
     </a>
 
-    <a href="posts/iron-fist-drugs.html" class="article-card">
+    <a href="posts/iron-fist-drugs.html" class="article-card" data-topic="youth">
       <div class="card-visual" style="background:linear-gradient(135deg,#e65100,#ffa726);">💊</div>
       <div class="card-body">
-        <span class="card-tag" style="background:#fff3e0;color:#bf360c;">時事 · 藥物濫用</span>
-        <div class="card-title">《鐵拳教育》裡的「聰明藥」——ADHD 藥物濫用的神經毒理學【含劇透】</div>
+        <span class="card-tag" style="background:#fff3e0;color:#bf360c;">聰明藥迷思 · 用藥風險</span>
+        <div class="card-title">《鐵拳教育》裡的「聰明藥」——ADHD 藥物被亂用會怎樣【含劇透】</div>
         <div class="card-desc">ADHD 處方藥在正常大腦裡無法提升智力，只會讓引擎過熱。劇中第 4、8 集的醫學真相。</div>
         <div class="card-meta">施懿恩 · 2026.06.20</div>
       </div>
     </a>
 
-    <a href="posts/concussion-what-is.html" class="article-card">
+    <a href="posts/concussion-what-is.html" class="article-card" data-topic="sports">
       <div class="card-visual" style="background:linear-gradient(135deg,#1a6b2a,#43a047);">⚽</div>
       <div class="card-body">
         <span class="card-tag" style="background:#e8f5e9;color:#2e7d32;">腦震盪 · 運動傷害</span>
@@ -301,7 +330,7 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       </div>
     </a>
 
-    <a href="posts/concussion-wc2026.html" class="article-card">
+    <a href="posts/concussion-wc2026.html" class="article-card" data-topic="sports">
       <div class="card-visual" style="background:linear-gradient(135deg,#0d47a1,#1976d2);">🏟️</div>
       <div class="card-body">
         <span class="card-tag" style="background:#e8f5e9;color:#2e7d32;">腦震盪 · 醫療政策</span>
@@ -311,7 +340,7 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       </div>
     </a>
 
-    <a href="posts/catcher-injuries.html" class="article-card">
+    <a href="posts/catcher-injuries.html" class="article-card" data-topic="sports">
       <div class="card-visual" style="background:linear-gradient(135deg,#1565c0,#42a5f5);">⚾</div>
       <div class="card-body">
         <span class="card-tag" style="background:#e3f2fd;color:#1565c0;">棒球 · 運動傷害</span>
@@ -321,17 +350,17 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       </div>
     </a>
 
-    <a href="posts/duanwu-health.html" class="article-card">
+    <a href="posts/duanwu-health.html" class="article-card" data-topic="stroke">
       <div class="card-visual" style="background:linear-gradient(135deg,#e65100,#ff8f00);">🎋</div>
       <div class="card-body">
-        <span class="card-tag" style="background:#fff3e0;color:#e65100;">假期健康 · 神經科</span>
+        <span class="card-tag" style="background:#fff3e0;color:#e65100;">連假健康 · 長輩照護</span>
         <div class="card-title">每年端午節後，門診都會出現這三種病人</div>
         <div class="card-desc">粽子、沙發、龍舟——三個大多數人沒注意到的端午神經科風險，高風險族群請特別留意。</div>
         <div class="card-meta">施懿恩 · 2026.06.19</div>
       </div>
     </a>
 
-    <a href="posts/insomnia-when-to-see-doctor.html" class="article-card">
+    <a href="posts/insomnia-when-to-see-doctor.html" class="article-card" data-topic="sleep">
       <div class="card-visual" style="background:linear-gradient(135deg,#1a1a40,#5e35b1);">🌙</div>
       <div class="card-body">
         <span class="card-tag" style="background:#e8eaf6;color:#3949ab;">失眠 · 衛教</span>
@@ -341,7 +370,7 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       </div>
     </a>
 
-    <a href="posts/insomnia-sleeping-pills-safety.html" class="article-card">
+    <a href="posts/insomnia-sleeping-pills-safety.html" class="article-card" data-topic="sleep">
       <div class="card-visual" style="background:linear-gradient(135deg,#311b92,#7e57c2);">💊</div>
       <div class="card-body">
         <span class="card-tag" style="background:#e8eaf6;color:#3949ab;">失眠 · 用藥安全</span>
@@ -351,7 +380,7 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       </div>
     </a>
 
-    <a href="posts/insomnia-new-drugs.html" class="article-card">
+    <a href="posts/insomnia-new-drugs.html" class="article-card" data-topic="sleep">
       <div class="card-visual" style="background:linear-gradient(135deg,#283593,#9fa8da);">😴</div>
       <div class="card-body">
         <span class="card-tag" style="background:#e8eaf6;color:#3949ab;">失眠 · 新藥解析</span>
@@ -361,7 +390,7 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       </div>
     </a>
 
-    <a href="posts/dementia-blood-test.html" class="article-card">
+    <a href="posts/dementia-blood-test.html" class="article-card" data-topic="dementia">
       <div class="card-visual cv-orange">🩸</div>
       <div class="card-body">
         <span class="card-tag" style="background:#fff3e0;color:#e65100;">失智症 · 消費提醒</span>
@@ -371,7 +400,7 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       </div>
     </a>
 
-    <a href="posts/zombie-vape.html" class="article-card">
+    <a href="posts/zombie-vape.html" class="article-card" data-topic="youth">
       <div class="card-visual" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0);">🧟</div>
       <div class="card-body">
         <span class="card-tag" style="background:#fce4ec;color:#880e4f;">家長必讀</span>
@@ -381,7 +410,7 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       </div>
     </a>
 
-    <a href="posts/2026-guideline.html" class="article-card">
+    <a href="posts/2026-guideline.html" class="article-card" data-topic="stroke">
       <div class="card-visual cv-green">🧠</div>
       <div class="card-body">
         <span class="card-tag ct-stroke">中風治療</span>
@@ -391,7 +420,7 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       </div>
     </a>
 
-    <a href="posts/golden-hour.html" class="article-card">
+    <a href="posts/golden-hour.html" class="article-card" data-topic="stroke">
       <div class="card-visual cv-orange">⏱️</div>
       <div class="card-body">
         <span class="card-tag ct-stroke">急救知識</span>
@@ -404,57 +433,57 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
   </div>
 
   <!-- FABRY 專題 -->
-  <div class="section-header">
+  <div class="section-header" data-section="fabry">
     <span class="section-title">法布瑞氏症專題</span>
     <div class="section-line"></div>
   </div>
 
-  <div class="article-grid">
+  <div class="article-grid" data-section="fabry">
 
-    <a href="posts/fabry-what-is.html" class="article-card">
+    <a href="posts/fabry-what-is.html" class="article-card" data-topic="rare">
       <div class="card-visual cv-green">🧬</div>
       <div class="card-body">
-        <span class="card-tag" style="background:#e0f2f1;color:#00695c;">罕見疾病</span>
+        <span class="card-tag" style="background:#e0f2f1;color:#00695c;">法布瑞是什麼</span>
         <div class="card-title">什麼是法布瑞氏症？傷心、傷腎、傷腦的遺傳病</div>
         <div class="card-desc">缺一把酵素，脂肪堆滿全身血管。男女都會發病，症狀雜到常被當成別的病。</div>
         <div class="card-meta">施懿恩 · 2026.06.14</div>
       </div>
     </a>
 
-    <a href="posts/fabry-early-signs.html" class="article-card">
+    <a href="posts/fabry-early-signs.html" class="article-card" data-topic="rare">
       <div class="card-visual cv-orange">🔎</div>
       <div class="card-body">
-        <span class="card-tag" style="background:#e0f2f1;color:#00695c;">罕見疾病</span>
+        <span class="card-tag" style="background:#e0f2f1;color:#00695c;">手腳灼痛 · 少汗</span>
         <div class="card-title">容易被當成別的病的法布瑞氏症早期警訊</div>
         <div class="card-desc">手腳灼痛、不流汗、皮膚小紅點、反覆腹痛——多個一起出現就該警覺。</div>
         <div class="card-meta">施懿恩 · 2026.06.14</div>
       </div>
     </a>
 
-    <a href="posts/fabry-young-stroke.html" class="article-card">
+    <a href="posts/fabry-young-stroke.html" class="article-card" data-topic="rare stroke">
       <div class="card-visual cv-blue">⚡</div>
       <div class="card-body">
-        <span class="card-tag" style="background:#e0f2f1;color:#00695c;">罕見疾病</span>
+        <span class="card-tag" style="background:#e0f2f1;color:#00695c;">年輕人中風</span>
         <div class="card-title">為什麼年輕人也會中風或腎衰竭？</div>
         <div class="card-desc">脂肪堆在血管壁，腦腎心同時受害。中風好發 20–50 歲，可能是首發警訊。</div>
         <div class="card-meta">施懿恩 · 2026.06.14</div>
       </div>
     </a>
 
-    <a href="posts/fabry-family-screening.html" class="article-card">
+    <a href="posts/fabry-family-screening.html" class="article-card" data-topic="rare">
       <div class="card-visual cv-purple">👪</div>
       <div class="card-body">
-        <span class="card-tag" style="background:#e0f2f1;color:#00695c;">罕見疾病</span>
+        <span class="card-tag" style="background:#e0f2f1;color:#00695c;">家族檢查</span>
         <div class="card-title">一人確診、全家受惠：為什麼要做家族檢查</div>
         <div class="card-desc">遺傳病的特性，是一人確診常代表家裡還有人帶因。提早找到，就能保住器官。</div>
         <div class="card-meta">施懿恩 · 2026.06.14</div>
       </div>
     </a>
 
-    <a href="posts/fabry-treatment.html" class="article-card">
+    <a href="posts/fabry-treatment.html" class="article-card" data-topic="rare">
       <div class="card-visual cv-green">💊</div>
       <div class="card-body">
-        <span class="card-tag" style="background:#e0f2f1;color:#00695c;">罕見疾病</span>
+        <span class="card-tag" style="background:#e0f2f1;color:#00695c;">可治療嗎</span>
         <div class="card-title">法布瑞氏症可以治療嗎？酵素替代、口服藥與越早越好</div>
         <div class="card-desc">補酵素或穩定酵素兩種選擇，最重要的原則是：器官壞掉前治療，效果最好。</div>
         <div class="card-meta">施懿恩 · 2026.06.14</div>
@@ -464,14 +493,14 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
   </div>
 
   <!-- 失智症專題 -->
-  <div class="section-header">
+  <div class="section-header" data-section="dementia">
     <span class="section-title">失智症專題 · 從一則新聞談起</span>
     <div class="section-line"></div>
   </div>
 
-  <div class="article-grid">
+  <div class="article-grid" data-section="dementia">
 
-    <a href="posts/dementia-myths.html" class="article-card">
+    <a href="posts/dementia-myths.html" class="article-card" data-topic="dementia">
       <div class="card-visual cv-green">🧠</div>
       <div class="card-body">
         <span class="card-tag" style="background:#e8f5e9;color:#2e7d32;">失智症 · 衛教</span>
@@ -481,7 +510,7 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       </div>
     </a>
 
-    <a href="posts/dementia-handwriting.html" class="article-card">
+    <a href="posts/dementia-handwriting.html" class="article-card" data-topic="dementia">
       <div class="card-visual cv-blue">✍️</div>
       <div class="card-body">
         <span class="card-tag" style="background:#e8f5e9;color:#2e7d32;">失智症 · 衛教</span>
@@ -491,7 +520,7 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       </div>
     </a>
 
-    <a href="posts/dementia-anosognosia.html" class="article-card">
+    <a href="posts/dementia-anosognosia.html" class="article-card" data-topic="dementia">
       <div class="card-visual cv-purple">🪞</div>
       <div class="card-body">
         <span class="card-tag" style="background:#e8f5e9;color:#2e7d32;">失智症 · 衛教</span>
@@ -501,7 +530,7 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       </div>
     </a>
 
-    <a href="posts/dementia-early-signs.html" class="article-card">
+    <a href="posts/dementia-early-signs.html" class="article-card" data-topic="dementia">
       <div class="card-visual cv-orange">🔔</div>
       <div class="card-body">
         <span class="card-tag" style="background:#e8f5e9;color:#2e7d32;">失智症 · 衛教</span>
@@ -511,7 +540,7 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       </div>
     </a>
 
-    <a href="posts/dementia-law.html" class="article-card">
+    <a href="posts/dementia-law.html" class="article-card" data-topic="dementia">
       <div class="card-visual cv-green">⚖️</div>
       <div class="card-body">
         <span class="card-tag" style="background:#e8f5e9;color:#2e7d32;">失智症 · 衛教</span>
@@ -580,6 +609,48 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
   </style>
 
 </main>
+
+<script>
+const topicButtons = document.querySelectorAll('.topic-btn');
+const articleCards = document.querySelectorAll('.article-card[data-topic]');
+const sectionGrids = document.querySelectorAll('.article-grid[data-section]');
+const sectionHeaders = document.querySelectorAll('.section-header[data-section]');
+const emptyState = document.querySelector('.topic-empty');
+
+function applyTopicFilter(topic) {
+  let visibleCount = 0;
+
+  articleCards.forEach((card) => {
+    const topics = (card.dataset.topic || '').split(/\s+/);
+    const isVisible = topic === 'all' || topics.includes(topic);
+    card.classList.toggle('is-hidden', !isVisible);
+    if (isVisible) visibleCount += 1;
+  });
+
+  sectionGrids.forEach((grid) => {
+    const section = grid.dataset.section;
+    const hasVisibleCards = Boolean(grid.querySelector('.article-card:not(.is-hidden)'));
+    grid.classList.toggle('is-hidden', !hasVisibleCards);
+    sectionHeaders.forEach((header) => {
+      if (header.dataset.section === section) header.classList.toggle('is-hidden', !hasVisibleCards);
+    });
+  });
+
+  if (emptyState) emptyState.style.display = visibleCount ? 'none' : 'block';
+}
+
+topicButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    topicButtons.forEach((item) => {
+      item.classList.remove('on');
+      item.setAttribute('aria-pressed', 'false');
+    });
+    button.classList.add('on');
+    button.setAttribute('aria-pressed', 'true');
+    applyTopicFilter(button.dataset.filter);
+  });
+});
+</script>
 
 <footer>
   © 2026 BrainTaiwan Media · 施懿恩醫師 · 神經科專科醫師 · <a href="https://braintaiwan.com">braintaiwan.com</a> · <a href="/subscribe.html">訂閱</a> · <a href="https://www.facebook.com/FBbraintaiwan" target="_blank" rel="noopener">Facebook 粉專</a>
