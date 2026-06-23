@@ -91,6 +91,27 @@ main { max-width: 860px; margin: 0 auto; padding: 40px 24px; }
 }
 .read-btn:hover { background: #004d40; }
 
+/* SUBSCRIBE */
+.subscribe-strip {
+  background: #fff; border: 1px solid #dfe8e5; border-left: 4px solid #00897b;
+  border-radius: 10px; padding: 24px 26px; margin: 0 0 48px;
+  display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 22px; align-items: center;
+  box-shadow: 0 8px 22px rgba(0,77,64,0.06);
+}
+.subscribe-kicker {
+  font-size: 8pt; font-weight: 800; letter-spacing: 1.6px;
+  text-transform: uppercase; color: #00695c; margin-bottom: 7px;
+}
+.subscribe-title { font-size: 16pt; line-height: 1.35; color: #0d1f1c; font-weight: 800; margin-bottom: 7px; }
+.subscribe-copy { font-size: 10pt; color: #4f5f5b; line-height: 1.65; }
+.subscribe-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #00695c; color: white; text-decoration: none; border-radius: 7px;
+  padding: 12px 20px; font-size: 10pt; font-weight: 800; white-space: nowrap;
+}
+.subscribe-btn:hover { background: #004d40; }
+@media(max-width:600px){ .subscribe-strip{grid-template-columns:1fr}.subscribe-btn{width:100%} }
+
 /* DIVIDER */
 .section-header {
   display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
@@ -170,6 +191,7 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       <a href="https://md.braintaiwan.com" class="nav-a">臨床 MD</a>
       <a href="https://er.braintaiwan.com" class="nav-a">急重症 ER</a>
       <a href="/" class="nav-a on">衛教 Media</a>
+      <a href="/subscribe.html" class="nav-a">訂閱</a>
     </nav>
   </div>
 </header>
@@ -190,6 +212,16 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
       <a href="posts/tia-brain-warning.html" class="read-btn" style="background:#3949ab;">閱讀全文</a>
     </div>
   </div>
+
+  <!-- SUBSCRIBE -->
+  <section class="subscribe-strip" aria-label="訂閱 BrainTaiwan 神經健康信">
+    <div>
+      <div class="subscribe-kicker">Newsletter</div>
+      <div class="subscribe-title">少一點焦慮，多一點判斷力。</div>
+      <div class="subscribe-copy">訂閱 BrainTaiwan 神經健康信，每週收到神經科醫師整理的腦健康提醒、急症警訊與醫學新知。</div>
+    </div>
+    <a class="subscribe-btn" href="/subscribe.html">訂閱神經健康信</a>
+  </section>
 
   <!-- MORE ARTICLES -->
   <div class="section-header">
@@ -550,7 +582,7 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
 </main>
 
 <footer>
-  © 2026 BrainTaiwan Media · <a href="https://braintaiwan.com">braintaiwan.com</a> · <a href="https://www.facebook.com/FBbraintaiwan" target="_blank" rel="noopener">Facebook 粉專</a>
+  © 2026 BrainTaiwan Media · 施懿恩醫師 · 神經科專科醫師 · <a href="https://braintaiwan.com">braintaiwan.com</a> · <a href="/subscribe.html">訂閱</a> · <a href="https://www.facebook.com/FBbraintaiwan" target="_blank" rel="noopener">Facebook 粉專</a>
   <br><br>本站文章為衛教資訊，不構成個人醫療建議，如有症狀請就醫。
 </footer>
 
