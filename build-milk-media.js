@@ -32,6 +32,30 @@ const articles = [
     tag: '健康迷思 · 營養科學',
     nav: '豆漿迷思',
   },
+  {
+    md: 'soy-gout-purine-myths.md',
+    out: 'soy-gout-purine-myths.html',
+    title: '',
+    desc: '黃豆有普林，不代表豆漿一定會引發痛風。從 NEJM 大型研究、植物性普林與飲食模式，看懂痛風患者怎麼看待豆漿。',
+    tag: '痛風迷思 · 營養科學',
+    nav: '豆漿與痛風',
+  },
+  {
+    md: 'soy-kidney-stone-oxalate.md',
+    out: 'soy-kidney-stone-oxalate.html',
+    title: '',
+    desc: '豆漿含草酸就會造成腎結石嗎？從飲食鈣、腸道草酸結合、水分與尿液濃縮，看懂真正該注意的結石風險。',
+    tag: '腎結石迷思 · 營養科學',
+    nav: '豆漿與結石',
+  },
+  {
+    md: 'soy-egg-protein-myths.md',
+    out: 'soy-egg-protein-myths.html',
+    title: '',
+    desc: '豆漿不能配雞蛋的說法，源自生黃豆中的胰蛋白酶抑制劑。只要豆漿充分煮熟，這不是營養相剋。',
+    tag: '食物相剋 · 營養科學',
+    nav: '豆漿與雞蛋',
+  },
 ];
 
 function esc(s) {
