@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.06.23';
+const DATE = '2026.06.24';
 
 const article = {
-  md:  'tia-brain-warning.md',
-  out: 'tia-brain-warning.html',
+  md:  'shingles-vaccine-brain.md',
+  out: 'shingles-vaccine-brain.html',
   title: '',
-  desc: '有一半的小中風病人，在症狀消失後選擇觀望、不就醫，然後在四十八小時內再次進急診——這一次是大中風。TIA 後九十天中風率可高達二十%，且過半發生在最初四十八小時。神經科醫師解析 ABCD2 評分與「好了才是最需要就醫的時候」。',
-  tag: '小中風 · 神經急症',
+  desc: '台灣多縣市啟動帶狀皰疹疫苗補助，民眾搶打的理由是怕神經痛——但神經科醫師更在意的是另一件事。多項研究顯示，接種帶狀皰疹疫苗可使失智症風險降低達二成以上，原因藏在 VZV 與大腦的一段幾十年隱密關係裡。',
+  tag: '疫苗新知 · 失智預防',
 };
 
 const related = [
-  { out: 'tia-brain-warning.html', nav: '本篇',  title: '「症狀好了，應該沒事吧」——小中風最要命的一句話' },
-  { out: 'golden-hour.html',       nav: '急救',  title: '中風黃金一小時：到院前你能做什麼' },
-  { out: '2026-guideline.html',    nav: '中風',  title: '2026 中風治療新指引：你需要知道的五件事' },
+  { out: 'shingles-vaccine-brain.html', nav: '本篇',  title: '打皮蛇疫苗那天，保護的其實不只是皮膚' },
+  { out: 'dementia-early-signs.html',   nav: '失智',  title: '失智十大警訊與及早就醫：該看哪一科、做哪些檢查' },
+  { out: 'dementia-myths.html',         nav: '失智',  title: '「能對答、能寫字」就不是失智嗎？破解最普遍的迷思' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -146,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">中風防治 · 相關閱讀</div>
+    <div class="sb-h">失智預防 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -181,44 +181,44 @@ body{font-family:'Segoe UI','Microsoft JhengHei','PingFang TC',Georgia,serif;bac
 .topbar a:hover{color:#fff}
 .topbar-logo{font-weight:700;font-size:13pt;color:#fff}
 main{max-width:720px;margin:0 auto;padding:48px 24px 64px}
-.article-tag{display:inline-block;background:#e8eaf6;color:#283593;font-size:10pt;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.article-tag{display:inline-block;background:#f3e5f5;color:#6a1b9a;font-size:10pt;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
 h1{font-size:25pt;font-weight:700;line-height:1.3;color:#0d1f1c;margin-bottom:16px}
 .article-meta{display:flex;align-items:center;gap:8px;font-size:11pt;color:#888;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid #e8e8e8}
-.meta-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1a237e,#3949ab);display:flex;align-items:center;justify-content:center;font-size:14pt;color:#fff;font-weight:700}
+.meta-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#4a148c,#7b1fa2);display:flex;align-items:center;justify-content:center;font-size:14pt;color:#fff;font-weight:700}
 .meta-name{font-weight:600;color:#444}
 .article-body{font-size:14pt;line-height:1.9;color:#2a2a2a}
 .article-body p{margin-bottom:20px}
-.article-body h2{font-size:18pt;font-weight:700;color:#0d1f1c;margin:36px 0 14px;padding-left:14px;border-left:4px solid #3949ab}
-.article-body h3{font-size:15pt;font-weight:700;color:#1a237e;margin:26px 0 10px}
+.article-body h2{font-size:18pt;font-weight:700;color:#0d1f1c;margin:36px 0 14px;padding-left:14px;border-left:4px solid #7b1fa2}
+.article-body h3{font-size:15pt;font-weight:700;color:#4a148c;margin:26px 0 10px}
 .article-body strong{color:#0d1f1c}
 .article-body em{font-style:italic;color:#555}
-.article-body a{color:#3949ab;text-decoration:none}
+.article-body a{color:#7b1fa2;text-decoration:none}
 .article-body a:hover{text-decoration:underline}
 .article-body hr{border:none;border-top:1px solid #e8e8e8;margin:32px 0}
 .article-body ul,.article-body ol{margin:0 0 20px;padding-left:1.5em}
 .article-body li{margin:.4em 0}
-.article-body code{background:#e8eaf6;padding:1px 6px;border-radius:5px;font-size:.9em}
-.article-body table{width:100%;border-collapse:collapse;margin:24px 0;font-size:12.5pt;border:1px solid #c5cae9;border-radius:8px;overflow:hidden}
-.article-body th,.article-body td{padding:10px 13px;text-align:left;border-bottom:1px solid #e8eaf6;vertical-align:top}
-.article-body th{background:#3949ab;color:#fff;font-weight:600}
-.article-body tr:nth-child(even) td{background:#f3f4fb}
+.article-body code{background:#f3e5f5;padding:1px 6px;border-radius:5px;font-size:.9em}
+.article-body table{width:100%;border-collapse:collapse;margin:24px 0;font-size:12.5pt;border:1px solid #e1bee7;border-radius:8px;overflow:hidden}
+.article-body th,.article-body td{padding:10px 13px;text-align:left;border-bottom:1px solid #f3e5f5;vertical-align:top}
+.article-body th{background:#7b1fa2;color:#fff;font-weight:600}
+.article-body tr:nth-child(even) td{background:#faf4fb}
 .article-body blockquote{margin:24px 0;padding:16px 20px;background:#f3f8f6;border-left:4px solid #00695c;border-radius:0 8px 8px 0;color:#37474f;font-size:13pt}
 .article-body blockquote p:last-child{margin-bottom:0}
 .article-body blockquote.commentary{background:#fff7e8;border-left-color:#f5a623}
 .article-body blockquote.commentary h3{color:#0d1f1c;margin-top:0}
-.series-box{background:#fff;border:1px solid #c5cae9;border-radius:12px;padding:18px 22px;margin:44px 0 0}
-.series-box .sb-h{font-size:10pt;font-weight:800;letter-spacing:.08em;color:#3949ab;text-transform:uppercase;margin-bottom:10px}
+.series-box{background:#fff;border:1px solid #e1bee7;border-radius:12px;padding:18px 22px;margin:44px 0 0}
+.series-box .sb-h{font-size:10pt;font-weight:800;letter-spacing:.08em;color:#7b1fa2;text-transform:uppercase;margin-bottom:10px}
 .series-box a{display:block;text-decoration:none;color:#455;font-size:11.5pt;padding:8px 0;border-top:1px solid #f0f3f2}
 .series-box a:first-of-type{border-top:none}
-.series-box a:hover{color:#3949ab}
-.series-box a.cur{color:#3949ab;font-weight:700}
+.series-box a:hover{color:#7b1fa2}
+.series-box a.cur{color:#7b1fa2;font-weight:700}
 .author-footer{background:#fff;border-radius:10px;padding:24px;border:1px solid #ebebeb;display:flex;gap:16px;align-items:center;margin-top:32px}
-.af-avatar{width:52px;height:52px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#1a237e,#3949ab);display:flex;align-items:center;justify-content:center;font-size:18pt;color:#fff;font-weight:700}
+.af-avatar{width:52px;height:52px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#4a148c,#7b1fa2);display:flex;align-items:center;justify-content:center;font-size:18pt;color:#fff;font-weight:700}
 .af-name{font-size:12pt;font-weight:700;color:#0d1f1c}
-.af-title{font-size:10pt;color:#3949ab;font-weight:600;margin-top:2px}
+.af-title{font-size:10pt;color:#7b1fa2;font-weight:600;margin-top:2px}
 .af-bio{font-size:10.5pt;color:#666;margin-top:6px;line-height:1.6}
 .back-link{margin-top:36px}
-.back-link a{color:#3949ab;text-decoration:none;font-size:11pt;font-weight:600}
+.back-link a{color:#7b1fa2;text-decoration:none;font-size:11pt;font-weight:600}
 .back-link a:hover{text-decoration:underline}
 footer{background:#0d1f1c;color:rgba(255,255,255,.4);text-align:center;padding:24px;font-size:10pt;margin-top:40px}
 </style>
@@ -278,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 小中風 TIA 神經急症文章');
+console.log('完成：每日晨報 帶狀皰疹 × 失智預防文章');
