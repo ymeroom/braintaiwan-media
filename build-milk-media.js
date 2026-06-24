@@ -1,4 +1,4 @@
-// Converts _src milk articles to BrainTaiwan Media HTML pages.
+// Converts _src nutrition articles to BrainTaiwan Media HTML pages.
 const fs = require('fs');
 const path = require('path');
 
@@ -14,6 +14,7 @@ const articles = [
     title: '',
     desc: '牛奶不是神奇食物，也不是敵人。從 DIAAS、鈣質生物利用率、心血管與骨骼研究，整理牛奶在一般飲食中的真實營養位置。',
     tag: '營養科學 · 食品安全',
+    nav: '牛奶營養',
   },
   {
     md: 'milk-antibiotic-residue.md',
@@ -21,6 +22,15 @@ const articles = [
     title: '',
     desc: '乳牛使用抗生素是真的，市售牛奶風險如何被管控也是真的。從停藥期、MRL、檢驗與抗藥性，看懂牛奶殘留問題。',
     tag: '食品安全 · 抗生素',
+    nav: '牛奶安全',
+  },
+  {
+    md: 'soy-isoflavone-myths.md',
+    out: 'soy-isoflavone-myths.html',
+    title: '',
+    desc: '豆漿有植物性雌激素，所以會造成乳癌或讓男性女性化嗎？從大豆異黃酮、乳癌存活研究與男性荷爾蒙統合分析，看懂真正證據。',
+    tag: '健康迷思 · 營養科學',
+    nav: '豆漿迷思',
   },
 ];
 
@@ -122,7 +132,7 @@ function renderBlocks(lines) {
 
 function parse(src) {
   let title = '';
-  const fm = src.match(/^---\n([\s\S]*?)\n---\n/);
+  const fm = src.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n/);
   if (fm) {
     const t = fm[1].match(/title:\s*"?(.*?)"?\s*$/m);
     if (t) title = t[1];
@@ -170,17 +180,17 @@ const SHARE = `<!-- bt-share -->
 
 function seriesBox(items, activeIdx) {
   const links = items.map((item, i) =>
-    `    <a href="${item.out}"${i === activeIdx ? ' class="cur"' : ''}>${i === 0 ? '營養' : '安全'}　${esc(item.title)}</a>`
+    `    <a href="${item.out}"${i === activeIdx ? ' class="cur"' : ''}>${esc(item.nav || '相關')}　${esc(item.title)}</a>`
   ).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">牛奶科學 · 相關閱讀</div>
+    <div class="sb-h">營養食品科學 · 相關閱讀</div>
 ${links}
   </div>`;
 }
 
 function page(a, contentHtml, activeIdx) {
   const url = `${SITE}/posts/${a.out}`;
-  const related = articles.map(item => ({ out: item.out, title: item.title }));
+  const related = articles.map(item => ({ out: item.out, title: item.title, nav: item.nav }));
   return `<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -248,6 +258,7 @@ h1{font-size:25pt;font-weight:700;line-height:1.3;color:#0d1f1c;margin-bottom:16
 .back-link a:hover{text-decoration:underline}
 footer{background:#0d1f1c;color:rgba(255,255,255,.4);text-align:center;padding:24px;font-size:10pt;margin-top:40px}
 @media(max-width:600px){main{padding:36px 20px 56px}h1{font-size:22pt}.article-body{font-size:13.5pt}.author-footer{align-items:flex-start}}
+.article-body{overflow-wrap:break-word;word-break:break-word}
 </style>
 </head>
 <body>
@@ -315,4 +326,4 @@ parsedArticles.forEach((parsed, index) => {
   console.log('寫出', parsed.out, '—', parsed.title);
 });
 
-console.log('完成：牛奶營養與抗生素安全 media 文章');
+console.log('完成：營養食品科學 media 文章');
