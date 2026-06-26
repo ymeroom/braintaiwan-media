@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.06.25';
+const DATE = '2026.06.26';
 
 const article = {
-  md:  'heat-sleep-brain.md',
-  out: 'heat-sleep-brain.html',
+  md:  'resistant-htn-rdn.md',
+  out: 'resistant-htn-rdn.html',
   title: '',
-  desc: '台南連日飆破三十九度，急診熱傷害今年最密集。但神經科更在意的是另一個傷：被高溫剝奪的慢波睡眠。大腦的類淋巴系統只在深睡時清掃廢物，那些消失的深夜清掃，是以幾十年為單位慢慢結帳的帳單。',
-  tag: '夏季健康 · 睡眠神經科學',
+  desc: '一名四十歲男性服用六種降壓藥仍壓不住血壓，急診時衝到231/160——差點中風。新術式「腎臟交感神經阻斷術」在腎動脈放電截斷失控的神經迴路，術後從六顆藥減到兩顆。高血壓是腦中風最重要的單一可修改風險，這個手術補的，正是藥夠不到的地方。',
+  tag: '高血壓 · 神經調控 · 腦中風預防',
 };
 
 const related = [
-  { out: 'heat-sleep-brain.html',  nav: '本篇',  title: '熱到睡不著的夏夜，大腦正在欠一筆沒人算過的帳' },
-  { out: 'heatstroke-brain.html',  nav: '中暑',  title: '熱中暑後，有人的大腦再也回不來了' },
-  { out: 'insomnia-new-drugs.html', nav: '失眠', title: '新型助眠藥和傳統安眠藥差在哪？醫師白話解析' },
+  { out: 'resistant-htn-rdn.html', nav: '本篇', title: '六顆藥壓不住的高血壓，和那個在腎動脈裡讓交感神經靜音的導管' },
+  { out: 'tia-brain-warning.html', nav: '小中風', title: '「症狀好了，應該沒事吧」——小中風最要命的一句話' },
+  { out: 'heatstroke-brain.html',  nav: '急症',  title: '熱中暑後，有人的大腦再也回不來了' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -146,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">夏季健康與大腦 · 相關閱讀</div>
+    <div class="sb-h">高血壓與腦血管 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -278,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 夏季熱浪 × 睡眠神經科學文章');
+console.log('完成：每日晨報 頑固型高血壓 × 腎臟交感神經阻斷術');
