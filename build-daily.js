@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.06.26';
+const DATE = '2026.06.27';
 
 const article = {
-  md:  'resistant-htn-rdn.md',
-  out: 'resistant-htn-rdn.html',
+  md:  'ecig-teen-brain.md',
+  out: 'ecig-teen-brain.html',
   title: '',
-  desc: '一名四十歲男性服用六種降壓藥仍壓不住血壓，急診時衝到231/160——差點中風。新術式「腎臟交感神經阻斷術」在腎動脈放電截斷失控的神經迴路，術後從六顆藥減到兩顆。高血壓是腦中風最重要的單一可修改風險，這個手術補的，正是藥夠不到的地方。',
-  tag: '高血壓 · 神經調控 · 腦中風預防',
+  desc: '2025年台灣校園電子煙通報暴增7倍，行政院剛於6月25日拍板持有入罰最高10萬元。但尼古丁對一個還在發育的前額葉皮質做了什麼，不會出現在任何急診報告上——這才是神經科醫師最擔心的帳單。',
+  tag: '青少年健康 · 神經毒理 · 時事法律',
 };
 
 const related = [
-  { out: 'resistant-htn-rdn.html', nav: '本篇', title: '六顆藥壓不住的高血壓，和那個在腎動脈裡讓交感神經靜音的導管' },
+  { out: 'ecig-teen-brain.html', nav: '本篇', title: '行政院剛拍板電子煙持有入罰，但神經科醫師最在乎的不是10萬元——是15歲的前額葉' },
+  { out: 'zombie-vape.html',     nav: '喪屍煙彈', title: '孩子手指發黑，我以為他只是沒洗手——「喪屍煙彈」家長辨識指南' },
   { out: 'tia-brain-warning.html', nav: '小中風', title: '「症狀好了，應該沒事吧」——小中風最要命的一句話' },
-  { out: 'heatstroke-brain.html',  nav: '急症',  title: '熱中暑後，有人的大腦再也回不來了' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -125,7 +125,7 @@ const SHARE = `<!-- bt-share: 閱讀時間 + 分享（自動注入） -->
 .bt-share-btns{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
 .bt-share-label{font-size:.85rem;color:#6f6a62;font-weight:700}
 .bt-sh{display:inline-flex;align-items:center;justify-content:center;height:34px;padding:0 .85rem;border-radius:7px;font-size:.84rem;font-weight:700;text-decoration:none;cursor:pointer;border:none;color:#fff;line-height:1}
-.bt-fb{background:#1877f2}.bt-line{background:#06c755}.bt-x{background:#111}.bt-copy{background:#e65100}
+.bt-fb{background:#1877f2}.bt-line{background:#06c755}.bt-x{background:#111}.bt-copy{background:#c62828}
 .bt-sh:hover{opacity:.85}
 </style>
 <script>
@@ -146,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">高血壓與腦血管 · 相關閱讀</div>
+    <div class="sb-h">青少年神經健康 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -175,50 +175,50 @@ function page(a, contentHtml){
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI','Microsoft JhengHei','PingFang TC',Georgia,serif;background:#fafaf8;color:#1a1a1a}
-.topbar{background:linear-gradient(135deg,#004d40,#00695c);padding:14px 24px}
+.topbar{background:linear-gradient(135deg,#263238,#37474f);padding:14px 24px}
 .topbar-inner{max-width:720px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
 .topbar a{color:rgba(255,255,255,.75);text-decoration:none;font-size:11pt}
 .topbar a:hover{color:#fff}
 .topbar-logo{font-weight:700;font-size:13pt;color:#fff}
 main{max-width:720px;margin:0 auto;padding:48px 24px 64px}
-.article-tag{display:inline-block;background:#fff3e0;color:#e65100;font-size:10pt;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.article-tag{display:inline-block;background:#ffebee;color:#c62828;font-size:10pt;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
 h1{font-size:25pt;font-weight:700;line-height:1.3;color:#0d1f1c;margin-bottom:16px}
 .article-meta{display:flex;align-items:center;gap:8px;font-size:11pt;color:#888;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid #e8e8e8}
-.meta-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0d47a1,#1976d2);display:flex;align-items:center;justify-content:center;font-size:14pt;color:#fff;font-weight:700}
+.meta-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#263238,#546e7a);display:flex;align-items:center;justify-content:center;font-size:14pt;color:#fff;font-weight:700}
 .meta-name{font-weight:600;color:#444}
 .article-body{font-size:14pt;line-height:1.9;color:#2a2a2a}
 .article-body p{margin-bottom:20px}
-.article-body h2{font-size:18pt;font-weight:700;color:#0d1f1c;margin:36px 0 14px;padding-left:14px;border-left:4px solid #e65100}
-.article-body h3{font-size:15pt;font-weight:700;color:#0d47a1;margin:26px 0 10px}
+.article-body h2{font-size:18pt;font-weight:700;color:#0d1f1c;margin:36px 0 14px;padding-left:14px;border-left:4px solid #c62828}
+.article-body h3{font-size:15pt;font-weight:700;color:#b71c1c;margin:26px 0 10px}
 .article-body strong{color:#0d1f1c}
 .article-body em{font-style:italic;color:#555}
-.article-body a{color:#0d47a1;text-decoration:none}
+.article-body a{color:#c62828;text-decoration:none}
 .article-body a:hover{text-decoration:underline}
 .article-body hr{border:none;border-top:1px solid #e8e8e8;margin:32px 0}
 .article-body ul,.article-body ol{margin:0 0 20px;padding-left:1.5em}
 .article-body li{margin:.4em 0}
-.article-body code{background:#fff3e0;padding:1px 6px;border-radius:5px;font-size:.9em}
-.article-body table{width:100%;border-collapse:collapse;margin:24px 0;font-size:12.5pt;border:1px solid #ffe0b2;border-radius:8px;overflow:hidden}
-.article-body th,.article-body td{padding:10px 13px;text-align:left;border-bottom:1px solid #fff3e0;vertical-align:top}
-.article-body th{background:#e65100;color:#fff;font-weight:600}
-.article-body tr:nth-child(even) td{background:#fff8f0}
-.article-body blockquote{margin:24px 0;padding:16px 20px;background:#f3f8f6;border-left:4px solid #00695c;border-radius:0 8px 8px 0;color:#37474f;font-size:13pt}
+.article-body code{background:#ffebee;padding:1px 6px;border-radius:5px;font-size:.9em}
+.article-body table{width:100%;border-collapse:collapse;margin:24px 0;font-size:12.5pt;border:1px solid #ffcdd2;border-radius:8px;overflow:hidden}
+.article-body th,.article-body td{padding:10px 13px;text-align:left;border-bottom:1px solid #ffebee;vertical-align:top}
+.article-body th{background:#c62828;color:#fff;font-weight:600}
+.article-body tr:nth-child(even) td{background:#fff8f8}
+.article-body blockquote{margin:24px 0;padding:16px 20px;background:#f3f8f6;border-left:4px solid #546e7a;border-radius:0 8px 8px 0;color:#37474f;font-size:13pt}
 .article-body blockquote p:last-child{margin-bottom:0}
 .article-body blockquote.commentary{background:#fff7e8;border-left-color:#f5a623}
 .article-body blockquote.commentary h3{color:#0d1f1c;margin-top:0}
-.series-box{background:#fff;border:1px solid #ffe0b2;border-radius:12px;padding:18px 22px;margin:44px 0 0}
-.series-box .sb-h{font-size:10pt;font-weight:800;letter-spacing:.08em;color:#e65100;text-transform:uppercase;margin-bottom:10px}
+.series-box{background:#fff;border:1px solid #ffcdd2;border-radius:12px;padding:18px 22px;margin:44px 0 0}
+.series-box .sb-h{font-size:10pt;font-weight:800;letter-spacing:.08em;color:#c62828;text-transform:uppercase;margin-bottom:10px}
 .series-box a{display:block;text-decoration:none;color:#455;font-size:11.5pt;padding:8px 0;border-top:1px solid #f0f3f2}
 .series-box a:first-of-type{border-top:none}
-.series-box a:hover{color:#e65100}
-.series-box a.cur{color:#e65100;font-weight:700}
+.series-box a:hover{color:#c62828}
+.series-box a.cur{color:#c62828;font-weight:700}
 .author-footer{background:#fff;border-radius:10px;padding:24px;border:1px solid #ebebeb;display:flex;gap:16px;align-items:center;margin-top:32px}
-.af-avatar{width:52px;height:52px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#0d47a1,#1976d2);display:flex;align-items:center;justify-content:center;font-size:18pt;color:#fff;font-weight:700}
+.af-avatar{width:52px;height:52px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#263238,#546e7a);display:flex;align-items:center;justify-content:center;font-size:18pt;color:#fff;font-weight:700}
 .af-name{font-size:12pt;font-weight:700;color:#0d1f1c}
-.af-title{font-size:10pt;color:#0d47a1;font-weight:600;margin-top:2px}
+.af-title{font-size:10pt;color:#c62828;font-weight:600;margin-top:2px}
 .af-bio{font-size:10.5pt;color:#666;margin-top:6px;line-height:1.6}
 .back-link{margin-top:36px}
-.back-link a{color:#0d47a1;text-decoration:none;font-size:11pt;font-weight:600}
+.back-link a{color:#c62828;text-decoration:none;font-size:11pt;font-weight:600}
 .back-link a:hover{text-decoration:underline}
 footer{background:#0d1f1c;color:rgba(255,255,255,.4);text-align:center;padding:24px;font-size:10pt;margin-top:40px}
 </style>
@@ -278,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 頑固型高血壓 × 腎臟交感神經阻斷術');
+console.log('完成：每日晨報 電子煙持有入罰 × 青少年前額葉神經毒害');
