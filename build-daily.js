@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.06.27';
+const DATE = '2026.06.28';
 
 const article = {
-  md:  'ecig-teen-brain.md',
-  out: 'ecig-teen-brain.html',
+  md:  'je-brain-2026.md',
+  out: 'je-brain-2026.html',
   title: '',
-  desc: '2025年台灣校園電子煙通報暴增7倍，行政院剛於6月25日拍板持有入罰最高10萬元。但尼古丁對一個還在發育的前額葉皮質做了什麼，不會出現在任何急診報告上——這才是神經科醫師最擔心的帳單。',
-  tag: '青少年健康 · 神經毒理 · 時事法律',
+  desc: '花蓮縣一名三個月大嬰兒確診日本腦炎，是台灣有紀錄以來最年幼的病例，住院三週沒有改善。同期嘉義縣民雄鄉一名六十多歲女性也在加護病房。日本腦炎病毒偏好侵犯視丘與基底核，有症狀者死亡率達 20–30%，存活者半數留下永久神經後遺症。',
+  tag: '傳染病 · 腦炎 · 夏季防疫',
 };
 
 const related = [
-  { out: 'ecig-teen-brain.html', nav: '本篇', title: '行政院剛拍板電子煙持有入罰，但神經科醫師最在乎的不是10萬元——是15歲的前額葉' },
-  { out: 'zombie-vape.html',     nav: '喪屍煙彈', title: '孩子手指發黑，我以為他只是沒洗手——「喪屍煙彈」家長辨識指南' },
-  { out: 'tia-brain-warning.html', nav: '小中風', title: '「症狀好了，應該沒事吧」——小中風最要命的一句話' },
+  { out: 'je-brain-2026.html',    nav: '本篇', title: '花蓮三個月大嬰兒在加護病房三週了——日本腦炎病毒是怎麼打進大腦的？' },
+  { out: 'heatstroke-brain.html', nav: '中暑急症', title: '熱中暑後，有人的大腦再也回不來了' },
+  { out: 'tia-brain-warning.html',nav: '小中風', title: '「症狀好了，應該沒事吧」——小中風最要命的一句話' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -125,7 +125,7 @@ const SHARE = `<!-- bt-share: 閱讀時間 + 分享（自動注入） -->
 .bt-share-btns{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
 .bt-share-label{font-size:.85rem;color:#6f6a62;font-weight:700}
 .bt-sh{display:inline-flex;align-items:center;justify-content:center;height:34px;padding:0 .85rem;border-radius:7px;font-size:.84rem;font-weight:700;text-decoration:none;cursor:pointer;border:none;color:#fff;line-height:1}
-.bt-fb{background:#1877f2}.bt-line{background:#06c755}.bt-x{background:#111}.bt-copy{background:#c62828}
+.bt-fb{background:#1877f2}.bt-line{background:#06c755}.bt-x{background:#111}.bt-copy{background:#2e7d32}
 .bt-sh:hover{opacity:.85}
 </style>
 <script>
@@ -146,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">青少年神經健康 · 相關閱讀</div>
+    <div class="sb-h">夏季腦神經急症 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -175,50 +175,50 @@ function page(a, contentHtml){
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI','Microsoft JhengHei','PingFang TC',Georgia,serif;background:#fafaf8;color:#1a1a1a}
-.topbar{background:linear-gradient(135deg,#263238,#37474f);padding:14px 24px}
+.topbar{background:linear-gradient(135deg,#1b5e20,#2e7d32);padding:14px 24px}
 .topbar-inner{max-width:720px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
 .topbar a{color:rgba(255,255,255,.75);text-decoration:none;font-size:11pt}
 .topbar a:hover{color:#fff}
 .topbar-logo{font-weight:700;font-size:13pt;color:#fff}
 main{max-width:720px;margin:0 auto;padding:48px 24px 64px}
-.article-tag{display:inline-block;background:#ffebee;color:#c62828;font-size:10pt;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.article-tag{display:inline-block;background:#e8f5e9;color:#1b5e20;font-size:10pt;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
 h1{font-size:25pt;font-weight:700;line-height:1.3;color:#0d1f1c;margin-bottom:16px}
 .article-meta{display:flex;align-items:center;gap:8px;font-size:11pt;color:#888;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid #e8e8e8}
-.meta-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#263238,#546e7a);display:flex;align-items:center;justify-content:center;font-size:14pt;color:#fff;font-weight:700}
+.meta-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1b5e20,#388e3c);display:flex;align-items:center;justify-content:center;font-size:14pt;color:#fff;font-weight:700}
 .meta-name{font-weight:600;color:#444}
 .article-body{font-size:14pt;line-height:1.9;color:#2a2a2a}
 .article-body p{margin-bottom:20px}
-.article-body h2{font-size:18pt;font-weight:700;color:#0d1f1c;margin:36px 0 14px;padding-left:14px;border-left:4px solid #c62828}
-.article-body h3{font-size:15pt;font-weight:700;color:#b71c1c;margin:26px 0 10px}
+.article-body h2{font-size:18pt;font-weight:700;color:#0d1f1c;margin:36px 0 14px;padding-left:14px;border-left:4px solid #2e7d32}
+.article-body h3{font-size:15pt;font-weight:700;color:#1b5e20;margin:26px 0 10px}
 .article-body strong{color:#0d1f1c}
 .article-body em{font-style:italic;color:#555}
-.article-body a{color:#c62828;text-decoration:none}
+.article-body a{color:#2e7d32;text-decoration:none}
 .article-body a:hover{text-decoration:underline}
 .article-body hr{border:none;border-top:1px solid #e8e8e8;margin:32px 0}
 .article-body ul,.article-body ol{margin:0 0 20px;padding-left:1.5em}
 .article-body li{margin:.4em 0}
-.article-body code{background:#ffebee;padding:1px 6px;border-radius:5px;font-size:.9em}
-.article-body table{width:100%;border-collapse:collapse;margin:24px 0;font-size:12.5pt;border:1px solid #ffcdd2;border-radius:8px;overflow:hidden}
-.article-body th,.article-body td{padding:10px 13px;text-align:left;border-bottom:1px solid #ffebee;vertical-align:top}
-.article-body th{background:#c62828;color:#fff;font-weight:600}
-.article-body tr:nth-child(even) td{background:#fff8f8}
-.article-body blockquote{margin:24px 0;padding:16px 20px;background:#f3f8f6;border-left:4px solid #546e7a;border-radius:0 8px 8px 0;color:#37474f;font-size:13pt}
+.article-body code{background:#e8f5e9;padding:1px 6px;border-radius:5px;font-size:.9em}
+.article-body table{width:100%;border-collapse:collapse;margin:24px 0;font-size:12.5pt;border:1px solid #c8e6c9;border-radius:8px;overflow:hidden}
+.article-body th,.article-body td{padding:10px 13px;text-align:left;border-bottom:1px solid #e8f5e9;vertical-align:top}
+.article-body th{background:#2e7d32;color:#fff;font-weight:600}
+.article-body tr:nth-child(even) td{background:#f1f8e9}
+.article-body blockquote{margin:24px 0;padding:16px 20px;background:#eef6f4;border-left:4px solid #388e3c;border-radius:0 8px 8px 0;color:#37474f;font-size:13pt}
 .article-body blockquote p:last-child{margin-bottom:0}
 .article-body blockquote.commentary{background:#fff7e8;border-left-color:#f5a623}
 .article-body blockquote.commentary h3{color:#0d1f1c;margin-top:0}
-.series-box{background:#fff;border:1px solid #ffcdd2;border-radius:12px;padding:18px 22px;margin:44px 0 0}
-.series-box .sb-h{font-size:10pt;font-weight:800;letter-spacing:.08em;color:#c62828;text-transform:uppercase;margin-bottom:10px}
+.series-box{background:#fff;border:1px solid #c8e6c9;border-radius:12px;padding:18px 22px;margin:44px 0 0}
+.series-box .sb-h{font-size:10pt;font-weight:800;letter-spacing:.08em;color:#2e7d32;text-transform:uppercase;margin-bottom:10px}
 .series-box a{display:block;text-decoration:none;color:#455;font-size:11.5pt;padding:8px 0;border-top:1px solid #f0f3f2}
 .series-box a:first-of-type{border-top:none}
-.series-box a:hover{color:#c62828}
-.series-box a.cur{color:#c62828;font-weight:700}
+.series-box a:hover{color:#2e7d32}
+.series-box a.cur{color:#2e7d32;font-weight:700}
 .author-footer{background:#fff;border-radius:10px;padding:24px;border:1px solid #ebebeb;display:flex;gap:16px;align-items:center;margin-top:32px}
-.af-avatar{width:52px;height:52px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#263238,#546e7a);display:flex;align-items:center;justify-content:center;font-size:18pt;color:#fff;font-weight:700}
+.af-avatar{width:52px;height:52px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#1b5e20,#388e3c);display:flex;align-items:center;justify-content:center;font-size:18pt;color:#fff;font-weight:700}
 .af-name{font-size:12pt;font-weight:700;color:#0d1f1c}
-.af-title{font-size:10pt;color:#c62828;font-weight:600;margin-top:2px}
+.af-title{font-size:10pt;color:#2e7d32;font-weight:600;margin-top:2px}
 .af-bio{font-size:10.5pt;color:#666;margin-top:6px;line-height:1.6}
 .back-link{margin-top:36px}
-.back-link a{color:#c62828;text-decoration:none;font-size:11pt;font-weight:600}
+.back-link a{color:#2e7d32;text-decoration:none;font-size:11pt;font-weight:600}
 .back-link a:hover{text-decoration:underline}
 footer{background:#0d1f1c;color:rgba(255,255,255,.4);text-align:center;padding:24px;font-size:10pt;margin-top:40px}
 </style>
@@ -278,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 電子煙持有入罰 × 青少年前額葉神經毒害');
+console.log('完成：每日晨報 日本腦炎 × 花蓮史上最小確診嬰兒 × 腦炎神經科學');
