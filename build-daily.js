@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.06.28';
+const DATE = '2026.06.29';
 
 const article = {
-  md:  'je-brain-2026.md',
-  out: 'je-brain-2026.html',
+  md:  'fructose-brain-vessels.md',
+  out: 'fructose-brain-vessels.html',
   title: '',
-  desc: '花蓮縣一名三個月大嬰兒確診日本腦炎，是台灣有紀錄以來最年幼的病例，住院三週沒有改善。同期嘉義縣民雄鄉一名六十多歲女性也在加護病房。日本腦炎病毒偏好侵犯視丘與基底核，有症狀者死亡率達 20–30%，存活者半數留下永久神經後遺症。',
-  tag: '傳染病 · 腦炎 · 夏季防疫',
+  desc: '她三十八歲、血壓正常、不喝酒，核磁共振卻照出腦白質滿是高訊號病灶。每天兩杯手搖杯喝了六年。果糖在肝臟代謝產生的尿酸，會抑制血管內皮製造一氧化氮，悄悄讓腦裡最纖細的穿通動脈老化——這條路徑和鹽無關，而且獨立於血壓之外。',
+  tag: '飲食衛教 · 腦血管 · 代謝健康',
 };
 
 const related = [
-  { out: 'je-brain-2026.html',    nav: '本篇', title: '花蓮三個月大嬰兒在加護病房三週了——日本腦炎病毒是怎麼打進大腦的？' },
-  { out: 'heatstroke-brain.html', nav: '中暑急症', title: '熱中暑後，有人的大腦再也回不來了' },
-  { out: 'tia-brain-warning.html',nav: '小中風', title: '「症狀好了，應該沒事吧」——小中風最要命的一句話' },
+  { out: 'fructose-brain-vessels.html', nav: '本篇',   title: '三十八歲、血壓正常、不喝酒——她腦部 MRI 上那些白點是怎麼來的' },
+  { out: 'resistant-htn-rdn.html',      nav: '高血壓', title: '六顆藥壓不住的高血壓，和那個在腎動脈裡讓交感神經靜音的導管' },
+  { out: 'heatstroke-brain.html',       nav: '中暑急症', title: '熱中暑後，有人的大腦再也回不來了' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -146,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">夏季腦神經急症 · 相關閱讀</div>
+    <div class="sb-h">腦血管健康 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -175,50 +175,50 @@ function page(a, contentHtml){
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI','Microsoft JhengHei','PingFang TC',Georgia,serif;background:#fafaf8;color:#1a1a1a}
-.topbar{background:linear-gradient(135deg,#1b5e20,#2e7d32);padding:14px 24px}
+.topbar{background:linear-gradient(135deg,#004d40,#00695c);padding:14px 24px}
 .topbar-inner{max-width:720px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
 .topbar a{color:rgba(255,255,255,.75);text-decoration:none;font-size:11pt}
 .topbar a:hover{color:#fff}
 .topbar-logo{font-weight:700;font-size:13pt;color:#fff}
 main{max-width:720px;margin:0 auto;padding:48px 24px 64px}
-.article-tag{display:inline-block;background:#e8f5e9;color:#1b5e20;font-size:10pt;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.article-tag{display:inline-block;background:#e0f2f1;color:#00695c;font-size:10pt;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
 h1{font-size:25pt;font-weight:700;line-height:1.3;color:#0d1f1c;margin-bottom:16px}
 .article-meta{display:flex;align-items:center;gap:8px;font-size:11pt;color:#888;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid #e8e8e8}
-.meta-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1b5e20,#388e3c);display:flex;align-items:center;justify-content:center;font-size:14pt;color:#fff;font-weight:700}
+.meta-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#004d40,#00897b);display:flex;align-items:center;justify-content:center;font-size:14pt;color:#fff;font-weight:700}
 .meta-name{font-weight:600;color:#444}
 .article-body{font-size:14pt;line-height:1.9;color:#2a2a2a}
 .article-body p{margin-bottom:20px}
-.article-body h2{font-size:18pt;font-weight:700;color:#0d1f1c;margin:36px 0 14px;padding-left:14px;border-left:4px solid #2e7d32}
-.article-body h3{font-size:15pt;font-weight:700;color:#1b5e20;margin:26px 0 10px}
+.article-body h2{font-size:18pt;font-weight:700;color:#0d1f1c;margin:36px 0 14px;padding-left:14px;border-left:4px solid #00695c}
+.article-body h3{font-size:15pt;font-weight:700;color:#00695c;margin:26px 0 10px}
 .article-body strong{color:#0d1f1c}
 .article-body em{font-style:italic;color:#555}
-.article-body a{color:#2e7d32;text-decoration:none}
+.article-body a{color:#00695c;text-decoration:none}
 .article-body a:hover{text-decoration:underline}
 .article-body hr{border:none;border-top:1px solid #e8e8e8;margin:32px 0}
 .article-body ul,.article-body ol{margin:0 0 20px;padding-left:1.5em}
 .article-body li{margin:.4em 0}
-.article-body code{background:#e8f5e9;padding:1px 6px;border-radius:5px;font-size:.9em}
-.article-body table{width:100%;border-collapse:collapse;margin:24px 0;font-size:12.5pt;border:1px solid #c8e6c9;border-radius:8px;overflow:hidden}
-.article-body th,.article-body td{padding:10px 13px;text-align:left;border-bottom:1px solid #e8f5e9;vertical-align:top}
-.article-body th{background:#2e7d32;color:#fff;font-weight:600}
-.article-body tr:nth-child(even) td{background:#f1f8e9}
-.article-body blockquote{margin:24px 0;padding:16px 20px;background:#eef6f4;border-left:4px solid #388e3c;border-radius:0 8px 8px 0;color:#37474f;font-size:13pt}
+.article-body code{background:#eef6f4;padding:1px 6px;border-radius:5px;font-size:.9em}
+.article-body table{width:100%;border-collapse:collapse;margin:24px 0;font-size:12.5pt;border:1px solid #e0e6e4;border-radius:8px;overflow:hidden}
+.article-body th,.article-body td{padding:10px 13px;text-align:left;border-bottom:1px solid #eef2f1;vertical-align:top}
+.article-body th{background:#00695c;color:#fff;font-weight:600}
+.article-body tr:nth-child(even) td{background:#f3f8f6}
+.article-body blockquote{margin:24px 0;padding:16px 20px;background:#eef6f4;border-left:4px solid #00695c;border-radius:0 8px 8px 0;color:#37474f;font-size:13pt}
 .article-body blockquote p:last-child{margin-bottom:0}
 .article-body blockquote.commentary{background:#fff7e8;border-left-color:#f5a623}
 .article-body blockquote.commentary h3{color:#0d1f1c;margin-top:0}
-.series-box{background:#fff;border:1px solid #c8e6c9;border-radius:12px;padding:18px 22px;margin:44px 0 0}
-.series-box .sb-h{font-size:10pt;font-weight:800;letter-spacing:.08em;color:#2e7d32;text-transform:uppercase;margin-bottom:10px}
+.series-box{background:#fff;border:1px solid #e3e8e6;border-radius:12px;padding:18px 22px;margin:44px 0 0}
+.series-box .sb-h{font-size:10pt;font-weight:800;letter-spacing:.08em;color:#00695c;text-transform:uppercase;margin-bottom:10px}
 .series-box a{display:block;text-decoration:none;color:#455;font-size:11.5pt;padding:8px 0;border-top:1px solid #f0f3f2}
 .series-box a:first-of-type{border-top:none}
-.series-box a:hover{color:#2e7d32}
-.series-box a.cur{color:#2e7d32;font-weight:700}
+.series-box a:hover{color:#00695c}
+.series-box a.cur{color:#00695c;font-weight:700}
 .author-footer{background:#fff;border-radius:10px;padding:24px;border:1px solid #ebebeb;display:flex;gap:16px;align-items:center;margin-top:32px}
-.af-avatar{width:52px;height:52px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#1b5e20,#388e3c);display:flex;align-items:center;justify-content:center;font-size:18pt;color:#fff;font-weight:700}
+.af-avatar{width:52px;height:52px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#004d40,#00897b);display:flex;align-items:center;justify-content:center;font-size:18pt;color:#fff;font-weight:700}
 .af-name{font-size:12pt;font-weight:700;color:#0d1f1c}
-.af-title{font-size:10pt;color:#2e7d32;font-weight:600;margin-top:2px}
+.af-title{font-size:10pt;color:#00695c;font-weight:600;margin-top:2px}
 .af-bio{font-size:10.5pt;color:#666;margin-top:6px;line-height:1.6}
 .back-link{margin-top:36px}
-.back-link a{color:#2e7d32;text-decoration:none;font-size:11pt;font-weight:600}
+.back-link a{color:#00695c;text-decoration:none;font-size:11pt;font-weight:600}
 .back-link a:hover{text-decoration:underline}
 footer{background:#0d1f1c;color:rgba(255,255,255,.4);text-align:center;padding:24px;font-size:10pt;margin-top:40px}
 </style>
@@ -278,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 日本腦炎 × 花蓮史上最小確診嬰兒 × 腦炎神經科學');
+console.log('完成：每日晨報 果糖 × 腦小血管 × 白質病變 × 台灣夏季甜飲代謝健康');
