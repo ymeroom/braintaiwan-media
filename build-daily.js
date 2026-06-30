@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.06.29';
+const DATE = '2026.06.30';
 
 const article = {
-  md:  'fructose-brain-vessels.md',
-  out: 'fructose-brain-vessels.html',
+  md:  'sleep-young-stroke.md',
+  out: 'sleep-young-stroke.html',
   title: '',
-  desc: '她三十八歲、血壓正常、不喝酒，核磁共振卻照出腦白質滿是高訊號病灶。每天兩杯手搖杯喝了六年。果糖在肝臟代謝產生的尿酸，會抑制血管內皮製造一氧化氮，悄悄讓腦裡最纖細的穿通動脈老化——這條路徑和鹽無關，而且獨立於血壓之外。',
-  tag: '飲食衛教 · 腦血管 · 代謝健康',
+  desc: '豐原醫院六月底收治了一位四十歲科技業工程師，每天熬夜追劇、每晚只睡四小時，整理衣物時右手突然使不上力、說話含糊——急性缺血性中風。台灣年輕型中風比例已從5%攀升至18%，每7位中風病人就有1位是45歲以下。睡眠不足與長期工作壓力如何一起把動脈的老化時鐘往前撥。',
+  tag: '年輕中風 · 睡眠 · 時事',
 };
 
 const related = [
-  { out: 'fructose-brain-vessels.html', nav: '本篇',   title: '三十八歲、血壓正常、不喝酒——她腦部 MRI 上那些白點是怎麼來的' },
-  { out: 'resistant-htn-rdn.html',      nav: '高血壓', title: '六顆藥壓不住的高血壓，和那個在腎動脈裡讓交感神經靜音的導管' },
-  { out: 'heatstroke-brain.html',       nav: '中暑急症', title: '熱中暑後，有人的大腦再也回不來了' },
+  { out: 'sleep-young-stroke.html', nav: '本篇',    title: '追劇三年、每晚睡四小時，那個下午右手突然舉不起來' },
+  { out: 'golden-hour.html',        nav: '中風急救', title: '中風黃金一小時：到院前你能做什麼' },
+  { out: 'tia-brain-warning.html',  nav: '小中風',  title: '「症狀好了，應該沒事吧」——小中風最要命的一句話' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -146,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">腦血管健康 · 相關閱讀</div>
+    <div class="sb-h">中風急症 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -278,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 果糖 × 腦小血管 × 白質病變 × 台灣夏季甜飲代謝健康');
+console.log('完成：每日晨報 2026.06.30 睡眠不足 × 年輕型中風 × tPA黃金窗口');
