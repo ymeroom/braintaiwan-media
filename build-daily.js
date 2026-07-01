@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.06.30';
+const DATE = '2026.07.01';
 
 const article = {
-  md:  'sleep-young-stroke.md',
-  out: 'sleep-young-stroke.html',
+  md:  'heat-brain-cognition.md',
+  out: 'heat-brain-cognition.html',
   title: '',
-  desc: '豐原醫院六月底收治了一位四十歲科技業工程師，每天熬夜追劇、每晚只睡四小時，整理衣物時右手突然使不上力、說話含糊——急性缺血性中風。台灣年輕型中風比例已從5%攀升至18%，每7位中風病人就有1位是45歲以下。睡眠不足與長期工作壓力如何一起把動脈的老化時鐘往前撥。',
-  tag: '年輕中風 · 睡眠 · 時事',
+  desc: '台灣熱傷害就醫人次已達去年同期一點六倍，高溫假草案還在各部會審議——但有一件事公文裡沒寫：室內三十三度時大腦注意力就悄悄跌了一成，前額葉最先讓步，判斷力打折卻渾然不覺。神經科醫師談高溫假背後的認知神經科學依據。',
+  tag: '高溫假 · 認知神經科學 · 時事',
 };
 
 const related = [
-  { out: 'sleep-young-stroke.html', nav: '本篇',    title: '追劇三年、每晚睡四小時，那個下午右手突然舉不起來' },
-  { out: 'golden-hour.html',        nav: '中風急救', title: '中風黃金一小時：到院前你能做什麼' },
-  { out: 'tia-brain-warning.html',  nav: '小中風',  title: '「症狀好了，應該沒事吧」——小中風最要命的一句話' },
+  { out: 'heat-brain-cognition.html', nav: '本篇',    title: '你的大腦在三十六度時就開始打折——高溫假背後，神經科醫師一直想說的事' },
+  { out: 'heatstroke-brain.html',     nav: '中暑急症', title: '熱中暑後，有人的大腦再也回不來了' },
+  { out: 'heat-sleep-brain.html',     nav: '夏夜睡眠', title: '熱到睡不著的夏夜，大腦正在欠一筆沒人算過的帳' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -146,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">中風急症 · 相關閱讀</div>
+    <div class="sb-h">夏季腦健康 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -278,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.06.30 睡眠不足 × 年輕型中風 × tPA黃金窗口');
+console.log('完成：每日晨報 2026.07.01 高溫假 × 認知神經科學 × 台灣熱傷害1.6倍');
