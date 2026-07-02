@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.01';
+const DATE = '2026.07.02';
 
 const article = {
-  md:  'heat-brain-cognition.md',
-  out: 'heat-brain-cognition.html',
+  md:  'stroke-rehab-ward-2026.md',
+  out: 'stroke-rehab-ward-2026.html',
   title: '',
-  desc: '台灣熱傷害就醫人次已達去年同期一點六倍，高溫假草案還在各部會審議——但有一件事公文裡沒寫：室內三十三度時大腦注意力就悄悄跌了一成，前額葉最先讓步，判斷力打折卻渾然不覺。神經科醫師談高溫假背後的認知神經科學依據。',
-  tag: '高溫假 · 認知神經科學 · 時事',
+  desc: '健保署七月啟動復健病房試辦計畫，腦中風患者最長可住一百八十天。但神經科醫師最在乎的不是住院天數——而是大腦那扇六個月的可塑性視窗，和台灣的照護系統有沒有把握住它。',
+  tag: '中風復健 · 神經可塑性 · 健保政策',
 };
 
 const related = [
-  { out: 'heat-brain-cognition.html', nav: '本篇',    title: '你的大腦在三十六度時就開始打折——高溫假背後，神經科醫師一直想說的事' },
-  { out: 'heatstroke-brain.html',     nav: '中暑急症', title: '熱中暑後，有人的大腦再也回不來了' },
-  { out: 'heat-sleep-brain.html',     nav: '夏夜睡眠', title: '熱到睡不著的夏夜，大腦正在欠一筆沒人算過的帳' },
+  { out: 'stroke-rehab-ward-2026.html', nav: '本篇',    title: '中風後那扇窗——七月起健保復健病房上路，神經科醫師說為什麼六個月之後就不一樣了' },
+  { out: 'golden-hour.html',            nav: '急救',    title: '中風黃金一小時：到院前你能做什麼' },
+  { out: '2026-guideline.html',         nav: '新指引',  title: '2026 中風治療新指引：你需要知道的五件事' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -146,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">夏季腦健康 · 相關閱讀</div>
+    <div class="sb-h">腦中風照護 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -278,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.01 高溫假 × 認知神經科學 × 台灣熱傷害1.6倍');
+console.log('完成：每日晨報 2026.07.02 中風復健病房試辦 × 神經可塑性視窗 × 健保政策');
