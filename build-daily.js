@@ -6,20 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.02';
+const DATE = '2026.07.03';
 
 const article = {
-  md:  'stroke-rehab-ward-2026.md',
-  out: 'stroke-rehab-ward-2026.html',
+  md:  'summer-ac-stroke.md',
+  out: 'summer-ac-stroke.html',
   title: '',
-  desc: '健保署七月啟動復健病房試辦計畫，腦中風患者最長可住一百八十天。但神經科醫師最在乎的不是住院天數——而是大腦那扇六個月的可塑性視窗，和台灣的照護系統有沒有把握住它。',
-  tag: '中風復健 · 神經可塑性 · 健保政策',
+  desc: '三十七度的戶外走進二十四度的室內，血管在幾秒內收縮、血壓飆升。台灣急診熱傷害人次已達去年同期一點六倍，但被低估的夏季中風風險，藏在那個每天重複幾十次的日常動作裡。',
+  tag: '腦中風 · 夏季健康 · 時事',
 };
 
 const related = [
-  { out: 'stroke-rehab-ward-2026.html', nav: '本篇',    title: '中風後那扇窗——七月起健保復健病房上路，神經科醫師說為什麼六個月之後就不一樣了' },
+  { out: 'summer-ac-stroke.html',       nav: '本篇',    title: '三十七度衝進冷氣房的那一刻，血管正在發生什麼' },
+  { out: 'heatstroke-brain.html',       nav: '中暑',    title: '熱中暑後，有人的大腦再也回不來了' },
   { out: 'golden-hour.html',            nav: '急救',    title: '中風黃金一小時：到院前你能做什麼' },
-  { out: '2026-guideline.html',         nav: '新指引',  title: '2026 中風治療新指引：你需要知道的五件事' },
+  { out: 'tia-brain-warning.html',      nav: '小中風',  title: '「症狀好了，應該沒事吧」——小中風最要命的一句話' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -146,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">腦中風照護 · 相關閱讀</div>
+    <div class="sb-h">夏季中風防護 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -278,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.02 中風復健病房試辦 × 神經可塑性視窗 × 健保政策');
+console.log('完成：每日晨報 2026.07.03 夏日冷氣溫差 × 血壓飆升 × 夏季腦中風風險');
