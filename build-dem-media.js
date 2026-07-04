@@ -12,7 +12,7 @@ const DATE = '2026.06';
 const articles = [
   { md: '01-myths.md',                     out: 'dementia-myths.html',        nav: '① 破解迷思',   desc: '「能對答、能寫字就不是失智」？早期失智仍保留的社交門面與舊技能，以及為何「三個詞」測驗會露餡。' },
   { md: '02-handwriting-agraphia.md',      out: 'dementia-handwriting.html',  nav: '② 書寫密碼',   desc: '為什麼簽名漂亮、寫信卻變潦草？從失寫症與大腦迴路，看懂書寫變化背後的警訊。' },
-  { md: '03-anosognosia.md',               out: 'dementia-anosognosia.html',  nav: '③ 病識感',     desc: '失智長輩常「不覺得自己生病」，這不是嘴硬，而是大腦的病識感缺乏。家屬該如何因應？' },
+  { md: '03-anosognosia.md',               out: 'dementia-anosognosia.html',  nav: '③ 病識感',     desc: '失智長輩常「不覺得自己生病」——那可能不是嘴硬，是大腦的病識感缺乏，疾病本身的一部分。家屬該如何因應？' },
   { md: '04-early-signs.md',               out: 'dementia-early-signs.html',  nav: '④ 早期警訊',   desc: '失智十大警訊、正常老化 vs 該警覺的退化、該看哪一科，以及就醫會做哪些評估。' },
   { md: '05-law-capacity-guardianship.md', out: 'dementia-law.html',          nav: '⑤ 失智與法律', desc: '遺囑能力、監護與輔助宣告，為什麼遺產官司常打成「立遺囑時清不清楚」，以及如何及早準備。' },
 ];
