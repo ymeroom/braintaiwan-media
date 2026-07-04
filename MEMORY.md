@@ -3,6 +3,18 @@
 This file contains stable decisions shared by Claude Code and Codex. It does
 not contain session history, credentials, post IDs, schedules, or commit IDs.
 
+## Build Workflow
+
+- `build-*-media.js` regenerate post HTML from source markdown but do NOT emit
+  the JSON-LD `<script type="application/ld+json">` (Article schema). That
+  structured data is injected in a separate post-build pass by
+  `enhance-article-seo.js`. Therefore: after running any `build-*-media.js`,
+  ALWAYS run `node enhance-article-seo.js` (and `node seo-build.js` for the
+  sitemap) or the rebuilt posts silently lose their SEO schema.
+- A rebuild also overwrites every other output of that build script, not just
+  the article you changed — commit only the intended files, and discard churn
+  in siblings (e.g. the soy/milk set share `build-milk-media.js`).
+
 ## Audience And Editorial Style
 
 - Write public-health content for a general audience in Traditional Chinese.

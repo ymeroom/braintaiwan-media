@@ -132,7 +132,7 @@ footer{background:#0d1f1c;color:rgba(255,255,255,0.4);text-align:center;padding:
 
   <div class="article-body">
 
-<p>連假結束後的那個門診，總有幾個固定的面孔：長輩因為吃粽子嗆咳住院、高血壓患者血壓突然飆高、或是三天窩在沙發上看龍舟轉播，站起來手麻腳麻才發現不對勁。這幾年下來，我漸漸覺得這不是巧合，而是可以事先防範的事。</p>
+<p>連假結束後的那個門診，總有幾個固定的面孔：長輩因為吃粽子嗆咳住院、高血壓患者血壓突然飆高、或是三天窩在沙發上看龍舟轉播，站起來手麻腳麻才發現不對勁。這幾年下來，我漸漸看出一個規律——這些幾乎都能事先防範。</p>
 
 <p>端午節好好過，這點毋庸置疑。但有幾個細節，特別是家裡有高風險族群的，真的值得多想一秒。</p>
 
@@ -219,7 +219,7 @@ footer{background:#0d1f1c;color:rgba(255,255,255,0.4);text-align:center;padding:
 <hr>
 
 <blockquote class="commentary">
-<h3>🩺 神經專科醫師　施懿恩・小評論</h3>
+<h3>🩺 神經專科 施懿恩醫師觀察</h3>
 <p>我跟患者說這些的時候，他們有時會問：「醫師你也太掃興了，過個節而已。」我完全理解這個反應。</p>
 <p>但我想說的不是「粽子不能吃」。我想說的是：<strong>這三件事裡，任何一件出了狀況，後面要收拾都很費力。</strong>一次吸入性肺炎要住院一週；一次腦中風發作，即使搶救成功，後面幾個月的復健是誰都不想面對的。而這些代價，往往只是因為沒有多切幾刀、多喝點水、或是到了中間站起來走一走。</p>
 <p>每年端午診間的那波小高峰，不是命中注定的。只是有些事，沒人在當下提醒過他們。</p>
@@ -279,6 +279,40 @@ footer{background:#0d1f1c;color:rgba(255,255,255,0.4);text-align:center;padding:
     <a href="/">← 返回所有文章</a>
   </div>
 </main>
+
+<!-- bt-share: 閱讀時間 + 分享（自動注入） -->
+<div class="bt-share">
+  <span class="bt-rt" id="btReadingTime">⏱ 閱讀時間</span>
+  <div class="bt-share-btns">
+    <span class="bt-share-label">分享</span>
+    <a class="bt-sh bt-fb" id="btFb" target="_blank" rel="noopener" aria-label="分享到 Facebook">f Facebook</a>
+    <a class="bt-sh bt-line" id="btLine" target="_blank" rel="noopener" aria-label="分享到 LINE">LINE</a>
+    <a class="bt-sh bt-x" id="btX" target="_blank" rel="noopener" aria-label="分享到 X">X</a>
+    <button class="bt-sh bt-copy" id="btCopy" type="button">🔗 複製連結</button>
+  </div>
+</div>
+<style>
+.bt-share{max-width:720px;margin:0 auto 2.6rem;padding:1.15rem 1.5rem;display:flex;flex-wrap:wrap;gap:.8rem 1.3rem;align-items:center;justify-content:space-between;border-top:1px solid #d8d0c0;border-bottom:1px solid #d8d0c0}
+.bt-rt{font-size:.92rem;color:#6f6a62;font-weight:600}
+.bt-share-btns{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.bt-share-label{font-size:.85rem;color:#6f6a62;font-weight:700}
+.bt-sh{display:inline-flex;align-items:center;justify-content:center;height:34px;padding:0 .85rem;border-radius:7px;font-size:.84rem;font-weight:700;text-decoration:none;cursor:pointer;border:none;color:#fff;line-height:1}
+.bt-fb{background:#1877f2}.bt-line{background:#06c755}.bt-x{background:#111}.bt-copy{background:#00695c}
+.bt-sh:hover{opacity:.85}
+</style>
+<script>
+(function(){
+  var url=location.href;
+  var title=(document.title||'').replace(/\s*[—|｜-].*$/,'').trim()||document.title;
+  var c=document.querySelector('.article-body, .post-body, main, body');
+  if(c){var n=(c.innerText||c.textContent||'').replace(/\s+/g,'').length;var min=Math.max(1,Math.round(n/420));var rt=document.getElementById('btReadingTime');if(rt)rt.textContent='⏱ 閱讀時間約 '+min+' 分鐘';}
+  var e=encodeURIComponent;
+  var fb=document.getElementById('btFb');if(fb)fb.href='https://www.facebook.com/sharer/sharer.php?u='+e(url);
+  var ln=document.getElementById('btLine');if(ln)ln.href='https://social-plugins.line.me/lineit/share?url='+e(url);
+  var x=document.getElementById('btX');if(x)x.href='https://twitter.com/intent/tweet?url='+e(url)+'&text='+e(title);
+  var cp=document.getElementById('btCopy');if(cp)cp.addEventListener('click',function(){if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){cp.textContent='✓ 已複製';setTimeout(function(){cp.textContent='🔗 複製連結';},1800);});}});
+})();
+</script>
 
 <footer>
   © 2026 BrainTaiwan · 神經專科衛教平台 · 本站內容供衛教參考，不取代專業醫療建議
