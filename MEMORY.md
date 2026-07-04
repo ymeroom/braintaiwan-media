@@ -11,6 +11,10 @@ not contain session history, credentials, post IDs, schedules, or commit IDs.
   `enhance-article-seo.js`. Therefore: after running any `build-*-media.js`,
   ALWAYS run `node enhance-article-seo.js` (and `node seo-build.js` for the
   sitemap) or the rebuilt posts silently lose their SEO schema.
+- The same applies to the injected boxes: after any `build-*-media.js`, run
+  `node inject-subscribe-box.js` and `node inject-clinic-box.js`, or rebuilt
+  posts silently lose the subscribe box and the 施懿恩醫師門診資訊 box
+  (funnel to https://braintaiwan.com/clinic.html).
 - A rebuild also overwrites every other output of that build script, not just
   the article you changed — commit only the intended files, and discard churn
   in siblings (e.g. the soy/milk set share `build-milk-media.js`).
