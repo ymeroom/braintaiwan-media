@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.03';
+const DATE = '2026.07.04';
 
 const article = {
-  md:  'summer-ac-stroke.md',
-  out: 'summer-ac-stroke.html',
+  md:  'heatwave-brain-aging.md',
+  out: 'heatwave-brain-aging.html',
   title: '',
-  desc: '三十七度的戶外走進二十四度的室內，血管在幾秒內收縮、血壓飆升。台灣急診熱傷害人次已達去年同期一點六倍，但被低估的夏季中風風險，藏在那個每天重複幾十次的日常動作裡。',
-  tag: '腦中風 · 夏季健康 · 時事',
+  desc: '台灣追蹤兩萬名民眾十五年的大型研究發現，每次熱浪暴露讓生物年齡提前八到十一天、加速程度堪比吸菸。這筆帳算進大腦，神經科醫師最想說的是：表觀遺傳時鐘在悄悄走，而大多數人根本感覺不到。',
+  tag: '腦老化 · 表觀遺傳 · 夏季健康',
 };
 
 const related = [
-  { out: 'summer-ac-stroke.html',       nav: '本篇',    title: '三十七度衝進冷氣房的那一刻，血管正在發生什麼' },
+  { out: 'heatwave-brain-aging.html',   nav: '本篇',    title: '每一次熱浪，你的大腦就悄悄老了幾天' },
+  { out: 'heat-brain-cognition.html',   nav: '認知',    title: '你的大腦在三十六度時就開始打折' },
   { out: 'heatstroke-brain.html',       nav: '中暑',    title: '熱中暑後，有人的大腦再也回不來了' },
-  { out: 'golden-hour.html',            nav: '急救',    title: '中風黃金一小時：到院前你能做什麼' },
-  { out: 'tia-brain-warning.html',      nav: '小中風',  title: '「症狀好了，應該沒事吧」——小中風最要命的一句話' },
+  { out: 'heat-sleep-brain.html',       nav: '睡眠',    title: '熱到睡不著的夏夜，大腦正在欠一筆沒人算過的帳' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">夏季中風防護 · 相關閱讀</div>
+    <div class="sb-h">熱浪與大腦老化 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.03 夏日冷氣溫差 × 血壓飆升 × 夏季腦中風風險');
+console.log('完成：每日晨報 2026.07.04 熱浪加速大腦老化 × 表觀遺傳時鐘 × 台灣兩萬人研究');
