@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.04';
+const DATE = '2026.07.05';
 
 const article = {
-  md:  'heatwave-brain-aging.md',
-  out: 'heatwave-brain-aging.html',
+  md:  'bap-oil-brain.md',
+  out: 'bap-oil-brain.html',
   title: '',
-  desc: '台灣追蹤兩萬名民眾十五年的大型研究發現，每次熱浪暴露讓生物年齡提前八到十一天、加速程度堪比吸菸。這筆帳算進大腦，神經科醫師最想說的是：表觀遺傳時鐘在悄悄走，而大多數人根本感覺不到。',
-  tag: '腦老化 · 表觀遺傳 · 夏季健康',
+  desc: '中聯油脂大豆沙拉油苯駢芘超標四倍，1,300公噸問題油品流向全台224家業者。大家在問「我吃到了沒」，但神經科醫師想先說清楚：這個脂溶性化合物能穿越血腦屏障，動物實驗已確認它損傷海馬迴記憶迴路、讓多巴胺神經元受損。一次暴露不必恐慌，但這個事件打開了一扇更大的窗口。',
+  tag: '食安 · 神經毒理 · 時事',
 };
 
 const related = [
-  { out: 'heatwave-brain-aging.html',   nav: '本篇',    title: '每一次熱浪，你的大腦就悄悄老了幾天' },
-  { out: 'heat-brain-cognition.html',   nav: '認知',    title: '你的大腦在三十六度時就開始打折' },
-  { out: 'heatstroke-brain.html',       nav: '中暑',    title: '熱中暑後，有人的大腦再也回不來了' },
-  { out: 'heat-sleep-brain.html',       nav: '睡眠',    title: '熱到睡不著的夏夜，大腦正在欠一筆沒人算過的帳' },
+  { out: 'bap-oil-brain.html',       nav: '本篇',    title: '全台追查那批油，神經科醫師在算另一筆帳' },
+  { out: 'ecig-teen-brain.html',     nav: '神經毒理', title: '行政院剛拍板電子煙持有入罰，但神經科醫師最在乎的不是10萬元——是15歲的前額葉' },
+  { out: 'fructose-brain-vessels.html', nav: '飲食與腦', title: '三十八歲、血壓正常、不喝酒——她腦部MRI上那些白點是怎麼來的' },
+  { out: 'heatwave-brain-aging.html', nav: '環境暴露', title: '每一次熱浪，你的大腦就悄悄老了幾天' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">熱浪與大腦老化 · 相關閱讀</div>
+    <div class="sb-h">飲食毒物與大腦 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.04 熱浪加速大腦老化 × 表觀遺傳時鐘 × 台灣兩萬人研究');
+console.log('完成：每日晨報 2026.07.05 苯駢芘食安事件 × 神經毒理 × 血腦屏障');
