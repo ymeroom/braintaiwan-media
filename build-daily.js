@@ -12,7 +12,7 @@ const article = {
   md:  'bap-oil-brain.md',
   out: 'bap-oil-brain.html',
   title: '',
-  desc: '中聯油脂大豆沙拉油苯駢芘超標四倍，1,300公噸問題油品流向全台224家業者。大家在問「我吃到了沒」，但神經科醫師想先說清楚：這個脂溶性化合物能穿越血腦屏障，動物實驗已確認它損傷海馬迴記憶迴路、讓多巴胺神經元受損。一次暴露不必恐慌，但這個事件打開了一扇更大的窗口。',
+  desc: '中聯油脂大豆沙拉油驗出苯駢芘每公斤8.1微克，約1,300公噸流向下游。動物研究確實出現神經毒性警訊，但不能直接推論短期飲食暴露會傷害人類多巴胺神經元或增加帕金森氏症風險。',
   tag: '食安 · 神經毒理 · 時事',
 };
 
@@ -97,7 +97,7 @@ function renderBlocks(lines){
 
 function parse(src){
   let title = '';
-  const fm = src.match(/^---\n([\s\S]*?)\n---\n/);
+  const fm = src.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n/);
   if (fm){
     const t = fm[1].match(/title:\s*"?(.*?)"?\s*$/m);
     if (t) title = t[1];
