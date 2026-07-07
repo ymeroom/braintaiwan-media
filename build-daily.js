@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.06';
+const DATE = '2026.07.07';
 
 const article = {
-  md:  'lecanemab-amyloid-taiwan.md',
-  out: 'lecanemab-amyloid-taiwan.html',
+  md:  'sleep-apnea-brain-2026.md',
+  out: 'sleep-apnea-brain-2026.html',
   title: '',
-  desc: '成大醫院6月完成台灣首例樂意保滿周年治療，71位患者中4人類澱粉蛋白幾乎清光並停藥。但清掉斑塊不等於恢復神經元：阿茲海默症的治療窗口、ARIA風險與健保門檻，神經科醫師一次說清楚。',
-  tag: '失智症 · 新藥治療 · 時事',
+  desc: '台灣25%成年人有睡眠呼吸中止症症狀，九成從未被診斷。間歇低血氧傷害海馬迴、破壞大腦類淋巴清除系統，兒童患者的代價從課業落後一路延伸到校園霸凌——神經科醫師說清楚大腦在每個夜晚付出的代價。',
+  tag: '睡眠 · 認知神經 · 時事',
 };
 
 const related = [
-  { out: 'lecanemab-amyloid-taiwan.html', nav: '本篇',    title: '清掉斑塊的那一刻，神經元還在嗎' },
-  { out: 'dementia-blood-test.html',      nav: '生物標記', title: '「抽血驗失智症」可信嗎？三分鐘看懂廣告沒說的事' },
-  { out: 'dementia-early-signs.html',     nav: '早期失智', title: '失智衛教（四）：早期警訊與及早就醫——十大警訊、評估工具與該掛哪一科' },
-  { out: 'dementia-myths.html',           nav: '失智迷思', title: '失智迷思（一）：「能對答、能寫字就不是失智」？這是台灣最普遍的誤會' },
+  { out: 'sleep-apnea-brain-2026.html', nav: '本篇',    title: '四個人裡有一個，今晚睡覺時呼吸會停幾百次' },
+  { out: 'sleep-young-stroke.html',     nav: '睡眠中風', title: '追劇三年、每晚睡四小時，那個下午右手突然舉不起來' },
+  { out: 'insomnia-new-drugs.html',     nav: '失眠治療', title: '失眠衛教：三種新藥的機轉與選擇' },
+  { out: 'dementia-early-signs.html',   nav: '失智早期', title: '失智衛教（四）：早期警訊與及早就醫' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">阿茲海默症新治療 · 相關閱讀</div>
+    <div class="sb-h">睡眠與大腦健康 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.06 阿茲海默症新藥樂意保 × 類澱粉蛋白清除 × 治療窗口');
+console.log('完成：每日晨報 2026.07.07 睡眠呼吸中止症 × 腦部低血氧 × 兒童霸凌風險');
