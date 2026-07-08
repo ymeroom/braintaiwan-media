@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.07';
+const DATE = '2026.07.08';
 
 const article = {
-  md:  'sleep-apnea-brain-2026.md',
-  out: 'sleep-apnea-brain-2026.html',
+  md:  'lacunar-stroke-svd-2026.md',
+  out: 'lacunar-stroke-svd-2026.html',
   title: '',
-  desc: '台灣25%成年人有睡眠呼吸中止症症狀，九成從未被診斷。間歇低血氧傷害海馬迴、破壞大腦類淋巴清除系統，兒童患者的代價從課業落後一路延伸到校園霸凌——神經科醫師說清楚大腦在每個夜晚付出的代價。',
-  tag: '睡眠 · 認知神經 · 時事',
+  desc: '腔隙性腦梗塞佔缺血性中風四分之一，傳統認為是小動脈脂肪變性所致，但 2026 年《循環》期刊研究指出主因可能是顱內動脈擴張症與腦小血管病變——這解釋了為何標準抗血小板治療的再發率始終令人失望。',
+  tag: '腦中風 · 腦小血管病變 · 時事',
 };
 
 const related = [
-  { out: 'sleep-apnea-brain-2026.html', nav: '本篇',    title: '四個人裡有一個，今晚睡覺時呼吸會停幾百次' },
-  { out: 'sleep-young-stroke.html',     nav: '睡眠中風', title: '追劇三年、每晚睡四小時，那個下午右手突然舉不起來' },
-  { out: 'insomnia-new-drugs.html',     nav: '失眠治療', title: '失眠衛教：三種新藥的機轉與選擇' },
-  { out: 'dementia-early-signs.html',   nav: '失智早期', title: '失智衛教（四）：早期警訊與及早就醫' },
+  { out: 'lacunar-stroke-svd-2026.html', nav: '本篇',    title: '最常見的那種腦中風，病因可能找錯了幾十年' },
+  { out: 'tia-brain-warning.html',       nav: '短暫中風', title: '大腦在發出最後一次警告——TIA 是什麼、為什麼要搶時間' },
+  { out: '2026-guideline.html',          nav: '中風指引', title: '2026 中風治療新指引：你需要知道的五件事' },
+  { out: 'golden-hour.html',             nav: '急救黃金', title: '中風黃金一小時：到院前你能做什麼' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">睡眠與大腦健康 · 相關閱讀</div>
+    <div class="sb-h">腦中風與腦血管病變 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.07 睡眠呼吸中止症 × 腦部低血氧 × 兒童霸凌風險');
+console.log('完成：每日晨報 2026.07.08 腔隙性中風 × 顱內動脈擴張症 × 腦小血管病變 × 治療靶心再定位');
