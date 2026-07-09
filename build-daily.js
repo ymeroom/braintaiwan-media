@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.08';
+const DATE = '2026.07.09';
 
 const article = {
-  md:  'lacunar-stroke-svd-2026.md',
-  out: 'lacunar-stroke-svd-2026.html',
+  md:  'heat-injury-dementia-risk-2026.md',
+  out: 'heat-injury-dementia-risk-2026.html',
   title: '',
-  desc: '腔隙性腦梗塞佔缺血性中風四分之一，傳統認為是小動脈脂肪變性所致，但 2026 年《循環》期刊研究指出主因可能是顱內動脈擴張症與腦小血管病變——這解釋了為何標準抗血小板治療的再發率始終令人失望。',
-  tag: '腦中風 · 腦小血管病變 · 時事',
+  desc: '台灣六月剛完成史上第一次四十度熱浪全國演習；成大七萬人健保研究顯示，有熱傷害病史者未來失智風險增加二十四%。中暑不只是一場急症——那次補水回家的急診，可能埋下二十年後的神經科帳單。',
+  tag: '熱傷害 · 失智症 · 時事',
 };
 
 const related = [
-  { out: 'lacunar-stroke-svd-2026.html', nav: '本篇',    title: '最常見的那種腦中風，病因可能找錯了幾十年' },
-  { out: 'tia-brain-warning.html',       nav: '短暫中風', title: '大腦在發出最後一次警告——TIA 是什麼、為什麼要搶時間' },
-  { out: '2026-guideline.html',          nav: '中風指引', title: '2026 中風治療新指引：你需要知道的五件事' },
-  { out: 'golden-hour.html',             nav: '急救黃金', title: '中風黃金一小時：到院前你能做什麼' },
+  { out: 'heat-injury-dementia-risk-2026.html', nav: '本篇',    title: '那一次中暑，可能是失智的前二十年——台灣七萬人研究' },
+  { out: 'heatstroke-brain.html',               nav: '熱中暑',  title: '中暑那一刻大腦在發生什麼' },
+  { out: 'heatwave-brain-aging.html',           nav: '腦老化',  title: '每一次熱浪，你的大腦就悄悄老了幾天' },
+  { out: 'dementia-blood-test.html',            nav: '失智預測', title: '血液裡的阿茲海默訊號' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">腦中風與腦血管病變 · 相關閱讀</div>
+    <div class="sb-h">熱傷害與神經健康 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.08 腔隙性中風 × 顱內動脈擴張症 × 腦小血管病變 × 治療靶心再定位');
+console.log('完成：每日晨報 2026.07.09 熱傷害 × 失智症風險 × 台灣首次熱浪演習 × 室內中暑 × 七萬人研究');
