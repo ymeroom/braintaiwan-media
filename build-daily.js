@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.09';
+const DATE = '2026.07.10';
 
 const article = {
-  md:  'heat-injury-dementia-risk-2026.md',
-  out: 'heat-injury-dementia-risk-2026.html',
+  md:  'ev-d68-afm-paralysis-2026.md',
+  out: 'ev-d68-afm-paralysis-2026.html',
   title: '',
-  desc: '台灣六月剛完成史上第一次四十度熱浪全國演習；成大七萬人健保研究顯示，有熱傷害病史者未來失智風險增加二十四%。中暑不只是一場急症——那次補水回家的急診，可能埋下二十年後的神經科帳單。',
-  tag: '熱傷害 · 失智症 · 時事',
+  desc: '七月七日疾管署公布今年第六例腸病毒重症：不到一歲男嬰感染D68型進加護病房。D68沒有手足口病的疹子，看起來像感冒——但它攻擊脊髓前角運動神經元，讓孩子手腳突然動不了。2025年研究指出：打壞脊髓的，是自己的免疫細胞。',
+  tag: '腸病毒 · 脊髓炎 · 時事',
 };
 
 const related = [
-  { out: 'heat-injury-dementia-risk-2026.html', nav: '本篇',    title: '那一次中暑，可能是失智的前二十年——台灣七萬人研究' },
-  { out: 'heatstroke-brain.html',               nav: '熱中暑',  title: '中暑那一刻大腦在發生什麼' },
-  { out: 'heatwave-brain-aging.html',           nav: '腦老化',  title: '每一次熱浪，你的大腦就悄悄老了幾天' },
-  { out: 'dementia-blood-test.html',            nav: '失智預測', title: '血液裡的阿茲海默訊號' },
+  { out: 'ev-d68-afm-paralysis-2026.html', nav: '本篇',    title: '手腳突然軟掉，才發現不只是感冒——腸病毒D68與急性脊髓炎' },
+  { out: 'je-brain-2026.html',             nav: '腦炎',    title: '日本腦炎疫情：蚊子帶來的腦炎' },
+  { out: 'tia-brain-warning.html',         nav: '腦血管',  title: '小中風：大腦發出的最後警告' },
+  { out: 'heatstroke-brain.html',          nav: '神經急症', title: '中暑那一刻大腦在發生什麼' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">熱傷害與神經健康 · 相關閱讀</div>
+    <div class="sb-h">腸病毒 · 神經急症 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.09 熱傷害 × 失智症風險 × 台灣首次熱浪演習 × 室內中暑 × 七萬人研究');
+console.log('完成：每日晨報 2026.07.10 腸病毒D68 × 急性脊髓炎 × 手腳無力 × 免疫病理 × 疾管署重症公告');
