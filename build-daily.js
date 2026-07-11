@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.10';
+const DATE = '2026.07.11';
 
 const article = {
-  md:  'ev-d68-afm-paralysis-2026.md',
-  out: 'ev-d68-afm-paralysis-2026.html',
+  md:  'karyoptosis-alzheimer-brain-2026.md',
+  out: 'karyoptosis-alzheimer-brain-2026.html',
   title: '',
-  desc: '七月七日疾管署公布今年第六例腸病毒重症：不到一歲男嬰感染D68型進加護病房。D68沒有手足口病的疹子，看起來像感冒——但它攻擊脊髓前角運動神經元，讓孩子手腳突然動不了。2025年研究指出：打壞脊髓的，是自己的免疫細胞。',
-  tag: '腸病毒 · 脊髓炎 · 時事',
+  desc: '六月下旬《自然通訊》揭示一種此前沒有名字的神經元死亡方式——核碎解（karyoptosis）：毒性蛋白質堆滿後細胞核萎縮碎裂，阿茲海默患者額葉有三十五％的神經元走這條路。這是繼清除類澱粉斑塊之後，另一個可能的治療切入點。',
+  tag: '失智症 · 神經科學 · 時事',
 };
 
 const related = [
-  { out: 'ev-d68-afm-paralysis-2026.html', nav: '本篇',    title: '手腳突然軟掉，才發現不只是感冒——腸病毒D68與急性脊髓炎' },
-  { out: 'je-brain-2026.html',             nav: '腦炎',    title: '日本腦炎疫情：蚊子帶來的腦炎' },
-  { out: 'tia-brain-warning.html',         nav: '腦血管',  title: '小中風：大腦發出的最後警告' },
-  { out: 'heatstroke-brain.html',          nav: '神經急症', title: '中暑那一刻大腦在發生什麼' },
+  { out: 'karyoptosis-alzheimer-brain-2026.html', nav: '本篇',    title: '蛋白質垃圾堆滿了，細胞核就碎掉了——阿茲海默神經元之死的新答案' },
+  { out: 'lecanemab-amyloid-taiwan.html',         nav: '阿茲海默', title: '清掉斑塊的那一刻，神經元還在嗎' },
+  { out: 'shingles-vaccine-brain.html',           nav: '失智預防', title: '打帶狀皰疹疫苗，失智風險也降了' },
+  { out: 'dementia-blood-test.html',              nav: '失智診斷', title: '失智症現在可以驗血診斷了嗎' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">腸病毒 · 神經急症 · 相關閱讀</div>
+    <div class="sb-h">失智症 · 神經科學 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.10 腸病毒D68 × 急性脊髓炎 × 手腳無力 × 免疫病理 × 疾管署重症公告');
+console.log('完成：每日晨報 2026.07.11 核碎解 × 阿茲海默神經元死亡 × karyoptosis × Nature Communications × 失智症新機制');
