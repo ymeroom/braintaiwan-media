@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.11';
+const DATE = '2026.07.12';
 
 const article = {
-  md:  'karyoptosis-alzheimer-brain-2026.md',
-  out: 'karyoptosis-alzheimer-brain-2026.html',
+  md:  'trace5-basilar-stroke-tenecteplase.md',
+  out: 'trace5-basilar-stroke-tenecteplase.html',
   title: '',
-  desc: '六月下旬《自然通訊》揭示一種此前沒有名字的神經元死亡方式——核碎解（karyoptosis）：毒性蛋白質堆滿後細胞核萎縮碎裂，阿茲海默患者額葉有三十五％的神經元走這條路。這是繼清除類澱粉斑塊之後，另一個可能的治療切入點。',
-  tag: '失智症 · 神經科學 · 時事',
+  desc: '基底動脈阻塞是最致命的腦中風亞型，未治療死亡率高達七至八成，且症狀不符 FAST 口訣而常被延誤。《刺胳針》TRACE-5 試驗顯示，發病二十四小時內給予 tenecteplase，仍可讓九十天良好功能恢復率從二十九%提升至三十八%。',
+  tag: '腦中風 · 急性治療 · 時事',
 };
 
 const related = [
-  { out: 'karyoptosis-alzheimer-brain-2026.html', nav: '本篇',    title: '蛋白質垃圾堆滿了，細胞核就碎掉了——阿茲海默神經元之死的新答案' },
-  { out: 'lecanemab-amyloid-taiwan.html',         nav: '阿茲海默', title: '清掉斑塊的那一刻，神經元還在嗎' },
-  { out: 'shingles-vaccine-brain.html',           nav: '失智預防', title: '打帶狀皰疹疫苗，失智風險也降了' },
-  { out: 'dementia-blood-test.html',              nav: '失智診斷', title: '失智症現在可以驗血診斷了嗎' },
+  { out: 'trace5-basilar-stroke-tenecteplase.html', nav: '本篇',    title: '後循環中風的二十四小時——TRACE-5 試驗打開了最危險腦中風的新治療窗口' },
+  { out: 'golden-hour.html',                        nav: '黃金時間', title: '中風黃金時間怎麼算' },
+  { out: 'tia-brain-warning.html',                  nav: '警示徵兆', title: '短暫性腦缺血發作：中風前的最後警告' },
+  { out: 'lacunar-stroke-svd-2026.html',            nav: '腔隙中風', title: '最常見的那種腦中風，病因可能找錯了幾十年' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">失智症 · 神經科學 · 相關閱讀</div>
+    <div class="sb-h">腦中風 · 急性治療 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.11 核碎解 × 阿茲海默神經元死亡 × karyoptosis × Nature Communications × 失智症新機制');
+console.log('完成：每日晨報 2026.07.12 後循環中風 × TRACE-5 × tenecteplase × 基底動脈阻塞 × Lancet 2026');
