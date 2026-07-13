@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.12';
+const DATE = '2026.07.13';
 
 const article = {
-  md:  'trace5-basilar-stroke-tenecteplase.md',
-  out: 'trace5-basilar-stroke-tenecteplase.html',
+  md:  'brainstem-stroke-vertigo-2026.md',
+  out: 'brainstem-stroke-vertigo-2026.html',
   title: '',
-  desc: '基底動脈阻塞是最致命的腦中風亞型，未治療死亡率高達七至八成，且症狀不符 FAST 口訣而常被延誤。《刺胳針》TRACE-5 試驗顯示，發病二十四小時內給予 tenecteplase，仍可讓九十天良好功能恢復率從二十九%提升至三十八%。',
-  tag: '腦中風 · 急性治療 · 時事',
+  desc: '頭暈天旋地轉、眼前出現兩個影、吞嚥開始嗆咳——這三個症狀都不像中風，卻可能是後循環腦幹中風。為什麼 FAST 口訣找不到它，HINTS 床邊評估又如何填補這個空白。',
+  tag: '後循環中風 · 眩暈 · 時事',
 };
 
 const related = [
-  { out: 'trace5-basilar-stroke-tenecteplase.html', nav: '本篇',    title: '後循環中風的二十四小時——TRACE-5 試驗打開了最危險腦中風的新治療窗口' },
-  { out: 'golden-hour.html',                        nav: '黃金時間', title: '中風黃金時間怎麼算' },
-  { out: 'tia-brain-warning.html',                  nav: '警示徵兆', title: '短暫性腦缺血發作：中風前的最後警告' },
-  { out: 'lacunar-stroke-svd-2026.html',            nav: '腔隙中風', title: '最常見的那種腦中風，病因可能找錯了幾十年' },
+  { out: 'brainstem-stroke-vertigo-2026.html',       nav: '本篇',    title: '暈到站不穩、眼前出現兩個影——後循環中風的三個警訊都不像中風' },
+  { out: 'trace5-basilar-stroke-tenecteplase.html',  nav: '後循環',  title: '後循環中風的二十四小時——TRACE-5 試驗打開了最危險腦中風的新治療窗口' },
+  { out: 'tia-brain-warning.html',                   nav: '警示徵兆', title: '短暫性腦缺血發作：中風前的最後警告' },
+  { out: 'lacunar-stroke-svd-2026.html',             nav: '腔隙中風', title: '最常見的那種腦中風，病因可能找錯了幾十年' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">腦中風 · 急性治療 · 相關閱讀</div>
+    <div class="sb-h">腦中風 · 後循環 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.12 後循環中風 × TRACE-5 × tenecteplase × 基底動脈阻塞 × Lancet 2026');
+console.log('完成：每日晨報 2026.07.13 後循環中風 × 腦幹中風 × 眩暈 × HINTS × FAST 口訣盲點');
