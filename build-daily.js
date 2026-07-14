@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.13';
+const DATE = '2026.07.14';
 
 const article = {
-  md:  'brainstem-stroke-vertigo-2026.md',
-  out: 'brainstem-stroke-vertigo-2026.html',
+  md:  'soccer-brain-aaic-2026.md',
+  out: 'soccer-brain-aaic-2026.html',
   title: '',
-  desc: '頭暈天旋地轉、眼前出現兩個影、吞嚥開始嗆咳——這三個症狀都不像中風，卻可能是後循環腦幹中風。為什麼 FAST 口訣找不到它，HINTS 床邊評估又如何填補這個空白。',
-  tag: '後循環中風 · 眩暈 · 時事',
+  desc: 'AAIC 2026 倫敦會議發布首項大規模退役精英足球員腦部影像研究：124 名前職業球員的前額葉、扣帶迴與視丘灰質體積，在中年已比對照組明顯減少。31% 有臨床憂鬱症狀（vs 對照組 9%），42% 焦慮（vs 25%）。從頭球到 tau 蛋白，神經科醫師的觀察。',
+  tag: '運動與大腦 · 神經退化 · 時事',
 };
 
 const related = [
-  { out: 'brainstem-stroke-vertigo-2026.html',       nav: '本篇',    title: '暈到站不穩、眼前出現兩個影——後循環中風的三個警訊都不像中風' },
-  { out: 'trace5-basilar-stroke-tenecteplase.html',  nav: '後循環',  title: '後循環中風的二十四小時——TRACE-5 試驗打開了最危險腦中風的新治療窗口' },
-  { out: 'tia-brain-warning.html',                   nav: '警示徵兆', title: '短暫性腦缺血發作：中風前的最後警告' },
-  { out: 'lacunar-stroke-svd-2026.html',             nav: '腔隙中風', title: '最常見的那種腦中風，病因可能找錯了幾十年' },
+  { out: 'soccer-brain-aaic-2026.html',       nav: '本篇',    title: '踢了一輩子球，大腦默默老了——AAIC 2026 退役精英球員腦部掃描研究' },
+  { out: 'concussion-wc2026.html',            nav: '腦震盪',  title: '2026 世界盃腦神經防護新制：FIFA 為什麼把規則改這麼大？' },
+  { out: 'concussion-what-is.html',           nav: '基礎知識', title: '腦震盪是什麼？神經科醫師說你需要知道的事' },
+  { out: 'karyoptosis-alzheimer-brain-2026.html', nav: '失智研究', title: '蛋白質垃圾堆滿了，細胞核就碎掉了——阿茲海默神經元之死的新答案' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">腦中風 · 後循環 · 相關閱讀</div>
+    <div class="sb-h">運動與大腦 · 神經退化 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.13 後循環中風 × 腦幹中風 × 眩暈 × HINTS × FAST 口訣盲點');
+console.log('完成：每日晨報 2026.07.14 足球大腦 × AAIC 2026 × 退役球員腦部掃描 × 頭球 × tau × p-tau217');
