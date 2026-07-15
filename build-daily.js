@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.14';
+const DATE = '2026.07.15';
 
 const article = {
-  md:  'soccer-brain-aaic-2026.md',
-  out: 'soccer-brain-aaic-2026.html',
+  md:  'covid-brain-dopamine-2026.md',
+  out: 'covid-brain-dopamine-2026.html',
   title: '',
-  desc: 'AAIC 2026 倫敦會議發布首項大規模退役精英足球員腦部影像研究：124 名前職業球員的前額葉、扣帶迴與視丘灰質體積，在中年已比對照組明顯減少。31% 有臨床憂鬱症狀（vs 對照組 9%），42% 焦慮（vs 25%）。從頭球到 tau 蛋白，神經科醫師的觀察。',
-  tag: '運動與大腦 · 神經退化 · 時事',
+  desc: '台灣新冠疫情連五週升溫，本週可能突破流行閾值；七月十日刊出的 eBioMedicine 研究首次用 PET 掃描直接看到：長新冠患者腦中的多巴胺神經末梢標記比健康對照組低了 16 至 20%，解釋了動力消退、記憶模糊、行動變慢的生物根源。疫情浪頭之下，神經科醫師在意的不只是急性感染——而是三個月後的大腦。',
+  tag: '長新冠 · 神經後遺症 · 時事',
 };
 
 const related = [
-  { out: 'soccer-brain-aaic-2026.html',       nav: '本篇',    title: '踢了一輩子球，大腦默默老了——AAIC 2026 退役精英球員腦部掃描研究' },
-  { out: 'concussion-wc2026.html',            nav: '腦震盪',  title: '2026 世界盃腦神經防護新制：FIFA 為什麼把規則改這麼大？' },
-  { out: 'concussion-what-is.html',           nav: '基礎知識', title: '腦震盪是什麼？神經科醫師說你需要知道的事' },
-  { out: 'karyoptosis-alzheimer-brain-2026.html', nav: '失智研究', title: '蛋白質垃圾堆滿了，細胞核就碎掉了——阿茲海默神經元之死的新答案' },
+  { out: 'covid-brain-dopamine-2026.html',  nav: '本篇',    title: '新冠疫情再升溫，長新冠正在悄悄動你的多巴胺——七月最新研究' },
+  { out: 'je-brain-2026.html',              nav: '病毒與腦', title: '日本腦炎在台灣：被蚊子叮一口，大腦可以出什麼事？' },
+  { out: 'stroke-rehab-ward-2026.html',     nav: '神經照護', title: '中風後那扇窗——七月起健保復健病房上路' },
+  { out: 'heatstroke-brain.html',           nav: '夏季急症', title: '熱到中暑，大腦第一個受害——中暑的神經科醫師視角' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">運動與大腦 · 神經退化 · 相關閱讀</div>
+    <div class="sb-h">長新冠 · 神經後遺症 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.14 足球大腦 × AAIC 2026 × 退役球員腦部掃描 × 頭球 × tau × p-tau217');
+console.log('完成：每日晨報 2026.07.15 長新冠 × 多巴胺 × PET掃描 × VMAT2 × eBioMedicine × 台灣疫情升溫');
