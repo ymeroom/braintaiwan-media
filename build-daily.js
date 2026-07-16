@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.15';
+const DATE = '2026.07.16';
 
 const article = {
-  md:  'covid-brain-dopamine-2026.md',
-  out: 'covid-brain-dopamine-2026.html',
+  md:  'typhoon-heatwave-stroke-2026.md',
+  out: 'typhoon-heatwave-stroke-2026.html',
   title: '',
-  desc: '台灣新冠疫情連五週升溫，本週可能突破流行閾值；七月十日刊出的 eBioMedicine 研究首次用 PET 掃描直接看到：長新冠患者腦中的多巴胺神經末梢標記比健康對照組低了 16 至 20%，解釋了動力消退、記憶模糊、行動變慢的生物根源。疫情浪頭之下，神經科醫師在意的不只是急性感染——而是三個月後的大腦。',
-  tag: '長新冠 · 神經後遺症 · 時事',
+  desc: '颱風巴威過後全台飆35度，林口長庚急重症主任直言院內大血管中風個案翻倍；長庚大學二十年健保數據登上《刺胳針》，證實氣溫超過35度與氣溫驟變都是腦中風的強力預測因子。脫水、血液濃稠、溫差——夏天的腦血管正在面對一個並不友善的環境。',
+  tag: '夏季急症 · 腦中風 · 時事',
 };
 
 const related = [
-  { out: 'covid-brain-dopamine-2026.html',  nav: '本篇',    title: '新冠疫情再升溫，長新冠正在悄悄動你的多巴胺——七月最新研究' },
-  { out: 'je-brain-2026.html',              nav: '病毒與腦', title: '日本腦炎在台灣：被蚊子叮一口，大腦可以出什麼事？' },
-  { out: 'stroke-rehab-ward-2026.html',     nav: '神經照護', title: '中風後那扇窗——七月起健保復健病房上路' },
-  { out: 'heatstroke-brain.html',           nav: '夏季急症', title: '熱到中暑，大腦第一個受害——中暑的神經科醫師視角' },
+  { out: 'typhoon-heatwave-stroke-2026.html', nav: '本篇',    title: '颱風巴威一過、氣溫炸裂，急診大血管中風為什麼翻倍了' },
+  { out: 'summer-ac-stroke.html',             nav: '溫差中風', title: '開冷氣開到中風？夏天的溫差殺手' },
+  { out: 'heatstroke-brain.html',             nav: '中暑神經', title: '熱到中暑，大腦第一個受害——中暑的神經科醫師視角' },
+  { out: 'heat-injury-dementia-risk-2026.html', nav: '熱傷害', title: '那一次中暑，可能是失智的前二十年——台灣七萬人研究' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -148,6 +148,7 @@ function seriesBox(items, activeIdx){
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
     <div class="sb-h">長新冠 · 神經後遺症 · 相關閱讀</div>
+    <div class="sb-h">夏季急症 · 腦中風 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -280,3 +281,4 @@ const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
 console.log('完成：每日晨報 2026.07.15 長新冠 × 多巴胺 × PET掃描 × VMAT2 × eBioMedicine × 台灣疫情升溫');
+console.log('完成：每日晨報 2026.07.16 颱風巴威後高溫 × 大血管中風翻倍 × 長庚刺胳針研究 × 夏季腦中風機制');
