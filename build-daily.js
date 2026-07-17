@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.16';
+const DATE = '2026.07.17';
 
 const article = {
-  md:  'typhoon-heatwave-stroke-2026.md',
-  out: 'typhoon-heatwave-stroke-2026.html',
+  md:  'heat-epilepsy-seizure-taiwan-2026.md',
+  out: 'heat-epilepsy-seizure-taiwan-2026.html',
   title: '',
-  desc: '颱風巴威過後全台飆35度，林口長庚急重症主任直言院內大血管中風個案翻倍；長庚大學二十年健保數據登上《刺胳針》，證實氣溫超過35度與氣溫驟變都是腦中風的強力預測因子。脫水、血液濃稠、溫差——夏天的腦血管正在面對一個並不友善的環境。',
-  tag: '夏季急症 · 腦中風 · 時事',
+  desc: '台灣中國醫藥大學分析全國健保急診資料庫十八萬七千筆癲癇紀錄，發現溼球黑球溫度（WBGT）愈高，當天癲癇急診機率顯著上升（OR=1.083）。高溫如何降低神經元放電閾值，「收割效應」又揭示了什麼——今年夏天的連日高溫，對台灣十萬名癲癇患者是一個應被認真對待的誘發因子。',
+  tag: '夏季急症 · 癲癇 · 神經科學',
 };
 
 const related = [
-  { out: 'typhoon-heatwave-stroke-2026.html', nav: '本篇',    title: '颱風巴威一過、氣溫炸裂，急診大血管中風為什麼翻倍了' },
-  { out: 'summer-ac-stroke.html',             nav: '溫差中風', title: '開冷氣開到中風？夏天的溫差殺手' },
-  { out: 'heatstroke-brain.html',             nav: '中暑神經', title: '熱到中暑，大腦第一個受害——中暑的神經科醫師視角' },
-  { out: 'heat-injury-dementia-risk-2026.html', nav: '熱傷害', title: '那一次中暑，可能是失智的前二十年——台灣七萬人研究' },
+  { out: 'heat-epilepsy-seizure-taiwan-2026.html', nav: '本篇',    title: '熱到可以癲癇——台灣十八萬次急診數據說了什麼' },
+  { out: 'heatstroke-brain.html',                  nav: '中暑神經', title: '熱到中暑，大腦第一個受害——中暑的神經科醫師視角' },
+  { out: 'heat-injury-dementia-risk-2026.html',    nav: '熱傷害',  title: '那一次中暑，可能是失智的前二十年——台灣七萬人研究' },
+  { out: 'heat-brain-cognition.html',              nav: '熱與認知', title: '這個夏天，你的大腦真的可能因為太熱而變笨' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,8 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">長新冠 · 神經後遺症 · 相關閱讀</div>
-    <div class="sb-h">夏季急症 · 腦中風 · 相關閱讀</div>
+    <div class="sb-h">夏季急症 · 神經科學 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -280,5 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.15 長新冠 × 多巴胺 × PET掃描 × VMAT2 × eBioMedicine × 台灣疫情升溫');
-console.log('完成：每日晨報 2026.07.16 颱風巴威後高溫 × 大血管中風翻倍 × 長庚刺胳針研究 × 夏季腦中風機制');
+console.log('完成：每日晨報 2026.07.17 熱應力 × 癲癇急診 × 台灣十八萬筆NHIRD × WBGT × 收割效應');
