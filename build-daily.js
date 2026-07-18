@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.17';
+const DATE = '2026.07.18';
 
 const article = {
-  md:  'heat-epilepsy-seizure-taiwan-2026.md',
-  out: 'heat-epilepsy-seizure-taiwan-2026.html',
+  md:  'gut-brain-alzheimer-taiwan-2026.md',
+  out: 'gut-brain-alzheimer-taiwan-2026.html',
   title: '',
-  desc: '台灣中國醫藥大學分析全國健保急診資料庫十八萬七千筆癲癇紀錄，發現溼球黑球溫度（WBGT）愈高，當天癲癇急診機率顯著上升（OR=1.083）。高溫如何降低神經元放電閾值，「收割效應」又揭示了什麼——今年夏天的連日高溫，對台灣十萬名癲癇患者是一個應被認真對待的誘發因子。',
-  tag: '夏季急症 · 癲癇 · 神經科學',
+  desc: '陽明交通大學分析台灣 439 名長者的腸道菌相、阿茲海默症生物標記與腦部影像，發現 59 種關鍵腸道菌，其中嗜黏蛋白阿克曼菌（Akk 菌）濃度越高的人，大腦 β-類澱粉蛋白沉積越少。台灣首座全年齡腸道微菌資料庫同週發布——腸腦軸研究正在從點狀累積變成系統性的本土證據鏈。',
+  tag: '腸腦軸 · 失智預防 · 時事',
 };
 
 const related = [
-  { out: 'heat-epilepsy-seizure-taiwan-2026.html', nav: '本篇',    title: '熱到可以癲癇——台灣十八萬次急診數據說了什麼' },
-  { out: 'heatstroke-brain.html',                  nav: '中暑神經', title: '熱到中暑，大腦第一個受害——中暑的神經科醫師視角' },
-  { out: 'heat-injury-dementia-risk-2026.html',    nav: '熱傷害',  title: '那一次中暑，可能是失智的前二十年——台灣七萬人研究' },
-  { out: 'heat-brain-cognition.html',              nav: '熱與認知', title: '這個夏天，你的大腦真的可能因為太熱而變笨' },
+  { out: 'gut-brain-alzheimer-taiwan-2026.html', nav: '本篇',    title: '腸道菌在悄悄保護你的大腦——台灣 439 名長者讓腸腦軸走出實驗室' },
+  { out: 'dementia-blood-test.html',             nav: '失智檢測', title: '血液裡找失智症——台灣的 p-tau217 篩檢時代來了嗎？' },
+  { out: 'oral-brain-dementia.html',             nav: '口腔與腦', title: '你沒想到的失智風險：牙齦細菌如何進入大腦' },
+  { out: 'shingles-vaccine-brain.html',          nav: '疫苗護腦', title: '帶狀皰疹疫苗能預防失智？一篇百萬人研究說了什麼' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">夏季急症 · 神經科學 · 相關閱讀</div>
+    <div class="sb-h">腸腦軸 · 失智預防 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.17 熱應力 × 癲癇急診 × 台灣十八萬筆NHIRD × WBGT × 收割效應');
+console.log('完成：每日晨報 2026.07.18 腸腦軸 × 失智預防 × 台灣439人腸道菌相 × Akkermansia × 阿茲海默症生物標記');
