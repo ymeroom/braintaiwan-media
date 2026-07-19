@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.18';
+const DATE = '2026.07.19';
 
 const article = {
-  md:  'gut-brain-alzheimer-taiwan-2026.md',
-  out: 'gut-brain-alzheimer-taiwan-2026.html',
+  md:  'elderly-heat-brain-2026.md',
+  out: 'elderly-heat-brain-2026.html',
   title: '',
-  desc: '陽明交通大學分析台灣 439 名長者的腸道菌相、阿茲海默症生物標記與腦部影像，發現 59 種關鍵腸道菌，其中嗜黏蛋白阿克曼菌（Akk 菌）濃度越高的人，大腦 β-類澱粉蛋白沉積越少。台灣首座全年齡腸道微菌資料庫同週發布——腸腦軸研究正在從點狀累積變成系統性的本土證據鏈。',
-  tag: '腸腦軸 · 失智預防 · 時事',
+  desc: '台灣六月二十九日完成史上第一次全國性熱浪緊急演練，背後數字驚人：2024 年 65 歲以上長者熱傷害通報暴增至 791 件，是十年前的兩倍半。為什麼高溫讓年長的大腦最先失守？從腦血流自動調節退化到血腦屏障滲漏，一篇台灣七萬人追蹤研究揭示的 24% 失智症風險，正在重新定義高溫天氣的神經科學意涵。',
+  tag: '高溫 · 神經老化 · 時事',
 };
 
 const related = [
-  { out: 'gut-brain-alzheimer-taiwan-2026.html', nav: '本篇',    title: '腸道菌在悄悄保護你的大腦——台灣 439 名長者讓腸腦軸走出實驗室' },
-  { out: 'dementia-blood-test.html',             nav: '失智檢測', title: '血液裡找失智症——台灣的 p-tau217 篩檢時代來了嗎？' },
-  { out: 'oral-brain-dementia.html',             nav: '口腔與腦', title: '你沒想到的失智風險：牙齦細菌如何進入大腦' },
-  { out: 'shingles-vaccine-brain.html',          nav: '疫苗護腦', title: '帶狀皰疹疫苗能預防失智？一篇百萬人研究說了什麼' },
+  { out: 'elderly-heat-brain-2026.html',       nav: '本篇',    title: '台灣首次全國熱浪演練背後：高溫為什麼讓年長的大腦最先失守？' },
+  { out: 'heat-injury-dementia-risk-2026.html', nav: '熱傷害', title: '曬過頭，大腦會老得更快嗎？台灣最新研究這樣說' },
+  { out: 'heatstroke-brain.html',               nav: '中暑',   title: '中暑不只是身體過熱——大腦在高溫下發生了什麼？' },
+  { out: 'heat-epilepsy-seizure-taiwan-2026.html', nav: '高溫癲癇', title: '熱到可以癲癇——台灣十八萬次急診數據說了什麼' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">腸腦軸 · 失智預防 · 相關閱讀</div>
+    <div class="sb-h">高溫與大腦 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.18 腸腦軸 × 失智預防 × 台灣439人腸道菌相 × Akkermansia × 阿茲海默症生物標記');
+console.log('完成：每日晨報 2026.07.19 高溫 × 老化大腦 × 台灣首次熱浪演練 × 腦血流自動調節 × 七萬人失智追蹤');
