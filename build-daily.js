@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.19';
+const DATE = '2026.07.20';
 
 const article = {
-  md:  'elderly-heat-brain-2026.md',
-  out: 'elderly-heat-brain-2026.html',
+  md:  'epidural-hematoma-brain-2026.md',
+  out: 'epidural-hematoma-brain-2026.html',
   title: '',
-  desc: '台灣六月二十九日完成史上第一次全國性熱浪緊急演練，背後數字驚人：2024 年 65 歲以上長者熱傷害通報暴增至 791 件，是十年前的兩倍半。為什麼高溫讓年長的大腦最先失守？從腦血流自動調節退化到血腦屏障滲漏，一篇台灣七萬人追蹤研究揭示的 24% 失智症風險，正在重新定義高溫天氣的神經科學意涵。',
-  tag: '高溫 · 神經老化 · 時事',
+  desc: '七月十九日，聯電榮譽副董事長宣明智因腦硬膜外出血緊急開顱手術——比多數人想像的「腦出血」更隱蔽：撞頭後那段「好像沒事」的清明期，是動脈仍在積血的靜止假象。從 Monroe-Kellie 原理到「說話然後死亡」的臨床模式，解析顱內壓、清明期與黃金手術窗口的神經科學邏輯。',
+  tag: '神經急症 · 腦外傷 · 時事',
 };
 
 const related = [
-  { out: 'elderly-heat-brain-2026.html',       nav: '本篇',    title: '台灣首次全國熱浪演練背後：高溫為什麼讓年長的大腦最先失守？' },
-  { out: 'heat-injury-dementia-risk-2026.html', nav: '熱傷害', title: '曬過頭，大腦會老得更快嗎？台灣最新研究這樣說' },
-  { out: 'heatstroke-brain.html',               nav: '中暑',   title: '中暑不只是身體過熱——大腦在高溫下發生了什麼？' },
-  { out: 'heat-epilepsy-seizure-taiwan-2026.html', nav: '高溫癲癇', title: '熱到可以癲癇——台灣十八萬次急診數據說了什麼' },
+  { out: 'epidural-hematoma-brain-2026.html',      nav: '本篇',    title: '清醒過來以為沒事——腦硬膜外出血的「清明期」是神經科最危險的假象' },
+  { out: 'brainstem-stroke-vertigo-2026.html',     nav: '後循環',  title: '暈到站不穩、眼前出現兩個影——後循環中風的三個警訊都不像中風' },
+  { out: 'tia-brain-warning.html',                 nav: 'TIA',    title: '短暫性腦缺血發作：最被低估的中風前兆' },
+  { out: 'summer-cardiac-brain.html',              nav: '急救',    title: '夏至晨運他倒下了——最先死去的其實是大腦' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">高溫與大腦 · 相關閱讀</div>
+    <div class="sb-h">神經急症 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.19 高溫 × 老化大腦 × 台灣首次熱浪演練 × 腦血流自動調節 × 七萬人失智追蹤');
+console.log('完成：每日晨報 2026.07.20 腦硬膜外出血 × 清明期 × Monroe-Kellie × 宣明智案 × 神經外科黃金手術窗口');
