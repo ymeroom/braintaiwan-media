@@ -16,6 +16,14 @@ const articles = [
     tag: '高血壓 · 腦中風預防 · 腦小血管',
     nav: '血壓與腦',
   },
+  {
+    md: 'ldl-brain-target.md',
+    out: 'ldl-brain-target.html',
+    title: '',
+    desc: '總膽固醇正常、LDL 紅字，到底要不要緊？LDL 沒有全民通用的標準值，目標值由風險分層決定——同一個數字在不同人身上，結論可以完全相反。',
+    tag: '膽固醇 · 動脈硬化 · 腦中風預防',
+    nav: '膽固醇與腦',
+  },
 ];
 
 function esc(s) {
