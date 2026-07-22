@@ -24,6 +24,14 @@ const articles = [
     tag: '膽固醇 · 動脈硬化 · 腦中風預防',
     nav: '膽固醇與腦',
   },
+  {
+    md: 'statin-bp-drug-fear.md',
+    out: 'statin-bp-drug-fear.html',
+    title: '',
+    desc: '藥拿了卻沒開始吃，因為怕副作用。statin 的肌肉痠痛有多少來自反安慰劑效應、降壓藥頭暈是不是劑量問題，以及為什麼「開始的方式」本來就可以跟醫師談。',
+    tag: '用藥安全 · 反安慰劑效應 · 慢性病',
+    nav: '怕副作用',
+  },
 ];
 
 function esc(s) {
@@ -175,7 +183,7 @@ function seriesBox(items, activeIdx) {
     `    <a href="${item.out}"${i === activeIdx ? ' class="cur"' : ''}>${esc(item.nav || '相關')}　${esc(item.title)}</a>`
   ).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">營養食品科學 · 相關閱讀</div>
+    <div class="sb-h">腦血管危險因子 · 相關閱讀</div>
 ${links}
   </div>`;
 }
