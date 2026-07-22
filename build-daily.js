@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.05';
+const DATE = '2026.07.22';
 
 const article = {
-  md:  'bap-oil-brain.md',
-  out: 'bap-oil-brain.html',
+  md:  '2026-07-22-anticoagulant-brain-bleed.md',
+  out: '2026-07-22-anticoagulant-brain-bleed.html',
   title: '',
-  desc: '中聯油脂大豆沙拉油驗出苯駢芘每公斤8.1微克，約1,300公噸流向下游。動物研究確實出現神經毒性警訊，但不能直接推論短期飲食暴露會傷害人類多巴胺神經元或增加帕金森氏症風險。',
-  tag: '食安 · 神經毒理 · 時事',
+  desc: '宣明智案後續揭露：他長年裝有近十支心臟支架、服用抗凝血藥。大腦出血時停藥讓腦內血塊擴大，不停藥讓支架面臨血栓風險——這是神經外科與心臟科共同面對的兩難，也是台灣千萬高齡心臟病患家屬都應該了解的臨床現實。',
+  tag: '心腦共病 · 抗凝血 · 時事',
 };
 
 const related = [
-  { out: 'bap-oil-brain.html',       nav: '本篇',    title: '全台追查那批油，神經科醫師在算另一筆帳' },
-  { out: 'ecig-teen-brain.html',     nav: '神經毒理', title: '行政院剛拍板電子煙持有入罰，但神經科醫師最在乎的不是10萬元——是15歲的前額葉' },
-  { out: 'fructose-brain-vessels.html', nav: '飲食與腦', title: '三十八歲、血壓正常、不喝酒——她腦部MRI上那些白點是怎麼來的' },
-  { out: 'heatwave-brain-aging.html', nav: '環境暴露', title: '每一次熱浪，你的大腦就悄悄老了幾天' },
+  { out: '2026-07-22-anticoagulant-brain-bleed.html', nav: '本篇',    title: '心臟裝了十支架、長年服抗凝血藥——大腦出血來了，藥要停嗎？' },
+  { out: 'epidural-hematoma-brain-2026.html',         nav: '上篇',    title: '清醒過來以為沒事——腦硬膜外出血的「清明期」是神經科最危險的假象' },
+  { out: 'tia-brain-warning.html',                    nav: 'TIA',     title: '短暫性腦缺血發作：最被低估的中風前兆' },
+  { out: 'stroke-rehab-ward-2026.html',               nav: '中風復健', title: '台灣中風後復健的缺口與新制度' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">飲食毒物與大腦 · 相關閱讀</div>
+    <div class="sb-h">心腦共病與抗凝血 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.05 苯駢芘食安事件 × 神經毒理 × 血腦屏障');
+console.log('完成：每日晨報 2026.07.22 宣明智案後續 × 心臟支架 × 抗凝血藥 × 腦出血兩難 × NOAC 逆轉劑');
