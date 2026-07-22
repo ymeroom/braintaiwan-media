@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.21';
+const DATE = '2026.07.22';
 
 const article = {
-  md:  '2026-07-21-world-brain-day-2026.md',
-  out: '2026-07-21-world-brain-day-2026.html',
+  md:  '2026-07-22-anticoagulant-brain-bleed.md',
+  out: '2026-07-22-anticoagulant-brain-bleed.html',
   title: '',
-  desc: '全球超過 34 億人受神經疾病影響，全球致殘第一大原因，許多國家每百萬人不足一名神經科醫師——世界腦健康日前夕，WFN 主題「人人可及的大腦健康」藏著一個讓神經科醫師難受的現實。台灣健保覆蓋雖廣，但地理差距、急性後期照護空窗與社區認知不足，是三層仍未解決的「可及性」問題。',
-  tag: '腦健康 · 神經政策 · 時事',
+  desc: '宣明智案後續揭露：他長年裝有近十支心臟支架、服用抗凝血藥。大腦出血時停藥讓腦內血塊擴大，不停藥讓支架面臨血栓風險——這是神經外科與心臟科共同面對的兩難，也是台灣千萬高齡心臟病患家屬都應該了解的臨床現實。',
+  tag: '心腦共病 · 抗凝血 · 時事',
 };
 
 const related = [
-  { out: '2026-07-21-world-brain-day-2026.html',   nav: '本篇',    title: '七月二十二日是世界腦健康日——「人人可及的大腦健康」，為什麼到現在還做不到' },
-  { out: 'stroke-rehab-ward-2026.html',             nav: '中風復健', title: '台灣中風後復健的缺口與新制度' },
-  { out: 'tia-brain-warning.html',                  nav: 'TIA',    title: '短暫性腦缺血發作：最被低估的中風前兆' },
-  { out: 'epidural-hematoma-brain-2026.html',       nav: '腦外傷',  title: '清醒過來以為沒事——腦硬膜外出血的「清明期」是神經科最危險的假象' },
+  { out: '2026-07-22-anticoagulant-brain-bleed.html', nav: '本篇',    title: '心臟裝了十支架、長年服抗凝血藥——大腦出血來了，藥要停嗎？' },
+  { out: 'epidural-hematoma-brain-2026.html',         nav: '上篇',    title: '清醒過來以為沒事——腦硬膜外出血的「清明期」是神經科最危險的假象' },
+  { out: 'tia-brain-warning.html',                    nav: 'TIA',     title: '短暫性腦缺血發作：最被低估的中風前兆' },
+  { out: 'stroke-rehab-ward-2026.html',               nav: '中風復健', title: '台灣中風後復健的缺口與新制度' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">腦健康與神經照護 · 相關閱讀</div>
+    <div class="sb-h">心腦共病與抗凝血 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.21 世界腦健康日 × 人人可及 × WFN × 台灣復健病房試辦 × 照護空窗 × 認知可及性');
+console.log('完成：每日晨報 2026.07.22 宣明智案後續 × 心臟支架 × 抗凝血藥 × 腦出血兩難 × NOAC 逆轉劑');
