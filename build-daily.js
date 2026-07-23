@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.22';
+const DATE = '2026.07.23';
 
 const article = {
-  md:  '2026-07-22-anticoagulant-brain-bleed.md',
-  out: '2026-07-22-anticoagulant-brain-bleed.html',
+  md:  '2026-07-23-dementia-who-guidelines-taiwan.md',
+  out: '2026-07-23-dementia-who-guidelines-taiwan.html',
   title: '',
-  desc: '宣明智案後續揭露：他長年裝有近十支心臟支架、服用抗凝血藥。大腦出血時停藥讓腦內血塊擴大，不停藥讓支架面臨血栓風險——這是神經外科與心臟科共同面對的兩難，也是台灣千萬高齡心臟病患家屬都應該了解的臨床現實。',
-  tag: '心腦共病 · 抗凝血 · 時事',
+  desc: 'WHO 在 7 月 15 日更新失智症預防指南，首次將空氣污染列入風險因子，並指出 45% 失智案例與可改變的風險有關。同週衛福部公布 114 年十大死因，台灣女性失智死亡率升至第八名。對失智人口成長速度比全球快 1.5 倍的台灣，這兩則消息放在一起，說的是同一件事。',
+  tag: '失智預防 · 時事 · 神經退化',
 };
 
 const related = [
-  { out: '2026-07-22-anticoagulant-brain-bleed.html', nav: '本篇',    title: '心臟裝了十支架、長年服抗凝血藥——大腦出血來了，藥要停嗎？' },
-  { out: 'epidural-hematoma-brain-2026.html',         nav: '上篇',    title: '清醒過來以為沒事——腦硬膜外出血的「清明期」是神經科最危險的假象' },
-  { out: 'tia-brain-warning.html',                    nav: 'TIA',     title: '短暫性腦缺血發作：最被低估的中風前兆' },
-  { out: 'stroke-rehab-ward-2026.html',               nav: '中風復健', title: '台灣中風後復健的缺口與新制度' },
+  { out: '2026-07-23-dementia-who-guidelines-taiwan.html', nav: '本篇',   title: '台灣女性失智死亡升至第八名的那一週，WHO 說 45% 本可以預防' },
+  { out: 'gut-brain-alzheimer-taiwan-2026.html',           nav: '腸腦軸', title: '腸道菌在悄悄保護你的大腦——台灣 439 名長者讓腸腦軸走出實驗室' },
+  { out: '2026-07-21-world-brain-day-2026.html',           nav: '腦健康', title: '七月二十二日是世界腦健康日——「人人可及的大腦健康」，為什麼到現在還做不到' },
+  { out: 'stroke-rehab-ward-2026.html',                    nav: '中風復健', title: '台灣中風後復健的缺口與新制度' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">心腦共病與抗凝血 · 相關閱讀</div>
+    <div class="sb-h">失智預防與神經退化 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.22 宣明智案後續 × 心臟支架 × 抗凝血藥 × 腦出血兩難 × NOAC 逆轉劑');
+console.log('完成：每日晨報 2026.07.23 WHO 失智症預防指南更新 × 空氣污染新納入 × 台灣女性失智死亡升至第八名');
