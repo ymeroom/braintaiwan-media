@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.23';
+const DATE = '2026.07.24';
 
 const article = {
-  md:  '2026-07-23-dementia-who-guidelines-taiwan.md',
-  out: '2026-07-23-dementia-who-guidelines-taiwan.html',
+  md:  '2026-07-24-alcohol-brain-aging.md',
+  out: '2026-07-24-alcohol-brain-aging.html',
   title: '',
-  desc: 'WHO 在 7 月 15 日更新失智症預防指南，首次將空氣污染列入風險因子，並指出 45% 失智案例與可改變的風險有關。同週衛福部公布 114 年十大死因，台灣女性失智死亡率升至第八名。對失智人口成長速度比全球快 1.5 倍的台灣，這兩則消息放在一起，說的是同一件事。',
-  tag: '失智預防 · 時事 · 神經退化',
+  desc: '「小酌怡情」是台灣常見的飲酒文化。但 Stanford 2026 年 MRI 研究顯示，即使是一般社交性飲酒者，每月飲酒量越高，大腦血流（灌流）越低；終生飲酒量越高的年長者，大腦皮質越薄。這條線和失智症的影像特徵，指向同一個方向。',
+  tag: '腦健康 · 飲酒 · 失智預防 · 時事',
 };
 
 const related = [
-  { out: '2026-07-23-dementia-who-guidelines-taiwan.html', nav: '本篇',   title: '台灣女性失智死亡升至第八名的那一週，WHO 說 45% 本可以預防' },
-  { out: 'gut-brain-alzheimer-taiwan-2026.html',           nav: '腸腦軸', title: '腸道菌在悄悄保護你的大腦——台灣 439 名長者讓腸腦軸走出實驗室' },
-  { out: '2026-07-21-world-brain-day-2026.html',           nav: '腦健康', title: '七月二十二日是世界腦健康日——「人人可及的大腦健康」，為什麼到現在還做不到' },
-  { out: 'stroke-rehab-ward-2026.html',                    nav: '中風復健', title: '台灣中風後復健的缺口與新制度' },
+  { out: '2026-07-24-alcohol-brain-aging.html',              nav: '本篇',   title: '「小酌怡情」的腦科學代價——Stanford 研究：飲酒量越多，大腦血流越少' },
+  { out: '2026-07-23-dementia-who-guidelines-taiwan.html',   nav: '失智預防', title: '台灣女性失智死亡升至第八名的那一週，WHO 說 45% 本可以預防' },
+  { out: 'shingles-vaccine-brain.html',                      nav: '預防策略', title: '打一針帶狀皰疹疫苗，大腦的保護比你以為的更長' },
+  { out: 'gut-brain-alzheimer-taiwan-2026.html',             nav: '腸腦軸',  title: '腸道菌在悄悄保護你的大腦——台灣 439 名長者讓腸腦軸走出實驗室' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">失智預防與神經退化 · 相關閱讀</div>
+    <div class="sb-h">腦健康與失智預防 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.23 WHO 失智症預防指南更新 × 空氣污染新納入 × 台灣女性失智死亡升至第八名');
+console.log('完成：每日晨報 2026.07.24 Stanford MRI 研究：飲酒量越多大腦血流越少 × 「小酌怡情」的腦科學代價');
