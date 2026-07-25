@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.24';
+const DATE = '2026.07.25';
 
 const article = {
-  md:  '2026-07-24-alcohol-brain-aging.md',
-  out: '2026-07-24-alcohol-brain-aging.html',
+  md:  '2026-07-25-spousal-dementia-taiwan.md',
+  out: '2026-07-25-spousal-dementia-taiwan.html',
   title: '',
-  desc: '「小酌怡情」是台灣常見的飲酒文化。但 Stanford 2026 年 MRI 研究顯示，即使是一般社交性飲酒者，每月飲酒量越高，大腦血流（灌流）越低；終生飲酒量越高的年長者，大腦皮質越薄。這條線和失智症的影像特徵，指向同一個方向。',
-  tag: '腦健康 · 飲酒 · 失智預防 · 時事',
+  desc: '台灣健保資料庫追蹤九十五萬名已婚成人，發現配偶確診失智後，自己被診斷失智的風險升高 69–74%。共同生活環境、照顧壓力與時間超前效應，可能都是背後的推手——但哪條路徑貢獻最大，目前的資料還說不清楚。',
+  tag: '失智照護 · 時事 · 照顧者健康',
 };
 
 const related = [
-  { out: '2026-07-24-alcohol-brain-aging.html',              nav: '本篇',   title: '「小酌怡情」的腦科學代價——Stanford 研究：飲酒量越多，大腦血流越少' },
+  { out: '2026-07-25-spousal-dementia-taiwan.html',          nav: '本篇',   title: '配偶失智，你的風險也升了七成——台灣九十五萬人健保資料說的事' },
+  { out: '2026-07-24-alcohol-brain-aging.html',              nav: '飲酒與腦', title: '「小酌怡情」的腦科學代價——Stanford 研究：飲酒量越多，大腦血流越少' },
   { out: '2026-07-23-dementia-who-guidelines-taiwan.html',   nav: '失智預防', title: '台灣女性失智死亡升至第八名的那一週，WHO 說 45% 本可以預防' },
-  { out: 'shingles-vaccine-brain.html',                      nav: '預防策略', title: '打一針帶狀皰疹疫苗，大腦的保護比你以為的更長' },
   { out: 'gut-brain-alzheimer-taiwan-2026.html',             nav: '腸腦軸',  title: '腸道菌在悄悄保護你的大腦——台灣 439 名長者讓腸腦軸走出實驗室' },
 ];
 
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">腦健康與失智預防 · 相關閱讀</div>
+    <div class="sb-h">失智照護與腦健康 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.24 Stanford MRI 研究：飲酒量越多大腦血流越少 × 「小酌怡情」的腦科學代價');
+console.log('完成：每日晨報 2026.07.25 配偶失智風險 × 台灣九十五萬人健保資料 × JAMA Network Open');
