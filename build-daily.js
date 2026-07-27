@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.26';
+const DATE = '2026.07.27';
 
 const article = {
-  md:  '2026-07-26-glp1-brain-alzheimer.md',
-  out: '2026-07-26-glp1-brain-alzheimer.html',
+  md:  '2026-07-27-sweetener-brain-aging.md',
+  out: '2026-07-27-sweetener-brain-aging.html',
   title: '',
-  desc: '世界最大的 GLP-1 阿茲海默症試驗（EVOKE，3,808 人）宣告失敗，Semaglutide 未能減緩失智進程；同一時期，Liraglutide 的小型試驗卻顯示認知衰退減慢 18%。台灣的瘦瘦針熱潮、違法販售與護腦傳說，正在撞上一個比預期複雜的大腦藥理學難題。',
-  tag: '用藥 · 失智 · 時事',
+  desc: '《神經學》期刊最新研究追蹤一萬兩千七百名巴西成年人長達八年，發現每天攝取代糖等同於一罐無糖可樂的量，大腦認知功能退化速度快了 62%、腦年提前老化一點六歲。六種主流代糖幾乎全數榜上有名，但這份研究也有觀察型研究的根本侷限——神經科醫師解析你真正需要知道的訊號。',
+  tag: '飲食 · 認知 · 時事',
 };
 
 const related = [
-  { out: '2026-07-26-glp1-brain-alzheimer.html',             nav: '本篇',    title: '台灣搶打的瘦瘦針，在阿茲海默的大腦裡留下了一道問號' },
-  { out: '2026-07-25-spousal-dementia-taiwan.html',          nav: '失智風險', title: '配偶失智，你的風險也升了七成——台灣九十五萬人健保資料說的事' },
+  { out: '2026-07-27-sweetener-brain-aging.html',            nav: '本篇',    title: '那罐「無糖」飲料，正在悄悄借走你的記憶' },
+  { out: '2026-07-26-glp1-brain-alzheimer.html',             nav: '認知用藥', title: '台灣搶打的瘦瘦針，在阿茲海默的大腦裡留下了一道問號' },
+  { out: '2026-07-24-alcohol-brain-aging.html',              nav: '飲食與腦', title: '「小酌怡情」的腦科學代價——Stanford：飲酒量越多，大腦血流越少' },
   { out: 'dementia-blood-test.html',                         nav: '失智檢測', title: '血液檢測能提早發現阿茲海默嗎？神經科醫師解析最新進展' },
-  { out: 'heat-injury-dementia-risk-2026.html',              nav: '熱傷害',   title: '那一次中暑，可能是失智的前二十年——台灣七萬人研究' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">用藥與失智 · 相關閱讀</div>
+    <div class="sb-h">飲食與大腦 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.26 瘦瘦針大腦困局 × EVOKE 試驗失敗 × Liraglutide Nature Medicine');
+console.log('完成：每日晨報 2026.07.27 代糖大腦老化 × Neurology 研究 × 赤藻糖醇警訊');
