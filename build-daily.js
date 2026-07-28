@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.27';
+const DATE = '2026.07.28';
 
 const article = {
-  md:  '2026-07-27-sweetener-brain-aging.md',
-  out: '2026-07-27-sweetener-brain-aging.html',
+  md:  'migraine-brain-aging-2026.md',
+  out: 'migraine-brain-aging-2026.html',
   title: '',
-  desc: '《神經學》期刊最新研究追蹤一萬兩千七百名巴西成年人長達八年，發現每天攝取代糖等同於一罐無糖可樂的量，大腦認知功能退化速度快了 62%、腦年提前老化一點六歲。六種主流代糖幾乎全數榜上有名，但這份研究也有觀察型研究的根本侷限——神經科醫師解析你真正需要知道的訊號。',
-  tag: '飲食 · 認知 · 時事',
+  desc: '台北榮總與陽明交通大學在《Brain Communications》發表 MRI 研究：偏頭痛患者的腦齡平均比同齡健康人老 4.24 年，六十六個腦區顯著超前老化，集中在前額葉、杏仁核與扣帶迴。這個落差可逆嗎？',
+  tag: '頭痛 · 腦老化 · 時事',
 };
 
 const related = [
-  { out: '2026-07-27-sweetener-brain-aging.html',            nav: '本篇',    title: '那罐「無糖」飲料，正在悄悄借走你的記憶' },
-  { out: '2026-07-26-glp1-brain-alzheimer.html',             nav: '認知用藥', title: '台灣搶打的瘦瘦針，在阿茲海默的大腦裡留下了一道問號' },
-  { out: '2026-07-24-alcohol-brain-aging.html',              nav: '飲食與腦', title: '「小酌怡情」的腦科學代價——Stanford：飲酒量越多，大腦血流越少' },
-  { out: 'dementia-blood-test.html',                         nav: '失智檢測', title: '血液檢測能提早發現阿茲海默嗎？神經科醫師解析最新進展' },
+  { out: 'migraine-brain-aging-2026.html',        nav: '本篇',   title: '偏頭痛讓大腦早老四年？台灣 MRI 研究繪出腦齡落差的地圖' },
+  { out: '2026-07-27-sweetener-brain-aging.html', nav: '腦老化', title: '那罐「無糖」飲料，正在悄悄借走你的記憶' },
+  { out: '2026-07-24-alcohol-brain-aging.html',   nav: '腦老化', title: '「小酌怡情」的腦科學代價——Stanford：飲酒量越多，大腦血流越少' },
+  { out: 'sleep-apnea-brain-2026.html',           nav: '睡眠',   title: '睡眠呼吸中止與腦老化的隱形帳單' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">飲食與大腦 · 相關閱讀</div>
+    <div class="sb-h">腦老化與神經健康 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -182,7 +182,7 @@ body{font-family:'Segoe UI','Microsoft JhengHei','PingFang TC',Georgia,serif;bac
 .topbar a:hover{color:#fff}
 .topbar-logo{font-weight:700;font-size:13pt;color:#fff}
 main{max-width:720px;margin:0 auto;padding:48px 24px 64px}
-.article-tag{display:inline-block;background:#e0f2f1;color:#00695c;font-size:10pt;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.article-tag{display:inline-block;background:#f3e5f5;color:#6a1b9a;font-size:10pt;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
 h1{font-size:25pt;font-weight:700;line-height:1.3;color:#0d1f1c;margin-bottom:16px}
 .article-meta{display:flex;align-items:center;gap:8px;font-size:11pt;color:#888;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid #e8e8e8}
 .meta-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#004d40,#00897b);display:flex;align-items:center;justify-content:center;font-size:14pt;color:#fff;font-weight:700}
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.27 代糖大腦老化 × Neurology 研究 × 赤藻糖醇警訊');
+console.log('完成：每日晨報 2026.07.28 偏頭痛腦老化 × Brain Communications × 台北榮總研究');
