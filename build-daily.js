@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.28';
+const DATE = '2026.07.29';
 
 const article = {
-  md:  'migraine-brain-aging-2026.md',
-  out: 'migraine-brain-aging-2026.html',
+  md:  '2026-07-29-stroke-funnel-taiwan.md',
+  out: '2026-07-29-stroke-funnel-taiwan.html',
   title: '',
-  desc: '台北榮總與陽明交通大學在《Brain Communications》發表 MRI 研究：偏頭痛患者的腦齡平均比同齡健康人老 4.24 年，六十六個腦區顯著超前老化，集中在前額葉、杏仁核與扣帶迴。這個落差可逆嗎？',
-  tag: '頭痛 · 腦老化 · 時事',
+  desc: '台灣腦中風患者僅 6.7% 接受溶栓治療，76% 錯過黃金 4.5 小時窗口。急診塞車、家屬猶豫、藥物程序繁複——三道漏斗把大多數病人過濾在救治之外。2026 AHA 指引納入新型替奈普酶（TNK）能縮短一關，但最難的那關沒有藥可以解。',
+  tag: '中風急救 · 時事',
 };
 
 const related = [
-  { out: 'migraine-brain-aging-2026.html',        nav: '本篇',   title: '偏頭痛讓大腦早老四年？台灣 MRI 研究繪出腦齡落差的地圖' },
-  { out: '2026-07-27-sweetener-brain-aging.html', nav: '腦老化', title: '那罐「無糖」飲料，正在悄悄借走你的記憶' },
-  { out: '2026-07-24-alcohol-brain-aging.html',   nav: '腦老化', title: '「小酌怡情」的腦科學代價——Stanford：飲酒量越多，大腦血流越少' },
-  { out: 'sleep-apnea-brain-2026.html',           nav: '睡眠',   title: '睡眠呼吸中止與腦老化的隱形帳單' },
+  { out: '2026-07-29-stroke-funnel-taiwan.html', nav: '本篇',   title: '腦中風的漏斗有多窄——台灣只有 6.7% 的患者走到了溶栓這一關' },
+  { out: 'golden-hour.html',                     nav: '急救',   title: '中風黃金一小時：到院前你能做什麼' },
+  { out: '2026-guideline.html',                  nav: '指引',   title: '2026 中風治療新指引：你需要知道的五件事' },
+  { out: 'summer-cardiac-brain.html',            nav: '急救',   title: '夏至晨運他倒下了——最先死去的其實是大腦' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">腦老化與神經健康 · 相關閱讀</div>
+    <div class="sb-h">中風急救與腦血管健康 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -182,7 +182,7 @@ body{font-family:'Segoe UI','Microsoft JhengHei','PingFang TC',Georgia,serif;bac
 .topbar a:hover{color:#fff}
 .topbar-logo{font-weight:700;font-size:13pt;color:#fff}
 main{max-width:720px;margin:0 auto;padding:48px 24px 64px}
-.article-tag{display:inline-block;background:#f3e5f5;color:#6a1b9a;font-size:10pt;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.article-tag{display:inline-block;background:#e0f2f1;color:#004d40;font-size:10pt;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
 h1{font-size:25pt;font-weight:700;line-height:1.3;color:#0d1f1c;margin-bottom:16px}
 .article-meta{display:flex;align-items:center;gap:8px;font-size:11pt;color:#888;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid #e8e8e8}
 .meta-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#004d40,#00897b);display:flex;align-items:center;justify-content:center;font-size:14pt;color:#fff;font-weight:700}
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.28 偏頭痛腦老化 × Brain Communications × 台北榮總研究');
+console.log('完成：每日晨報 2026.07.29 腦中風漏斗效應 × 溶栓 6.7% × 替奈普酶 TNK 新指引');
