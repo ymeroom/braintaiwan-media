@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.29';
+const DATE = '2026.07.30';
 
 const article = {
-  md:  '2026-07-29-stroke-funnel-taiwan.md',
-  out: '2026-07-29-stroke-funnel-taiwan.html',
+  md:  '2026-07-30-long-covid-brain-fog-ampa.md',
+  out: '2026-07-30-long-covid-brain-fog-ampa.html',
   title: '',
-  desc: '台灣腦中風患者僅 6.7% 接受溶栓治療，76% 錯過黃金 4.5 小時窗口。急診塞車、家屬猶豫、藥物程序繁複——三道漏斗把大多數病人過濾在救治之外。2026 AHA 指引納入新型替奈普酶（TNK）能縮短一關，但最難的那關沒有藥可以解。',
-  tag: '中風急救 · 時事',
+  desc: '台灣第 28 週新冠門急診人次較前週暴增 66.5%，免費疫苗接種 7 月 31 日截止。橫濱市立大學研究用 PET 影像直接拍出長新冠腦霧的分子基礎：AMPA 受體在患者腦中系統性升高，密度越高、認知測驗分數越低——那個思考打結的感覺，有了第一個影像學上的生物標記。',
+  tag: '長新冠 · 腦霧 · 時事',
 };
 
 const related = [
-  { out: '2026-07-29-stroke-funnel-taiwan.html', nav: '本篇',   title: '腦中風的漏斗有多窄——台灣只有 6.7% 的患者走到了溶栓這一關' },
-  { out: 'golden-hour.html',                     nav: '急救',   title: '中風黃金一小時：到院前你能做什麼' },
-  { out: '2026-guideline.html',                  nav: '指引',   title: '2026 中風治療新指引：你需要知道的五件事' },
-  { out: 'summer-cardiac-brain.html',            nav: '急救',   title: '夏至晨運他倒下了——最先死去的其實是大腦' },
+  { out: '2026-07-30-long-covid-brain-fog-ampa.html', nav: '本篇', title: '台灣新冠疫情再升溫——長新冠腦霧有了影像學答案：AMPA 受體的密度，藏在掃描圖裡' },
+  { out: 'covid-brain-dopamine-2026.html',            nav: '長新冠', title: '新冠疫情再升溫，長新冠正在悄悄動你的多巴胺——七月最新研究' },
+  { out: '2026-07-27-sweetener-brain-aging.html',    nav: '腦健康', title: '那罐「無糖」飲料，正在悄悄借走你的記憶' },
+  { out: '2026-07-25-spousal-dementia-taiwan.html',  nav: '失智',   title: '配偶失智，你的風險也升了七成——台灣九十五萬人健保資料說的事' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">中風急救與腦血管健康 · 相關閱讀</div>
+    <div class="sb-h">長新冠與腦神經健康 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.29 腦中風漏斗效應 × 溶栓 6.7% × 替奈普酶 TNK 新指引');
+console.log('完成：每日晨報 2026.07.30 長新冠腦霧 × AMPA 受體 PET 研究 × 台灣新冠第 28 週浪');
