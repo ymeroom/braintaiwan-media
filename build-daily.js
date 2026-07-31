@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.30';
+const DATE = '2026.07.31';
 
 const article = {
-  md:  '2026-07-30-long-covid-brain-fog-ampa.md',
-  out: '2026-07-30-long-covid-brain-fog-ampa.html',
+  md:  '2026-07-31-je-death-taiwan-2026.md',
+  out: '2026-07-31-je-death-taiwan-2026.html',
   title: '',
-  desc: '台灣第 28 週新冠門急診人次較前週暴增 66.5%，免費疫苗接種 7 月 31 日截止。橫濱市立大學研究用 PET 影像直接拍出長新冠腦霧的分子基礎：AMPA 受體在患者腦中系統性升高，密度越高、認知測驗分數越低——那個思考打結的感覺，有了第一個影像學上的生物標記。',
-  tag: '長新冠 · 腦霧 · 時事',
+  desc: '7 月 28 日，疾管署公告台灣今年首例日本腦炎死亡：桃園七旬婦發燒嗜睡、住院一週呼吸衰竭病逝，同日另一名男性也住院中。日本腦炎致死率 20–30%，倖存者有 30–50% 留有長期神經後遺症——語言障礙、癲癇、個性改變。目前沒有特效藥，疫苗是唯一有效的防線。',
+  tag: '日本腦炎 · 神經急症 · 時事',
 };
 
 const related = [
-  { out: '2026-07-30-long-covid-brain-fog-ampa.html', nav: '本篇', title: '台灣新冠疫情再升溫——長新冠腦霧有了影像學答案：AMPA 受體的密度，藏在掃描圖裡' },
-  { out: 'covid-brain-dopamine-2026.html',            nav: '長新冠', title: '新冠疫情再升溫，長新冠正在悄悄動你的多巴胺——七月最新研究' },
-  { out: '2026-07-27-sweetener-brain-aging.html',    nav: '腦健康', title: '那罐「無糖」飲料，正在悄悄借走你的記憶' },
-  { out: '2026-07-25-spousal-dementia-taiwan.html',  nav: '失智',   title: '配偶失智，你的風險也升了七成——台灣九十五萬人健保資料說的事' },
+  { out: 'je-brain-2026.html',                         nav: '病毒',   title: '花蓮三個月大嬰兒在加護病房三週了——日本腦炎病毒是怎麼打進大腦的？' },
+  { out: 'heatstroke-brain.html',                      nav: '急症',   title: '熱到腦子也壞了——熱中暑的神經科後遺症' },
+  { out: '2026-07-22-anticoagulant-brain-bleed.html',  nav: '腦出血', title: '服用血栓藥後頭部受傷，送急診的時機是什麼' },
+  { out: 'tia-brain-warning.html',                     nav: '警訊',   title: '一過性腦缺血：那次「還好沒事」其實是大警報' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">長新冠與腦神經健康 · 相關閱讀</div>
+    <div class="sb-h">神經急症與腦健康 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.30 長新冠腦霧 × AMPA 受體 PET 研究 × 台灣新冠第 28 週浪');
+console.log('完成：每日晨報 2026.07.31 日本腦炎首例死亡 × 桃園七旬婦 × 神經後遺症');
