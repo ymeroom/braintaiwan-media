@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.07.31';
+const DATE = '2026.08.01';
 
 const article = {
-  md:  '2026-07-31-je-death-taiwan-2026.md',
-  out: '2026-07-31-je-death-taiwan-2026.html',
+  md:  '2026-08-01-heatwave-dementia-risk.md',
+  out: '2026-08-01-heatwave-dementia-risk.html',
   title: '',
-  desc: '7 月 28 日，疾管署公告台灣今年首例日本腦炎死亡：桃園七旬婦發燒嗜睡、住院一週呼吸衰竭病逝，同日另一名男性也住院中。日本腦炎致死率 20–30%，倖存者有 30–50% 留有長期神經後遺症——語言障礙、癲癇、個性改變。目前沒有特效藥，疫苗是唯一有效的防線。',
-  tag: '日本腦炎 · 神經急症 · 時事',
+  desc: '截至七月二十九日，台灣今年熱傷害就診已達 756 人次，超越去年七月整月。2024 年一篇以台灣健保資料庫追蹤逾 7 萬名熱傷害患者的研究顯示，熱中暑者未來罹患失智症的風險高出對照組約 26%。從腦部發炎、β 類澱粉蛋白堆積到海馬迴損傷，中暑對大腦的帳是長期的。',
+  tag: '熱傷害 · 失智 · 時事',
 };
 
 const related = [
-  { out: 'je-brain-2026.html',                         nav: '病毒',   title: '花蓮三個月大嬰兒在加護病房三週了——日本腦炎病毒是怎麼打進大腦的？' },
   { out: 'heatstroke-brain.html',                      nav: '急症',   title: '熱到腦子也壞了——熱中暑的神經科後遺症' },
-  { out: '2026-07-22-anticoagulant-brain-bleed.html',  nav: '腦出血', title: '服用血栓藥後頭部受傷，送急診的時機是什麼' },
-  { out: 'tia-brain-warning.html',                     nav: '警訊',   title: '一過性腦缺血：那次「還好沒事」其實是大警報' },
+  { out: 'typhoon-heatwave-stroke-2026.html',           nav: '熱浪',   title: '颱風巴威一過、氣溫炸裂，急診大血管中風為什麼翻倍了' },
+  { out: 'dementia-blood-test.html',                    nav: '失智',   title: '血液檢測能預測失智症？新一代 pTau217 準確率達九成' },
+  { out: 'tia-brain-warning.html',                      nav: '警訊',   title: '一過性腦缺血：那次「還好沒事」其實是大警報' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">神經急症與腦健康 · 相關閱讀</div>
+    <div class="sb-h">夏季高溫與腦健康 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.07.31 日本腦炎首例死亡 × 桃園七旬婦 × 神經後遺症');
+console.log('完成：每日晨報 2026.08.01 台灣熱傷害破756人 × 中暑增失智風險26% × 海馬迴');
