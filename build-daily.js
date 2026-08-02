@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.01';
+const DATE = '2026.08.02';
 
 const article = {
-  md:  '2026-08-01-heatwave-dementia-risk.md',
-  out: '2026-08-01-heatwave-dementia-risk.html',
+  md:  '2026-08-02-sleep-eeg-brain-age-dementia.md',
+  out: '2026-08-02-sleep-eeg-brain-age-dementia.html',
   title: '',
-  desc: '截至七月二十九日，台灣今年熱傷害就診已達 756 人次，超越去年七月整月。2024 年一篇以台灣健保資料庫追蹤逾 7 萬名熱傷害患者的研究顯示，熱中暑者未來罹患失智症的風險高出對照組約 26%。從腦部發炎、β 類澱粉蛋白堆積到海馬迴損傷，中暑對大腦的帳是長期的。',
-  tag: '熱傷害 · 失智 · 時事',
+  desc: '《JAMA Network Open》2026 年研究：AI 從 7,105 人的睡眠腦電圖 13 個微結構特徵推算「腦齡指標（BAI）」，每老化十歲風險上升 39%。傳統睡眠時數、分期完全無法預測；真正的訊號藏在睡眠紡錘波與 K-複合波的細節裡，比失智症狀早十幾年出現。',
+  tag: '失智預測 · 睡眠科學 · 時事',
 };
 
 const related = [
-  { out: 'heatstroke-brain.html',                      nav: '急症',   title: '熱到腦子也壞了——熱中暑的神經科後遺症' },
-  { out: 'typhoon-heatwave-stroke-2026.html',           nav: '熱浪',   title: '颱風巴威一過、氣溫炸裂，急診大血管中風為什麼翻倍了' },
-  { out: 'dementia-blood-test.html',                    nav: '失智',   title: '血液檢測能預測失智症？新一代 pTau217 準確率達九成' },
-  { out: 'tia-brain-warning.html',                      nav: '警訊',   title: '一過性腦缺血：那次「還好沒事」其實是大警報' },
+  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html', nav: '本篇', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
+  { out: '2026-07-31-ptau217-alzheimer-early.html',      nav: '早篩', title: '一滴血往前看十年——阿茲海默症的血液預警，抵達了家庭診所' },
+  { out: 'dementia-blood-test.html',                     nav: '失智', title: '血液檢測能預測失智症？新一代 pTau217 準確率達九成' },
+  { out: 'sleep-apnea-brain-2026.html',                  nav: '睡眠', title: '打呼不只是吵——睡眠呼吸中止與大腦的那條隱藏連結' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">夏季高溫與腦健康 · 相關閱讀</div>
+    <div class="sb-h">失智預測與早期篩檢 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.01 台灣熱傷害破756人 × 中暑增失智風險26% × 海馬迴');
+console.log('完成：每日晨報 2026.08.02 睡眠腦電圖腦齡指標 × 失智風險 39% × JAMA Network Open');
