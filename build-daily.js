@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.02';
+const DATE = '2026.08.03';
 
 const article = {
-  md:  '2026-08-02-sleep-eeg-brain-age-dementia.md',
-  out: '2026-08-02-sleep-eeg-brain-age-dementia.html',
+  md:  '2026-08-03-loberamisal-stroke-neuroprotection.md',
+  out: '2026-08-03-loberamisal-stroke-neuroprotection.html',
   title: '',
-  desc: '《JAMA Network Open》2026 年研究：AI 從 7,105 人的睡眠腦電圖 13 個微結構特徵推算「腦齡指標（BAI）」，每老化十歲風險上升 39%。傳統睡眠時數、分期完全無法預測；真正的訊號藏在睡眠紡錘波與 K-複合波的細節裡，比失智症狀早十幾年出現。',
-  tag: '失智預測 · 睡眠科學 · 時事',
+  desc: '過去三十年超過一千項神經保護劑試驗全部失敗——ISC 2026 二月發表的 LAIS 試驗，首次讓 loberamisal 在 998 名急性腦中風患者身上達到 13 個百分點的功能改善，48 小時治療窗讓「來得太晚」的患者也有機會。台灣溶栓率僅 6.7%，這道新門的意義格外深遠。',
+  tag: '中風新知 · 神經保護 · 時事',
 };
 
 const related = [
-  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html', nav: '本篇', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
-  { out: '2026-07-31-ptau217-alzheimer-early.html',      nav: '早篩', title: '一滴血往前看十年——阿茲海默症的血液預警，抵達了家庭診所' },
-  { out: 'dementia-blood-test.html',                     nav: '失智', title: '血液檢測能預測失智症？新一代 pTau217 準確率達九成' },
-  { out: 'sleep-apnea-brain-2026.html',                  nav: '睡眠', title: '打呼不只是吵——睡眠呼吸中止與大腦的那條隱藏連結' },
+  { out: '2026-08-03-loberamisal-stroke-neuroprotection.html', nav: '本篇', title: '三十年的等待，腦中風終於有了第一顆神經保護劑——LAIS 試驗改寫教科書' },
+  { out: '2026-07-29-stroke-funnel-taiwan.html',               nav: '中風', title: '腦中風的漏斗有多窄——台灣只有 6.7% 的患者走到了溶栓這一關' },
+  { out: 'trace5-basilar-stroke-tenecteplase.html',            nav: '治療', title: '基底動脈中風的 TNK 時代——TRACE-5 試驗與台灣臨床意義' },
+  { out: 'brainstem-stroke-vertigo-2026.html',                 nav: '急症', title: '頭暈就是耳石？這次是腦幹在說話——後循環中風的診斷困局' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">失智預測與早期篩檢 · 相關閱讀</div>
+    <div class="sb-h">中風急症與神經保護 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.02 睡眠腦電圖腦齡指標 × 失智風險 39% × JAMA Network Open');
+console.log('完成：每日晨報 2026.08.03 Loberamisal LAIS × 腦中風神經保護劑首次 Phase III 成功 × ISC 2026');
