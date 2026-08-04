@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.03';
+const DATE = '2026.08.04';
 
 const article = {
-  md:  '2026-08-03-loberamisal-stroke-neuroprotection.md',
-  out: '2026-08-03-loberamisal-stroke-neuroprotection.html',
+  md:  '2026-08-04-tropical-night-stroke-brain.md',
+  out: '2026-08-04-tropical-night-stroke-brain.html',
   title: '',
-  desc: '過去三十年超過一千項神經保護劑試驗全部失敗——ISC 2026 二月發表的 LAIS 試驗，首次讓 loberamisal 在 998 名急性腦中風患者身上達到 13 個百分點的功能改善，48 小時治療窗讓「來得太晚」的患者也有機會。台灣溶栓率僅 6.7%，這道新門的意義格外深遠。',
-  tag: '中風新知 · 神經保護 · 時事',
+  desc: '氣象署 8 月 3 日橙色高溫警報亮起，台北連三天 36°C。多數人以為白天才危險——《歐洲心臟雜誌》2024 年 11,037 人研究卻發現：夜間高溫讓腦中風勝算比升高 7%，且獨立於白天高溫之外。熱帶夜讓交感神經整夜無法下線，脫水、夜間血壓不下沉、睡眠破碎——都在悄悄積累血栓風險。',
+  tag: '夏季健康 · 中風急症 · 時事',
 };
 
 const related = [
-  { out: '2026-08-03-loberamisal-stroke-neuroprotection.html', nav: '本篇', title: '三十年的等待，腦中風終於有了第一顆神經保護劑——LAIS 試驗改寫教科書' },
-  { out: '2026-07-29-stroke-funnel-taiwan.html',               nav: '中風', title: '腦中風的漏斗有多窄——台灣只有 6.7% 的患者走到了溶栓這一關' },
-  { out: 'trace5-basilar-stroke-tenecteplase.html',            nav: '治療', title: '基底動脈中風的 TNK 時代——TRACE-5 試驗與台灣臨床意義' },
-  { out: 'brainstem-stroke-vertigo-2026.html',                 nav: '急症', title: '頭暈就是耳石？這次是腦幹在說話——後循環中風的診斷困局' },
+  { out: '2026-08-04-tropical-night-stroke-brain.html',        nav: '本篇', title: '熱帶夜降不了溫的那個夜晚，腦子裡發生了什麼' },
+  { out: '2026-08-01-heatwave-dementia-risk.html',             nav: '熱傷害', title: '七月底台灣熱傷害已破七五六人——中暑之後，腦子沒你想的那麼快忘記' },
+  { out: '2026-08-03-loberamisal-stroke-neuroprotection.html', nav: '中風', title: '三十年的等待，腦中風終於有了第一顆神經保護劑——LAIS 試驗改寫教科書' },
+  { out: 'golden-hour.html',                                   nav: '急救', title: '中風黃金一小時：到院前你能做什麼' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">中風急症與神經保護 · 相關閱讀</div>
+    <div class="sb-h">夏季健康與中風急症 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.03 Loberamisal LAIS × 腦中風神經保護劑首次 Phase III 成功 × ISC 2026');
+console.log('完成：每日晨報 2026.08.04 熱帶夜 × 夜間高溫中風風險 × European Heart Journal 2024');
