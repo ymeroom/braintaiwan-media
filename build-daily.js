@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.04';
+const DATE = '2026.08.05';
 
 const article = {
-  md:  '2026-08-04-tropical-night-stroke-brain.md',
-  out: '2026-08-04-tropical-night-stroke-brain.html',
+  md:  '2026-08-05-pneumococcal-meningitis-vaccine.md',
+  out: '2026-08-05-pneumococcal-meningitis-vaccine.html',
   title: '',
-  desc: '氣象署 8 月 3 日橙色高溫警報亮起，台北連三天 36°C。多數人以為白天才危險——《歐洲心臟雜誌》2024 年 11,037 人研究卻發現：夜間高溫讓腦中風勝算比升高 7%，且獨立於白天高溫之外。熱帶夜讓交感神經整夜無法下線，脫水、夜間血壓不下沉、睡眠破碎——都在悄悄積累血栓風險。',
-  tag: '夏季健康 · 中風急症 · 時事',
+  desc: '八月十日台灣公費肺炎鏈球菌疫苗升級為 PCV20/PCV21 一劑搞定，約 317 萬成年人尚未接種。肺炎鏈球菌是成年人細菌性腦膜炎最主要病原：致死率 16–37%，存活者 30–50% 有長期神經後遺症，包括永久聽力損失與認知障礙。神經科最怕的，不是它感染肺，而是它走到腦膜的那一步。',
+  tag: '腦膜炎 · 疫苗 · 時事',
 };
 
 const related = [
-  { out: '2026-08-04-tropical-night-stroke-brain.html',        nav: '本篇', title: '熱帶夜降不了溫的那個夜晚，腦子裡發生了什麼' },
+  { out: '2026-08-05-pneumococcal-meningitis-vaccine.html',    nav: '本篇', title: '說是「肺炎」球菌——神經科最怕的是它走到腦膜的那一步' },
+  { out: '2026-07-31-je-death-taiwan-2026.html',              nav: '腦炎', title: '台灣今年首例日本腦炎死亡——那 30% 活下來的人，之後怎麼了' },
   { out: '2026-08-01-heatwave-dementia-risk.html',             nav: '熱傷害', title: '七月底台灣熱傷害已破七五六人——中暑之後，腦子沒你想的那麼快忘記' },
-  { out: '2026-08-03-loberamisal-stroke-neuroprotection.html', nav: '中風', title: '三十年的等待，腦中風終於有了第一顆神經保護劑——LAIS 試驗改寫教科書' },
   { out: 'golden-hour.html',                                   nav: '急救', title: '中風黃金一小時：到院前你能做什麼' },
 ];
 
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">夏季健康與中風急症 · 相關閱讀</div>
+    <div class="sb-h">感染與神經系統 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.04 熱帶夜 × 夜間高溫中風風險 × European Heart Journal 2024');
+console.log('完成：每日晨報 2026.08.05 肺炎鏈球菌腦膜炎 × PCV20/PCV21 疫苗升級');
