@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.06';
+const DATE = '2026.08.07';
 
 const article = {
-  md:  '2026-08-06-covid-brain-fog.md',
-  out: '2026-08-06-covid-brain-fog.html',
+  md:  '2026-08-07-dengue-brain-neuro.md',
+  out: '2026-08-07-dengue-brain-neuro.html',
   title: '',
-  desc: '台灣 COVID-19 七月進流行期，疾管署預測八月中旬單週確診突破五萬一千人。每一次感染在大腦留下神經炎症與突觸損傷；研究顯示長新冠者發展為輕度認知障礙（MCI）的風險是其他組別的 3.93 倍。腦霧不只是你覺得累——大腦一直在記帳。',
-  tag: '長新冠 · 腦霧 · 時事',
+  desc: '台灣今年登革熱比去年提早三個月出現本土案例，八月進入主流行季。多數人只知道「骨折熱」的高燒與出血傾向，但《Brain Communications》最新台灣研究揭示：2023年台南疫情住院患者中，十二%出現神經系統症狀——腦炎、中風、顱內出血、吉蘭—巴雷症候群。大腦在登革熱裡的處境，比你知道的更複雜。',
+  tag: '登革熱 · 神經急症 · 時事',
 };
 
 const related = [
-  { out: '2026-08-06-covid-brain-fog.html',                    nav: '本篇', title: '台灣新冠又進流行期——大腦為每一次感染記帳，帳單現在到了' },
-  { out: '2026-08-05-pneumococcal-meningitis-vaccine.html',    nav: '腦膜炎', title: '說是「肺炎」球菌——神經科最怕的是它走到腦膜的那一步' },
-  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html',       nav: '失智', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
+  { out: '2026-08-07-dengue-brain-neuro.html',                  nav: '本篇', title: '登革熱不只是「骨折熱」——台灣研究：每八名住院患者就有一個大腦出了事' },
+  { out: '2026-07-31-je-death-taiwan-2026.html',                nav: '腦炎', title: '台灣今年首例日本腦炎死亡——那 30% 活下來的人，之後怎麼了' },
+  { out: '2026-08-05-pneumococcal-meningitis-vaccine.html',     nav: '腦膜炎', title: '說是「肺炎」球菌——神經科最怕的是它走到腦膜的那一步' },
   { out: 'golden-hour.html',                                    nav: '急救', title: '中風黃金一小時：到院前你能做什麼' },
 ];
 
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">長新冠與腦神經 · 相關閱讀</div>
+    <div class="sb-h">感染性腦神經疾病 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.06 COVID-19 流行期 × 長新冠腦霧 × MCI 風險');
+console.log('完成：每日晨報 2026.08.07 登革熱 × 神經併發症 × Brain Communications 台南研究');
