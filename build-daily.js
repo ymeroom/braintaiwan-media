@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.08';
+const DATE = '2026.08.09';
 
 const article = {
-  md:  '2026-08-08-covid-acute-encephalitis-peak.md',
-  out: '2026-08-08-covid-acute-encephalitis-peak.html',
+  md:  '2026-08-09-tia-small-stroke-warning.md',
+  out: '2026-08-09-tia-small-stroke-warning.html',
   title: '',
-  desc: '台灣疾管署預估本週新冠就診人次達五萬一千，確認第八波高峰。最小重症患者僅七個月大，在加護病房。NB.1.8.1 對呼吸道之外的攻擊——急性腦炎——在歷次台灣 Omicron 疫情中並不陌生：2022 年重症兒童近半數出現腦炎。抽搐、意識改變、退燒後嗜睡，哪個訊號代表大腦已進入緊急狀態。',
-  tag: '新冠腦炎 · 神經急症 · 時事',
+  desc: 'TIA（短暫性腦缺血發作）俗稱小中風，症狀十五分鐘消失，患者以為沒事；兩天後急性缺血性腦中風送醫，已超過十二小時，錯過溶栓黃金窗口。陳龍醫師說：這是很多人重複的故事。台灣只有 6.7% 的中風患者接受溶栓治療，遠低於歐洲。當症狀消失的那一刻，才是危險最高的開始。',
+  tag: '小中風 · 腦中風警訊 · 時事',
 };
 
 const related = [
-  { out: '2026-08-08-covid-acute-encephalitis-peak.html',       nav: '本篇', title: '新冠第八波正在台灣達到高峰——最小重症七個月大，急性腦炎的那道紅線在哪裡' },
-  { out: '2026-08-06-covid-brain-fog.html',                     nav: '長新冠', title: '台灣新冠又進流行期——大腦為每一次感染記帳，帳單現在到了' },
-  { out: '2026-08-05-pneumococcal-meningitis-vaccine.html',     nav: '腦膜炎', title: '說是「肺炎」球菌——神經科最怕的是它走到腦膜的那一步' },
-  { out: '2026-07-31-je-death-taiwan-2026.html',                nav: '腦炎', title: '台灣今年首例日本腦炎死亡——那 30% 活下來的人，之後怎麼了' },
+  { out: '2026-08-09-tia-small-stroke-warning.html',            nav: '本篇', title: '「那15分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
+  { out: '2026-07-29-stroke-funnel-taiwan.html',                nav: '漏斗', title: '腦中風的漏斗有多窄——台灣只有 6.7% 的患者走到了溶栓這一關' },
+  { out: '2026-08-03-loberamisal-stroke-neuroprotection.html',  nav: '新藥', title: '三十年的等待，腦中風終於有了第一顆神經保護劑——LAIS 試驗改寫教科書' },
+  { out: '2026-08-04-tropical-night-stroke-brain.html',         nav: '熱帶夜', title: '熱帶夜降不了溫的那個夜晚，腦子裡發生了什麼' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">感染 × 腦神經 · 相關閱讀</div>
+    <div class="sb-h">中風警訊 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.08 新冠第八波高峰 × 急性腦炎 × NB.1.8.1');
+console.log('完成：每日晨報 2026.08.09 小中風 TIA × 黃金窗口 × 台灣 6.7%');
