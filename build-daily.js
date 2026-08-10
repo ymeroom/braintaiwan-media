@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.09';
+const DATE = '2026.08.10';
 
 const article = {
-  md:  '2026-08-09-tia-small-stroke-warning.md',
-  out: '2026-08-09-tia-small-stroke-warning.html',
+  md:  '2026-08-10-young-stroke-taiwan.md',
+  out: '2026-08-10-young-stroke-taiwan.html',
   title: '',
-  desc: 'TIA（短暫性腦缺血發作）俗稱小中風，症狀十五分鐘消失，患者以為沒事；兩天後急性缺血性腦中風送醫，已超過十二小時，錯過溶栓黃金窗口。陳龍醫師說：這是很多人重複的故事。台灣只有 6.7% 的中風患者接受溶栓治療，遠低於歐洲。當症狀消失的那一刻，才是危險最高的開始。',
-  tag: '小中風 · 腦中風警訊 · 時事',
+  desc: '台灣腦中風患者中，年輕人比例從十幾年前的 5–6% 遽增到 15–18%——每七位就有一個不到四十五歲。世界腦健康日前後，創世基金會的數字在社群引發廣泛討論：年輕失能院民背後，七成五是腦部或神經系統的問題。三十八歲的手突然麻了，被解釋成熬夜太累；兩天後送進急診，什麼都來不及了。',
+  tag: '年輕中風 · 腦血管疾病 · 時事',
 };
 
 const related = [
-  { out: '2026-08-09-tia-small-stroke-warning.html',            nav: '本篇', title: '「那15分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
+  { out: '2026-08-10-young-stroke-taiwan.html',                 nav: '本篇', title: '三十歲的大腦，卻中了風——每七位台灣腦中風患者，就有一個不到四十五歲' },
+  { out: '2026-08-09-tia-small-stroke-warning.html',            nav: '小中風', title: '「那15分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
   { out: '2026-07-29-stroke-funnel-taiwan.html',                nav: '漏斗', title: '腦中風的漏斗有多窄——台灣只有 6.7% 的患者走到了溶栓這一關' },
   { out: '2026-08-03-loberamisal-stroke-neuroprotection.html',  nav: '新藥', title: '三十年的等待，腦中風終於有了第一顆神經保護劑——LAIS 試驗改寫教科書' },
-  { out: '2026-08-04-tropical-night-stroke-brain.html',         nav: '熱帶夜', title: '熱帶夜降不了溫的那個夜晚，腦子裡發生了什麼' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.09 小中風 TIA × 黃金窗口 × 台灣 6.7%');
+console.log('完成：每日晨報 2026.08.10 年輕型腦中風 × 台灣每七位就有一個45歲以下');
