@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.10';
+const DATE = '2026.08.11';
 
 const article = {
-  md:  '2026-08-10-young-stroke-taiwan.md',
-  out: '2026-08-10-young-stroke-taiwan.html',
+  md:  '2026-08-11-stroke-csa-brain.md',
+  out: '2026-08-11-stroke-csa-brain.html',
   title: '',
-  desc: '台灣腦中風患者中，年輕人比例從十幾年前的 5–6% 遽增到 15–18%——每七位就有一個不到四十五歲。世界腦健康日前後，創世基金會的數字在社群引發廣泛討論：年輕失能院民背後，七成五是腦部或神經系統的問題。三十八歲的手突然麻了，被解釋成熬夜太累；兩天後送進急診，什麼都來不及了。',
-  tag: '年輕中風 · 腦血管疾病 · 時事',
+  desc: '腦中風後，約有一成的患者會出現「中樞型睡眠呼吸中止症」——不是氣道塌陷，而是大腦忘記下達呼吸指令。這種沉默的夜間低氧，正在悄悄干擾中風復健、加速認知退化，卻幾乎從未被例行篩查。',
+  tag: '中風復健 · 睡眠 · 腦科學 · 時事',
 };
 
 const related = [
-  { out: '2026-08-10-young-stroke-taiwan.html',                 nav: '本篇', title: '三十歲的大腦，卻中了風——每七位台灣腦中風患者，就有一個不到四十五歲' },
-  { out: '2026-08-09-tia-small-stroke-warning.html',            nav: '小中風', title: '「那15分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
-  { out: '2026-07-29-stroke-funnel-taiwan.html',                nav: '漏斗', title: '腦中風的漏斗有多窄——台灣只有 6.7% 的患者走到了溶栓這一關' },
-  { out: '2026-08-03-loberamisal-stroke-neuroprotection.html',  nav: '新藥', title: '三十年的等待，腦中風終於有了第一顆神經保護劑——LAIS 試驗改寫教科書' },
+  { out: '2026-08-11-stroke-csa-brain.html',                   nav: '本篇', title: '中風之後，大腦忘記叫你呼吸——每十位住院患者可能就有一位在夜裡無聲地缺氧' },
+  { out: '2026-08-10-young-stroke-taiwan.html',                nav: '年輕中風', title: '三十歲的大腦，卻中了風——每七位台灣腦中風患者，就有一個不到四十五歲' },
+  { out: '2026-08-09-tia-small-stroke-warning.html',           nav: '小中風', title: '「那15分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
+  { out: '2026-07-29-stroke-funnel-taiwan.html',               nav: '溶栓', title: '腦中風的漏斗有多窄——台灣只有 6.7% 的患者走到了溶栓這一關' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">中風警訊 · 相關閱讀</div>
+    <div class="sb-h">中風復健 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.10 年輕型腦中風 × 台灣每七位就有一個45歲以下');
+console.log('完成：每日晨報 2026.08.11 中風後中樞型睡眠呼吸中止症 × 夜間無聲缺氧 × 一成患者未被篩查');
