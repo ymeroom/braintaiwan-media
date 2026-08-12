@@ -1,5 +1,6 @@
 ---
 title: "熱帶夜降不了溫的那個夜晚，腦子裡發生了什麼"
+topic: heat-environment, stroke
 ---
 
 # 熱帶夜降不了溫的那個夜晚，腦子裡發生了什麼

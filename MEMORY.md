@@ -35,6 +35,27 @@ not contain session history, credentials, post IDs, schedules, or commit IDs.
 - Standard sources format: a formal `## 參考來源` section (bulleted list)
   after the closer, before the italic disclaimer line. Inline-only attribution
   is not sufficient for articles that cite numbers or studies.
+- Journal citations must be complete — authors, title, italicized full journal
+  name, year, volume(issue):pages, and DOI or PMID. Journal name plus title is
+  not enough, and databases (PubMed, PMC, ScienceDirect, Oxford Academic) are
+  not journal names. Cite the original paper for any study datum, not the news
+  story about it. Enforced by `node check-citations.js`; see
+  `docs/daily-pipeline.md` for the per-source-type formats.
+
+## Daily Pipeline Topic Rotation
+
+- The daily morning-brief must not repeat a topic group used within the last
+  7 days. Topic groups (`stroke`, `brain-infection`, `dementia`, `sleep`, …)
+  are defined in `topic-guard.js`; the rule is about the topic group, not the
+  headline wording.
+- Select the topic with `node topic-guard.js` (see what is blocked) and
+  validate the candidate with `node topic-guard.js --check "<題目>"` before
+  writing. Exit code 1 means pick another topic group.
+- Every new `_src/*.md` carries an explicit `topic:` field in its front-matter.
+  The guard falls back to keyword classification only for older articles.
+- If the day's biggest health news falls in a blocked group, still switch
+  groups — hot news naturally clusters, which is exactly what the cooldown
+  exists to counteract.
 - All public copy must pass `D:\claudecode\BRAND_STYLE_GUIDE.md` (vocabulary
   blacklist, 三不 rules, pre-publish checklist) before publishing.
 
