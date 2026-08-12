@@ -145,7 +145,22 @@ node check-citations.js --all              # 稽核全部（會列出舊文欠�
 
 ---
 
-## 三、每日流程檢查點
+## 三、雲端 routine
+
+排程 routine「Taiwan daily health brief」由 HTTP API 建立，agent 無法改寫它的
+prompt，只能在 Claude 網頁介面手動更新。`docs/daily-routine-prompt.md` 存的就是
+該貼上去的文字，**整份檔案就是 prompt 本身**，不含任何說明文字，可以整份複製。
+
+在網頁介面設定 routine 時，除了 prompt 還要確認：
+
+- **Repository 指向 `ymeroom/braintaiwan-media`。** 少了這一項，觸發的 session
+  不會 clone 到這個 repo，整個流程從 STEP 0 就跑不動。
+- 同名的舊 routine 要停用，否則同一天會產出兩篇文章。
+
+即使 routine 尚未更新，`CLAUDE.md` 與 `AGENTS.md` 已載明這兩道關卡，每日 agent
+在 session 啟動時就會讀到。
+
+## 四、每日流程檢查點
 
 1. `node topic-guard.js` → 取得封鎖／可選主題群
 2. 搜尋當日新聞時，只在可選主題群內找題
