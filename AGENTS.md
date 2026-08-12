@@ -17,3 +17,19 @@ session logs as project policy.
 - Do not publish, deploy, schedule, or post externally without the user's
   explicit approval in the current conversation.
 - Never print or persist access tokens.
+
+## Daily morning-brief: two mandatory gates
+
+Any session writing a daily article — including the automated cloud routine —
+MUST pass both gates. Full rules and formats: `docs/daily-pipeline.md`.
+
+- **Topic must not repeat within 7 days.** Run `node topic-guard.js` before
+  choosing a topic; do not write about a blocked topic group even if it is the
+  day's hottest news. Validate with `node topic-guard.js --check "<題目>"`
+  (exit 0 required) and record the group in the `topic:` front-matter field.
+- **Citations must be complete.** Journal references need authors, quoted
+  title, italicized full journal name, year, volume(issue):pages, and a DOI or
+  PMID; databases (PubMed, PMC, ScienceDirect) are not journal names. Verify
+  identifiers, drop unverifiable studies, and cite the original paper rather
+  than the news story about it. `node check-citations.js _src/<slug>.md` must
+  exit 0 before building.

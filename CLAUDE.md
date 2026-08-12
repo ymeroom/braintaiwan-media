@@ -18,6 +18,31 @@ session logs as project policy.
   explicit approval in the current conversation.
 - Never print or persist access tokens.
 
+## Daily morning-brief: two mandatory gates
+
+Any session writing a daily article — including the automated cloud routine —
+MUST pass both gates. Full rules and formats: `docs/daily-pipeline.md`.
+
+**Gate 1 — topic must not repeat within 7 days.** Before searching for a
+topic, run `node topic-guard.js`; it lists the topic groups blocked by the
+cooldown and the groups available. Do not write about a blocked group, even
+if it is the day's hottest news — hot news clusters, which is exactly what
+the cooldown counteracts. Validate the candidate with
+`node topic-guard.js --check "<題目>"` (exit 0 required) before writing, and
+record the group in the `topic:` front-matter field of `_src/<slug>.md`
+(comma-separated for a piece that genuinely spans two groups).
+
+**Gate 2 — citations must be complete.** Every journal reference in
+`## 參考來源` needs authors, a quoted title, the italicized full journal
+name, the year, volume(issue):pages, and a DOI or PMID. A journal name plus
+a title is not enough, and PubMed / PMC / ScienceDirect / Oxford Academic are
+databases, not journal names. Verify identifiers against the journal page,
+the DOI, or PubMed; if a study's identifiers cannot be verified, drop the
+citation rather than approximating it. Cite the original paper for study
+data — the news story reporting it may be listed additionally, never
+instead. Run `node check-citations.js _src/<slug>.md` and fix every ❌
+before building; it must exit 0.
+
 ## `main` moves on its own
 
 A daily cloud routine ("Daily morning-brief") commits and pushes to `main`
