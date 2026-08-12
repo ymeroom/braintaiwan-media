@@ -38,10 +38,10 @@ title: "清掉斑塊的那一刻，神經元還在嗎"
 
 ## 參考來源
 
-- 成大醫院秘書室公關組：全台首例樂意保治療滿周年 建構完整失智症精準醫療模式（2026年6月）
-- van Dyck CH et al., Lecanemab in Early Alzheimer's Disease. *New England Journal of Medicine*, 2023
-- Eisai：Results from Real-World, Long-Term Treatment Persistence with LEQEMBI® Presented at AD/PD™ 2026（2026年3月，哥本哈根）
-- 台灣臨床失智症學會（TDS）：Lecanemab 台灣適當用藥建議 第二版（2025年12月）
-- 台灣食品藥物管理署：Lecanemab（Leqembi、樂意保）核准公告（2025年）
-- 衛生福利部：臺灣社區失智症流行病學調查（2024年）
-- 內政部：台灣正式進入超高齡社會（2026年1月）
+- 成大醫院，〈全台首例樂意保治療滿周年，建構完整失智症精準醫療模式〉，2026 年 6 月
+- van Dyck CH, Swanson CJ, Aisen P, et al. "Lecanemab in Early Alzheimer's Disease." *New England Journal of Medicine*, 2023;388(1):9–21. DOI: 10.1056/NEJMoa2212948
+- Eisai，〈Results from Real-World, Long-Term Treatment Persistence with LEQEMBI Presented at AD/PD 2026〉，2026 年 3 月，哥本哈根
+- 台灣臨床失智症學會，〈Lecanemab 台灣適當用藥建議 第二版〉，2025 年 12 月
+- 衛生福利部食品藥物管理署，〈Lecanemab（Leqembi、樂意保）核准公告〉，2025 年
+- 衛生福利部，〈臺灣社區失智症流行病學調查〉，2024 年
+- 內政部，〈台灣正式進入超高齡社會〉人口統計發布，2026 年 1 月

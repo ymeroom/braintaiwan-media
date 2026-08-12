@@ -36,7 +36,7 @@ title: "那罐「無糖」飲料，正在悄悄借走你的記憶"
 
 ## 參考來源
 
-- 美國神經學學會《神經學》期刊（Neurology）：Association Between Consumption of Low- and No-Calorie Artificial Sweeteners and Cognitive Decline. July 2026. doi: 10.1212/WNL.0000000000214023
-- ELSA-Brasil（巴西成人縱貫健康研究）：追蹤 12,772 名成年受試者，8 年三波追蹤（2008–2010、2012–2014、2017–2019）
-- Witkowski M et al.（2023）. The artificial sweetener erythritol and cardiovascular event risk. *Nature Medicine*. doi: 10.1038/s41591-023-02223-9
-- TVBS 健康、自由健康網、三立健康（台灣媒體 2026 年 7 月）報導
+- Gonçalves NG, Martinez-Steele E, Lotufo PA, et al. "Association Between Consumption of Low- and No-Calorie Artificial Sweeteners and Cognitive Decline: An 8-Year Prospective Study." *Neurology*, 2025. DOI: 10.1212/WNL.0000000000214023；PMID: 40902134（ELSA-Brasil 世代，12,772 名成年受試者）
+- American Academy of Neurology，〈Some sugar substitutes linked to faster cognitive decline〉新聞稿，2025 年
+- Witkowski M, Nemet I, Alamri H, et al. "The artificial sweetener erythritol and cardiovascular event risk." *Nature Medicine*, 2023;29(3):710–718. DOI: 10.1038/s41591-023-02223-9
+- TVBS 健康、自由健康網、三立健康，甜味劑與認知功能相關報導，2026 年 7 月

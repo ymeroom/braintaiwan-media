@@ -38,9 +38,9 @@ p-tau217 告訴你十年後的風險，不是命運。同樣是高 p-tau217，�
 
 ## 參考來源
 
-- Alzheimer's Association International Conference (AAIC) 2026，倫敦，2026 年 7 月
-- Blood test p-tau217 predicts cognitive decline up to 10 years before symptoms，同步發表於 *JAMA*，2026 年 7 月 15 日；研究整合 A4/LEARN、HABS、ADNI、WRAP、HABS-HD 五個世代隊列，共 2,705 名受試者
-- Blood test improves Alzheimer's diagnosis accuracy in primary care（瑞典研究：1,300+ 病人、165 名醫師），發表於 AAIC 2026
-- 衛生福利部委託國家衛生研究院，全國社區失智症流行病學調查：65 歲以上盛行率 7.99%，85 歲以上 23.23%，推估 2024 年失智人口約 35 萬
+- Buckley RF, et al. "Prognostic Value of Blood-Based P-Tau217 Levels for Progression to Cognitive Impairment." *JAMA*, 2026. DOI: 10.1001/jama.2026.12556；PMID: 42449500（整合 A4/LEARN、HABS、ADNI、WRAP、HABS-HD 五個世代共 2,705 名受試者）
+- Alzheimer's Association International Conference (AAIC) 2026，〈Blood test p-tau217 predicts cognitive decline up to 10 years before symptoms〉，倫敦，2026 年 7 月 15 日
+- Alzheimer's Association International Conference (AAIC) 2026，〈Blood test improves Alzheimer's diagnosis accuracy in primary care〉（瑞典研究：1,300 餘名病人、165 名醫師），2026 年 7 月
+- Cheng YW, Chen TF. "Clinical Utility of Plasma pTau217 and NfL in Dementia Diagnosis and Management in a Taiwanese Memory Clinic." *Alzheimer's & Dementia*, 2026. DOI: 10.1002/alz70856_106176；PMC12784110
+- 衛生福利部委託國家衛生研究院，〈全國社區失智症流行病學調查〉，2024 年（65 歲以上盛行率 7.99%、85 歲以上 23.23%）
 - 中央通訊社好生活，〈一滴血提前 20 年預警失智，冷泉港生技推動阿茲海默症早篩新時代〉，2026 年 7 月 18 日
-- Clinical Utility of Plasma pTau217 and NfL in Dementia Diagnosis and Management in a Taiwanese Memory Clinic，*PMC12784110*

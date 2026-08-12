@@ -35,9 +35,9 @@ topic: sleep, dementia
 
 ## 參考來源
 
-- Haoqi Sun et al., "Machine Learning–Based Sleep Electroencephalographic Brain Age Index and Dementia Risk: An Individual Participant Data Meta-Analysis"，*JAMA Network Open*，2026（DOI: 10.1001/jamanetworkopen.2026.1521）
-- ScienceDaily，"AI can tell if your brain is aging faster than you are"，2026 年 7 月 29 日
-- 衛生福利部，失智症盛行率與人口推估統計（2024）
-- 台灣失智症協會，《失智症基本法》連署聲明，2026 年 7 月–8 月
-- 中央社 CNA，"3,000 人連署籲政府速訂失智症基本法"，2026 年 8 月 1 日
-- Xie L et al., "Sleep Drives Metabolite Clearance from the Adult Brain"，*Science*，2013（淋巴系統清掃機制背景）
+- Sun H, et al. "Machine Learning–Based Sleep Electroencephalographic Brain Age Index and Dementia Risk: An Individual Participant Data Meta-Analysis." *JAMA Network Open*, 2026;9(3):e261521. DOI: 10.1001/jamanetworkopen.2026.1521；PMID: 41854616
+- ScienceDaily，〈AI can tell if your brain is aging faster than you are〉，2026 年 7 月 29 日
+- 衛生福利部，失智症盛行率與人口推估統計，2024 年
+- 台灣失智症協會，《失智症基本法》連署聲明，2026 年 7 月至 8 月
+- 中央社 CNA，〈3,000 人連署籲政府速訂失智症基本法〉，2026 年 8 月 1 日
+- Xie L, Kang H, Xu Q, et al. "Sleep drives metabolite clearance from the adult brain." *Science*, 2013;342(6156):373–377. DOI: 10.1126/science.1241224（膠淋巴系統清除機制背景）

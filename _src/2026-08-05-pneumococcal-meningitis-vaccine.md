@@ -35,7 +35,5 @@ topic: brain-infection
 
 - 衛生福利部疾病管制署，〈成人公費肺炎鏈球菌疫苗自 2026 年 8 月 10 日起全面升級為 20 價或 21 價新型疫苗，接種「1 劑搞定」〉，2026 年 7 月 28 日
 - Taiwan News，〈公費肺炎鏈球菌疫苗升級 8/10 起 20 價、21 價二選一「一劑搞定」〉，2026 年 7 月 28 日
-- Frontiers in Cellular and Infection Microbiology，"Streptococcus pneumoniae meningitis and the CNS barriers"，2023
-- Journal of Clinical Microbiology and Infection，"Long-term neurologic and cognitive outcome and quality of life in adults after pneumococcal meningitis"，2020
-- PMC/NCBI，"Blood-Brain Barrier Pathology and CNS Outcomes in Streptococcus pneumoniae Meningitis"，2018
-- PMC/NCBI，"Pathogenesis and Pathophysiology of Pneumococcal Meningitis"（綜述）
+- Gil E, Wall E, Noursadeghi M, Brown JS. "Streptococcus pneumoniae meningitis and the CNS barriers." *Frontiers in Cellular and Infection Microbiology*, 2023;12:1106596. DOI: 10.3389/fcimb.2022.1106596
+- Kloek AT, Brouwer MC, Schmand B, Tanck MWT, van de Beek D. "Long-term neurologic and cognitive outcome and quality of life in adults after pneumococcal meningitis." *Clinical Microbiology and Infection*, 2020;26(10):1361–1367. DOI: 10.1016/j.cmi.2020.01.020

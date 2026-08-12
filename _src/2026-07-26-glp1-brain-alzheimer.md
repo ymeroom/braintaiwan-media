@@ -34,9 +34,8 @@ EVOKE 試驗招募的，是五十五至八十五歲、正處於輕度認知障�
 
 ## 參考來源
 
-- EVOKE / EVOKE+ 試驗：Efficacy and safety of oral semaglutide in early-stage symptomatic Alzheimer's disease. *The Lancet*, 2026. doi: 10.1016/S0140-6736(26)00459-9
-- Novo Nordisk 新聞稿：EVOKE 與 EVOKE+ 第三期試驗結果公告（未達主要指標），2026 年
-- Edison P et al.（2025）. Liraglutide in mild to moderate Alzheimer's disease: a phase 2b clinical trial. *Nature Medicine*. PMID: 41326666
-- 世代研究：Semaglutide / Tirzepatide 使用與失智症風險（HR 0.63），2025 年
-- 台灣食品藥物管理署：非法瘦瘦針查緝案件（2024–2026 年，查扣一二四件，罰鍰逾三百五十萬元）
-- 台灣報導者（The Reporter）：〈社群販售、藥局私賣、日本代購：揭開台灣「瘦瘦針」的非法流通網路〉，2026 年
+- Cummings JL, Atri A, Sano M, et al. "Efficacy and safety of oral semaglutide 14 mg (flexible dose) in early-stage symptomatic Alzheimer's disease (evoke and evoke+): two phase 3, randomised, placebo-controlled trials." *The Lancet*, 2026;407(10544):2167–2179. DOI: 10.1016/S0140-6736(26)00459-9
+- Novo Nordisk，〈EVOKE 與 EVOKE+ 第三期試驗結果公告（未達主要指標）〉新聞稿，2026 年
+- Edison P, Ballard C, et al. "Liraglutide in mild to moderate Alzheimer's disease: a phase 2b clinical trial." *Nature Medicine*, 2026;32(1):353–361. DOI: 10.1038/s41591-025-04106-7；PMID: 41326666
+- 衛生福利部食品藥物管理署，〈非法「瘦瘦針」查緝案件統計〉，2024–2026 年（查扣一二四件、罰鍰逾三百五十萬元）
+- 報導者 The Reporter，〈社群販售、藥局私賣、日本代購：揭開台灣「瘦瘦針」的非法流通網路〉，2026 年

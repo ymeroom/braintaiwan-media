@@ -37,9 +37,8 @@ Loberamisal 的治療窗是 48 小時——幾乎是現有主流急性治療上�
 
 ## 參考來源
 
-- Shuya Li et al., "Loberamisal for Acute Ischaemic Stroke (LAIS): a multicentre, randomised, double-blind, parallel, placebo-controlled phase III clinical trial"，*Lancet Neurology*，2026；發表於 ISC 2026（2026 年 2 月 6 日）
-- American Heart Association / ISC 2026，"Started within 48 hours of stroke, neuroprotective medication helped brain cells, recovery"，2026 年 2 月
-- NeurologyLive，"Testing Dual-Target Agent Loberamisal in Phase 3 Trial for Acute Ischemic Stroke: Shuya Li, MD"，2026
-- Medscape，"First-In-Class Neuroprotective Agent Improves Stroke Outcomes"，2026
-- 台灣腦中風學會 × 健保署資料：台灣急性缺血性腦中風溶栓率分析（2026 年腦中風年報背景數據）
-- PubMed PMID 41344725（LAIS 試驗全文）
+- Li S, et al. "Loberamisal for Acute Ischaemic Stroke (LAIS): a multicentre, randomised, double-blind, parallel, placebo-controlled phase III clinical trial." *Lancet Neurology*, 2026. PMID: 41344725（NCT06517173；998 名受試者、32 家中國中心）
+- American Heart Association / International Stroke Conference 2026，〈Started within 48 hours of stroke, neuroprotective medication helped brain cells, recovery〉，2026 年 2 月 6 日
+- NeurologyLive，〈Testing Dual-Target Agent Loberamisal in Phase 3 Trial for Acute Ischemic Stroke: Shuya Li, MD〉，2026 年
+- Medscape，〈First-In-Class Neuroprotective Agent Improves Stroke Outcomes〉，2026 年
+- 台灣腦中風登錄（Taiwan Stroke Registry），急性缺血性腦中風溶栓率統計，2026 年

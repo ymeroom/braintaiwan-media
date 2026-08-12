@@ -39,9 +39,9 @@ WFN 今年把「建立社區層次的神經健康識能」列為重點之一，�
 ## 參考來源
 
 - 世界神經學聯盟（World Federation of Neurology），〈2026 World Brain Day: Brain Health, Access for All〉，2026 年
-- WFN，〈World Brain Day 2026: Global Leaders Unite to Address Neurological Care Gap〉，2026 年 7 月 13 日
-- National Today、Awareness Days，World Brain Day 2026 — 全球超過 34 億人受神經疾病影響統計，2026 年
-- 衛生福利部中央健康保險署，復健病房試辦計畫說明（腦中風、衰弱高齡等四類對象），2026 年 7 月
-- 聯合新聞網，《迎戰失能海嘯，180 天復健病房 7 月上路》，2026 年
-- 公視新聞網，《健保署試辦 180 天復健病房計劃，護理團體憂增加人力負擔》，2026 年
-- 關鍵評論網（TNL），《健保署 2026 年試辦復健病房，盼提升返家率》，2026 年
+- World Federation of Neurology，〈World Brain Day 2026: Global Leaders Unite to Address Neurological Care Gap〉，2026 年 7 月 13 日
+- GBD 2021 Nervous System Disorders Collaborators. "Global, regional, and national burden of disorders affecting the nervous system, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021." *The Lancet Neurology*, 2024;23(4):344–381. DOI: 10.1016/S1474-4422(24)00038-3（全球逾 34 億人受神經疾病影響）
+- 衛生福利部中央健康保險署，〈復健病房試辦計畫說明〉（腦中風、衰弱高齡等四類對象），2026 年 7 月
+- 聯合新聞網，〈迎戰失能海嘯，180 天復健病房 7 月上路〉，2026 年
+- 公視新聞網，〈健保署試辦 180 天復健病房計劃，護理團體憂增加人力負擔〉，2026 年
+- 關鍵評論網（TNL），〈健保署 2026 年試辦復健病房，盼提升返家率〉，2026 年

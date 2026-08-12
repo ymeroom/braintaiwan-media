@@ -30,10 +30,10 @@ Stanford 這項研究的 45 人樣本，研究者自己也強調屬於初步結�
 
 ## 參考來源
 
-- Durazzo TC et al.（2026）. The interaction of age and total lifetime drinks is associated with regional cortical perfusion and thickness in healthy adults with low-level alcohol consumption. *Alcohol Use Research*（ScienceDirect）
-- PsyPost，「Even light drinking combined with aging is linked to reduced brain blood flow and thinner tissue」，2026 年
-- ScienceAlert，「Even Low Levels of Alcohol Could Damage Your Brain, Study Finds」，2026 年
-- MedicalNewsToday，「Brain health: Even a little alcohol impairs brain blood flow」，2026 年
-- World Heart Federation（2022）. Alcohol & Heart Disease: No Safe Limit Policy Brief
-- Lancet（2018）. Alcohol use and burden for 195 countries and territories, 1990–2016. 392(10152): 1015–1035
-- 世界衛生組織（WHO），2026 年 7 月失智症預防指南更新：過量飲酒列入十四項可改變風險因子
+- Durazzo TC, Joseff BDP, McNerney MW, Humphreys K, Meyerhoff DJ. "The interaction of age and total lifetime drinks is associated with regional cortical perfusion and thickness in healthy adults with low-level alcohol consumption." *Alcohol*, 2026;133. DOI: 10.1016/j.alcohol.2026.03.006
+- PsyPost，〈Even light drinking combined with aging is linked to reduced brain blood flow and thinner tissue〉，2026 年
+- ScienceAlert，〈Even Low Levels of Alcohol Could Damage Your Brain, Study Finds〉，2026 年
+- Medical News Today，〈Brain health: Even a little alcohol impairs brain blood flow〉，2026 年
+- World Heart Federation，〈Alcohol & Heart Disease: No Safe Limit〉政策簡報，2022 年
+- GBD 2016 Alcohol Collaborators. "Alcohol use and burden for 195 countries and territories, 1990–2016: a systematic analysis for the Global Burden of Disease Study 2016." *The Lancet*, 2018;392(10152):1015–1035. DOI: 10.1016/S0140-6736(18)31310-2
+- 世界衛生組織（WHO），〈失智症預防指南更新：過量飲酒列入十四項可改變風險因子〉，2026 年 7 月

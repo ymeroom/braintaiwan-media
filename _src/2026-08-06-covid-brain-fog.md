@@ -35,11 +35,11 @@ SARS-CoV-2 有多條路徑進入中樞神經系統：病毒顆粒可以沿嗅神
 
 ## 參考來源
 
-- 衛生福利部疾病管制署，COVID-19 疫情週報（流行期宣布），2026 年 7 月
+- 衛生福利部疾病管制署，COVID-19 疫情週報（宣布進入流行期），2026 年 7 月
 - Taipei Times，〈COVID-19 cases surge to epidemic levels: CDC〉，2026 年 7 月 22 日
 - Taiwan News，〈Taiwan COVID-19 medical visits double in 1 week〉，2026 年 7 月 28 日
-- Nature Reviews Neurology，"Understanding the long-term neurological effects of SARS-CoV-2 infection"，2026
-- Alzheimer's & Dementia，觀察性世代研究（長新冠輕度認知障礙風險），2026 年 4 月
+- Matthews R, et al. "Understanding the long-term neurological effects of SARS-CoV-2 infection." *Nature Reviews Neurology*, 2026;22:351–365. DOI: 10.1038/s41582-026-01205-y
+- Frontera JA, Masurkar AV, Betensky RA, et al. "Increased incidence of mild cognitive impairment in long COVID patients." *Alzheimer's & Dementia*, 2026;22(3):e71237. DOI: 10.1002/alz.71237；PMID: 41772376（長新冠者輕度認知障礙風險 HR 3.93）
 - 中國時報，〈長新冠罹患認知障礙風險高近 4 倍〉，2026 年 4 月 12 日
-- 台灣神經醫學會，世界大腦日長新冠腦霧倡議，2025 年
-- 聯合新聞網，〈長新冠「腦霧」易怒、判斷力降，精神科醫師：2 成患者持續受干擾〉
+- 台灣神經醫學學會，世界大腦日長新冠腦霧倡議，2025 年
+- 聯合新聞網，〈長新冠「腦霧」易怒、判斷力降，精神科醫師：2 成患者持續受干擾〉，2026 年

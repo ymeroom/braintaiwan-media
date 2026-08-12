@@ -31,19 +31,19 @@ topic: sleep, stroke
 
 家屬能做的，是在照護腦中風患者時，對睡眠品質保持一定程度的「有意識的觀察」：白天嗜睡、夜間醒來頻繁、早晨頭痛、記憶與情緒比預期退步得更快，都是可以提給醫療團隊討論的訊號——儘管確診仍需要客觀的睡眠監測。
 
-## 參考來源
-
-- 照護線上（CareOnline）2026年5月：〈打鼾就是呼吸中止症？中風後，另一種「中樞型呼吸暫停」更需留意？〉
-- 照護線上（CareOnline）2026年6月：〈半夜呼吸暫停，小心是中樞型？這種睡眠問題會增加中風風險嗎？〉
-- 中央社 CNA，2026年7月22日：〈睡眠呼吸中止症別輕忽　醫：睡不好增認知退化風險〉
-- Imrpress.com *Reviews in the Neurosciences* 2025：Mapping the Evidence: Central Sleep Apnea Syndromes During Sleep and Stroke—A Scoping Review
-- PubMed 2023（*Journal of Neurology*）：Longitudinal Assessment of Sleep Apnea in the Year After Stroke in a Population-Based Study（PMID 37485665）
-- PMC *Nature and Science of Sleep* 2025：The role of obstructive sleep apnea, neurofilaments and early CPAP intervention in post-stroke cognitive recovery（PMC12182375）
-- ClinicalTrials.gov，NCT06811948，2025–2026：Sleep-Disordered Breathing in the Acute Phase After Stroke and Neuropsychiatric Outcomes
-- 衛生福利部，長期照顧十年計畫 3.0（2026 施行），腦中風納入 PAC 照護對象
-
 > ### 🩺 神經專科 施懿恩醫師觀察
 >
 > 住院期間，我們對急性中風患者的監測密度通常很高——血壓、心電圖、神經學評估——但多導睡眠監測幾乎從未包含在其中，因為它耗時、耗人力，而且在急性期患者身上配置困難。這在某種程度上是個系統性盲點：偏偏中風患者才是最可能在夜裡出現中樞型呼吸中止的族群，而夜間低氧又是對復健最不利的背景干擾之一。一個值得追問的問題是：如果在急性中風後的住院期間，對高風險患者（腦幹或後循環梗塞、白質病變嚴重、年長者）進行系統性的簡易睡眠監測篩查，我們能改變多少人的復健軌跡？目前沒有大型的台灣本土數據，但這個問題或許值得有人去問。
+
+## 參考來源
+
+- 照護線上（CareOnline），〈打鼾就是呼吸中止症？中風後，另一種「中樞型呼吸暫停」更需留意？〉，2026 年 5 月
+- 照護線上（CareOnline），〈半夜呼吸暫停，小心是中樞型？這種睡眠問題會增加中風風險嗎？〉，2026 年 6 月
+- 中央社 CNA，〈睡眠呼吸中止症別輕忽　醫：睡不好增認知退化風險〉，2026 年 7 月 22 日
+- Uscamaita K, Yazbeck Morell I, Sánchez-López MJ, et al. "Mapping the Evidence: Central Sleep Apnea Syndromes During Sleep and Stroke—A Scoping Review." *Revista de Neurología*, 2026;81(5):RN49726. DOI: 10.31083/RN49726
+- Lisabeth LD, Zhang G, Chervin RD, et al. "Longitudinal Assessment of Sleep Apnea in the Year After Stroke in a Population-Based Study." *Stroke*, 2023;54(9):2356–2365. DOI: 10.1161/STROKEAHA.123.042325；PMID: 37485665
+- Levicka P, Slavkovska M, Koren D, et al. "The role of obstructive sleep apnea, neurofilaments and early CPAP intervention in post-stroke cognitive recovery." *Sleep Medicine: X*, 2025;9:100142. DOI: 10.1016/j.sleepx.2025.100142；PMC12182375
+- ClinicalTrials.gov，"Sleep-Disordered Breathing in the Acute Phase After Stroke and Neuropsychiatric Outcomes"，NCT06811948，2025–2026 年
+- 衛生福利部，長期照顧十年計畫 3.0（2026 年施行），腦中風納入急性後期整合照護（PAC）對象
 
 *本文為衛教資訊，不構成個人醫療建議。如有症狀請就醫。*

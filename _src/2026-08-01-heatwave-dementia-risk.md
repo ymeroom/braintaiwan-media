@@ -35,7 +35,7 @@ topic: heat-environment, dementia
 
 ## 參考來源
 
-- 衛生福利部熱傷害就診統計，2026 年 7 月 29 日累計（聯合新聞網、世界新聞網報導）
-- "Heat-related illness and dementia: a study integrating epidemiological and experimental evidence," *Alzheimer's Research & Therapy*, 2024（DOI: 10.1186/s13195-024-01515-7）
-- 國民健康署熱傷害防治衛教資訊
-- 康健雜誌「高溫不只會中暑！台灣 7 萬人研究揭警訊：熱傷害恐讓失智風險增加 24%」，2026 年報導
+- 衛生福利部，熱傷害就診人次統計，2026 年 7 月 29 日累計
+- Kuo WY, Huang CC, Chen CA, et al. "Heat-related illness and dementia: a study integrating epidemiological and experimental evidence." *Alzheimer's Research & Therapy*, 2024;16:145. DOI: 10.1186/s13195-024-01515-7
+- 衛生福利部國民健康署，〈熱傷害防治〉衛教資訊，2026 年
+- 康健雜誌，〈高溫不只會中暑！台灣 7 萬人研究揭警訊：熱傷害恐讓失智風險增加 24%〉，2026 年

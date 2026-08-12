@@ -35,8 +35,8 @@ topic: heat-environment, stroke
 
 ## 參考來源
 
-- Cheng He, Alexandra Schneider et al., "Nocturnal heat exposure and stroke risk"，*European Heart Journal*，2024；Vol. 45, Issue 24, pp. 2158–2167
-- Helmholtz Munich，"Night-time heat significantly increases the risk of stroke"，新聞稿，2024 年 5 月
-- 中央氣象署，高溫特報：2026 年 8 月 3 日橙色燈號（台北、新北、桃園；連續三天 36°C 以上）
-- 衛生福利部國民健康署，2026 年熱傷害就醫通報數據（截至 7 月底累計逾 756 人）
-- Qian et al., "Association of extreme heat events with sleep and cardiovascular health: a scoping review"，*Systematic Reviews*，2024
+- He C, Breitner S, Zhang S, et al. "Nocturnal heat exposure and stroke risk." *European Heart Journal*, 2024;45(24):2158–2166. DOI: 10.1093/eurheartj/ehae277
+- Helmholtz Munich，〈Night-time heat significantly increases the risk of stroke〉新聞稿，2024 年 5 月 21 日
+- 中央氣象署，高溫特報（台北、新北、桃園橙色燈號），2026 年 8 月 3 日
+- 衛生福利部國民健康署，熱傷害就醫通報數據，2026 年 7 月底累計
+- Kuo WY, Huang CC, Chen CA, et al. "Heat-related illness and dementia: a study integrating epidemiological and experimental evidence." *Alzheimer's Research & Therapy*, 2024;16:145. DOI: 10.1186/s13195-024-01515-7（熱暴露之神經影響背景）

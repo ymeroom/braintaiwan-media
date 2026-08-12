@@ -38,7 +38,7 @@ const YEAR_RE = /\b(19|20)\d{2}\b/;
 const ITALIC_JOURNAL_RE = /\*[^*]{3,}\*/;
 const TITLE_RE = /["“”「」『』〈〉《》]/;
 // 作者：`Surname AB,` / `Surname A. ` / `... et al.` / 團體作者 Collaborators / Group
-const AUTHOR_RE = /(et al\.|collaborat|study group|\bgroup\b|^[A-Z][A-Za-zÀ-ſ'’-]{1,}\s+[A-Z]{1,3}[,.]|^[A-Z][A-Za-zÀ-ſ'’-]{1,},\s+[A-Z]\.)/;
+const AUTHOR_RE = /(et al\.|[Cc]ollaborat|[Ss]tudy [Gg]roup|\b[Gg]roup\b|^[A-Z][A-Za-zÀ-ſ'’-]{1,}\s+[A-Z]{1,3}[,.]|^[A-Z][A-Za-zÀ-ſ'’-]{1,},\s+[A-Z]\.)/;
 // 卷(期):頁 或 Vol. / pp.
 const VOLPAGE_RE = /(\b\d{4}\s*[;；]\s*\d+|vol\.?\s*\d+|volume\s+\d+|pp?\.\s*\d+|\b\d+\s*\(\d+[^)]*\)\s*[,:：]\s*\d)/i;
 // 資料庫／聚合網站不能當期刊名
@@ -48,12 +48,27 @@ const AGGREGATORS = ['pubmed', 'pmc/ncbi', 'ncbi', 'sciencedirect', 'sciencedail
 // 來源種類：registry（試驗登錄）、guideline（臨床指引）、academic（期刊論文）、general（機關／新聞）
 function classifySource(text) {
   const t = text.toLowerCase();
-  if (/nct\d{6,}/i.test(t) || t.includes('clinicaltrials.gov')) return 'registry';
+  const hasNct = /nct\d{6,}/i.test(t);
+  // 論文若只是順帶標註試驗編號，仍是期刊論文，不能當成試驗登錄來源
+  if (t.includes('clinicaltrials.gov') ||
+      (hasNct && !ITALIC_JOURNAL_RE.test(text) && !/(doi|pmid|pmc\d)/i.test(t))) return 'registry';
+  // 研討會發表（尚未或不會有期刊卷期）優先於期刊判定
+  if (/(aaic|ad\/pd|\bisc 20\d\d|conference|congress|年會|研討會|presented at|發表於[^，。]{0,10}(大會|年會))/i.test(text)) return 'conference';
   if (/(guideline|指引|治療準則|consensus|共識|建議書)/i.test(text)) return 'guideline';
+  // 學術引用的判定要看「格式訊號」，不能只看是否出現 stroke／brain 這類字眼，
+  // 否則「Taiwan Stroke Registry 統計」這種機關來源會被誤判為期刊論文。
   if (LOCATOR_RE.test(t)) return 'academic';
-  if (JOURNAL_HINTS.some(h => t.includes(h))) return 'academic';
-  // 純中文機關／新聞來源不算學術引用
+  if (ITALIC_JOURNAL_RE.test(text)) return 'academic';
+  if (AUTHOR_RE.test(text) && TITLE_RE.test(text)) return 'academic';
   return 'general';
+}
+
+// 看起來像期刊論文卻沒有用完整格式寫的條目（給警告，促使改寫）
+function looksLikeUnformattedStudy(text) {
+  const t = text.toLowerCase();
+  const hasJournalWord = JOURNAL_HINTS.some(h => t.includes(h)) || /期刊|論文/.test(text);
+  const hasStudyWord = /(study|trial|cohort|meta-analysis|randomi|研究|試驗|世代|統合分析)/i.test(text);
+  return hasJournalWord && hasStudyWord;
 }
 
 function extractSources(md) {
@@ -94,6 +109,12 @@ function checkBullet(b) {
     if (!/nct\d{6,}/i.test(t)) errs.push('試驗登錄來源缺 NCT 編號');
     if (!TITLE_RE.test(t)) errs.push('缺試驗標題（需用引號框住）');
     if (!YEAR_RE.test(t)) errs.push('缺年份');
+  } else if (kind === 'conference') {
+    if (!TITLE_RE.test(t)) errs.push('缺發表標題（需用引號或〈〉框住）');
+    if (!YEAR_RE.test(t)) errs.push('缺年份');
+    if (LOCATOR_RE.test(t) && !ITALIC_JOURNAL_RE.test(t)) {
+      warns.push('已同步發表於期刊時，請改用完整期刊格式');
+    }
   } else if (kind === 'guideline') {
     if (!/[A-Za-z一-鿿]{2,}/.test(t)) errs.push('缺發布機構');
     if (!TITLE_RE.test(t)) errs.push('缺指引全名（需用引號或〈〉框住）');
@@ -117,6 +138,9 @@ function checkBullet(b) {
   } else {
     if (!YEAR_RE.test(t)) errs.push('非期刊來源缺年份（機關／新聞來源需註明發布日期）');
     if (!TITLE_RE.test(t) && !/[，,]/.test(t)) warns.push('建議格式：機構名，〈標題〉，YYYY 年 M 月 D 日');
+    if (looksLikeUnformattedStudy(t)) {
+      warns.push('疑似期刊論文卻未用完整格式；請補上作者、"標題"、*期刊全名*、年份、卷(期):頁碼與 DOI／PMID');
+    }
   }
 
   return { errs, warns, academic };

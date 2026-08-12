@@ -49,4 +49,5 @@ title: "台灣今年首例日本腦炎死亡——那 30% 活下來的人，之�
 - Focus Taiwan，〈Taiwan reports first Japanese encephalitis death of the year〉，2026 年 7 月 28 日
 - ETtoday 健康雲，〈全台今年已 12 例！日本腦炎致死率高有後遺症〉，2026 年 7 月 28 日
 - 衛生福利部疾病管制署，〈國內新增日本腦炎病例；花蓮三個月大嬰兒確診〉，2026 年 6 月
-- 疾管署 日本腦炎衛教資料：致死率約 20–30%，倖存者 30–50% 有長期神經後遺症
+- Solomon T. "Flavivirus encephalitis." *New England Journal of Medicine*, 2004;351(4):370–378. DOI: 10.1056/NEJMra030476；PMID: 15269317（致死率與後遺症比例之醫學背景）
+- 衛生福利部疾病管制署，〈日本腦炎疾病介紹〉衛教資料，2026 年

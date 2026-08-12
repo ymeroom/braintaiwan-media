@@ -35,10 +35,10 @@ topic: brain-infection
 
 ## 參考來源
 
-- 衛生福利部疾病管制署：「國內新冠疫情持續呈上升趨勢，呼籲尚未接種疫苗民眾儘速接種」（2026年7月）
-- Focus Taiwan：「COVID-19 wave in Taiwan expected to peak in early August: CDC」（2026年7月28日）
-- Tech Times：「Taiwan COVID Peak Pulled to Early August as Nimbus Cases More Than Double in a Week」（2026年7月28日）
-- The Asia Business Daily：「Taiwan Sees Quadrupling of Emergency Patients as COVID Cases Surpass 10,000」（2026年7月29日）
-- 報導者 The Reporter：〈Omicron 如何造成兒童腦炎？家長能做什麼？〉（2022）
-- 康健雜誌：〈Omicron 是年輕人大敵？兒童重症腦炎致死率更高〉（2022）；兒童 Omicron 住院死亡率 0.35%、流感 7 倍數據
-- ScienceDirect / Journal of Infection：「Critical pediatric neurological illness associated with COVID-19 (Omicron BA.2.3.7 variant) infection in Taiwan: immunological assessment and viral genome analysis」（2022）
+- 衛生福利部疾病管制署，〈國內新冠疫情持續呈上升趨勢，呼籲尚未接種疫苗民眾儘速接種〉，2026 年 7 月
+- Focus Taiwan，〈COVID-19 wave in Taiwan expected to peak in early August: CDC〉，2026 年 7 月 28 日
+- Tech Times，〈Taiwan COVID Peak Pulled to Early August as Nimbus Cases More Than Double in a Week〉，2026 年 7 月 28 日
+- The Asia Business Daily，〈Taiwan Sees Quadrupling of Emergency Patients as COVID Cases Surpass 10,000〉，2026 年 7 月 29 日
+- Chen CS, Chang CN, Hu CF, et al. "Critical pediatric neurological illness associated with COVID-19 (Omicron BA.2.3.7 variant) infection in Taiwan: immunological assessment and viral genome analysis in tertiary medical center." *International Journal of Infectious Diseases*, 2022;124:45–48. DOI: 10.1016/j.ijid.2022.09.001；PMID: 36087642
+- 報導者 The Reporter，〈Omicron 如何造成兒童腦炎？家長能做什麼？〉，2022 年
+- 康健雜誌，〈Omicron 是年輕人大敵？兒童重症腦炎致死率更高〉，2022 年

@@ -39,6 +39,7 @@ title: "心臟裝了十支架、長年服抗凝血藥——大腦出血來了，
 - 自由健康網，〈兒曝宣明智心臟裝近10支架 醫：服抗凝血藥瘀青別急停〉，2026 年 7 月 20 日
 - Yahoo 新聞，〈宣明智心臟裝10支架！醫揭抗凝血劑正確停藥時機〉，2026 年 7 月 20 日
 - 中時新聞網，〈宣明智最新病況曝光！緊急開顱手術「抽出160mL血塊」〉，2026 年 7 月 20 日
-- PMC，〈Principles of reversal of anticoagulation in patients with intracerebral hemorrhage related to oral anticoagulants〉，*European Stroke Journal*，2025
-- PMC，〈2025 Guidelines for direct oral anticoagulants: a practical guidance on the prescription, laboratory testing, peri-operative and bleeding management〉，2025
-- 台灣腦中風學會，〈比較新型口服抗凝血藥物和阿斯匹靈與顱內出血風險〉
+- Christensen H, Casolla B, Frontera JA, et al. "Principles of reversal of anticoagulation in patients with intracerebral hemorrhage related to oral anticoagulants." *European Stroke Journal*, 2025;10(1 Suppl):4–13. DOI: 10.1177/23969873231222393
+- Seiffge D, Polymeris A, Pfeilschifter W, et al. "Reversal of anticoagulation in patients with intracerebral haemorrhage related to oral anticoagulants: State of the evidence." *European Stroke Journal*, 2025;10(1 Suppl):14–23. DOI: 10.1177/23969873241281477
+- Tran HA, Merriman E, Baker R, et al. "2025 Guidelines for direct oral anticoagulants: a practical guidance on the prescription, laboratory testing, peri-operative and bleeding management." *Internal Medicine Journal*, 2025;55:1174–1183. DOI: 10.1111/imj.70103
+- 台灣腦中風學會，〈比較新型口服抗凝血藥物和阿斯匹靈與顱內出血風險〉衛教資料，2025 年

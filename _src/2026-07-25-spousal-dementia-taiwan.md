@@ -32,10 +32,10 @@ title: "配偶失智，你的風險也升了七成——台灣九十五萬人健
 
 ## 參考來源
 
-- Wang S-H et al.（2026）. Spousal Dementia Exposure and Risk of Dementia. *JAMA Network Open*. doi: 10.1001/jamanetworkopen.2026.24175
-- Taipei Times，「Spousal dementia increases partner's risk, researchers find」，2026 年 7 月 21 日
-- Taipei Times，「Study shows correlation in dementia for couples」，2026 年 7 月 22 日
-- Newsweek，「Spouses of People With Dementia Face Higher Risk Themselves, Study Finds」，2026 年 7 月
-- McKnight's Long-Term Care News，「Spouses of patients with dementia nearly 75 percent more likely to develop same condition, large study finds」，2026 年
-- Medicaldialogues.in，「Spouses of People With Dementia May Face Increased Dementia Risk: JAMA」，2026 年
-- 國家衛生研究院老年醫學暨健康福祉研究中心（NHRI National Center for Geriatrics and Welfare Research）
+- Wang S, Lin M, Fan CC, Huang W, Hsu C, Wu C. "Spousal Dementia Exposure and Risk of Dementia." *JAMA Network Open*, 2026;9(7):e2624175. DOI: 10.1001/jamanetworkopen.2026.24175
+- Taipei Times，〈Spousal dementia increases partner's risk, researchers find〉，2026 年 7 月 21 日
+- Taipei Times，〈Study shows correlation in dementia for couples〉，2026 年 7 月 22 日
+- Newsweek，〈Spouses of People With Dementia Face Higher Risk Themselves, Study Finds〉，2026 年 7 月
+- McKnight's Long-Term Care News，〈Spouses of patients with dementia nearly 75 percent more likely to develop same condition, large study finds〉，2026 年
+- Medical Dialogues，〈Spouses of People With Dementia May Face Increased Dementia Risk: JAMA〉，2026 年
+- 國家衛生研究院高齡醫學暨健康福祉研究中心，研究團隊說明，2026 年

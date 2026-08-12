@@ -41,10 +41,10 @@ topic: brain-infection
 
 ## 參考來源
 
-- 衛生福利部疾病管制署，2026年首例本土登革熱確診新聞稿，2026年5月
-- 衛生福利部疾病管制署，境外移入登革熱病例通報，2026年8月4日
-- Taiwan News，"Taiwan reports 8 imported dengue fever cases"，2026年8月4日
-- Brain Communications（Oxford Academic），"Sex differences in dengue-related neurological complications: insights from the 2023 Taiwan outbreak"，Volume 8, Issue 4, fcag258，2026年
-- JAMA Network Open，"Neurological or Psychiatric Disorders After Dengue Fever"（PMC11077384），2024年
-- BMC Infectious Diseases，"Re-examination of the risk of dementia after dengue virus infection: A population-based cohort study"（PMC10699621），2023年
-- World Health Organization（WHO），Global dengue fever situation report，2026年6月
+- 衛生福利部疾病管制署，2026 年首例本土登革熱確診新聞稿，2026 年 5 月
+- 衛生福利部疾病管制署，境外移入登革熱病例通報，2026 年 8 月 4 日
+- Taiwan News，〈Taiwan reports 8 imported dengue fever cases〉，2026 年 8 月 4 日
+- Lin WZ, Yeh PS, Hsueh LS, et al. "Sex differences in dengue-related neurological complications: insights from the 2023 Taiwan outbreak." *Brain Communications*, 2026;8(4):fcag258. DOI: 10.1093/braincomms/fcag258（住院患者神經表現 12.0%）
+- Lin HC, Chou HP, Chiang YC, Chang R, Chen YS, Juan YC. "Neurological or Psychiatric Disorders After Dengue Fever." *JAMA Network Open*, 2024;7(5):e2410075. DOI: 10.1001/jamanetworkopen.2024.10075
+- Chien YW, Shih HI, Wang YP, Chi CY. "Re-examination of the risk of dementia after dengue virus infection: A population-based cohort study." *PLOS Neglected Tropical Diseases*, 2023;17(12):e0011788. DOI: 10.1371/journal.pntd.0011788
+- 世界衛生組織（WHO），全球登革熱疫情報告，2026 年 6 月
