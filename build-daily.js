@@ -6,21 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.12';
+const DATE = '2026.08.13';
 
 const article = {
-  md:  '2026-08-12-japanese-encephalitis-brain.md',
-  out: '2026-08-12-japanese-encephalitis-brain.html',
+  md:  '2026-08-13-medication-overuse-headache.md',
+  out: '2026-08-13-medication-overuse-headache.html',
   title: '',
-  desc: '桃園七旬婦人嗜睡、發燒入院，一週後死於呼吸衰竭——讓她奪命的，是三斑家蚊傳播的日本腦炎病毒。2026 年台灣首例死亡，八月仍在流行季。存活者中每兩人就可能有一人留下語言障礙、肢體無力或性格改變等神經後遺症。',
-  tag: '腦炎 · 蚊媒疾病 · 神經急症 · 時事',
+  desc: '八月八日的健康版面又在提醒同一件事：頭痛就吞止痛藥，一個月超過十天，恐掉進「越吃越痛」的循環。它在國際頭痛學會的分類手冊上編號 8.2——藥物過度使用性頭痛。止痛藥把三叉神經與腦幹的疼痛調節網絡訓練成更怕痛，而拆開這個循環，六個月的成功率可以高到 97%。',
+  tag: '頭痛 · 止痛藥 · 神經調節 · 時事',
 };
-
 const related = [
-  { out: '2026-08-12-japanese-encephalitis-brain.html',        nav: '本篇', title: '一週後死於呼吸衰竭——日本腦炎燒的不是肺，是大腦深處的神經' },
-  { out: '2026-08-08-covid-acute-encephalitis-peak.html',      nav: '新冠腦炎', title: '新冠第八波正在台灣達到高峰——最小重症七個月大，急性腦炎的那道紅線在哪裡' },
-  { out: '2026-08-07-dengue-brain-neuro.html',                 nav: '登革熱神經', title: '登革熱不只是「骨折熱」——台灣研究：每八名住院患者就有一個大腦出了事' },
-  { out: '2026-08-05-pneumococcal-meningitis-vaccine.html',    nav: '腦膜炎疫苗', title: '細菌鑽進腦膜的那幾小時——肺炎鏈球菌腦膜炎與 PCV20/PCV21 公費升級' },
+  { out: '2026-08-13-medication-overuse-headache.html',         nav: '本篇', title: '一個月吃超過十天，頭痛就換了另一種病——止痛藥把大腦訓練得更怕痛' },
+  { out: 'migraine-brain-aging-2026.html',                      nav: '偏頭痛腦齡', title: '偏頭痛讓大腦早老四年？台灣 MRI 研究，繪出了腦齡落差的地圖' },
+  { out: '2026-08-11-stroke-csa-brain.html',                    nav: '中風與呼吸', title: '中風之後，大腦忘記叫你呼吸——每十位住院患者可能就有一位在夜裡無聲地缺氧' },
+  { out: '2026-08-12-japanese-encephalitis-brain.html',         nav: '日本腦炎', title: '一週後死於呼吸衰竭——日本腦炎燒的不是肺，是大腦深處的神經' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">感染性腦炎 · 蚊媒病 · 相關閱讀</div>
+    <div class="sb-h">頭痛 · 疼痛與大腦 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.12 日本腦炎 × 大腦深處神經燒損 × 存活者半數留下終生後遺症');
+console.log('完成：每日晨報 2026.08.13 藥物過度使用性頭痛 × 痛覺閾值下修 × 停藥＋預防六個月 97% 脫離');
