@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.12';
+const DATE = '2026.08.14';
 
 const article = {
-  md:  '2026-08-12-japanese-encephalitis-brain.md',
-  out: '2026-08-12-japanese-encephalitis-brain.html',
+  md:  '2026-08-14-brain-age-gap-lifestyle.md',
+  out: '2026-08-14-brain-age-gap-lifestyle.html',
   title: '',
-  desc: '桃園七旬婦人嗜睡、發燒入院，一週後死於呼吸衰竭——讓她奪命的，是三斑家蚊傳播的日本腦炎病毒。2026 年台灣首例死亡，八月仍在流行季。存活者中每兩人就可能有一人留下語言障礙、肢體無力或性格改變等神經後遺症。',
-  tag: '腦炎 · 蚊媒疾病 · 神經急症 · 時事',
+  desc: '三立、自由、中時這幾天輪流推播同一則研究：四個習慣讓大腦年輕八歲。原始論文刊在 Brain Communications，收了 197 位帶著慢性膝痛的中高齡成人。統計調整後高低分組的差距是 2.69 歲，八歲是分布兩端互相對照的結果；論文裡慢性疼痛與社會環境劣勢那半篇，沒有被翻出來。',
+  tag: '大腦老化 · 腦齡 · 科學新聞判讀 · 時事',
 };
 
 const related = [
-  { out: '2026-08-12-japanese-encephalitis-brain.html',        nav: '本篇', title: '一週後死於呼吸衰竭——日本腦炎燒的不是肺，是大腦深處的神經' },
-  { out: '2026-08-08-covid-acute-encephalitis-peak.html',      nav: '新冠腦炎', title: '新冠第八波正在台灣達到高峰——最小重症七個月大，急性腦炎的那道紅線在哪裡' },
-  { out: '2026-08-07-dengue-brain-neuro.html',                 nav: '登革熱神經', title: '登革熱不只是「骨折熱」——台灣研究：每八名住院患者就有一個大腦出了事' },
-  { out: '2026-08-05-pneumococcal-meningitis-vaccine.html',    nav: '腦膜炎疫苗', title: '細菌鑽進腦膜的那幾小時——肺炎鏈球菌腦膜炎與 PCV20/PCV21 公費升級' },
+  { out: '2026-08-14-brain-age-gap-lifestyle.html',            nav: '本篇', title: '「大腦年輕 8 歲」洗版台灣健康版面——那 8 歲到底是怎麼算出來的' },
+  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html',       nav: '睡眠腦齡', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
+  { out: 'migraine-brain-aging-2026.html',                     nav: '偏頭痛腦老化', title: '偏頭痛讓大腦早老四年？台灣 MRI 研究，繪出了腦齡落差的地圖' },
+  { out: '2026-07-27-sweetener-brain-aging.html',              nav: '代糖腦老化', title: '那罐「無糖」飲料，正在悄悄借走你的記憶' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">感染性腦炎 · 蚊媒病 · 相關閱讀</div>
+    <div class="sb-h">大腦老化 · 腦齡研究 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.12 日本腦炎 × 大腦深處神經燒損 × 存活者半數留下終生後遺症');
+console.log('完成：每日晨報 2026.08.14 腦齡 × 保護因子量表 × 8 歲與 2.69 歲的差別');
