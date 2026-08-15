@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.14';
+const DATE = '2026.08.15';
 
 const article = {
-  md:  '2026-08-14-brain-age-gap-lifestyle.md',
-  out: '2026-08-14-brain-age-gap-lifestyle.html',
+  md:  '2026-08-15-child-adolescent-headache.md',
+  out: '2026-08-15-child-adolescent-headache.html',
   title: '',
-  desc: '三立、自由、中時這幾天輪流推播同一則研究：四個習慣讓大腦年輕八歲。原始論文刊在 Brain Communications，收了 197 位帶著慢性膝痛的中高齡成人。統計調整後高低分組的差距是 2.69 歲，八歲是分布兩端互相對照的結果；論文裡慢性疼痛與社會環境劣勢那半篇，沒有被翻出來。',
-  tag: '大腦老化 · 腦齡 · 科學新聞判讀 · 時事',
+  desc: '照護線上 8 月 14 日那篇「孩子常喊頭痛」的底下，是八天前刊在 Cephalalgia 的國際實證整理：頭痛盛行率從 5 到 9 歲的 10.71% 一路升到 15 到 19 歲的 42.64%。孩子的偏頭痛長得不像大人，所以最常被讀成「不想上學」。CGRP 新藥在美國過了兒童適應症，台灣還沒——那條線畫在哪裡。',
+  tag: '兒童青少年頭痛 · 偏頭痛 · 時事',
 };
 
 const related = [
-  { out: '2026-08-14-brain-age-gap-lifestyle.html',            nav: '本篇', title: '「大腦年輕 8 歲」洗版台灣健康版面——那 8 歲到底是怎麼算出來的' },
-  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html',       nav: '睡眠腦齡', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
-  { out: 'migraine-brain-aging-2026.html',                     nav: '偏頭痛腦老化', title: '偏頭痛讓大腦早老四年？台灣 MRI 研究，繪出了腦齡落差的地圖' },
-  { out: '2026-07-27-sweetener-brain-aging.html',              nav: '代糖腦老化', title: '那罐「無糖」飲料，正在悄悄借走你的記憶' },
+  { out: '2026-08-15-child-adolescent-headache.html',          nav: '本篇', title: '「他只是不想上學吧」——孩子喊頭痛，從五歲到十九歲，那條曲線一路往上' },
+  { out: 'migraine-brain-aging-2026.html',                     nav: '偏頭痛', title: '偏頭痛讓大腦早老四年？台灣 MRI 研究，繪出了腦齡落差的地圖' },
+  { out: 'ecig-teen-brain.html',                               nav: '青少年腦', title: '行政院剛拍板電子煙持有入罰，但神經科醫師最在乎的不是10萬元——是15歲的前額葉' },
+  { out: '2026-08-14-brain-age-gap-lifestyle.html',            nav: '腦齡', title: '「大腦年輕 8 歲」洗版台灣健康版面——那 8 歲到底是怎麼算出來的' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">大腦老化 · 腦齡研究 · 相關閱讀</div>
+    <div class="sb-h">頭痛與神經健康 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.14 腦齡 × 保護因子量表 × 8 歲與 2.69 歲的差別');
+console.log('完成：每日晨報 2026.08.15 兒童青少年頭痛 × Cephalalgia 實證整理 × CGRP 新藥的界線');
