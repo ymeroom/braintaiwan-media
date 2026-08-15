@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.14';
+const DATE = '2026.08.16';
 
 const article = {
-  md:  '2026-08-14-brain-age-gap-lifestyle.md',
-  out: '2026-08-14-brain-age-gap-lifestyle.html',
+  md:  '2026-08-16-idh-glioma-seizure-taiwan.md',
+  out: '2026-08-16-idh-glioma-seizure-taiwan.html',
   title: '',
-  desc: '三立、自由、中時這幾天輪流推播同一則研究：四個習慣讓大腦年輕八歲。原始論文刊在 Brain Communications，收了 197 位帶著慢性膝痛的中高齡成人。統計調整後高低分組的差距是 2.69 歲，八歲是分布兩端互相對照的結果；論文裡慢性疼痛與社會環境劣勢那半篇，沒有被翻出來。',
-  tag: '大腦老化 · 腦齡 · 科學新聞判讀 · 時事',
+  desc: '24 歲員警在靶場跑折返跑時癲癇倒地，才查出腦子裡的 IDH 突變神經膠質瘤。台灣神經腫瘤學學會 8 月 12 日呼籲把口服標靶藥納入健保。INDIGO 試驗把無惡化存活期從 11.1 個月拉到 27.7 個月、長期追蹤 44.1 個月，癲癇發作率從每人每年 51.2 次降到 18.2 次——而後面這個數字，掛在探索性指標那一區。',
+  tag: '腦瘤 · 癲癇 · IDH 突變膠質瘤 · 時事',
 };
 
 const related = [
-  { out: '2026-08-14-brain-age-gap-lifestyle.html',            nav: '本篇', title: '「大腦年輕 8 歲」洗版台灣健康版面——那 8 歲到底是怎麼算出來的' },
-  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html',       nav: '睡眠腦齡', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
-  { out: 'migraine-brain-aging-2026.html',                     nav: '偏頭痛腦老化', title: '偏頭痛讓大腦早老四年？台灣 MRI 研究，繪出了腦齡落差的地圖' },
-  { out: '2026-07-27-sweetener-brain-aging.html',              nav: '代糖腦老化', title: '那罐「無糖」飲料，正在悄悄借走你的記憶' },
+  { out: '2026-08-16-idh-glioma-seizure-taiwan.html',           nav: '本篇', title: '折返跑到一半倒在靶場——那次癲癇，是腦瘤唯一一次開口' },
+  { out: 'heat-epilepsy-seizure-taiwan-2026.html',              nav: '高溫與癲癇', title: '熱到可以癲癇——台灣十八萬次急診數據說了什麼' },
+  { out: '2026-07-21-world-brain-day-2026.html',                nav: '世界腦健康日', title: '七月二十二日是世界腦健康日——「人人可及的大腦健康」，為什麼到現在還做不到' },
+  { out: '2026-08-09-tia-small-stroke-warning.html',            nav: '中風前的警訊', title: '「那15分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">大腦老化 · 腦齡研究 · 相關閱讀</div>
+    <div class="sb-h">腦瘤 · 癲癇 · 神經腫瘤 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.14 腦齡 × 保護因子量表 × 8 歲與 2.69 歲的差別');
+console.log('完成：每日晨報 2026.08.16 IDH 突變膠質瘤 × 癲癇 × 標靶藥健保給付');
