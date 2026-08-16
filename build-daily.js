@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.14';
+const DATE = '2026.08.16';
 
 const article = {
-  md:  '2026-08-14-brain-age-gap-lifestyle.md',
-  out: '2026-08-14-brain-age-gap-lifestyle.html',
+  md:  '2026-08-16-child-teen-migraine.md',
+  out: '2026-08-16-child-teen-migraine.html',
   title: '',
-  desc: '三立、自由、中時這幾天輪流推播同一則研究：四個習慣讓大腦年輕八歲。原始論文刊在 Brain Communications，收了 197 位帶著慢性膝痛的中高齡成人。統計調整後高低分組的差距是 2.69 歲，八歲是分布兩端互相對照的結果；論文裡慢性疼痛與社會環境劣勢那半篇，沒有被翻出來。',
-  tag: '大腦老化 · 腦齡 · 科學新聞判讀 · 時事',
+  desc: '開學倒數兩週，孩子開始喊頭痛，大人多半用一句「壓力大」收尾。八月《Cephalalgia》的 2026 兒童青少年頭痛實證資料表把 GBD 2023 攤開：五到九歲頭痛盛行率 10.71%，十五到十九歲 42.64%。一月《新英格蘭醫學期刊》的 SPACE 試驗，則是兒童偏頭痛第一次有第三期隨機對照數據。',
+  tag: '兒童偏頭痛 · 頭痛紅旗 · 開學季 · 時事',
 };
 
 const related = [
-  { out: '2026-08-14-brain-age-gap-lifestyle.html',            nav: '本篇', title: '「大腦年輕 8 歲」洗版台灣健康版面——那 8 歲到底是怎麼算出來的' },
-  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html',       nav: '睡眠腦齡', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
-  { out: 'migraine-brain-aging-2026.html',                     nav: '偏頭痛腦老化', title: '偏頭痛讓大腦早老四年？台灣 MRI 研究，繪出了腦齡落差的地圖' },
-  { out: '2026-07-27-sweetener-brain-aging.html',              nav: '代糖腦老化', title: '那罐「無糖」飲料，正在悄悄借走你的記憶' },
+  { out: '2026-08-16-child-teen-migraine.html',           nav: '本篇', title: '「他只是壓力大吧」——開學前，被大人翻譯錯的兒童頭痛' },
+  { out: 'migraine-brain-aging-2026.html',                nav: '偏頭痛腦老化', title: '偏頭痛讓大腦早老四年？台灣 MRI 研究，繪出了腦齡落差的地圖' },
+  { out: '2026-08-14-brain-age-gap-lifestyle.html',       nav: '腦齡', title: '「大腦年輕 8 歲」洗版台灣健康版面——那 8 歲到底是怎麼算出來的' },
+  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html',  nav: '睡眠腦齡', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
