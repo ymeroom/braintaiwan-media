@@ -1,0 +1,61 @@
+# 把每日晨報自動送上 main（= 線上 media.braintaiwan.com）
+#
+# 雲端 routine 若被設定成推到 session 分支（claude/xxx），文章不會發布，
+# 因為 GitHub Pages 只服務 main。這個 workflow 在偵測到晨報 commit 時，
+# 把該分支快轉合併進 main。
+#
+# 三道安全閘：
+#   1. 只看 claude/** 分支
+#   2. commit 訊息必須是 routine 的格式（Daily morning-brief: / FB draft:）
+#      ——人工開發分支不會被誤送上線
+#   3. 只做 fast-forward；分支若不是 main 的直接延伸就不動，不會覆寫任何東西
+
+name: Publish daily brief to main
+
+on:
+  push:
+    branches:
+      - 'claude/**'
+
+permissions:
+  contents: write
+
+jobs:
+  fast-forward-main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fast-forward main when this is a daily-brief push
+        run: |
+          set -euo pipefail
+
+          # 從 git 讀訊息，不用 github.event 的字串內插（避免 commit 訊息注入）
+          msg="$(git log -1 --pretty=%s)"
+          echo "commit: $msg"
+
+          case "$msg" in
+            "Daily morning-brief:"*|"FB draft:"*) ;;
+            *)
+              echo "不是晨報 commit，略過。"
+              exit 0
+              ;;
+          esac
+
+          git fetch origin main
+
+          if git merge-base --is-ancestor HEAD origin/main; then
+            echo "main 已包含這些 commit，無事可做。"
+            exit 0
+          fi
+
+          if ! git merge-base --is-ancestor origin/main HEAD; then
+            echo "此分支不是 main 的直接延伸，無法 fast-forward；不動 main。"
+            echo "請人工處理（通常代表 main 期間有其他 commit）。"
+            exit 1
+          fi
+
+          git push origin HEAD:main
+          echo "已送上 main：https://media.braintaiwan.com/"
