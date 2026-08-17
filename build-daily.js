@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.14';
+const DATE = '2026.08.17';
 
 const article = {
-  md:  '2026-08-14-brain-age-gap-lifestyle.md',
-  out: '2026-08-14-brain-age-gap-lifestyle.html',
+  md:  '2026-08-17-benzopyrene-oil-brain.md',
+  out: '2026-08-17-benzopyrene-oil-brain.html',
   title: '',
-  desc: '三立、自由、中時這幾天輪流推播同一則研究：四個習慣讓大腦年輕八歲。原始論文刊在 Brain Communications，收了 197 位帶著慢性膝痛的中高齡成人。統計調整後高低分組的差距是 2.69 歲，八歲是分布兩端互相對照的結果；論文裡慢性疼痛與社會環境劣勢那半篇，沒有被翻出來。',
-  tag: '大腦老化 · 腦齡 · 科學新聞判讀 · 時事',
+  desc: '苦茶油苯駢芘超標的製油廠 8 月 15 日累計到第八家，往前接著中聯油脂那批 8.1 微克／公斤、一千三百公噸的大豆沙拉油。新聞停在「一級致癌物」，但多環芳香烴在神經科文獻裡還有另一段身世：它過得了胎盤與血腦屏障，產前暴露那條線的人體證據最清楚，成年人那側則薄得多。',
+  tag: '食安 · 神經毒性 · 時事',
 };
 
 const related = [
-  { out: '2026-08-14-brain-age-gap-lifestyle.html',            nav: '本篇', title: '「大腦年輕 8 歲」洗版台灣健康版面——那 8 歲到底是怎麼算出來的' },
-  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html',       nav: '睡眠腦齡', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
-  { out: 'migraine-brain-aging-2026.html',                     nav: '偏頭痛腦老化', title: '偏頭痛讓大腦早老四年？台灣 MRI 研究，繪出了腦齡落差的地圖' },
-  { out: '2026-07-27-sweetener-brain-aging.html',              nav: '代糖腦老化', title: '那罐「無糖」飲料，正在悄悄借走你的記憶' },
+  { out: '2026-08-17-benzopyrene-oil-brain.html',             nav: '本篇', title: '苦茶油超標名單再添一家——苯駢芘除了致癌，對大腦做了什麼' },
+  { out: '2026-07-27-sweetener-brain-aging.html',             nav: '代糖腦老化', title: '那罐「無糖」飲料，正在悄悄借走你的記憶' },
+  { out: '2026-07-24-alcohol-brain-aging.html',               nav: '酒精與腦血流', title: '「小酌怡情」的腦科學代價——Stanford 研究：飲酒量越多，大腦血流越少' },
+  { out: 'gut-brain-alzheimer-taiwan-2026.html',              nav: '腸腦軸', title: '腸道菌在悄悄保護你的大腦——台灣 439 名長者讓腸腦軸走出實驗室' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">大腦老化 · 腦齡研究 · 相關閱讀</div>
+    <div class="sb-h">飲食 · 神經毒性 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.14 腦齡 × 保護因子量表 × 8 歲與 2.69 歲的差別');
+console.log('完成：每日晨報 2026.08.17 苯駢芘 × 多環芳香烴 × 產前暴露與白質');
