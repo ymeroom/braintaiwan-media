@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.17';
+const DATE = '2026.08.20';
 
 const article = {
-  md:  '2026-08-17-benzopyrene-oil-brain.md',
-  out: '2026-08-17-benzopyrene-oil-brain.html',
+  md:  '2026-08-20-flu-febrile-seizure-encephalopathy.md',
+  out: '2026-08-20-flu-febrile-seizure-encephalopathy.html',
   title: '',
-  desc: '苦茶油苯駢芘超標的製油廠 8 月 15 日累計到第八家，往前接著中聯油脂那批 8.1 微克／公斤、一千三百公噸的大豆沙拉油。新聞停在「一級致癌物」，但多環芳香烴在神經科文獻裡還有另一段身世：它過得了胎盤與血腦屏障，產前暴露那條線的人體證據最清楚，成年人那側則薄得多。',
-  tag: '食安 · 神經毒性 · 時事',
+  desc: '疾管署 8 月 18 日公布單週 80 例流感重症、17 例死亡，本季新高；其中一名五歲女童從發燒咳嗽走到腦水腫、住院兩週後過世。發燒抽搐的孩子絕大多數是熱性痙攣，長期預後好得出乎意料；真正的分岔點不在體溫幾度，而在抽完之後有沒有回到原本的樣子。',
+  tag: '流感腦炎 · 熱性痙攣 · 時事',
 };
 
 const related = [
-  { out: '2026-08-17-benzopyrene-oil-brain.html',             nav: '本篇', title: '苦茶油超標名單再添一家——苯駢芘除了致癌，對大腦做了什麼' },
-  { out: '2026-07-27-sweetener-brain-aging.html',             nav: '代糖腦老化', title: '那罐「無糖」飲料，正在悄悄借走你的記憶' },
-  { out: '2026-07-24-alcohol-brain-aging.html',               nav: '酒精與腦血流', title: '「小酌怡情」的腦科學代價——Stanford 研究：飲酒量越多，大腦血流越少' },
-  { out: 'gut-brain-alzheimer-taiwan-2026.html',              nav: '腸腦軸', title: '腸道菌在悄悄保護你的大腦——台灣 439 名長者讓腸腦軸走出實驗室' },
+  { out: '2026-08-20-flu-febrile-seizure-encephalopathy.html', nav: '本篇', title: '「發燒、雙眼上吊、走路不穩」——五歲女童那場流感，和一般的熱性痙攣差在哪裡' },
+  { out: '2026-08-12-japanese-encephalitis-brain.html',        nav: '日本腦炎', title: '一週後死於呼吸衰竭——日本腦炎燒的不是肺，是大腦深處的神經' },
+  { out: '2026-08-08-covid-acute-encephalitis-peak.html',      nav: '新冠腦炎', title: '新冠第八波此刻正在台灣達到高峰——最小重症患者只有七個月大，急性腦炎的那道紅線在哪裡' },
+  { out: '2026-08-07-dengue-brain-neuro.html',                 nav: '登革熱', title: '登革熱不只是「骨折熱」——台灣研究：每八名住院患者就有一個大腦出了事' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">飲食 · 神經毒性 · 相關閱讀</div>
+    <div class="sb-h">感染與大腦 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.17 苯駢芘 × 多環芳香烴 × 產前暴露與白質');
+console.log('完成：每日晨報 2026.08.20 流感腦病變 × 熱性痙攣的分岔點');
