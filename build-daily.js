@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.20';
+const DATE = '2026.08.21';
 
 const article = {
-  md:  '2026-08-20-flu-febrile-seizure-encephalopathy.md',
-  out: '2026-08-20-flu-febrile-seizure-encephalopathy.html',
+  md:  '2026-08-21-alzheimer-amyloid-clearance-gap.md',
+  out: '2026-08-21-alzheimer-amyloid-clearance-gap.html',
   title: '',
-  desc: '疾管署 8 月 18 日公布單週 80 例流感重症、17 例死亡，本季新高；其中一名五歲女童從發燒咳嗽走到腦水腫、住院兩週後過世。發燒抽搐的孩子絕大多數是熱性痙攣，長期預後好得出乎意料；真正的分岔點不在體溫幾度，而在抽完之後有沒有回到原本的樣子。',
-  tag: '流感腦炎 · 熱性痙攣 · 時事',
+  desc: '中國醫大附醫公布一位八十歲患者接受抗類澱粉蛋白單株抗體治療半年，腦內類澱粉蛋白正子造影數值從 104.2 降到 19.8；同一家醫院近一年新診斷失智九百七十三人，真正用上新藥的約十五人。斑塊清掉八成，退化只慢了兩成七——這中間的落差，以及九百七十三與十五之間的距離。',
+  tag: '失智新藥 · 類澱粉蛋白 · 時事',
 };
 
 const related = [
-  { out: '2026-08-20-flu-febrile-seizure-encephalopathy.html', nav: '本篇', title: '「發燒、雙眼上吊、走路不穩」——五歲女童那場流感，和一般的熱性痙攣差在哪裡' },
-  { out: '2026-08-12-japanese-encephalitis-brain.html',        nav: '日本腦炎', title: '一週後死於呼吸衰竭——日本腦炎燒的不是肺，是大腦深處的神經' },
-  { out: '2026-08-08-covid-acute-encephalitis-peak.html',      nav: '新冠腦炎', title: '新冠第八波此刻正在台灣達到高峰——最小重症患者只有七個月大，急性腦炎的那道紅線在哪裡' },
-  { out: '2026-08-07-dengue-brain-neuro.html',                 nav: '登革熱', title: '登革熱不只是「骨折熱」——台灣研究：每八名住院患者就有一個大腦出了事' },
+  { out: '2026-08-21-alzheimer-amyloid-clearance-gap.html', nav: '本篇', title: '「腦中類澱粉蛋白從 104.2 掉到 19.8」——斑塊清掉八成，記憶為什麼沒有跟著回來八成' },
+  { out: 'dementia-blood-test.html',                        nav: '早期診斷', title: '「抽血驗失智症」可信嗎？三分鐘看懂廣告沒說的事' },
+  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html',    nav: '腦齡', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
+  { out: '2026-07-23-dementia-who-guidelines-taiwan.html',  nav: '風險因子', title: '台灣女性失智死亡升至第八名的那一週，WHO 說 45% 本可以預防' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">感染與大腦 · 相關閱讀</div>
+    <div class="sb-h">失智症與認知退化 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.20 流感腦病變 × 熱性痙攣的分岔點');
+console.log('完成：每日晨報 2026.08.21 失智新藥——斑塊清除與臨床效果的落差');
