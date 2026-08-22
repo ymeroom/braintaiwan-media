@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.21';
+const DATE = '2026.08.22';
 
 const article = {
-  md:  '2026-08-21-alzheimer-amyloid-clearance-gap.md',
-  out: '2026-08-21-alzheimer-amyloid-clearance-gap.html',
+  md:  '2026-08-22-child-teen-headache-school.md',
+  out: '2026-08-22-child-teen-headache-school.html',
   title: '',
-  desc: '中國醫大附醫公布一位八十歲患者接受抗類澱粉蛋白單株抗體治療半年，腦內類澱粉蛋白正子造影數值從 104.2 降到 19.8；同一家醫院近一年新診斷失智九百七十三人，真正用上新藥的約十五人。斑塊清掉八成，退化只慢了兩成七——這中間的落差，以及九百七十三與十五之間的距離。',
-  tag: '失智新藥 · 類澱粉蛋白 · 時事',
+  desc: '八月六日《Cephalalgia》線上刊出 2026 年版兒童青少年頭痛實證說明書：GBD 2023 的點盛行率顯示，頭痛疾患從五到九歲的 10.71% 一路爬到十五到十九歲的 42.64%。台北榮總的資料則指出，台灣國中生的一年期偏頭痛盛行率三年內從 5.2% 升到 7.4%，另有 1.5% 已經是慢性每日頭痛。開學前的「他只有上學才痛」，是線索，不是結論。',
+  tag: '兒童頭痛 · 偏頭痛 · 時事',
 };
 
 const related = [
-  { out: '2026-08-21-alzheimer-amyloid-clearance-gap.html', nav: '本篇', title: '「腦中類澱粉蛋白從 104.2 掉到 19.8」——斑塊清掉八成，記憶為什麼沒有跟著回來八成' },
-  { out: 'dementia-blood-test.html',                        nav: '早期診斷', title: '「抽血驗失智症」可信嗎？三分鐘看懂廣告沒說的事' },
-  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html',    nav: '腦齡', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
-  { out: '2026-07-23-dementia-who-guidelines-taiwan.html',  nav: '風險因子', title: '台灣女性失智死亡升至第八名的那一週，WHO 說 45% 本可以預防' },
+  { out: '2026-08-22-child-teen-headache-school.html', nav: '本篇', title: '「他只有上學才頭痛」——從 10.71% 爬到 42.64%，孩子的頭痛不是等長大就會好' },
+  { out: 'migraine-brain-aging-2026.html',             nav: '偏頭痛與腦齡', title: '偏頭痛讓大腦早老四年？台灣 MRI 研究，繪出了腦齡落差的地圖' },
+  { out: 'ecig-teen-brain.html',                       nav: '青少年大腦', title: '行政院剛拍板電子煙持有入罰，但神經科醫師最在乎的不是10萬元——是15歲的前額葉' },
+  { out: 'heat-sleep-brain.html',                      nav: '睡眠與大腦', title: '熱到睡不著的夏夜，大腦正在欠一筆沒人算過的帳' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">失智症與認知退化 · 相關閱讀</div>
+    <div class="sb-h">頭痛與疼痛 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.21 失智新藥——斑塊清除與臨床效果的落差');
+console.log('完成：每日晨報 2026.08.22 兒童與青少年頭痛——開學前的那句「只有上學才痛」');
