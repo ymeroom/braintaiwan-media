@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.23';
+const DATE = '2026.08.24';
 
 const article = {
-  md:  '2026-08-23-parkinson-finger-tapping.md',
-  out: '2026-08-23-parkinson-finger-tapping.html',
+  md:  '2026-08-24-shingles-postherpetic-neuralgia.md',
+  out: '2026-08-24-shingles-postherpetic-neuralgia.html',
   title: '',
-  desc: '八月八日高齡健康產業博覽會上，台中慈濟醫院神經內科醫師郭啟中請台下五十歲以上的人比出 OK、開合二十五下。這個動作看的不是手抖——2015 年 MDS 診斷準則把門檻放在「動作遲緩且愈做愈小」，而 2025 年《npj Parkinson\'s Disease》的影片研究發現，在臨床醫師打零分的手上，遞減已經量得出來。',
-  tag: '巴金森病 · 動作障礙 · 時事',
+  desc: '臺北市八月一日起把帶狀疱疹疫苗補助門檻下修到五十歲。皮蛇被歸在皮膚科的欄位下，但台灣健保資料顯示 8.6% 的患者在疹子開始三個月後仍在痛——疹子癒合的是皮膚，被病毒燒過的那段神經沒有跟著長回來。談疱疹後神經痛、皮節，以及那條通往中風的血管線。',
+  tag: '帶狀疱疹 · 神經痛 · 時事',
 };
 
 const related = [
-  { out: '2026-08-23-parkinson-finger-tapping.html',    nav: '本篇', title: '比 OK 開合 25 下——手指操真正在看的，是動作會不會愈做愈小' },
-  { out: '2026-08-21-alzheimer-amyloid-clearance-gap.html', nav: '失智新藥', title: '「腦中類澱粉蛋白從 104.2 掉到 19.8」——斑塊清掉八成，記憶為什麼沒有跟著回來八成' },
-  { out: '2026-08-14-brain-age-gap-lifestyle.html',     nav: '腦齡', title: '「大腦年輕 8 歲」洗版台灣健康版面——那 8 歲到底是怎麼算出來的' },
-  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html', nav: '睡眠與大腦', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
+  { out: '2026-08-24-shingles-postherpetic-neuralgia.html', nav: '本篇', title: '疹子退了，痛還在——皮蛇疫苗補助擴大的這個夏天，該把它當成神經的病來看' },
+  { out: 'shingles-vaccine-brain.html',                 nav: '皮蛇與大腦', title: '打皮蛇疫苗那天，保護的其實不只是皮膚——帶狀皰疹與大腦的隱密連線' },
+  { out: '2026-08-22-child-teen-headache-school.html',  nav: '疼痛', title: '「他只有上學才頭痛」——從 10.71% 爬到 42.64%，孩子的頭痛不是等長大就會好' },
+  { out: '2026-08-09-tia-small-stroke-warning.html',    nav: '中風警訊', title: '「那15分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">動作障礙與大腦 · 相關閱讀</div>
+    <div class="sb-h">帶狀疱疹、神經痛與大腦 · 相關閱讀</div>
 ${links}
   </div>`;
 }
