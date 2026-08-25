@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.24';
+const DATE = '2026.08.25';
 
 const article = {
-  md:  '2026-08-24-shingles-postherpetic-neuralgia.md',
-  out: '2026-08-24-shingles-postherpetic-neuralgia.html',
+  md:  '2026-08-25-flood-cleanup-head-injury-csdh.md',
+  out: '2026-08-25-flood-cleanup-head-injury-csdh.html',
   title: '',
-  desc: '臺北市八月一日起把帶狀疱疹疫苗補助門檻下修到五十歲。皮蛇被歸在皮膚科的欄位下，但台灣健保資料顯示 8.6% 的患者在疹子開始三個月後仍在痛——疹子癒合的是皮膚，被病毒燒過的那段神經沒有跟著長回來。談疱疹後神經痛、皮節，以及那條通往中風的血管線。',
-  tag: '帶狀疱疹 · 神經痛 · 時事',
+  desc: '高雄二十四小時雨量 567 毫米超過凱米，高屏撤離逾兩千人。水退之後才是重點——搬冰箱、爬櫃子、踩濕地板的那一跤，腦裡被拉長的橋靜脈可能裂出一個慢慢滲血的小口，三週到三個月後才以走路不穩、記性變差、性格變懶的樣子出現。談慢性硬腦膜下血腫、抗血栓藥把風險放大幾倍，以及哪些情況撞到頭不能等。',
+  tag: '頭部外傷 · 水災 · 時事',
 };
 
 const related = [
-  { out: '2026-08-24-shingles-postherpetic-neuralgia.html', nav: '本篇', title: '疹子退了，痛還在——皮蛇疫苗補助擴大的這個夏天，該把它當成神經的病來看' },
-  { out: 'shingles-vaccine-brain.html',                 nav: '皮蛇與大腦', title: '打皮蛇疫苗那天，保護的其實不只是皮膚——帶狀皰疹與大腦的隱密連線' },
-  { out: '2026-08-22-child-teen-headache-school.html',  nav: '疼痛', title: '「他只有上學才頭痛」——從 10.71% 爬到 42.64%，孩子的頭痛不是等長大就會好' },
-  { out: '2026-08-09-tia-small-stroke-warning.html',    nav: '中風警訊', title: '「那15分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
+  { out: '2026-08-25-flood-cleanup-head-injury-csdh.html', nav: '本篇', title: '水退之後才開始的那種出血——清家園撞到頭的那一下，腦子可以拖六週才喊痛' },
+  { out: 'concussion-what-is.html',                        nav: '腦震盪', title: '頭撞一下，大腦裡發生了什麼？醫師解析腦震盪' },
+  { out: 'concussion-wc2026.html',                         nav: '頭部防護', title: '2026 世界盃腦神經防護新制：FIFA 為什麼把規則改這麼大？' },
+  { out: 'typhoon-heatwave-stroke-2026.html',              nav: '天氣與腦', title: '颱風巴威一過、氣溫炸裂，急診大血管中風為什麼翻倍了' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">帶狀疱疹、神經痛與大腦 · 相關閱讀</div>
+    <div class="sb-h">頭部外傷與大腦 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.23 巴金森病手指操——動作會不會愈做愈小');
+console.log('完成：每日晨報 2026.08.25 水災清家園的頭部外傷——慢性硬腦膜下血腫');
