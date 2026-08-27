@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.25';
+const DATE = '2026.08.27';
 
 const article = {
-  md:  '2026-08-25-flood-cleanup-head-injury-csdh.md',
-  out: '2026-08-25-flood-cleanup-head-injury-csdh.html',
+  md:  '2026-08-27-idh-glioma-oral-targeted-therapy.md',
+  out: '2026-08-27-idh-glioma-oral-targeted-therapy.html',
   title: '',
-  desc: '高雄二十四小時雨量 567 毫米超過凱米，高屏撤離逾兩千人。水退之後才是重點——搬冰箱、爬櫃子、踩濕地板的那一跤，腦裡被拉長的橋靜脈可能裂出一個慢慢滲血的小口，三週到三個月後才以走路不穩、記性變差、性格變懶的樣子出現。談慢性硬腦膜下血腫、抗血栓藥把風險放大幾倍，以及哪些情況撞到頭不能等。',
-  tag: '頭部外傷 · 水災 · 時事',
+  desc: '八月中，神經腫瘤醫界集體呼籲健保納入 IDH 突變膠質瘤的口服標靶藥；報導裡是一名二十四歲警察折返跑倒地才查出腦瘤。台灣每年約七百多例惡性腦瘤，兩成多帶 IDH 突變，病人集中在三十到五十歲。談低惡性度膠質瘤為什麼不能只靠開刀、2-HG 如何卡住細胞的分化，以及 INDIGO 試驗把無惡化存活期從 11.1 個月推到 27.7、再到 44.1 個月的意義。',
+  tag: '腦瘤 · 精準治療 · 時事',
 };
 
 const related = [
-  { out: '2026-08-25-flood-cleanup-head-injury-csdh.html', nav: '本篇', title: '水退之後才開始的那種出血——清家園撞到頭的那一下，腦子可以拖六週才喊痛' },
-  { out: 'concussion-what-is.html',                        nav: '腦震盪', title: '頭撞一下，大腦裡發生了什麼？醫師解析腦震盪' },
-  { out: 'concussion-wc2026.html',                         nav: '頭部防護', title: '2026 世界盃腦神經防護新制：FIFA 為什麼把規則改這麼大？' },
-  { out: 'typhoon-heatwave-stroke-2026.html',              nav: '天氣與腦', title: '颱風巴威一過、氣溫炸裂，急診大血管中風為什麼翻倍了' },
+  { out: '2026-08-27-idh-glioma-oral-targeted-therapy.html', nav: '本篇', title: '腦子裡那顆長得慢的瘤，第一次有藥能在它變壞之前先攔一手' },
+  { out: '2026-08-20-flu-febrile-seizure-encephalopathy.html', nav: '抽搐', title: '「發燒、雙眼上吊、走路不穩」——五歲女童那場流感，和一般的熱性痙攣差在哪裡' },
+  { out: '2026-07-21-world-brain-day-2026.html',              nav: '腦健康', title: '七月二十二日是世界腦健康日——「人人可及的大腦健康」，為什麼到現在還做不到' },
+  { out: '2026-08-14-brain-age-gap-lifestyle.html',           nav: '腦齡', title: '「大腦年輕 8 歲」洗版台灣健康版面——那 8 歲到底是怎麼算出來的' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">頭部外傷與大腦 · 相關閱讀</div>
+    <div class="sb-h">腦瘤與神經腫瘤 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.25 水災清家園的頭部外傷——慢性硬腦膜下血腫');
+console.log('完成：每日晨報 2026.08.27 IDH 突變膠質瘤與口服標靶藥');
