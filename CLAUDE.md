@@ -49,8 +49,14 @@ A daily cloud routine ("Daily morning-brief") commits and pushes to `main`
 without any local session running. It adds a `_src/*.md`, a `posts/*.html`, an
 `fb-drafts/*.md`, **a card in `index.html`**, and regenerates `sitemap.xml`.
 
-GitHub Pages serves `main` at the repo root, so `main` is production. Pushing a
-feature branch publishes nothing.
+GitHub Pages serves `main` at the repo root, so `main` is production. Pushing an
+ordinary feature branch publishes nothing.
+
+The one exception is the daily brief: `.github/workflows/publish-daily-brief.yml`
+fast-forwards `main` from any `claude/**` push whose head commit starts with
+`Daily morning-brief:` or `FB draft:`. A daily session therefore publishes by
+pushing its own branch — no manual merge, and no second push to `main`. See
+`docs/daily-pipeline.md` → 「分支與發布路徑」.
 
 - Run `git fetch origin` and check `git log origin/main..HEAD` **before**
   starting work and again before merging. A branch left overnight is already
@@ -58,6 +64,10 @@ feature branch publishes nothing.
 - Never assume a merge to `main` is a fast-forward. Verify with
   `git log --oneline origin/<branch>..origin/main | wc -l` — a non-zero count
   means `main` moved.
+- That same command does **not** answer "did my work reach production": it is 0
+  both when `main` is behind and when `main` already matches the branch. Ask the
+  other direction — `git log --oneline origin/main..HEAD` (empty = published) or
+  `git merge-base --is-ancestor HEAD origin/main`.
 - `index.html` is the collision point: article cards are maintained by hand
   *and* appended by the routine. After any merge touching it, confirm the card
   count equals both sides' additions and grep for a few of the routine's recent

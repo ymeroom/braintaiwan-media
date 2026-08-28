@@ -160,6 +160,42 @@ prompt，只能在 Claude 網頁介面手動更新。`docs/daily-routine-prompt.
 即使 routine 尚未更新，`CLAUDE.md` 與 `AGENTS.md` 已載明這兩道關卡，每日 agent
 在 session 啟動時就會讀到。
 
+### 分支與發布路徑：推到 session 分支就會自動上線
+
+雲端 session 通常被指派一條 `claude/xxx` 分支，而 GitHub Pages 只服務 `main`。
+兩者由 `.github/workflows/publish-daily-brief.yml` 接起來：只要有 push 進
+`claude/**`，該 workflow 就會把分支**快轉合併**進 `main`。三道閘門是
+
+1. 只看 `claude/**` 分支；
+2. 最新一個 commit 的訊息必須以 `Daily morning-brief:` 或 `FB draft:` 開頭
+   ——人工開發分支不會被誤送上線；
+3. 只做 fast-forward。分支若不是 `main` 的直接延伸就整個不動，不覆寫任何東西。
+
+所以**每日 agent 把文章推上自己的分支就算發布完成，不需要人工合併**，也不必
+（更不該）另外推一次 `main`。workflow 是 push 之後才跑，會有幾十秒的延遲；要
+確認結果，重新 `git fetch origin main` 再查。
+
+第 3 道閘門失敗（workflow exit 1）代表 `main` 在這期間長出了別的 commit，此時
+分支停在原地、`main` 不動，需要人工把 `main` 併進分支再推一次。
+
+### 確認「文章到底上線了沒」的正確指令
+
+`CLAUDE.md` 裡那句 `git log --oneline origin/<branch>..origin/main | wc -l`
+回答的是**「`main` 有沒有長出我沒有的東西」**（非零表示 `main` 動過、分支已落後），
+拿它來判斷發布會出錯：`main` 落後、以及 `main` 與分支完全一致，兩種情況都是 0。
+
+判斷有沒有上線要問反方向——我的 commit 進到 `main` 了嗎：
+
+```bash
+git fetch origin main
+git merge-base --is-ancestor HEAD origin/main && echo 已上線 || echo 尚未上線
+# 或直接列出分支上還沒進 main 的 commit（空的就是全部到齊）
+git log --oneline origin/main..HEAD
+```
+
+2026-08-28 那天就是誤用了前一個指令，明明 workflow 已經把文章送上 `main`，
+報告卻寫成「尚未發布、請手動合併」。
+
 ## 四、每日流程檢查點
 
 1. `node topic-guard.js` → 取得封鎖／可選主題群
@@ -168,4 +204,6 @@ prompt，只能在 Claude 網頁介面手動更新。`docs/daily-routine-prompt.
 4. 寫作，front-matter 填入 `topic:`，來源依上述格式
 5. `node check-citations.js _src/<slug>.md` → 必須 exit 0
 6. `node build-daily.js` → `node enhance-article-seo.js` → `node seo-build.js`
-7. 更新 `index.html`，commit、push
+7. 更新 `index.html`，commit、push 到 session 分支（workflow 會自動快轉上 `main`）
+8. `git fetch origin main` 後用 `git log --oneline origin/main..HEAD` 確認為空
+   ——空的才代表真的上線了
