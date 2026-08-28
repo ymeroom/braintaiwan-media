@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.27';
+const DATE = '2026.08.28';
 
 const article = {
-  md:  '2026-08-27-idh-glioma-oral-targeted-therapy.md',
-  out: '2026-08-27-idh-glioma-oral-targeted-therapy.html',
+  md:  '2026-08-28-senior-fitness-brain-reserve.md',
+  out: '2026-08-28-senior-fitness-brain-reserve.html',
   title: '',
-  desc: '八月中，神經腫瘤醫界集體呼籲健保納入 IDH 突變膠質瘤的口服標靶藥；報導裡是一名二十四歲警察折返跑倒地才查出腦瘤。台灣每年約七百多例惡性腦瘤，兩成多帶 IDH 突變，病人集中在三十到五十歲。談低惡性度膠質瘤為什麼不能只靠開刀、2-HG 如何卡住細胞的分化，以及 INDIGO 試驗把無惡化存活期從 11.1 個月推到 27.7、再到 44.1 個月的意義。',
-  tag: '腦瘤 · 精準治療 · 時事',
+  desc: '健康幣十月上路，獎勵的十幾項篩檢全是抽血、影像和問卷。而同一個八月登上《JAMA Network Open》的台灣研究追蹤 13,423 位長者七年，發現最會預測死亡風險的不是任何一格檢驗數字，而是從椅子上起身、繞過八英尺外的角錐再走回來要幾秒。談「起身繞行」為什麼考的是前庭、小腦與額葉，單腳站不滿二十秒和腦中無症狀腔隙性梗塞的關係，以及生理儲備在神經科的具體對應。',
+  tag: '老化 · 腦健康 · 時事',
 };
 
 const related = [
-  { out: '2026-08-27-idh-glioma-oral-targeted-therapy.html', nav: '本篇', title: '腦子裡那顆長得慢的瘤，第一次有藥能在它變壞之前先攔一手' },
-  { out: '2026-08-20-flu-febrile-seizure-encephalopathy.html', nav: '抽搐', title: '「發燒、雙眼上吊、走路不穩」——五歲女童那場流感，和一般的熱性痙攣差在哪裡' },
-  { out: '2026-07-21-world-brain-day-2026.html',              nav: '腦健康', title: '七月二十二日是世界腦健康日——「人人可及的大腦健康」，為什麼到現在還做不到' },
-  { out: '2026-08-14-brain-age-gap-lifestyle.html',           nav: '腦齡', title: '「大腦年輕 8 歲」洗版台灣健康版面——那 8 歲到底是怎麼算出來的' },
+  { out: '2026-08-28-senior-fitness-brain-reserve.html', nav: '本篇', title: '起身繞一圈要幾秒——最會預測壽命的那一項，量的其實是神經' },
+  { out: '2026-08-27-idh-glioma-oral-targeted-therapy.html', nav: '腦瘤', title: '腦子裡那顆長得慢的瘤，第一次有藥能在它變壞之前先攔一手' },
+  { out: '2026-08-23-parkinson-finger-tapping.html',     nav: '動作', title: '比 OK 開合 25 下——手指操真正在看的，是動作會不會愈做愈小' },
+  { out: '2026-08-14-brain-age-gap-lifestyle.html',      nav: '腦齡', title: '「大腦年輕 8 歲」洗版台灣健康版面——那 8 歲到底是怎麼算出來的' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.27 IDH 突變膠質瘤與口服標靶藥');
+console.log('完成：每日晨報 2026.08.28 長者體適能與神經儲備');
