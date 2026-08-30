@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.29';
+const DATE = '2026.08.30';
 
 const article = {
-  md:  '2026-08-29-teen-circadian-school-start.md',
-  out: '2026-08-29-teen-circadian-school-start.html',
+  md:  '2026-08-30-depression-somatic-symptoms-neurology.md',
+  out: '2026-08-30-depression-somatic-symptoms-neurology.html',
   title: '',
-  desc: '8 月 31 日全台國中小開學，家長群組給的建議幾乎都是「提早上床」。但 1993 年 Carskadon 那份四百五十八人的問卷早就把社交因素排除掉了：青春期發育本身就會把生理時鐘往後推。談台灣中小學生平日 7.35 小時、週末 9.38 小時之間那道社交時差，光照為什麼比就寢時間更能調時鐘，以及西雅圖把第一節課延後 55 分鐘後、活動記錄器上多出來的 34 分鐘睡眠。',
-  tag: '睡眠 · 開學 · 時事',
+  desc: '6 月 22 日衛福部公布 114 年死因統計，自殺連兩年進十大死因、3,951 人，45–64 歲那一段不減反增。但這條路更前面的一段是：憂鬱的人第一次走進的診間常常不是身心科。談 WHO 十四國基層醫療調查裡「六成九只講身體症狀」、神經科新病人有三成症狀無法用器質性疾病解釋而追蹤十八個月只有 0.4% 翻案，以及偏頭痛與憂鬱那條 5.8 倍與 3.4 倍的雙向道路。',
+  tag: '精神症狀 · 神經 · 時事',
 };
 
 const related = [
-  { out: '2026-08-29-teen-circadian-school-start.html', nav: '本篇', title: '「早點睡」為什麼沒用——青少年那個天生走晚的時鐘，兩天調不回來' },
+  { out: '2026-08-30-depression-somatic-symptoms-neurology.html', nav: '本篇', title: '先掛到神經內科的那種憂鬱——七成的人開口講的是身體' },
+  { out: '2026-08-29-teen-circadian-school-start.html', nav: '睡眠', title: '「早點睡」為什麼沒用——青少年那個天生走晚的時鐘，兩天調不回來' },
+  { out: '2026-08-22-child-teen-headache-school.html',  nav: '頭痛', title: '「他只有上學才頭痛」——孩子的頭痛不是等長大就會好' },
   { out: '2026-08-28-senior-fitness-brain-reserve.html', nav: '老化', title: '起身繞一圈要幾秒——最會預測壽命的那一項，量的其實是神經' },
-  { out: '2026-08-22-child-teen-headache-school.html',       nav: '頭痛', title: '「他只有上學才頭痛」——孩子的頭痛不是等長大就會好' },
-  { out: '2026-08-27-idh-glioma-oral-targeted-therapy.html', nav: '腦瘤', title: '腦子裡那顆長得慢的瘤，第一次有藥能在它變壞之前先攔一手' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">腦瘤與神經腫瘤 · 相關閱讀</div>
+    <div class="sb-h">精神症狀與神經 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.29 青少年生理時鐘與開學');
+console.log('完成：每日晨報 2026.08.30 憂鬱的身體症狀與神經科門診');
