@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.30';
+const DATE = '2026.08.31';
 
 const article = {
-  md:  '2026-08-30-depression-somatic-symptoms-neurology.md',
-  out: '2026-08-30-depression-somatic-symptoms-neurology.html',
+  md:  '2026-08-31-metabolic-syndrome-brain-risk.md',
+  out: '2026-08-31-metabolic-syndrome-brain-risk.html',
   title: '',
-  desc: '6 月 22 日衛福部公布 114 年死因統計，自殺連兩年進十大死因、3,951 人，45–64 歲那一段不減反增。但這條路更前面的一段是：憂鬱的人第一次走進的診間常常不是身心科。談 WHO 十四國基層醫療調查裡「六成九只講身體症狀」、神經科新病人有三成症狀無法用器質性疾病解釋而追蹤十八個月只有 0.4% 翻案，以及偏頭痛與憂鬱那條 5.8 倍與 3.4 倍的雙向道路。',
-  tag: '精神症狀 · 神經 · 時事',
+  desc: '國健署「逆轉代謝、健康加值」報名到 9 月 30 日截止，滿四年的防治計畫收案已超過 60 萬人，宣導講的是心肌梗塞。但腰圍、血壓、血糖這五項湊到三項之後，先扣分的是腦：中風風險 1.7 倍、缺血性中風 2.12 倍；三萬七千人的腦部影像上，灰質與海馬迴已經變小；韓國近一百九十萬人的資料裡，年輕型失智風險高兩成四，四十幾歲五項全中的那一群高七成七。',
+  tag: '代謝 · 血管危險因子 · 時事',
 };
 
 const related = [
-  { out: '2026-08-30-depression-somatic-symptoms-neurology.html', nav: '本篇', title: '先掛到神經內科的那種憂鬱——七成的人開口講的是身體' },
-  { out: '2026-08-29-teen-circadian-school-start.html', nav: '睡眠', title: '「早點睡」為什麼沒用——青少年那個天生走晚的時鐘，兩天調不回來' },
-  { out: '2026-08-22-child-teen-headache-school.html',  nav: '頭痛', title: '「他只有上學才頭痛」——孩子的頭痛不是等長大就會好' },
-  { out: '2026-08-28-senior-fitness-brain-reserve.html', nav: '老化', title: '起身繞一圈要幾秒——最會預測壽命的那一項，量的其實是神經' },
+  { out: '2026-08-31-metabolic-syndrome-brain-risk.html', nav: '本篇', title: '「五項裡中三項」——代謝症候群這張帳單，腦子付的比心臟早' },
+  { out: '2026-08-10-young-stroke-taiwan.html', nav: '中風', title: '三十歲的大腦，卻中了風——每七位台灣腦中風患者，就有一個不到四十五歲' },
+  { out: '2026-08-09-tia-small-stroke-warning.html', nav: '警訊', title: '「那 15 分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
+  { out: '2026-08-21-alzheimer-amyloid-clearance-gap.html', nav: '失智', title: '斑塊清掉八成，記憶為什麼沒有跟著回來八成' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">精神症狀與神經 · 相關閱讀</div>
+    <div class="sb-h">代謝與血管危險因子 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.30 憂鬱的身體症狀與神經科門診');
+console.log('完成：每日晨報 2026.08.31 代謝症候群與腦');
