@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.08.31';
+const DATE = '2026.09.01';
 
 const article = {
-  md:  '2026-08-31-metabolic-syndrome-brain-risk.md',
-  out: '2026-08-31-metabolic-syndrome-brain-risk.html',
+  md:  '2026-09-01-influenza-brain-encephalopathy.md',
+  out: '2026-09-01-influenza-brain-encephalopathy.html',
   title: '',
-  desc: '國健署「逆轉代謝、健康加值」報名到 9 月 30 日截止，滿四年的防治計畫收案已超過 60 萬人，宣導講的是心肌梗塞。但腰圍、血壓、血糖這五項湊到三項之後，先扣分的是腦：中風風險 1.7 倍、缺血性中風 2.12 倍；三萬七千人的腦部影像上，灰質與海馬迴已經變小；韓國近一百九十萬人的資料裡，年輕型失智風險高兩成四，四十幾歲五項全中的那一群高七成七。',
-  tag: '代謝 · 血管危險因子 · 時事',
+  desc: '開學第一天，八月以來每週類流感門急診就診人次都是近十年同期新高，本季已累計 1139 例重症、220 例死亡，七成一沒打疫苗。流感偶爾會走到腦子：美國四十九家兒童醫院的資料裡，因流感住院的孩子有 7.6% 出現神經併發症，腦病變占 1.7%。「燒壞腦子」其實不是被溫度燒壞的——是細胞激素撐開血腦障壁，而判斷的依據從來不是體溫，是意識。',
+  tag: '流感 · 腦部感染 · 時事',
 };
 
 const related = [
-  { out: '2026-08-31-metabolic-syndrome-brain-risk.html', nav: '本篇', title: '「五項裡中三項」——代謝症候群這張帳單，腦子付的比心臟早' },
-  { out: '2026-08-10-young-stroke-taiwan.html', nav: '中風', title: '三十歲的大腦，卻中了風——每七位台灣腦中風患者，就有一個不到四十五歲' },
-  { out: '2026-08-09-tia-small-stroke-warning.html', nav: '警訊', title: '「那 15 分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
-  { out: '2026-08-21-alzheimer-amyloid-clearance-gap.html', nav: '失智', title: '斑塊清掉八成，記憶為什麼沒有跟著回來八成' },
+  { out: '2026-09-01-influenza-brain-encephalopathy.html', nav: '本篇', title: '「燒壞腦子」不是被燒壞的——八月流感創十年同期新高，開學第一天該盯的是那 1.7%' },
+  { out: '2026-08-05-pneumococcal-meningitis-vaccine.html', nav: '腦膜炎', title: '說是「肺炎」球菌——神經科最怕的是它走到腦膜的那一步' },
+  { out: '2026-08-31-metabolic-syndrome-brain-risk.html', nav: '危險因子', title: '「五項裡中三項」——代謝症候群這張帳單，腦子付的比心臟早' },
+  { out: '2026-08-29-teen-circadian-school-start.html', nav: '開學', title: '「早點睡」為什麼沒用——8 月 31 號開學，青少年那個天生走晚的時鐘，兩天調不回來' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.08.31 代謝症候群與腦');
+console.log('完成：每日晨報 2026.09.01 流感與腦病變');
