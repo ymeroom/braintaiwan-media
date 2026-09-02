@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.01';
+const DATE = '2026.09.02';
 
 const article = {
-  md:  '2026-09-01-influenza-brain-encephalopathy.md',
-  out: '2026-09-01-influenza-brain-encephalopathy.html',
+  md:  '2026-09-02-myasthenia-gravis-car-t.md',
+  out: '2026-09-02-myasthenia-gravis-car-t.html',
   title: '',
-  desc: '開學第一天，八月以來每週類流感門急診就診人次都是近十年同期新高，本季已累計 1139 例重症、220 例死亡，七成一沒打疫苗。流感偶爾會走到腦子：美國四十九家兒童醫院的資料裡，因流感住院的孩子有 7.6% 出現神經併發症，腦病變占 1.7%。「燒壞腦子」其實不是被溫度燒壞的——是細胞激素撐開血腦障壁，而判斷的依據從來不是體溫，是意識。',
-  tag: '流感 · 腦部感染 · 時事',
+  desc: '台灣的重症肌無力臨床指引今年登出來了：三十七位專科醫師加一位病友代表，把難治型單獨列成一章。這個病的指紋是疲乏不是無力——早上眼皮好好的，下午垂下來。八成的人靠傳統藥物控制得住，剩下兩成反覆走到插管。血漿置換是在擦地板，而今年《Nature Medicine》那個二十六人的試驗，做的是關水龍頭。',
+  tag: '神經免疫 · 重症肌無力 · 時事',
 };
 
 const related = [
-  { out: '2026-09-01-influenza-brain-encephalopathy.html', nav: '本篇', title: '「燒壞腦子」不是被燒壞的——八月流感創十年同期新高，開學第一天該盯的是那 1.7%' },
-  { out: '2026-08-05-pneumococcal-meningitis-vaccine.html', nav: '腦膜炎', title: '說是「肺炎」球菌——神經科最怕的是它走到腦膜的那一步' },
-  { out: '2026-08-31-metabolic-syndrome-brain-risk.html', nav: '危險因子', title: '「五項裡中三項」——代謝症候群這張帳單，腦子付的比心臟早' },
-  { out: '2026-08-29-teen-circadian-school-start.html', nav: '開學', title: '「早點睡」為什麼沒用——8 月 31 號開學，青少年那個天生走晚的時鐘，兩天調不回來' },
+  { out: '2026-09-02-myasthenia-gravis-car-t.html', nav: '本篇', title: '「早上還好，下午垂下來」——台灣今年寫出肌無力指引，而細胞治療正在改寫那兩成' },
+  { out: '2026-09-01-influenza-brain-encephalopathy.html', nav: '腦部感染', title: '「燒壞腦子」不是被燒壞的——八月流感創十年同期新高，開學第一天該盯的是那 1.7%' },
+  { out: '2026-08-30-depression-somatic-symptoms-neurology.html', nav: '身心', title: '先掛到神經內科的那種憂鬱——十四個國家的門診資料裡，七成的人開口講的是身體' },
+  { out: '2026-08-24-shingles-postherpetic-neuralgia.html', nav: '神經痛', title: '疹子退了痛還在——帶狀疱疹後神經痛，是神經被燒出來的疤' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">代謝與血管危險因子 · 相關閱讀</div>
+    <div class="sb-h">神經免疫與腦 · 相關閱讀</div>
 ${links}
   </div>`;
 }
