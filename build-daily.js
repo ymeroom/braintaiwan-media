@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.02';
+const DATE = '2026.09.03';
 
 const article = {
-  md:  '2026-09-02-myasthenia-gravis-car-t.md',
-  out: '2026-09-02-myasthenia-gravis-car-t.html',
+  md:  '2026-09-03-dementia-diagnosis-gap.md',
+  out: '2026-09-03-dementia-diagnosis-gap.html',
   title: '',
-  desc: '台灣的重症肌無力臨床指引今年登出來了：三十七位專科醫師加一位病友代表，把難治型單獨列成一章。這個病的指紋是疲乏不是無力——早上眼皮好好的，下午垂下來。八成的人靠傳統藥物控制得住，剩下兩成反覆走到插管。血漿置換是在擦地板，而今年《Nature Medicine》那個二十六人的試驗，做的是關水龍頭。',
-  tag: '神經免疫 · 重症肌無力 · 時事',
+  desc: '九月是國際失智症月。新竹市在發布會上放出的兩個數字擺在一起看有點刺眼：推估五千七百七十八名失智者，確診三千五百六十九人。中間那兩千兩百人不是還沒生病，是已經生病、還沒被任何一間診間登記到。全國調查裡極輕度占 17.08%，而新藥的入場券寫的正是「早期」兩個字。',
+  tag: '失智症 · 早期診斷 · 時事',
 };
 
 const related = [
-  { out: '2026-09-02-myasthenia-gravis-car-t.html', nav: '本篇', title: '「早上還好，下午垂下來」——台灣今年寫出肌無力指引，而細胞治療正在改寫那兩成' },
-  { out: '2026-09-01-influenza-brain-encephalopathy.html', nav: '腦部感染', title: '「燒壞腦子」不是被燒壞的——八月流感創十年同期新高，開學第一天該盯的是那 1.7%' },
-  { out: '2026-08-30-depression-somatic-symptoms-neurology.html', nav: '身心', title: '先掛到神經內科的那種憂鬱——十四個國家的門診資料裡，七成的人開口講的是身體' },
-  { out: '2026-08-24-shingles-postherpetic-neuralgia.html', nav: '神經痛', title: '疹子退了痛還在——帶狀疱疹後神經痛，是神經被燒出來的疤' },
+  { out: '2026-09-03-dementia-diagnosis-gap.html', nav: '本篇', title: '「推估 5,778 人，確診 3,569 人」——國際失智症月開跑，中間那兩千人在哪裡' },
+  { out: '2026-09-02-myasthenia-gravis-car-t.html', nav: '神經免疫', title: '「早上還好，下午垂下來」——台灣今年寫出肌無力指引，而細胞治療正在改寫那兩成' },
+  { out: '2026-08-28-senior-fitness-brain-reserve.html', nav: '老化', title: '起身繞一圈要幾秒——一萬三千位台灣長者的數據裡，最會預測壽命的那一項，量的其實是神經' },
+  { out: '2026-08-31-metabolic-syndrome-brain-risk.html', nav: '血管危險因子', title: '「五項裡中三項」——代謝症候群這張帳單，腦子付的比心臟早' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.09.01 流感與腦病變');
+console.log('完成：每日晨報 2026.09.03 失智症診斷缺口');
