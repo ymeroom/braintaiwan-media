@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.03';
+const DATE = '2026.09.04';
 
 const article = {
-  md:  '2026-09-03-dementia-diagnosis-gap.md',
-  out: '2026-09-03-dementia-diagnosis-gap.html',
+  md:  '2026-09-04-ed-crowding-stroke-clock.md',
+  out: '2026-09-04-ed-crowding-stroke-clock.html',
   title: '',
-  desc: '九月是國際失智症月。新竹市在發布會上放出的兩個數字擺在一起看有點刺眼：推估五千七百七十八名失智者，確診三千五百六十九人。中間那兩千兩百人不是還沒生病，是已經生病、還沒被任何一間診間登記到。全國調查裡極輕度占 17.08%，而新藥的入場券寫的正是「早期」兩個字。',
-  tag: '失智症 · 早期診斷 · 時事',
+  desc: '九月三號健保署把急診壅塞的解方定案：暫留特殊給付、下轉各三千五百點、訪視費調高。方向是對的，但急診裡有一種病人缺的不是床，是接下來的四十分鐘——每分鐘一百九十萬個神經元。台灣只有 6.7% 的缺血性中風走完溶栓，而研究說壅塞拖慢的不是打針，是「認出來」之前那一段。',
+  tag: '腦中風 · 急診 · 時事',
 };
 
 const related = [
-  { out: '2026-09-03-dementia-diagnosis-gap.html', nav: '本篇', title: '「推估 5,778 人，確診 3,569 人」——國際失智症月開跑，中間那兩千人在哪裡' },
-  { out: '2026-09-02-myasthenia-gravis-car-t.html', nav: '神經免疫', title: '「早上還好，下午垂下來」——台灣今年寫出肌無力指引，而細胞治療正在改寫那兩成' },
-  { out: '2026-08-28-senior-fitness-brain-reserve.html', nav: '老化', title: '起身繞一圈要幾秒——一萬三千位台灣長者的數據裡，最會預測壽命的那一項，量的其實是神經' },
+  { out: '2026-09-04-ed-crowding-stroke-clock.html', nav: '本篇', title: '「一分鐘一百九十萬顆」——急診壅塞的解方定案了，但中風的那格碼表是分開走的' },
+  { out: '2026-09-03-dementia-diagnosis-gap.html', nav: '失智症', title: '「推估 5,778 人，確診 3,569 人」——國際失智症月開跑，中間那兩千人在哪裡' },
   { out: '2026-08-31-metabolic-syndrome-brain-risk.html', nav: '血管危險因子', title: '「五項裡中三項」——代謝症候群這張帳單，腦子付的比心臟早' },
+  { out: 'stroke-rehab-ward-2026.html', nav: '中風復健', title: '中風後那扇窗——七月起健保復健病房上路，神經科醫師說為什麼六個月之後就不一樣了' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">神經免疫與腦 · 相關閱讀</div>
+    <div class="sb-h">腦中風與急症 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -279,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.09.03 失智症診斷缺口');
+console.log('完成：每日晨報 2026.09.04 急診壅塞與中風時鐘');
