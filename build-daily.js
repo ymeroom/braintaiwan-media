@@ -6,21 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.04';
+const DATE = '2026.09.05';
 
 const article = {
-  md:  '2026-09-04-ed-crowding-stroke-clock.md',
-  out: '2026-09-04-ed-crowding-stroke-clock.html',
+  md:  '2026-09-05-heat-illness-brain-emergency.md',
+  out: '2026-09-05-heat-illness-brain-emergency.html',
   title: '',
-  desc: '九月三號健保署把急診壅塞的解方定案：暫留特殊給付、下轉各三千五百點、訪視費調高。方向是對的，但急診裡有一種病人缺的不是床，是接下來的四十分鐘——每分鐘一百九十萬個神經元。台灣只有 6.7% 的缺血性中風走完溶栓，而研究說壅塞拖慢的不是打針，是「認出來」之前那一段。',
-  tag: '腦中風 · 急診 · 時事',
+  desc: '中央氣象署八月三十一號的季展望說九到十一月氣溫正常到偏高，而國健署七月的熱傷害急診已經八百零四人次、創今年單月新高。中暑跟熱衰竭的分界線不在溫度計上，而在中樞神經——講話顛三倒四、腳步歪斜、脾氣暴躁，這些比「他有沒有流汗」重要得多。談小腦為什麼先倒下，以及那格三十分鐘的碼表。',
+  tag: '熱傷害 · 中暑 · 時事',
 };
-
 const related = [
-  { out: '2026-09-04-ed-crowding-stroke-clock.html', nav: '本篇', title: '「一分鐘一百九十萬顆」——急診壅塞的解方定案了，但中風的那格碼表是分開走的' },
-  { out: '2026-09-03-dementia-diagnosis-gap.html', nav: '失智症', title: '「推估 5,778 人，確診 3,569 人」——國際失智症月開跑，中間那兩千人在哪裡' },
-  { out: '2026-08-31-metabolic-syndrome-brain-risk.html', nav: '血管危險因子', title: '「五項裡中三項」——代謝症候群這張帳單，腦子付的比心臟早' },
-  { out: 'stroke-rehab-ward-2026.html', nav: '中風復健', title: '中風後那扇窗——七月起健保復健病房上路，神經科醫師說為什麼六個月之後就不一樣了' },
+  { out: '2026-09-05-heat-illness-brain-emergency.html', nav: '本篇', title: '「秋天了怎麼還會中暑」——氣象署說九到十一月偏暖，而中暑的判斷點從來不在溫度計上' },
+  { out: '2026-09-04-ed-crowding-stroke-clock.html', nav: '急診', title: '「一分鐘一百九十萬顆」——急診壅塞的解方定案了，但中風的那格碼表是分開走的' },
+  { out: 'typhoon-heatwave-stroke-2026.html', nav: '高溫', title: '颱風巴威一過、氣溫炸裂，急診大血管中風為什麼翻倍了' },
+  { out: 'summer-ac-stroke.html', nav: '冷氣', title: '三十七度衝進冷氣房的那一刻，血管正在發生什麼' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -147,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">腦中風與急症 · 相關閱讀</div>
+    <div class="sb-h">高溫與腦部急症 · 相關閱讀</div>
 ${links}
   </div>`;
 }
