@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.05';
+const DATE = '2026.09.06';
 
 const article = {
-  md:  '2026-09-05-heat-illness-brain-emergency.md',
-  out: '2026-09-05-heat-illness-brain-emergency.html',
+  md:  '2026-09-06-lumbar-disc-herniation-sciatica.md',
+  out: '2026-09-06-lumbar-disc-herniation-sciatica.html',
   title: '',
-  desc: '中央氣象署八月三十一號的季展望說九到十一月氣溫正常到偏高，而國健署七月的熱傷害急診已經八百零四人次、創今年單月新高。中暑跟熱衰竭的分界線不在溫度計上，而在中樞神經——講話顛三倒四、腳步歪斜、脾氣暴躁，這些比「他有沒有流汗」重要得多。談小腦為什麼先倒下，以及那格三十分鐘的碼表。',
-  tag: '熱傷害 · 中暑 · 時事',
+  desc: '徐若熙七月十五號在日本接受全內視鏡椎間盤切除術，球團說要休兩到三個月，結果術後四十一天就進牛棚投了三十球。椎間盤突出壓到的其實不是腰，是往腿上走的神經根——痛有路線、有方向，而門診真正要問的是「痛到哪裡為止」。談六成六會自己吸收的自然病程、SPORT 試驗兩年後那個沒有差別的結果，以及什麼時候一小時都不能等。',
+  tag: '椎間盤 · 坐骨神經痛 · 時事',
 };
 const related = [
-  { out: '2026-09-05-heat-illness-brain-emergency.html', nav: '本篇', title: '「秋天了怎麼還會中暑」——氣象署說九到十一月偏暖，而中暑的判斷點從來不在溫度計上' },
-  { out: '2026-09-04-ed-crowding-stroke-clock.html', nav: '急診', title: '「一分鐘一百九十萬顆」——急診壅塞的解方定案了，但中風的那格碼表是分開走的' },
-  { out: 'typhoon-heatwave-stroke-2026.html', nav: '高溫', title: '颱風巴威一過、氣溫炸裂，急診大血管中風為什麼翻倍了' },
-  { out: 'summer-ac-stroke.html', nav: '冷氣', title: '三十七度衝進冷氣房的那一刻，血管正在發生什麼' },
+  { out: '2026-09-06-lumbar-disc-herniation-sciatica.html', nav: '本篇', title: '「腰不會再卡卡了」——徐若熙開刀四十一天回牛棚，而椎間盤壓到的從來不是腰' },
+  { out: '2026-08-24-shingles-postherpetic-neuralgia.html', nav: '神經痛', title: '疹子退了，痛還在——皮蛇疫苗補助擴大的這個夏天，該把它當成神經的病來看' },
+  { out: '2026-09-05-heat-illness-brain-emergency.html', nav: '中暑', title: '「秋天了怎麼還會中暑」——氣象署說九到十一月偏暖，而中暑的判斷點從來不在溫度計上' },
+  { out: '2026-08-25-flood-cleanup-head-injury-csdh.html', nav: '頭部外傷', title: '水退之後才開始的那種出血——清家園撞到頭的那一下，腦子可以拖六週才喊痛' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -146,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">高溫與腦部急症 · 相關閱讀</div>
+    <div class="sb-h">周邊神經與脊椎 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -278,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.09.04 急診壅塞與中風時鐘');
+console.log('完成：每日晨報 2026.09.06 腰椎間盤突出與坐骨神經痛');
