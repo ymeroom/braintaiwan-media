@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.06';
+const DATE = '2026.09.07';
 
 const article = {
-  md:  '2026-09-06-lumbar-disc-herniation-sciatica.md',
-  out: '2026-09-06-lumbar-disc-herniation-sciatica.html',
+  md:  '2026-09-07-rainy-days-light-brain-mood.md',
+  out: '2026-09-07-rainy-days-light-brain-mood.html',
   title: '',
-  desc: '徐若熙七月十五號在日本接受全內視鏡椎間盤切除術，球團說要休兩到三個月，結果術後四十一天就進牛棚投了三十球。椎間盤突出壓到的其實不是腰，是往腿上走的神經根——痛有路線、有方向，而門診真正要問的是「痛到哪裡為止」。談六成六會自己吸收的自然病程、SPORT 試驗兩年後那個沒有差別的結果，以及什麼時候一小時都不能等。',
-  tag: '椎間盤 · 坐骨神經痛 · 時事',
+  desc: '九月三號到六號台灣卡在一道低壓帶裡，醫師出面說連日下雨提不起勁不是錯覺，第一個被點名的因素是日照不足。這條路線在解剖上真的存在：視網膜裡有一群神經節細胞不負責看見，只負責報時，訊號直接送進生理時鐘。談 Lambert 從頸靜脈量到的陽光與血清素、英國 Biobank 五十萬人的戶外時間、以及一萬勒克斯燈箱在非季節性憂鬱症試驗裡跑出來的效果量。',
+  tag: '情緒 · 日照 · 時事',
 };
 const related = [
-  { out: '2026-09-06-lumbar-disc-herniation-sciatica.html', nav: '本篇', title: '「腰不會再卡卡了」——徐若熙開刀四十一天回牛棚，而椎間盤壓到的從來不是腰' },
-  { out: '2026-08-24-shingles-postherpetic-neuralgia.html', nav: '神經痛', title: '疹子退了，痛還在——皮蛇疫苗補助擴大的這個夏天，該把它當成神經的病來看' },
-  { out: '2026-09-05-heat-illness-brain-emergency.html', nav: '中暑', title: '「秋天了怎麼還會中暑」——氣象署說九到十一月偏暖，而中暑的判斷點從來不在溫度計上' },
-  { out: '2026-08-25-flood-cleanup-head-injury-csdh.html', nav: '頭部外傷', title: '水退之後才開始的那種出血——清家園撞到頭的那一下，腦子可以拖六週才喊痛' },
+  { out: '2026-09-07-rainy-days-light-brain-mood.html', nav: '本篇', title: '「連日下雨提不起勁」不是錯覺——低壓帶壓了四天，被關掉的是眼底那條不負責看見的線路' },
+  { out: '2026-08-30-depression-somatic-symptoms-neurology.html', nav: '身體症狀', title: '先掛到神經內科的那種憂鬱——十四個國家的門診資料裡，七成的人開口講的是身體' },
+  { out: '2026-08-29-teen-circadian-school-start.html', nav: '生理時鐘', title: '「早點睡」為什麼沒用——8 月 31 號開學，青少年那個天生走晚的時鐘，兩天調不回來' },
+  { out: '2026-08-28-senior-fitness-brain-reserve.html', nav: '大腦保健', title: '起身繞一圈要幾秒——一萬三千位台灣長者的數據裡，最會預測壽命的那一項，量的其實是神經' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -146,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">周邊神經與脊椎 · 相關閱讀</div>
+    <div class="sb-h">情緒、生理時鐘與大腦 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -278,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.09.06 腰椎間盤突出與坐骨神經痛');
+console.log('完成：每日晨報 2026.09.07 連日陰雨、日照不足與情緒');
