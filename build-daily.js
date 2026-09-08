@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.07';
+const DATE = '2026.09.08';
 
 const article = {
-  md:  '2026-09-07-rainy-days-light-brain-mood.md',
-  out: '2026-09-07-rainy-days-light-brain-mood.html',
+  md:  '2026-09-08-vestibular-migraine-dizziness.md',
+  out: '2026-09-08-vestibular-migraine-dizziness.html',
   title: '',
-  desc: '九月三號到六號台灣卡在一道低壓帶裡，醫師出面說連日下雨提不起勁不是錯覺，第一個被點名的因素是日照不足。這條路線在解剖上真的存在：視網膜裡有一群神經節細胞不負責看見，只負責報時，訊號直接送進生理時鐘。談 Lambert 從頸靜脈量到的陽光與血清素、英國 Biobank 五十萬人的戶外時間、以及一萬勒克斯燈箱在非季節性憂鬱症試驗裡跑出來的效果量。',
-  tag: '情緒 · 日照 · 時事',
+  desc: '九月六號一則門診故事被各家媒體轉了一輪：三十五歲女性開會到一半天旋地轉，耳鼻喉科、內耳功能、影像全部正常，最後在神經內科拿到前庭性偏頭痛的診斷。準則本來就允許一半的發作不痛。談 Bárány 學會二〇二二年的更新定義、台北榮總兩千八百零一人刊在《Neurology》的門診資料裡 68.4% 的前庭症狀與 15.2% 的完整診斷，以及為什麼內耳檢查照不到腦幹與視丘那一段增益。',
+  tag: '頭痛 · 暈眩 · 時事',
 };
 const related = [
-  { out: '2026-09-07-rainy-days-light-brain-mood.html', nav: '本篇', title: '「連日下雨提不起勁」不是錯覺——低壓帶壓了四天，被關掉的是眼底那條不負責看見的線路' },
-  { out: '2026-08-30-depression-somatic-symptoms-neurology.html', nav: '身體症狀', title: '先掛到神經內科的那種憂鬱——十四個國家的門診資料裡，七成的人開口講的是身體' },
-  { out: '2026-08-29-teen-circadian-school-start.html', nav: '生理時鐘', title: '「早點睡」為什麼沒用——8 月 31 號開學，青少年那個天生走晚的時鐘，兩天調不回來' },
-  { out: '2026-08-28-senior-fitness-brain-reserve.html', nav: '大腦保健', title: '起身繞一圈要幾秒——一萬三千位台灣長者的數據裡，最會預測壽命的那一項，量的其實是神經' },
+  { out: '2026-09-08-vestibular-migraine-dizziness.html', nav: '本篇', title: '「檢查都正常」的那種頭暈——北榮把兩千八百人問了一遍，七成偏頭痛的人身上有前庭症狀' },
+  { out: '2026-08-22-child-teen-headache-school.html', nav: '孩子的頭痛', title: '「他只有上學才頭痛」——從 10.71% 爬到 42.64%，孩子的頭痛不是等長大就會好' },
+  { out: '2026-08-23-parkinson-finger-tapping.html', nav: '動作徵象', title: '比 OK 開合 25 下——手指操真正在看的，是動作會不會愈做愈小' },
+  { out: '2026-09-07-rainy-days-light-brain-mood.html', nav: '天氣與腦', title: '「連日下雨提不起勁」不是錯覺——低壓帶壓了四天，被關掉的是眼底那條不負責看見的線路' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -146,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">情緒、生理時鐘與大腦 · 相關閱讀</div>
+    <div class="sb-h">頭痛、暈眩與大腦 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -278,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.09.07 連日陰雨、日照不足與情緒');
+console.log('完成：每日晨報 2026.09.08 前庭性偏頭痛與查不出來的頭暈');
