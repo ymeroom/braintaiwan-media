@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.08';
+const DATE = '2026.09.09';
 
 const article = {
-  md:  '2026-09-08-vestibular-migraine-dizziness.md',
-  out: '2026-09-08-vestibular-migraine-dizziness.html',
+  md:  '2026-09-09-flu-vaccine-high-dose-brain.md',
+  out: '2026-09-09-flu-vaccine-high-dose-brain.html',
   title: '',
-  desc: '九月六號一則門診故事被各家媒體轉了一輪：三十五歲女性開會到一半天旋地轉，耳鼻喉科、內耳功能、影像全部正常，最後在神經內科拿到前庭性偏頭痛的診斷。準則本來就允許一半的發作不痛。談 Bárány 學會二〇二二年的更新定義、台北榮總兩千八百零一人刊在《Neurology》的門診資料裡 68.4% 的前庭症狀與 15.2% 的完整診斷，以及為什麼內耳檢查照不到腦幹與視丘那一段增益。',
-  tag: '頭痛 · 暈眩 · 時事',
+  desc: '九月七號疾管署公布秋冬疫苗規畫：公費流感疫苗採購七百零五萬零一百五十劑，其中二十萬零七百九十劑是台灣第一次買進的加強型，十月一號開打，優先給長照與安養機構六十五歲以上住民。談流感確診後七天內心肌梗塞六點〇五倍、類流感之後十五天內中風勝算比二點八八，以及 DANFLU-2 與 GALFLU 兩個十幾萬人的隨機試驗為什麼給出不一樣的答案。',
+  tag: '流感 · 疫苗 · 時事',
 };
 const related = [
-  { out: '2026-09-08-vestibular-migraine-dizziness.html', nav: '本篇', title: '「檢查都正常」的那種頭暈——北榮把兩千八百人問了一遍，七成偏頭痛的人身上有前庭症狀' },
-  { out: '2026-08-22-child-teen-headache-school.html', nav: '孩子的頭痛', title: '「他只有上學才頭痛」——從 10.71% 爬到 42.64%，孩子的頭痛不是等長大就會好' },
-  { out: '2026-08-23-parkinson-finger-tapping.html', nav: '動作徵象', title: '比 OK 開合 25 下——手指操真正在看的，是動作會不會愈做愈小' },
-  { out: '2026-09-07-rainy-days-light-brain-mood.html', nav: '天氣與腦', title: '「連日下雨提不起勁」不是錯覺——低壓帶壓了四天，被關掉的是眼底那條不負責看見的線路' },
+  { out: '2026-09-09-flu-vaccine-high-dose-brain.html', nav: '本篇', title: '「705 萬劑裡有 20 萬劑不一樣」——加強型流感疫苗第一次進台灣，而流感傷的不只是肺' },
+  { out: '2026-09-01-influenza-brain-encephalopathy.html', nav: '流感與腦', title: '「燒壞腦子」不是被燒壞的——八月流感創十年同期新高，開學第一天該盯的是那 1.7%' },
+  { out: '2026-08-05-pneumococcal-meningitis-vaccine.html', nav: '另一種疫苗', title: '說是「肺炎」球菌——神經科最怕的是它走到腦膜的那一步' },
+  { out: '2026-08-24-shingles-postherpetic-neuralgia.html', nav: '疫苗與神經', title: '疹子退了，痛還在——皮蛇疫苗補助擴大的這個夏天，該把它當成神經的病來看' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -146,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">頭痛、暈眩與大腦 · 相關閱讀</div>
+    <div class="sb-h">流感、疫苗與大腦 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -278,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.09.08 前庭性偏頭痛與查不出來的頭暈');
+console.log('完成：每日晨報 2026.09.09 加強型流感疫苗與腦血管');
