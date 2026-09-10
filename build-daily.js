@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.09';
+const DATE = '2026.09.10';
 
 const article = {
-  md:  '2026-09-09-flu-vaccine-high-dose-brain.md',
-  out: '2026-09-09-flu-vaccine-high-dose-brain.html',
+  md:  '2026-09-10-hearing-loss-brain-aging.md',
+  out: '2026-09-10-hearing-loss-brain-aging.html',
   title: '',
-  desc: '九月七號疾管署公布秋冬疫苗規畫：公費流感疫苗採購七百零五萬零一百五十劑，其中二十萬零七百九十劑是台灣第一次買進的加強型，十月一號開打，優先給長照與安養機構六十五歲以上住民。談流感確診後七天內心肌梗塞六點〇五倍、類流感之後十五天內中風勝算比二點八八，以及 DANFLU-2 與 GALFLU 兩個十幾萬人的隨機試驗為什麼給出不一樣的答案。',
-  tag: '流感 · 疫苗 · 時事',
+  desc: '台灣耳科醫學會發布《台灣成人退化性聽力損失臨床治療指引》，第一次寫定成人聽力篩檢時程：50–64 歲每 3–5 年、65 歲以上每 1–3 年。本土盛行率 65 歲以上三成八、75 歲四成八、85 歲以上七成。談退化性聽損為什麼是「聽得到但聽不懂」、失智風險每掉 10 分貝一點二七倍，以及 ACHIEVE 試驗整體無差別、高風險亞組卻慢了四成八的兩層答案。',
+  tag: '聽損 · 大腦老化 · 時事',
 };
 const related = [
-  { out: '2026-09-09-flu-vaccine-high-dose-brain.html', nav: '本篇', title: '「705 萬劑裡有 20 萬劑不一樣」——加強型流感疫苗第一次進台灣，而流感傷的不只是肺' },
-  { out: '2026-09-01-influenza-brain-encephalopathy.html', nav: '流感與腦', title: '「燒壞腦子」不是被燒壞的——八月流感創十年同期新高，開學第一天該盯的是那 1.7%' },
-  { out: '2026-08-05-pneumococcal-meningitis-vaccine.html', nav: '另一種疫苗', title: '說是「肺炎」球菌——神經科最怕的是它走到腦膜的那一步' },
-  { out: '2026-08-24-shingles-postherpetic-neuralgia.html', nav: '疫苗與神經', title: '疹子退了，痛還在——皮蛇疫苗補助擴大的這個夏天，該把它當成神經的病來看' },
+  { out: '2026-09-10-hearing-loss-brain-aging.html', nav: '本篇', title: '「65 歲以上近四成」——第一份台灣成人聽損指引出爐，而聽不清楚耗掉的是腦子' },
+  { out: '2026-09-09-flu-vaccine-high-dose-brain.html', nav: '疫苗與腦', title: '「705 萬劑裡有 20 萬劑不一樣」——加強型流感疫苗第一次進台灣，而流感傷的不只是肺' },
+  { out: '2026-09-03-dementia-diagnosis-gap.html', nav: '失智診斷', title: '「推估 5,778 人，確診 3,569 人」——國際失智症月開跑，中間那兩千人在哪裡' },
+  { out: '2026-08-28-senior-fitness-brain-reserve.html', nav: '大腦保健', title: '起身繞一圈要幾秒——一萬三千位台灣長者的數據裡，最會預測壽命的那一項，量的其實是神經' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -146,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">流感、疫苗與大腦 · 相關閱讀</div>
+    <div class="sb-h">聽力、感官與大腦老化 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -278,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.09.09 加強型流感疫苗與腦血管');
+console.log('完成：每日晨報 2026.09.10 退化性聽損與大腦老化');
