@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.10';
+const DATE = '2026.09.11';
 
 const article = {
-  md:  '2026-09-10-hearing-loss-brain-aging.md',
-  out: '2026-09-10-hearing-loss-brain-aging.html',
+  md:  '2026-09-11-sleep-debt-visceral-fat-brain.md',
+  out: '2026-09-11-sleep-debt-visceral-fat-brain.html',
   title: '',
-  desc: '台灣耳科醫學會發布《台灣成人退化性聽力損失臨床治療指引》，第一次寫定成人聽力篩檢時程：50–64 歲每 3–5 年、65 歲以上每 1–3 年。本土盛行率 65 歲以上三成八、75 歲四成八、85 歲以上七成。談退化性聽損為什麼是「聽得到但聽不懂」、失智風險每掉 10 分貝一點二七倍，以及 ACHIEVE 試驗整體無差別、高風險亞組卻慢了四成八的兩層答案。',
-  tag: '聽損 · 大腦老化 · 時事',
+  desc: '連續 14 天睡不飽，腹部總脂肪增加約 9%、內臟脂肪增加約 11%；補足三個晚上九小時之後，熱量攝取回到正常，內臟脂肪卻還在往上。談梅約診所這份 21 天住院實驗的每日 308 大卡從哪裡來——睡眠剝奪後額葉與腦島的食物評分活性下降、杏仁核上升，以及為什麼週末補眠救不回胰島素敏感度。',
+  tag: '睡眠 · 代謝 · 時事',
 };
 const related = [
-  { out: '2026-09-10-hearing-loss-brain-aging.html', nav: '本篇', title: '「65 歲以上近四成」——第一份台灣成人聽損指引出爐，而聽不清楚耗掉的是腦子' },
-  { out: '2026-09-09-flu-vaccine-high-dose-brain.html', nav: '疫苗與腦', title: '「705 萬劑裡有 20 萬劑不一樣」——加強型流感疫苗第一次進台灣，而流感傷的不只是肺' },
-  { out: '2026-09-03-dementia-diagnosis-gap.html', nav: '失智診斷', title: '「推估 5,778 人，確診 3,569 人」——國際失智症月開跑，中間那兩千人在哪裡' },
-  { out: '2026-08-28-senior-fitness-brain-reserve.html', nav: '大腦保健', title: '起身繞一圈要幾秒——一萬三千位台灣長者的數據裡，最會預測壽命的那一項，量的其實是神經' },
+  { out: '2026-09-11-sleep-debt-visceral-fat-brain.html', nav: '本篇', title: '「補眠三天，那條線還在往上」——熬夜兩週內臟脂肪多一成一，而決定你吃什麼的是額葉' },
+  { out: '2026-08-29-teen-circadian-school-start.html', nav: '生理時鐘', title: '「早點睡」為什麼沒用——8 月 31 號開學，青少年那個天生走晚的時鐘，兩天調不回來' },
+  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html', nav: '睡眠腦波', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
+  { out: 'sleep-apnea-brain-2026.html', nav: '睡眠呼吸中止', title: '四個人裡有一個，今晚睡覺時呼吸會停幾百次' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -146,7 +146,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">聽力、感官與大腦老化 · 相關閱讀</div>
+    <div class="sb-h">睡眠與大腦 · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -278,4 +278,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.09.10 退化性聽損與大腦老化');
+console.log('完成：每日晨報 2026.09.11 睡眠債與內臟脂肪');
