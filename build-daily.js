@@ -6,20 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.11';
+const DATE = '2026.09.12';
+const SERIES = '神經毒性與大腦';
 
 const article = {
-  md:  '2026-09-11-sleep-debt-visceral-fat-brain.md',
-  out: '2026-09-11-sleep-debt-visceral-fat-brain.html',
+  md:  '2026-09-12-flunitrazepam-spiked-drink-amnesia.md',
+  out: '2026-09-12-flunitrazepam-spiked-drink-amnesia.html',
   title: '',
-  desc: '連續 14 天睡不飽，腹部總脂肪增加約 9%、內臟脂肪增加約 11%；補足三個晚上九小時之後，熱量攝取回到正常，內臟脂肪卻還在往上。談梅約診所這份 21 天住院實驗的每日 308 大卡從哪裡來——睡眠剝奪後額葉與腦島的食物評分活性下降、杏仁核上升，以及為什麼週末補眠救不回胰島素敏感度。',
-  tag: '睡眠 · 代謝 · 時事',
+  desc: '淡水藥局案的水壺殘液驗出 FM2 主成分苯二氮平類。「斷片」不是意識消失，而是海馬迴把當下寫進長期記憶的那一步被切斷——談苯二氮平類在 GABA-A 受體上造成的前行性失憶、為什麼 2 毫克這個劑量記憶損害最大，以及證據為什麼留在杯子裡而不在記憶裡。',
+  tag: '神經毒性 · 時事',
 };
 const related = [
-  { out: '2026-09-11-sleep-debt-visceral-fat-brain.html', nav: '本篇', title: '「補眠三天，那條線還在往上」——熬夜兩週內臟脂肪多一成一，而決定你吃什麼的是額葉' },
-  { out: '2026-08-29-teen-circadian-school-start.html', nav: '生理時鐘', title: '「早點睡」為什麼沒用——8 月 31 號開學，青少年那個天生走晚的時鐘，兩天調不回來' },
-  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html', nav: '睡眠腦波', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
-  { out: 'sleep-apnea-brain-2026.html', nav: '睡眠呼吸中止', title: '四個人裡有一個，今晚睡覺時呼吸會停幾百次' },
+  { out: '2026-09-12-flunitrazepam-spiked-drink-amnesia.html', nav: '本篇', title: '「小喝兩口就斷片」——水壺裡驗出的 FM2，被關掉的不是意識，是海馬迴的存檔鍵' },
+  { out: '2026-07-24-alcohol-brain-aging.html', nav: '酒精與腦', title: '「小酌怡情」的腦科學代價——Stanford 研究：飲酒量越多，大腦血流越少' },
+  { out: '2026-08-17-benzopyrene-oil-brain.html', nav: '食安毒物', title: '苦茶油超標名單再添一家——苯駢芘除了致癌，對大腦做了什麼' },
+  { out: 'zombie-vape.html', nav: '濫用藥物', title: '孩子手指發黑，我以為他只是沒洗手——「喪屍煙彈」家長辨識指南' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -146,7 +147,7 @@ function seriesBox(items, activeIdx){
   const links = items.map((n,i)=>
     `    <a href="${n.out}"${i===activeIdx?' class="cur"':''}>${n.nav}　${esc(n.title)}</a>`).join('\n');
   return `  <div class="series-box">
-    <div class="sb-h">睡眠與大腦 · 相關閱讀</div>
+    <div class="sb-h">${SERIES} · 相關閱讀</div>
 ${links}
   </div>`;
 }
@@ -278,4 +279,4 @@ const parsed = { ...article, ...parse(src) };
 const html = page(parsed, parsed.body);
 fs.writeFileSync(path.join(OUT, parsed.out), html, 'utf8');
 console.log('寫出', parsed.out, '—', parsed.title);
-console.log('完成：每日晨報 2026.09.11 睡眠債與內臟脂肪');
+console.log(`完成：每日晨報 ${DATE} ${article.tag}`);
