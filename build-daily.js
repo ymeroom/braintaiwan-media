@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.12';
-const SERIES = '神經毒性與大腦';
+const DATE = '2026.09.13';
+const SERIES = '血管危險因子與大腦';
 
 const article = {
-  md:  '2026-09-12-flunitrazepam-spiked-drink-amnesia.md',
-  out: '2026-09-12-flunitrazepam-spiked-drink-amnesia.html',
+  md:  '2026-09-13-midlife-vascular-dementia-free-years.md',
+  out: '2026-09-13-midlife-vascular-dementia-free-years.html',
   title: '',
-  desc: '淡水藥局案的水壺殘液驗出 FM2 主成分苯二氮平類。「斷片」不是意識消失，而是海馬迴把當下寫進長期記憶的那一步被切斷——談苯二氮平類在 GABA-A 受體上造成的前行性失憶、為什麼 2 毫克這個劑量記憶損害最大，以及證據為什麼留在杯子裡而不在記憶裡。',
-  tag: '神經毒性 · 時事',
+  desc: '九月國際失智症月，桃園開辦確診補助。但診斷再早，都是腦子已經出事之後的事——ARIC 研究把「還有幾年不失智」換算成年數：55 歲時沒有高血壓、糖尿病、不抽菸的人平均 30.1 年，三項都有的人 17.5 年。而北台灣的世代研究說，真正有預測力的是那條風險曲線的斜率。',
+  tag: '代謝血管 · 時事',
 };
 const related = [
-  { out: '2026-09-12-flunitrazepam-spiked-drink-amnesia.html', nav: '本篇', title: '「小喝兩口就斷片」——水壺裡驗出的 FM2，被關掉的不是意識，是海馬迴的存檔鍵' },
-  { out: '2026-07-24-alcohol-brain-aging.html', nav: '酒精與腦', title: '「小酌怡情」的腦科學代價——Stanford 研究：飲酒量越多，大腦血流越少' },
-  { out: '2026-08-17-benzopyrene-oil-brain.html', nav: '食安毒物', title: '苦茶油超標名單再添一家——苯駢芘除了致癌，對大腦做了什麼' },
-  { out: 'zombie-vape.html', nav: '濫用藥物', title: '孩子手指發黑，我以為他只是沒洗手——「喪屍煙彈」家長辨識指南' },
+  { out: '2026-09-13-midlife-vascular-dementia-free-years.html', nav: '本篇', title: '「30.1 年，還是 17.5 年」——55 歲那天身上有幾個危險因子，決定你還剩多少年不失智' },
+  { out: '2026-08-31-metabolic-syndrome-brain-risk.html', nav: '代謝症候群', title: '「五項裡中三項」——代謝症候群這張帳單，腦子付的比心臟早' },
+  { out: '2026-09-03-dementia-diagnosis-gap.html', nav: '失智診斷', title: '「推估 5,778 人，確診 3,569 人」——國際失智症月開跑，中間那兩千人在哪裡' },
+  { out: 'bp-130-brain.html', nav: '血壓與腦', title: '「還沒到140，再觀察就好」——那條線四年前就已經往下移了' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
