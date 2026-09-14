@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.13';
-const SERIES = '血管危險因子與大腦';
+const DATE = '2026.09.14';
+const SERIES = '中風復原與神經可塑性';
 
 const article = {
-  md:  '2026-09-13-midlife-vascular-dementia-free-years.md',
-  out: '2026-09-13-midlife-vascular-dementia-free-years.html',
+  md:  '2026-09-14-stroke-rehab-ward-critical-period.md',
+  out: '2026-09-14-stroke-rehab-ward-critical-period.html',
   title: '',
-  desc: '九月國際失智症月，桃園開辦確診補助。但診斷再早，都是腦子已經出事之後的事——ARIC 研究把「還有幾年不失智」換算成年數：55 歲時沒有高血壓、糖尿病、不抽菸的人平均 30.1 年，三項都有的人 17.5 年。而北台灣的世代研究說，真正有預測力的是那條風險曲線的斜率。',
-  tag: '代謝血管 · 時事',
+  desc: '健保復健病房試辦計畫七月上路，十家醫院、373 床、最長住 180 天，每天兩到五小時高強度訓練。但大鼠實驗與 CPASS 試驗都指向同一件事：中風後第二到第三個月才是窗口最開的時候，而那段時間台灣的病人多半在轉院、等床。時間窗和劑量，是兩個獨立的旋鈕。',
+  tag: '中風復健 · 時事',
 };
 const related = [
-  { out: '2026-09-13-midlife-vascular-dementia-free-years.html', nav: '本篇', title: '「30.1 年，還是 17.5 年」——55 歲那天身上有幾個危險因子，決定你還剩多少年不失智' },
-  { out: '2026-08-31-metabolic-syndrome-brain-risk.html', nav: '代謝症候群', title: '「五項裡中三項」——代謝症候群這張帳單，腦子付的比心臟早' },
-  { out: '2026-09-03-dementia-diagnosis-gap.html', nav: '失智診斷', title: '「推估 5,778 人，確診 3,569 人」——國際失智症月開跑，中間那兩千人在哪裡' },
-  { out: 'bp-130-brain.html', nav: '血壓與腦', title: '「還沒到140，再觀察就好」——那條線四年前就已經往下移了' },
+  { out: '2026-09-14-stroke-rehab-ward-critical-period.html', nav: '本篇', title: '「每天兩到五小時，最長住半年」——健保復健病房跑滿兩個月，而大腦在意的是哪一段時間' },
+  { out: '2026-09-04-ed-crowding-stroke-clock.html', nav: '急診碼表', title: '「一分鐘一百九十萬顆」——急診壅塞的解方定案了，但中風的那格碼表是分開走的' },
+  { out: '2026-08-09-tia-small-stroke-warning.html', nav: '小中風', title: '「那15分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
+  { out: '2026-08-11-stroke-csa-brain.html', nav: '中風後呼吸', title: '中風之後，大腦忘記叫你呼吸——每十位住院患者可能就有一位在夜裡無聲地缺氧' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
