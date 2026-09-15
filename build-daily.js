@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.14';
-const SERIES = '中風復原與神經可塑性';
+const DATE = '2026.09.15';
+const SERIES = '頭部外傷與腦震盪';
 
 const article = {
-  md:  '2026-09-14-stroke-rehab-ward-critical-period.md',
-  out: '2026-09-14-stroke-rehab-ward-critical-period.html',
+  md:  '2026-09-15-motorcycle-helmet-rotational-brain.md',
+  out: '2026-09-15-motorcycle-helmet-rotational-brain.html',
   title: '',
-  desc: '健保復健病房試辦計畫七月上路，十家醫院、373 床、最長住 180 天，每天兩到五小時高強度訓練。但大鼠實驗與 CPASS 試驗都指向同一件事：中風後第二到第三個月才是窗口最開的時候，而那段時間台灣的病人多半在轉院、等床。時間窗和劑量，是兩個獨立的旋鈕。',
-  tag: '中風復健 · 時事',
+  desc: '交通安全月九月一日開跑，七千家機車行免費健檢；今年上半年道路事故死亡 1,333 人，其中 784 人是機車騎士。台灣一九九七年的安全帽法讓機車頭部外傷少掉三分之一，考科藍回顧算出頭部外傷風險降六成九。但發泡層擋的是線性減速度，斜撞造成的旋轉加速度才是軸突剪傷的來源——而多數檢驗標準還只測線性。',
+  tag: '頭部外傷 · 時事',
 };
 const related = [
-  { out: '2026-09-14-stroke-rehab-ward-critical-period.html', nav: '本篇', title: '「每天兩到五小時，最長住半年」——健保復健病房跑滿兩個月，而大腦在意的是哪一段時間' },
-  { out: '2026-09-04-ed-crowding-stroke-clock.html', nav: '急診碼表', title: '「一分鐘一百九十萬顆」——急診壅塞的解方定案了，但中風的那格碼表是分開走的' },
-  { out: '2026-08-09-tia-small-stroke-warning.html', nav: '小中風', title: '「那15分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
-  { out: '2026-08-11-stroke-csa-brain.html', nav: '中風後呼吸', title: '中風之後，大腦忘記叫你呼吸——每十位住院患者可能就有一位在夜裡無聲地缺氧' },
+  { out: '2026-09-15-motorcycle-helmet-rotational-brain.html', nav: '本篇', title: '「1,333 人裡有 784 個騎機車」——交通安全月開跑，而安全帽擋得住頭骨，擋不住腦子在裡面轉的那一下' },
+  { out: '2026-08-25-flood-cleanup-head-injury-csdh.html', nav: '慢性出血', title: '水退之後才開始的那種出血——清家園撞到頭的那一下，腦子可以拖六週才喊痛' },
+  { out: 'concussion-what-is.html', nav: '腦震盪', title: '頭撞一下，大腦裡發生了什麼？醫師解析腦震盪' },
+  { out: 'soccer-brain-aaic-2026.html', nav: '累積撞擊', title: '踢了一輩子球，大腦默默老了——AAIC 2026 退役精英球員腦部掃描研究' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
