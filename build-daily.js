@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.15';
-const SERIES = '頭部外傷與腦震盪';
+const DATE = '2026.09.16';
+const SERIES = '癲癇與意識障礙';
 
 const article = {
-  md:  '2026-09-15-motorcycle-helmet-rotational-brain.md',
-  out: '2026-09-15-motorcycle-helmet-rotational-brain.html',
+  md:  '2026-09-16-ect-induced-seizure-depression.md',
+  out: '2026-09-16-ect-induced-seizure-depression.html',
   title: '',
-  desc: '交通安全月九月一日開跑，七千家機車行免費健檢；今年上半年道路事故死亡 1,333 人，其中 784 人是機車騎士。台灣一九九七年的安全帽法讓機車頭部外傷少掉三分之一，考科藍回顧算出頭部外傷風險降六成九。但發泡層擋的是線性減速度，斜撞造成的旋轉加速度才是軸突剪傷的來源——而多數檢驗標準還只測線性。',
-  tag: '頭部外傷 · 時事',
+  desc: '九月一日上路的健保新制把電痙攣治療支付點數從 1,718 點調到 6,839 點，一年挹注約三千萬元、估計五千八百人受惠。這個療法做的事，是在全身麻醉下誘發一次二十到六十秒的全身性癲癇放電：《The Lancet》2003 年統合分析證實它優於假電療與抗憂鬱藥物，CORE 研究的緩解率七成五，而台灣健保資料庫十七年間只有 0.19% 的精神科住院病人用過它。',
+  tag: '癲癇 · 時事',
 };
 const related = [
-  { out: '2026-09-15-motorcycle-helmet-rotational-brain.html', nav: '本篇', title: '「1,333 人裡有 784 個騎機車」——交通安全月開跑，而安全帽擋得住頭骨，擋不住腦子在裡面轉的那一下' },
-  { out: '2026-08-25-flood-cleanup-head-injury-csdh.html', nav: '慢性出血', title: '水退之後才開始的那種出血——清家園撞到頭的那一下，腦子可以拖六週才喊痛' },
-  { out: 'concussion-what-is.html', nav: '腦震盪', title: '頭撞一下，大腦裡發生了什麼？醫師解析腦震盪' },
-  { out: 'soccer-brain-aaic-2026.html', nav: '累積撞擊', title: '踢了一輩子球，大腦默默老了——AAIC 2026 退役精英球員腦部掃描研究' },
+  { out: '2026-09-16-ect-induced-seizure-depression.html', nav: '本篇', title: '「1,718 點變成 6,839 點」——健保這個月調高電痙攣治療給付，而這個療法本身就是一場被算好的癲癇' },
+  { out: 'heat-epilepsy-seizure-taiwan-2026.html', nav: '癲癇', title: '熱到可以癲癇——台灣十八萬次急診數據說了什麼' },
+  { out: '2026-08-20-flu-febrile-seizure-encephalopathy.html', nav: '熱性痙攣', title: '「發燒、雙眼上吊、走路不穩」——五歲女童那場流感，和一般的熱性痙攣差在哪裡' },
+  { out: '2026-08-30-depression-somatic-symptoms-neurology.html', nav: '憂鬱', title: '先掛到神經內科的那種憂鬱——十四個國家的門診資料裡，七成的人開口講的是身體' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
