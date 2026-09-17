@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.16';
-const SERIES = '癲癇與意識障礙';
+const DATE = '2026.09.17';
+const SERIES = '頭痛與疼痛';
 
 const article = {
-  md:  '2026-09-16-ect-induced-seizure-depression.md',
-  out: '2026-09-16-ect-induced-seizure-depression.html',
+  md:  '2026-09-17-barometric-pressure-weather-headache.md',
+  out: '2026-09-17-barometric-pressure-weather-headache.html',
   title: '',
-  desc: '九月一日上路的健保新制把電痙攣治療支付點數從 1,718 點調到 6,839 點，一年挹注約三千萬元、估計五千八百人受惠。這個療法做的事，是在全身麻醉下誘發一次二十到六十秒的全身性癲癇放電：《The Lancet》2003 年統合分析證實它優於假電療與抗憂鬱藥物，CORE 研究的緩解率七成五，而台灣健保資料庫十七年間只有 0.19% 的精神科住院病人用過它。',
-  tag: '癲癇 · 時事',
+  desc: '氣象署預報東北季風從十七號起減弱、中南部高溫回到三十三度，而颱風杜鵑往日本南方海面走。一個氣團一週內進來又退掉，門診就多一批「變天前就知道」的人。日本四萬多名頭痛 App 使用者的資料顯示氣壓低、氣壓變化大、濕度高與下雨都對得上頭痛；《Neurology》的急診資料把氣壓的效果放在發作前四十八到七十二小時；而大鼠實驗指出，讀到氣壓的可能是內耳。',
+  tag: '頭痛 · 時事',
 };
 const related = [
-  { out: '2026-09-16-ect-induced-seizure-depression.html', nav: '本篇', title: '「1,718 點變成 6,839 點」——健保這個月調高電痙攣治療給付，而這個療法本身就是一場被算好的癲癇' },
-  { out: 'heat-epilepsy-seizure-taiwan-2026.html', nav: '癲癇', title: '熱到可以癲癇——台灣十八萬次急診數據說了什麼' },
-  { out: '2026-08-20-flu-febrile-seizure-encephalopathy.html', nav: '熱性痙攣', title: '「發燒、雙眼上吊、走路不穩」——五歲女童那場流感，和一般的熱性痙攣差在哪裡' },
-  { out: '2026-08-30-depression-somatic-symptoms-neurology.html', nav: '憂鬱', title: '先掛到神經內科的那種憂鬱——十四個國家的門診資料裡，七成的人開口講的是身體' },
+  { out: '2026-09-17-barometric-pressure-weather-headache.html', nav: '本篇', title: '「明天中南部回到三十三度」——東北季風說走就走，而有些人的頭比氣象署更早知道' },
+  { out: '2026-09-08-vestibular-migraine-dizziness.html', nav: '前庭偏頭痛', title: '「檢查都正常」的那種頭暈——北榮把兩千八百人問了一遍，七成偏頭痛的人身上有前庭症狀' },
+  { out: '2026-08-22-child-teen-headache-school.html', nav: '兒童頭痛', title: '「他只有上學才頭痛」——從 10.71% 爬到 42.64%，孩子的頭痛不是等長大就會好' },
+  { out: 'migraine-brain-aging-2026.html', nav: '偏頭痛', title: '偏頭痛讓大腦早老四年？台灣 MRI 研究，繪出了腦齡落差的地圖' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
