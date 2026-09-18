@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.17';
-const SERIES = '頭痛與疼痛';
+const DATE = '2026.09.18';
+const SERIES = '動作障礙';
 
 const article = {
-  md:  '2026-09-17-barometric-pressure-weather-headache.md',
-  out: '2026-09-17-barometric-pressure-weather-headache.html',
+  md:  '2026-09-18-gait-nervous-system-mobility.md',
+  out: '2026-09-18-gait-nervous-system-mobility.html',
   title: '',
-  desc: '氣象署預報東北季風從十七號起減弱、中南部高溫回到三十三度，而颱風杜鵑往日本南方海面走。一個氣團一週內進來又退掉，門診就多一批「變天前就知道」的人。日本四萬多名頭痛 App 使用者的資料顯示氣壓低、氣壓變化大、濕度高與下雨都對得上頭痛；《Neurology》的急診資料把氣壓的效果放在發作前四十八到七十二小時；而大鼠實驗指出，讀到氣壓的可能是內耳。',
-  tag: '頭痛 · 時事',
+  desc: '中華民國骨質疏鬆症學會發布「行動力四指標」，在關節、骨骼、肌肉之外把神經健康列為第四項；衛福部一一四年死因統計裡，跌倒致死一千六百三十二人，平均每天四點五個。走路其實是小腦、基底核、前庭與本體感覺一起算出來的結果：《JAMA》三萬四千多人的合併分析顯示七十五歲後步速能把十年存活率從一成九拉到八成七，愛因斯坦老化研究裡三成五的社區長者步態已經異常，而《The Lancet》那篇只有一頁的研究說，會不會為了講話停下腳步就預測得了跌倒。',
+  tag: '動作障礙 · 時事',
 };
 const related = [
-  { out: '2026-09-17-barometric-pressure-weather-headache.html', nav: '本篇', title: '「明天中南部回到三十三度」——東北季風說走就走，而有些人的頭比氣象署更早知道' },
-  { out: '2026-09-08-vestibular-migraine-dizziness.html', nav: '前庭偏頭痛', title: '「檢查都正常」的那種頭暈——北榮把兩千八百人問了一遍，七成偏頭痛的人身上有前庭症狀' },
-  { out: '2026-08-22-child-teen-headache-school.html', nav: '兒童頭痛', title: '「他只有上學才頭痛」——從 10.71% 爬到 42.64%，孩子的頭痛不是等長大就會好' },
-  { out: 'migraine-brain-aging-2026.html', nav: '偏頭痛', title: '偏頭痛讓大腦早老四年？台灣 MRI 研究，繪出了腦齡落差的地圖' },
+  { out: '2026-09-18-gait-nervous-system-mobility.html', nav: '本篇', title: '「平均每天四點五個」——骨鬆學會把神經健康寫進行動力指標，而走路從來就是一道大腦在算的題' },
+  { out: '2026-08-23-parkinson-finger-tapping.html', nav: '巴金森早期徵象', title: '比 OK 開合 25 下——手指操真正在看的，是動作會不會愈做愈小' },
+  { out: '2026-09-14-stroke-rehab-ward-critical-period.html', nav: '復健關鍵期', title: '「每天兩到五小時，最長住半年」——健保復健病房跑滿兩個月，而大腦在意的是哪一段時間' },
+  { out: '2026-09-08-vestibular-migraine-dizziness.html', nav: '前庭與平衡', title: '「檢查都正常」的那種頭暈——北榮把兩千八百人問了一遍，七成偏頭痛的人身上有前庭症狀' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
