@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.18';
-const SERIES = '動作障礙';
+const DATE = '2026.09.19';
+const SERIES = '腦瘤';
 
 const article = {
-  md:  '2026-09-18-gait-nervous-system-mobility.md',
-  out: '2026-09-18-gait-nervous-system-mobility.html',
+  md:  '2026-09-19-brain-tumor-stroke-mimic.md',
+  out: '2026-09-19-brain-tumor-stroke-mimic.html',
   title: '',
-  desc: '中華民國骨質疏鬆症學會發布「行動力四指標」，在關節、骨骼、肌肉之外把神經健康列為第四項；衛福部一一四年死因統計裡，跌倒致死一千六百三十二人，平均每天四點五個。走路其實是小腦、基底核、前庭與本體感覺一起算出來的結果：《JAMA》三萬四千多人的合併分析顯示七十五歲後步速能把十年存活率從一成九拉到八成七，愛因斯坦老化研究裡三成五的社區長者步態已經異常，而《The Lancet》那篇只有一頁的研究說，會不會為了講話停下腳步就預測得了跌倒。',
-  tag: '動作障礙 · 時事',
+  desc: '北醫附醫九月十八日公布一台手術：四十多歲女性如廁跌倒，隔天連手機都握不住，左手左腳漸漸抬不起來，磁振造影照出右腦一顆四公分腫瘤併出血，壓在運動皮質前方。二十九篇研究、八千八百三十九位「疑似中風」病人的系統性回顧顯示只有七成四真的是中風，腦瘤就排在前五個「不是中風」的診斷裡。談中風的懸崖與腦瘤的斜坡差在哪、為什麼先掉的是手的靈巧度，以及鹿特丹兩千人腦部磁振造影裡那些沒有症狀的腦膜瘤。',
+  tag: '腦瘤 · 時事',
 };
 const related = [
-  { out: '2026-09-18-gait-nervous-system-mobility.html', nav: '本篇', title: '「平均每天四點五個」——骨鬆學會把神經健康寫進行動力指標，而走路從來就是一道大腦在算的題' },
-  { out: '2026-08-23-parkinson-finger-tapping.html', nav: '巴金森早期徵象', title: '比 OK 開合 25 下——手指操真正在看的，是動作會不會愈做愈小' },
-  { out: '2026-09-14-stroke-rehab-ward-critical-period.html', nav: '復健關鍵期', title: '「每天兩到五小時，最長住半年」——健保復健病房跑滿兩個月，而大腦在意的是哪一段時間' },
-  { out: '2026-09-08-vestibular-migraine-dizziness.html', nav: '前庭與平衡', title: '「檢查都正常」的那種頭暈——北榮把兩千八百人問了一遍，七成偏頭痛的人身上有前庭症狀' },
+  { out: '2026-09-19-brain-tumor-stroke-mimic.html', nav: '本篇', title: '「隔天連手機都拿不住」——一顆四公分的腦瘤把自己演成中風，而拆穿它的是時間' },
+  { out: '2026-08-09-tia-small-stroke-warning.html', nav: '小中風', title: '「那15分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
+  { out: '2026-09-04-ed-crowding-stroke-clock.html', nav: '急診與時間', title: '「一分鐘一百九十萬顆」——急診壅塞的解方定案了，但中風的那格碼表是分開走的' },
+  { out: '2026-09-18-gait-nervous-system-mobility.html', nav: '走路與大腦', title: '「平均每天四點五個」——骨鬆學會把神經健康寫進行動力指標，而走路從來就是一道大腦在算的題' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
