@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.19';
-const SERIES = '腦瘤';
+const DATE = '2026.09.20';
+const SERIES = '神經毒性';
 
 const article = {
-  md:  '2026-09-19-brain-tumor-stroke-mimic.md',
-  out: '2026-09-19-brain-tumor-stroke-mimic.html',
+  md:  '2026-09-20-mid-autumn-bbq-carbon-monoxide-brain.md',
+  out: '2026-09-20-mid-autumn-bbq-carbon-monoxide-brain.html',
   title: '',
-  desc: '北醫附醫九月十八日公布一台手術：四十多歲女性如廁跌倒，隔天連手機都握不住，左手左腳漸漸抬不起來，磁振造影照出右腦一顆四公分腫瘤併出血，壓在運動皮質前方。二十九篇研究、八千八百三十九位「疑似中風」病人的系統性回顧顯示只有七成四真的是中風，腦瘤就排在前五個「不是中風」的診斷裡。談中風的懸崖與腦瘤的斜坡差在哪、為什麼先掉的是手的靈巧度，以及鹿特丹兩千人腦部磁振造影裡那些沒有症狀的腦膜瘤。',
-  tag: '腦瘤 · 時事',
+  desc: '中秋連假本週五開始，國健署九月十一日的節慶提醒談熱量與致癌物，其中最短的一句是「不要在室內或通風不良的陽台烤肉」——它防的是一氧化碳。血紅素對一氧化碳的親和力約為氧氣的兩百多倍，中毒不只是缺氧，還讓細胞用不動氧氣。台灣全國中毒資料庫一九九九到二〇一二年兩萬五千九百一十二名病人，平均年齡三十六歲，九點一％留下神經後遺症。談蒼白球為什麼先壞、醒來之後那段看似正常的空窗期，以及高壓氧試驗裡二十五％對四十六％的那個對照。',
+  tag: '神經毒性 · 時事',
 };
 const related = [
-  { out: '2026-09-19-brain-tumor-stroke-mimic.html', nav: '本篇', title: '「隔天連手機都拿不住」——一顆四公分的腦瘤把自己演成中風，而拆穿它的是時間' },
-  { out: '2026-08-09-tia-small-stroke-warning.html', nav: '小中風', title: '「那15分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
-  { out: '2026-09-04-ed-crowding-stroke-clock.html', nav: '急診與時間', title: '「一分鐘一百九十萬顆」——急診壅塞的解方定案了，但中風的那格碼表是分開走的' },
-  { out: '2026-09-18-gait-nervous-system-mobility.html', nav: '走路與大腦', title: '「平均每天四點五個」——骨鬆學會把神經健康寫進行動力指標，而走路從來就是一道大腦在算的題' },
+  { out: '2026-09-20-mid-autumn-bbq-carbon-monoxide-brain.html', nav: '本篇', title: '「別在室內或通風不良的陽台烤」——中秋提醒裡最短的那一句，防的是一種沒有味道的東西' },
+  { out: '2026-09-12-flunitrazepam-spiked-drink-amnesia.html', nav: '藥物與記憶', title: '「小喝兩口就斷片」——水壺裡驗出的 FM2，被關掉的不是意識，是海馬迴的存檔鍵' },
+  { out: '2026-07-24-alcohol-brain-aging.html', nav: '酒精與大腦', title: '「小酌怡情」的腦科學代價——Stanford 研究：飲酒量越多，大腦血流越少' },
+  { out: '2026-09-05-heat-illness-brain-emergency.html', nav: '環境暴露', title: '「秋天了怎麼還會中暑」——氣象署說九到十一月偏暖，而中暑的判斷點從來不在溫度計上' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
