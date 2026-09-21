@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.20';
-const SERIES = '神經毒性';
+const DATE = '2026.09.21';
+const SERIES = '感染與神經';
 
 const article = {
-  md:  '2026-09-20-mid-autumn-bbq-carbon-monoxide-brain.md',
-  out: '2026-09-20-mid-autumn-bbq-carbon-monoxide-brain.html',
+  md:  '2026-09-21-flu-vaccine-guillain-barre-nerve.md',
+  out: '2026-09-21-flu-vaccine-guillain-barre-nerve.html',
   title: '',
-  desc: '中秋連假本週五開始，國健署九月十一日的節慶提醒談熱量與致癌物，其中最短的一句是「不要在室內或通風不良的陽台烤肉」——它防的是一氧化碳。血紅素對一氧化碳的親和力約為氧氣的兩百多倍，中毒不只是缺氧，還讓細胞用不動氧氣。台灣全國中毒資料庫一九九九到二〇一二年兩萬五千九百一十二名病人，平均年齡三十六歲，九點一％留下神經後遺症。談蒼白球為什麼先壞、醒來之後那段看似正常的空窗期，以及高壓氧試驗裡二十五％對四十六％的那個對照。',
-  tag: '神經毒性 · 時事',
+  desc: '上週類流感門急診十三萬六千七百九十六人次、單週二十一例死亡，是本季最高；H1N1 佔八成二，疾管署估中秋前後爬到單週十五到十六萬人次，公費疫苗十月一號才開打。而診間被問最多的是格林巴利症候群——那個從腳往上爬、嚴重時爬到呼吸肌的病。安大略一九九三到二〇一一年的自我對照資料把兩個風險放在同一張秤上：疫苗後相對發生率一點五二倍，流感就醫後十五點八一倍；每百萬劑多出約一點零三例，每百萬次流感就醫多出約十七點二例。',
+  tag: '感染與神經 · 時事',
 };
 const related = [
-  { out: '2026-09-20-mid-autumn-bbq-carbon-monoxide-brain.html', nav: '本篇', title: '「別在室內或通風不良的陽台烤」——中秋提醒裡最短的那一句，防的是一種沒有味道的東西' },
-  { out: '2026-09-12-flunitrazepam-spiked-drink-amnesia.html', nav: '藥物與記憶', title: '「小喝兩口就斷片」——水壺裡驗出的 FM2，被關掉的不是意識，是海馬迴的存檔鍵' },
-  { out: '2026-07-24-alcohol-brain-aging.html', nav: '酒精與大腦', title: '「小酌怡情」的腦科學代價——Stanford 研究：飲酒量越多，大腦血流越少' },
-  { out: '2026-09-05-heat-illness-brain-emergency.html', nav: '環境暴露', title: '「秋天了怎麼還會中暑」——氣象署說九到十一月偏暖，而中暑的判斷點從來不在溫度計上' },
+  { out: '2026-09-21-flu-vaccine-guillain-barre-nerve.html', nav: '本篇', title: '「打了會不會癱瘓」——流感單週十三萬人就醫，而診間裡被問最多的是疫苗跟那條神經' },
+  { out: '2026-09-09-flu-vaccine-high-dose-brain.html', nav: '疫苗與腦', title: '「705 萬劑裡有 20 萬劑不一樣」——加強型流感疫苗第一次進台灣，而流感傷的不只是肺' },
+  { out: '2026-09-20-mid-autumn-bbq-carbon-monoxide-brain.html', nav: '中秋連假', title: '「別在室內或通風不良的陽台烤」——中秋提醒裡最短的那一句，防的是一種沒有味道的東西' },
+  { out: '2026-09-19-brain-tumor-stroke-mimic.html', nav: '症狀會騙人', title: '「隔天連手機都拿不住」——一顆四公分的腦瘤把自己演成中風，而拆穿它的是時間' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
