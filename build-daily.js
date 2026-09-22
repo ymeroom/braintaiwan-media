@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.21';
-const SERIES = '感染與神經';
+const DATE = '2026.09.22';
+const SERIES = '睡眠與失智';
 
 const article = {
-  md:  '2026-09-21-flu-vaccine-guillain-barre-nerve.md',
-  out: '2026-09-21-flu-vaccine-guillain-barre-nerve.html',
+  md:  '2026-09-22-sleep-glymphatic-dementia-risk.md',
+  out: '2026-09-22-sleep-glymphatic-dementia-risk.html',
   title: '',
-  desc: '上週類流感門急診十三萬六千七百九十六人次、單週二十一例死亡，是本季最高；H1N1 佔八成二，疾管署估中秋前後爬到單週十五到十六萬人次，公費疫苗十月一號才開打。而診間被問最多的是格林巴利症候群——那個從腳往上爬、嚴重時爬到呼吸肌的病。安大略一九九三到二〇一一年的自我對照資料把兩個風險放在同一張秤上：疫苗後相對發生率一點五二倍，流感就醫後十五點八一倍；每百萬劑多出約一點零三例，每百萬次流感就醫多出約十七點二例。',
-  tag: '感染與神經 · 時事',
+  desc: '九月十八號，第十九屆失智老人募款活動把主題定成「好眠存能量 記憶更閃亮」，同一週的新聞標題更直接：每晚睡不到六小時，失智風險增三成。那個數字出自英國 Whitehall II 世代七千九百五十九人、二十五年的追蹤。而機制那一側更硬——小鼠睡著時腦細胞間隙擴大約六成，類淋巴水路才全開；人只要一晚不睡，海馬迴與視丘的類澱粉蛋白訊號就量得到上升。慢波睡眠掉得快的人，全因失智風險比是一點二七。',
+  tag: '睡眠與失智 · 時事',
 };
 const related = [
-  { out: '2026-09-21-flu-vaccine-guillain-barre-nerve.html', nav: '本篇', title: '「打了會不會癱瘓」——流感單週十三萬人就醫，而診間裡被問最多的是疫苗跟那條神經' },
-  { out: '2026-09-09-flu-vaccine-high-dose-brain.html', nav: '疫苗與腦', title: '「705 萬劑裡有 20 萬劑不一樣」——加強型流感疫苗第一次進台灣，而流感傷的不只是肺' },
-  { out: '2026-09-20-mid-autumn-bbq-carbon-monoxide-brain.html', nav: '中秋連假', title: '「別在室內或通風不良的陽台烤」——中秋提醒裡最短的那一句，防的是一種沒有味道的東西' },
-  { out: '2026-09-19-brain-tumor-stroke-mimic.html', nav: '症狀會騙人', title: '「隔天連手機都拿不住」——一顆四公分的腦瘤把自己演成中風，而拆穿它的是時間' },
+  { out: '2026-09-22-sleep-glymphatic-dementia-risk.html', nav: '本篇', title: '「好眠存能量」——失智症月的主題今年押在睡眠，而幫大腦沖水的那套管路只在你睡著時全開' },
+  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html', nav: '睡眠腦波', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
+  { out: '2026-08-21-alzheimer-amyloid-clearance-gap.html', nav: '清掉斑塊之後', title: '「腦中類澱粉蛋白從 104.2 掉到 19.8」——斑塊清掉八成，記憶為什麼沒有跟著回來八成' },
+  { out: '2026-09-11-sleep-debt-visceral-fat-brain.html', nav: '睡眠負債', title: '「補眠三天，那條線還在往上」——熬夜兩週內臟脂肪多一成一，而決定你吃什麼的是額葉' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
