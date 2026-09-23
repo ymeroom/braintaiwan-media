@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.22';
-const SERIES = '睡眠與失智';
+const DATE = '2026.09.23';
+const SERIES = '氣溫與腦血管';
 
 const article = {
-  md:  '2026-09-22-sleep-glymphatic-dementia-risk.md',
-  out: '2026-09-22-sleep-glymphatic-dementia-risk.html',
+  md:  '2026-09-23-temperature-swing-stroke-risk.md',
+  out: '2026-09-23-temperature-swing-stroke-risk.html',
   title: '',
-  desc: '九月十八號，第十九屆失智老人募款活動把主題定成「好眠存能量 記憶更閃亮」，同一週的新聞標題更直接：每晚睡不到六小時，失智風險增三成。那個數字出自英國 Whitehall II 世代七千九百五十九人、二十五年的追蹤。而機制那一側更硬——小鼠睡著時腦細胞間隙擴大約六成，類淋巴水路才全開；人只要一晚不睡，海馬迴與視丘的類澱粉蛋白訊號就量得到上升。慢波睡眠掉得快的人，全因失智風險比是一點二七。',
-  tag: '睡眠與失智 · 時事',
+  desc: '九月十九號的氣象新聞下了一組自相矛盾的數字：清晨十八點五度，白天三十六度。國衛院國家環境醫學研究所把健保資料庫二十年、超過一百一十萬例急性中風拉出來，問的不是「今天幾度」，而是「跟兩天前差幾度」——兩天內升溫超過六度，缺血性中風風險增加逾兩倍；降溫超過十四度，出血性中風風險變成兩倍。而中風最集中的時段，是早上六點到中午。',
+  tag: '氣溫與中風 · 時事',
 };
 const related = [
-  { out: '2026-09-22-sleep-glymphatic-dementia-risk.html', nav: '本篇', title: '「好眠存能量」——失智症月的主題今年押在睡眠，而幫大腦沖水的那套管路只在你睡著時全開' },
-  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html', nav: '睡眠腦波', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
-  { out: '2026-08-21-alzheimer-amyloid-clearance-gap.html', nav: '清掉斑塊之後', title: '「腦中類澱粉蛋白從 104.2 掉到 19.8」——斑塊清掉八成，記憶為什麼沒有跟著回來八成' },
-  { out: '2026-09-11-sleep-debt-visceral-fat-brain.html', nav: '睡眠負債', title: '「補眠三天，那條線還在往上」——熬夜兩週內臟脂肪多一成一，而決定你吃什麼的是額葉' },
+  { out: '2026-09-23-temperature-swing-stroke-risk.html', nav: '本篇', title: '「清晨十八度半，白天飆三十六度」——秋老虎把一天拉開十七度，而台灣一百一十萬筆中風查的就是這個差' },
+  { out: '2026-08-04-tropical-night-stroke-brain.html', nav: '熱帶夜', title: '熱帶夜降不了溫的那個夜晚，腦子裡發生了什麼' },
+  { out: 'summer-ac-stroke.html', nav: '冷氣房', title: '三十七度衝進冷氣房的那一刻，血管正在發生什麼' },
+  { out: 'bp-130-brain.html', nav: '血壓那條線', title: '「還沒到140，再觀察就好」——那條線四年前就已經往下移了' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
