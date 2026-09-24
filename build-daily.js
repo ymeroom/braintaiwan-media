@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.23';
-const SERIES = '氣溫與腦血管';
+const DATE = '2026.09.24';
+const SERIES = '周邊神經與脊椎';
 
 const article = {
-  md:  '2026-09-23-temperature-swing-stroke-risk.md',
-  out: '2026-09-23-temperature-swing-stroke-risk.html',
+  md:  '2026-09-24-text-neck-cervical-radiculopathy.md',
+  out: '2026-09-24-text-neck-cervical-radiculopathy.html',
   title: '',
-  desc: '九月十九號的氣象新聞下了一組自相矛盾的數字：清晨十八點五度，白天三十六度。國衛院國家環境醫學研究所把健保資料庫二十年、超過一百一十萬例急性中風拉出來，問的不是「今天幾度」，而是「跟兩天前差幾度」——兩天內升溫超過六度，缺血性中風風險增加逾兩倍；降溫超過十四度，出血性中風風險變成兩倍。而中風最集中的時段，是早上六點到中午。',
-  tag: '氣溫與中風 · 時事',
+  desc: '九月十九號起跑遍各台的那則新聞裡，神經外科醫師請一位三十二歲工程師重現滑手機的姿勢，然後說那等於在脖子上掛了一個五歲小孩——二十七公斤。但那是二〇一四年一個力學模型算出來的瞬間受力，不是會不會痛的預測式：里約一百五十位年輕人的研究裡，低頭姿勢跟頸痛之間沒有關聯。神經科門診真正在數的是哪一根手指在麻，以及一種不痛、平均要看過五點二次門診才被抓到的病。',
+  tag: '頸椎與神經 · 時事',
 };
 const related = [
-  { out: '2026-09-23-temperature-swing-stroke-risk.html', nav: '本篇', title: '「清晨十八度半，白天飆三十六度」——秋老虎把一天拉開十七度，而台灣一百一十萬筆中風查的就是這個差' },
-  { out: '2026-08-04-tropical-night-stroke-brain.html', nav: '熱帶夜', title: '熱帶夜降不了溫的那個夜晚，腦子裡發生了什麼' },
-  { out: 'summer-ac-stroke.html', nav: '冷氣房', title: '三十七度衝進冷氣房的那一刻，血管正在發生什麼' },
-  { out: 'bp-130-brain.html', nav: '血壓那條線', title: '「還沒到140，再觀察就好」——那條線四年前就已經往下移了' },
+  { out: '2026-09-24-text-neck-cervical-radiculopathy.html', nav: '本篇', title: '「等於在脖子上掛了一個五歲小孩」——二十七公斤那個數字被轉了一整週，而診間真正在數的是哪一根手指在麻' },
+  { out: '2026-09-06-lumbar-disc-herniation-sciatica.html', nav: '下背與坐骨神經', title: '腰痛到腳麻，什麼時候該擔心' },
+  { out: '2026-09-18-gait-nervous-system-mobility.html', nav: '走路這道題', title: '走路從來就是一道大腦在算的題' },
+  { out: '2026-09-23-temperature-swing-stroke-risk.html', nav: '兩天的溫差', title: '秋老虎把一天拉開十七度，而台灣一百一十萬筆中風查的就是這個差' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
