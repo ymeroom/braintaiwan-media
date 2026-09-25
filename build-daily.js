@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.24';
-const SERIES = '周邊神經與脊椎';
+const DATE = '2026.09.25';
+const SERIES = '頭痛與疼痛';
 
 const article = {
-  md:  '2026-09-24-text-neck-cervical-radiculopathy.md',
-  out: '2026-09-24-text-neck-cervical-radiculopathy.html',
+  md:  '2026-09-25-medication-overuse-headache.md',
+  out: '2026-09-25-medication-overuse-headache.html',
   title: '',
-  desc: '九月十九號起跑遍各台的那則新聞裡，神經外科醫師請一位三十二歲工程師重現滑手機的姿勢，然後說那等於在脖子上掛了一個五歲小孩——二十七公斤。但那是二〇一四年一個力學模型算出來的瞬間受力，不是會不會痛的預測式：里約一百五十位年輕人的研究裡，低頭姿勢跟頸痛之間沒有關聯。神經科門診真正在數的是哪一根手指在麻，以及一種不痛、平均要看過五點二次門診才被抓到的病。',
-  tag: '頸椎與神經 · 時事',
+  desc: '世界偏頭痛週第一天上線的那份推薦醫師名單旁邊，新聞稿列了三個句子：藥越吃越多且藥效變短、沒發作就先吞一顆、換牌子就沒效。那不是形容詞，是《國際頭痛疾病分類》第三版編號 8.2 的診斷——單方止痛藥每月十五天、複方與翠普登每月十天就算過線。金門兩千零三位長者的研究裡，止痛藥過度使用的勝算比是七十九。',
+  tag: '頭痛與止痛藥 · 時事',
 };
 const related = [
-  { out: '2026-09-24-text-neck-cervical-radiculopathy.html', nav: '本篇', title: '「等於在脖子上掛了一個五歲小孩」——二十七公斤那個數字被轉了一整週，而診間真正在數的是哪一根手指在麻' },
-  { out: '2026-09-06-lumbar-disc-herniation-sciatica.html', nav: '下背與坐骨神經', title: '腰痛到腳麻，什麼時候該擔心' },
-  { out: '2026-09-18-gait-nervous-system-mobility.html', nav: '走路這道題', title: '走路從來就是一道大腦在算的題' },
-  { out: '2026-09-23-temperature-swing-stroke-risk.html', nav: '兩天的溫差', title: '秋老虎把一天拉開十七度，而台灣一百一十萬筆中風查的就是這個差' },
+  { out: '2026-09-25-medication-overuse-headache.html', nav: '本篇', title: '「藥越吃越多，藥效卻越來越短」——偏頭痛週上線的那份名單，和一種被止痛藥養出來的頭痛' },
+  { out: '2026-09-17-barometric-pressure-weather-headache.html', nav: '天氣與頭痛', title: '東北季風說走就走，而有些人的頭比氣象署更早知道' },
+  { out: '2026-09-08-vestibular-migraine-dizziness.html', nav: '頭暈型偏頭痛', title: '天旋地轉卻查不出原因，可能是偏頭痛的另一張臉' },
+  { out: 'migraine-brain-aging-2026.html', nav: '偏頭痛與大腦', title: '偏頭痛會不會讓大腦老得比較快' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
