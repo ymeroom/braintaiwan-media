@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.25';
-const SERIES = '頭痛與疼痛';
+const DATE = '2026.09.26';
+const SERIES = '癲癇與意識障礙';
 
 const article = {
-  md:  '2026-09-25-medication-overuse-headache.md',
-  out: '2026-09-25-medication-overuse-headache.html',
+  md:  '2026-09-26-seizure-vs-choking-first-aid.md',
+  out: '2026-09-26-seizure-vs-choking-first-aid.html',
   title: '',
-  desc: '世界偏頭痛週第一天上線的那份推薦醫師名單旁邊，新聞稿列了三個句子：藥越吃越多且藥效變短、沒發作就先吞一顆、換牌子就沒效。那不是形容詞，是《國際頭痛疾病分類》第三版編號 8.2 的診斷——單方止痛藥每月十五天、複方與翠普登每月十天就算過線。金門兩千零三位長者的研究裡，止痛藥過度使用的勝算比是七十九。',
-  tag: '頭痛與止痛藥 · 時事',
+  desc: '九月十九號中午，台中清水一家迴轉壽司店的八歲女孩吃到一半抽搐、意識不清，送醫後醫師給了兩句話：初判熱痙攣，食道裡沒有異物。噎到與抽搐的急救方向幾乎相反——一個要壓上腹部，一個最重要的是不要碰他的嘴。五分鐘那條線、三不二保護，以及八歲的「熱痙攣」為什麼要多想幾件事。',
+  tag: '癲癇急救 · 時事',
 };
 const related = [
-  { out: '2026-09-25-medication-overuse-headache.html', nav: '本篇', title: '「藥越吃越多，藥效卻越來越短」——偏頭痛週上線的那份名單，和一種被止痛藥養出來的頭痛' },
-  { out: '2026-09-17-barometric-pressure-weather-headache.html', nav: '天氣與頭痛', title: '東北季風說走就走，而有些人的頭比氣象署更早知道' },
-  { out: '2026-09-08-vestibular-migraine-dizziness.html', nav: '頭暈型偏頭痛', title: '天旋地轉卻查不出原因，可能是偏頭痛的另一張臉' },
-  { out: 'migraine-brain-aging-2026.html', nav: '偏頭痛與大腦', title: '偏頭痛會不會讓大腦老得比較快' },
+  { out: '2026-09-26-seizure-vs-choking-first-aid.html', nav: '本篇', title: '「食道裡沒有異物」——壽司店那場抽搐先被當成噎到，而兩種急救的方向正好相反' },
+  { out: '2026-08-20-flu-febrile-seizure-encephalopathy.html', nav: '熱性痙攣', title: '「發燒、雙眼上吊、走路不穩」——五歲女童那場流感，和一般的熱性痙攣差在哪裡' },
+  { out: 'heat-epilepsy-seizure-taiwan-2026.html', nav: '高溫與癲癇', title: '熱到可以癲癇——台灣十八萬次急診數據說了什麼' },
+  { out: '2026-09-16-ect-induced-seizure-depression.html', nav: '電痙攣治療', title: '「1,718 點變成 6,839 點」——健保這個月調高電痙攣治療給付，而這個療法本身就是一場被算好的癲癇' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
