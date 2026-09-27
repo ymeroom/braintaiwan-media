@@ -6,21 +6,22 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.26';
-const SERIES = '癲癇與意識障礙';
+const DATE = '2026.09.27';
+const SERIES = '頭部外傷與腦震盪';
 
 const article = {
-  md:  '2026-09-26-seizure-vs-choking-first-aid.md',
-  out: '2026-09-26-seizure-vs-choking-first-aid.html',
+  md:  '2026-09-27-asian-games-hbp-concussion.md',
+  out: '2026-09-27-asian-games-hbp-concussion.html',
   title: '',
-  desc: '九月十九號中午，台中清水一家迴轉壽司店的八歲女孩吃到一半抽搐、意識不清，送醫後醫師給了兩句話：初判熱痙攣，食道裡沒有異物。噎到與抽搐的急救方向幾乎相反——一個要壓上腹部，一個最重要的是不要碰他的嘴。五分鐘那條線、三不二保護，以及八歲的「熱痙攣」為什麼要多想幾件事。',
-  tag: '癲癇急救 · 時事',
+  desc: '九月二十三號名古屋亞運棒球預賽，中華隊挨了六次觸身球，李亦崴被一球打在左耳骨附近，流血、耳鳴退場。總教練說耳膜應該沒問題——但耳膜沒破跟腦子沒事是兩個問題。腦震盪不需要昏倒，斷層乾淨也排除不了它；職業棒球四年三百零七例輕度腦外傷，四成發生在捕手身上，而立刻換下場的人恢復時間只有硬撐完賽者的一半。',
+  tag: '腦震盪 · 時事',
 };
 const related = [
-  { out: '2026-09-26-seizure-vs-choking-first-aid.html', nav: '本篇', title: '「食道裡沒有異物」——壽司店那場抽搐先被當成噎到，而兩種急救的方向正好相反' },
-  { out: '2026-08-20-flu-febrile-seizure-encephalopathy.html', nav: '熱性痙攣', title: '「發燒、雙眼上吊、走路不穩」——五歲女童那場流感，和一般的熱性痙攣差在哪裡' },
-  { out: 'heat-epilepsy-seizure-taiwan-2026.html', nav: '高溫與癲癇', title: '熱到可以癲癇——台灣十八萬次急診數據說了什麼' },
-  { out: '2026-09-16-ect-induced-seizure-depression.html', nav: '電痙攣治療', title: '「1,718 點變成 6,839 點」——健保這個月調高電痙攣治療給付，而這個療法本身就是一場被算好的癲癇' },
+  { out: '2026-09-27-asian-games-hbp-concussion.html', nav: '本篇', title: '「耳膜應該沒問題」——亞運那顆砸中頭的觸身球，湯總那句話裡最該盯的其實不是耳朵' },
+  { out: 'concussion-what-is.html', nav: '腦震盪是什麼', title: '頭撞一下，大腦裡發生了什麼？醫師解析腦震盪' },
+  { out: 'concussion-wc2026.html', nav: '賽場腦神經防護', title: '2026 世界盃腦神經防護新制：FIFA 為什麼把規則改這麼大？' },
+  { out: '2026-09-15-motorcycle-helmet-rotational-brain.html', nav: '安全帽與旋轉力', title: '「1,333 人裡有 784 個騎機車」——交通安全月開跑，而安全帽擋得住頭骨，擋不住腦子在裡面轉的那一下' },
+  { out: '2026-08-25-flood-cleanup-head-injury-csdh.html', nav: '慢性硬腦膜下出血', title: '水退之後才開始的那種出血——清家園撞到頭的那一下，腦子可以拖六週才喊痛' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
