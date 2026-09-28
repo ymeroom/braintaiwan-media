@@ -6,22 +6,22 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.27';
-const SERIES = '頭部外傷與腦震盪';
+const DATE = '2026.09.28';
+const SERIES = '代謝與血管危險因子';
 
 const article = {
-  md:  '2026-09-27-asian-games-hbp-concussion.md',
-  out: '2026-09-27-asian-games-hbp-concussion.html',
+  md:  '2026-09-28-three-highs-brain-small-vessel.md',
+  out: '2026-09-28-three-highs-brain-small-vessel.html',
   title: '',
-  desc: '九月二十三號名古屋亞運棒球預賽，中華隊挨了六次觸身球，李亦崴被一球打在左耳骨附近，流血、耳鳴退場。總教練說耳膜應該沒問題——但耳膜沒破跟腦子沒事是兩個問題。腦震盪不需要昏倒，斷層乾淨也排除不了它；職業棒球四年三百零七例輕度腦外傷，四成發生在捕手身上，而立刻換下場的人恢復時間只有硬撐完賽者的一半。',
-  tag: '腦震盪 · 時事',
+  desc: '九月二十三號中秋節前，國健署公布 2020-2024 國民營養健康調查：二十歲以上國人高血壓盛行率 30.4%、高血糖 13.1%、高血脂 31%，而其中三到六成不知道自己已經在名單上。世界心臟日的宣導都圍著心臟轉，但血壓、血糖、血脂這三筆帳，最早記在腦子那批沒有側枝循環的穿通動脈上——白質高訊號讓中風風險變三點三倍、失智一點九倍，而帳是中年那二十年記下的。',
+  tag: '三高 · 時事',
 };
 const related = [
-  { out: '2026-09-27-asian-games-hbp-concussion.html', nav: '本篇', title: '「耳膜應該沒問題」——亞運那顆砸中頭的觸身球，湯總那句話裡最該盯的其實不是耳朵' },
-  { out: 'concussion-what-is.html', nav: '腦震盪是什麼', title: '頭撞一下，大腦裡發生了什麼？醫師解析腦震盪' },
-  { out: 'concussion-wc2026.html', nav: '賽場腦神經防護', title: '2026 世界盃腦神經防護新制：FIFA 為什麼把規則改這麼大？' },
-  { out: '2026-09-15-motorcycle-helmet-rotational-brain.html', nav: '安全帽與旋轉力', title: '「1,333 人裡有 784 個騎機車」——交通安全月開跑，而安全帽擋得住頭骨，擋不住腦子在裡面轉的那一下' },
-  { out: '2026-08-25-flood-cleanup-head-injury-csdh.html', nav: '慢性硬腦膜下出血', title: '水退之後才開始的那種出血——清家園撞到頭的那一下，腦子可以拖六週才喊痛' },
+  { out: '2026-09-28-three-highs-brain-small-vessel.html', nav: '本篇', title: '「三到六成不知道自己有」——世界心臟日前那組三高數字，最先記帳的器官不是心臟' },
+  { out: '2026-09-13-midlife-vascular-dementia-free-years.html', nav: '中年危險因子', title: '「30.1 年，還是 17.5 年」——55 歲那天身上有幾個危險因子，決定你還剩多少年不失智' },
+  { out: '2026-08-31-metabolic-syndrome-brain-risk.html', nav: '代謝症候群', title: '「五項裡中三項」——代謝症候群這張帳單，腦子付的比心臟早' },
+  { out: 'bp-130-brain.html', nav: '血壓那條線', title: '「還沒到140，再觀察就好」——那條線四年前就已經往下移了' },
+  { out: 'statin-bp-drug-fear.html', nav: '怕藥的副作用', title: '「我怕副作用，所以還沒開始吃」——那份痛是真的，只是有九成在吃安慰劑時也會出現' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
