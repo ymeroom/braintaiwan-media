@@ -6,22 +6,22 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.28';
-const SERIES = '代謝與血管危險因子';
+const DATE = '2026.09.29';
+const SERIES = '腦部感染與疫苗';
 
 const article = {
-  md:  '2026-09-28-three-highs-brain-small-vessel.md',
-  out: '2026-09-28-three-highs-brain-small-vessel.html',
+  md:  '2026-09-29-rabies-ferret-badger-nerve.md',
+  out: '2026-09-29-rabies-ferret-badger-nerve.html',
   title: '',
-  desc: '九月二十三號中秋節前，國健署公布 2020-2024 國民營養健康調查：二十歲以上國人高血壓盛行率 30.4%、高血糖 13.1%、高血脂 31%，而其中三到六成不知道自己已經在名單上。世界心臟日的宣導都圍著心臟轉，但血壓、血糖、血脂這三筆帳，最早記在腦子那批沒有側枝循環的穿通動脈上——白質高訊號讓中風風險變三點三倍、失智一點九倍，而帳是中年那二十年記下的。',
-  tag: '三高 · 時事',
+  desc: '九月二十八號世界狂犬病日剛過，農業部獸醫所公布今年上半年全台驗出三十三例狂犬病陽性鼬獾、一例白鼻心，陽性疫區橫跨十縣市一百個鄉鎮。狂犬病從頭到尾都是神經科的病——病毒不搭血管，它鑽進軸突、劫持 p75NTR 的逆向運輸軌道，一路往腦幹爬。那段以月計的潛伏期，正好是醫學唯一的空檔：這是極少數被咬之後才打疫苗還來得及的疾病。',
+  tag: '狂犬病 · 時事',
 };
 const related = [
-  { out: '2026-09-28-three-highs-brain-small-vessel.html', nav: '本篇', title: '「三到六成不知道自己有」——世界心臟日前那組三高數字，最先記帳的器官不是心臟' },
-  { out: '2026-09-13-midlife-vascular-dementia-free-years.html', nav: '中年危險因子', title: '「30.1 年，還是 17.5 年」——55 歲那天身上有幾個危險因子，決定你還剩多少年不失智' },
-  { out: '2026-08-31-metabolic-syndrome-brain-risk.html', nav: '代謝症候群', title: '「五項裡中三項」——代謝症候群這張帳單，腦子付的比心臟早' },
-  { out: 'bp-130-brain.html', nav: '血壓那條線', title: '「還沒到140，再觀察就好」——那條線四年前就已經往下移了' },
-  { out: 'statin-bp-drug-fear.html', nav: '怕藥的副作用', title: '「我怕副作用，所以還沒開始吃」——那份痛是真的，只是有九成在吃安慰劑時也會出現' },
+  { out: '2026-09-29-rabies-ferret-badger-nerve.html', nav: '本篇', title: '「上半年三十三隻鼬獾」——世界狂犬病日剛過，而狂犬病是極少數「被咬了之後才打疫苗還來得及」的病' },
+  { out: '2026-09-21-flu-vaccine-guillain-barre-nerve.html', nav: '疫苗與神經', title: '「打了會不會癱瘓」——流感單週十三萬人就醫，而診間裡被問最多的是疫苗跟那條神經' },
+  { out: '2026-08-12-japanese-encephalitis-brain.html', nav: '腦炎', title: '一週後死於呼吸衰竭——日本腦炎燒的不是肺，是大腦深處的神經' },
+  { out: '2026-09-01-influenza-brain-encephalopathy.html', nav: '流感腦病變', title: '「燒壞腦子」不是被燒壞的——八月流感創十年同期新高，開學第一天該盯的是那 1.7%' },
+  { out: '2026-08-24-shingles-postherpetic-neuralgia.html', nav: '病毒與神經痛', title: '疹子退了，痛還在——皮蛇疫苗補助擴大的這個夏天，該把它當成神經的病來看' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
