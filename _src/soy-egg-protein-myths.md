@@ -62,6 +62,6 @@ title: "豆漿不能配雞蛋？真正需要避免的不是搭配，而是沒煮
 
 真正該避開的不是豆漿加蛋，而是沒煮熟的生豆漿，以及那些把半句科學講成完整禁忌的謠言。
 
-## 參考資料
+## 參考來源
 
-- Friedman M, Brandon DL. Nutritional and health benefits of soy proteins. *Journal of Agricultural and Food Chemistry*. 2001;49(3):1069-1086. [DOI](https://doi.org/10.1021/jf0009246)
+- Friedman M, Brandon DL. "Nutritional and Health Benefits of Soy Proteins." *Journal of Agricultural and Food Chemistry*, 2001;49(3):1069–1086. DOI: 10.1021/jf0009246

@@ -60,8 +60,8 @@ title: "喝豆漿會得乳癌？會讓男生長胸部？一次看懂大豆異黃
 
 下次再聽到有人說「豆漿有雌激素，所以很危險」，可以先問一句：你說的是人體雌激素，還是大豆異黃酮？這兩件事，差很多。
 
-## 參考資料
+## 參考來源
 
-- Shu XO, Zheng Y, Cai H, et al. Soy food intake and breast cancer survival. *JAMA*. 2009;302(22):2437-2443. https://pubmed.ncbi.nlm.nih.gov/19996398/
-- Hamilton-Reeves JM, Vazquez G, Duval SJ, et al. Clinical studies show no effects of soy protein or isoflavones on reproductive hormones in men: results of a meta-analysis. *Fertility and Sterility*. 2010;94(3):997-1007. https://pubmed.ncbi.nlm.nih.gov/19524224/
-- Reed KE, Camargo J, Hamilton-Reeves J, Kurzer M, Messina M. Neither soy nor isoflavone intake affects male reproductive hormones: An expanded and updated meta-analysis of clinical studies. *Reproductive Toxicology*. 2021;100:60-67. https://pubmed.ncbi.nlm.nih.gov/33383165/
+- Shu XO, Zheng Y, Cai H, et al. "Soy food intake and breast cancer survival." *JAMA*, 2009;302(22):2437–2443. DOI: 10.1001/jama.2009.1783（PMID: 19996398）
+- Hamilton-Reeves JM, Vazquez G, Duval SJ, et al. "Clinical studies show no effects of soy protein or isoflavones on reproductive hormones in men: results of a meta-analysis." *Fertility and Sterility*, 2010;94(3):997–1007. DOI: 10.1016/j.fertnstert.2009.04.038（PMID: 19524224）
+- Reed KE, Camargo J, Hamilton-Reeves J, Kurzer M, Messina M. "Neither soy nor isoflavone intake affects male reproductive hormones: An expanded and updated meta-analysis of clinical studies." *Reproductive Toxicology*, 2021;100:60–67. DOI: 10.1016/j.reprotox.2020.12.019（PMID: 33383165）

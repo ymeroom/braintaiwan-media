@@ -64,6 +64,6 @@ title: "喝豆漿會長腎結石？草酸、鈣質與水分，才是你真正該
 
 把一杯豆漿當成結石元兇，太簡化了。身體裡真正重要的，是水分、尿液濃度與整體飲食環境。
 
-## 參考資料
+## 參考來源
 
-- Curhan GC, Willett WC, Speizer FE, Spiegelman D, Stampfer MJ. Comparison of dietary calcium with supplemental calcium and other nutrients as factors affecting the risk for kidney stones in women. *Annals of Internal Medicine*. 1997;126(7):497-504. [PubMed](https://pubmed.ncbi.nlm.nih.gov/9092314/)
+- Curhan GC, Willett WC, Speizer FE, Spiegelman D, Stampfer MJ. "Comparison of dietary calcium with supplemental calcium and other nutrients as factors affecting the risk for kidney stones in women." *Annals of Internal Medicine*, 1997;126(7):497–504. DOI: 10.7326/0003-4819-126-7-199704010-00001（PMID: 9092314）

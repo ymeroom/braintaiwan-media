@@ -46,8 +46,8 @@ title: "牛奶到底營養嗎？從蛋白質、鈣質到心血管與骨骼證據
 
 對一般成年人來說，最實際的原則是：把牛奶當成「高營養密度食物」，不是神藥，也不是敵人。能喝、喝了舒服、總熱量與脂肪攝取也合適，那它是一個好用的營養選項；不能喝的人，也可以透過優格、乳酪、強化豆奶、豆腐、小魚乾、深綠色蔬菜與均衡蛋白質來源來規劃替代。
 
-## 參考資料
+## 參考來源
 
-- Milk and dairy products - a scoping review for Nordic Nutrition Recommendations 2023. PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC11708500/
-- A review on nutritional quality of animal and plant-based milk alternatives: a focus on protein. PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC11259050/
-- Dairy Consumption and Risk of Cardiovascular and Bone Health Outcomes in Adults: An Umbrella Review and Updated Meta-Analyses. *Nutrients*. 2025. https://www.mdpi.com/2072-6643/17/17/2723
+- Holven KB, Sonestedt E. "Milk and dairy products – a scoping review for Nordic Nutrition Recommendations 2023." *Food & Nutrition Research*, 2024;68:10486. DOI: 10.29219/fnr.v68.10486（PMID: 39781268）
+- Karoui R, Bouaicha I. "A review on nutritional quality of animal and plant-based milk alternatives: a focus on protein." *Frontiers in Nutrition*, 2024;11:1378556. DOI: 10.3389/fnut.2024.1378556（PMID: 39036491）
+- Sharifan P, et al. "Dairy Consumption and Risk of Cardiovascular and Bone Health Outcomes in Adults: An Umbrella Review and Updated Meta-Analyses." *Nutrients*, 2025;17(17):2723. DOI: 10.3390/nu17172723

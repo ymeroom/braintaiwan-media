@@ -58,9 +58,9 @@ title: "牛奶裡會有抗生素嗎？真正的風險與管控機制"
 
 這比單純否認更能建立信任。因為科學溝通不是把風險擦掉，而是把風險放回正確的位置。
 
-## 參考資料
+## 參考來源
 
-- Antibiotic Residues in Raw Cow's Milk: A Systematic Review of the Last Decade. *Foods*. 2024. https://www.mdpi.com/2304-8158/13/23/3758
-- Dairy Chain Safety in the Context of Antibiotic Residues - Current Status of Confirmatory Liquid Chromatography Methods: A Review. PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC11591054/
-- Antibiotic Residues in Milk as a Consequence of Mastitis Treatment: Balancing Animal Welfare and One Health Risks. *Veterinary Sciences*. 2025. https://www.mdpi.com/2306-7381/12/12/1159
-- Antibiotic use in dairy: Could traces in milk put consumers at risk? FoodNavigator. 2024. https://www.foodnavigator.com/Article/2024/04/17/Antibiotics-in-dairy-cows/
+- Costa LV, et al. "Antibiotic Residues in Raw Cow's Milk: A Systematic Review of the Last Decade." *Foods*, 2024;13(23):3758. DOI: 10.3390/foods13233758
+- Dluhošová S, Bartáková K, Vorlová L. "Dairy Chain Safety in the Context of Antibiotic Residues—Current Status of Confirmatory Liquid Chromatography Methods: A Review." *Antibiotics*, 2024;13(11):1038. DOI: 10.3390/antibiotics13111038（PMID: 39596733）
+- Tomanić D, Kladar N, Kovačević Z. "Antibiotic Residues in Milk as a Consequence of Mastitis Treatment: Balancing Animal Welfare and One Health Risks." *Veterinary Sciences*, 2025;12(12):1159. DOI: 10.3390/vetsci12121159
+- FoodNavigator（Bambridge-Sutton A），〈Antibiotic use in dairy: Could traces in milk put consumers at risk?〉，2024 年 4 月 17 日。[foodnavigator.com](https://www.foodnavigator.com/Article/2024/04/17/Antibiotics-in-dairy-cows/)

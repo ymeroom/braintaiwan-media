@@ -63,6 +63,6 @@ title: "豆漿普林很高，痛風不能喝？先分清楚黃豆、豆漿與真
 
 真正要戒掉的，往往不是早餐那杯豆漿，而是「只看單一營養名詞就把食物貼標籤」的習慣。
 
-## 參考資料
+## 參考來源
 
-- Choi HK, Atkinson K, Karlson EW, Willett W, Curhan G. Purine-rich foods, dairy and protein intake, and the risk of gout in men. *New England Journal of Medicine*. 2004;350(11):1093-1103. [PubMed](https://pubmed.ncbi.nlm.nih.gov/15014182/)
+- Choi HK, Atkinson K, Karlson EW, Willett W, Curhan G. "Purine-rich foods, dairy and protein intake, and the risk of gout in men." *New England Journal of Medicine*, 2004;350(11):1093–1103. DOI: 10.1056/NEJMoa035700（PMID: 15014182）
