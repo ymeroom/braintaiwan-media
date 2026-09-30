@@ -32,3 +32,11 @@ title: "打皮蛇疫苗那天，保護的其實不只是皮膚——帶狀皰疹
 真正讓神經科學家還在爭辯的問題，不是「疫苗有沒有效」——那個答案越來越清晰——而是：如果連從未出現過皮疹的靜默再活化，都已經在悄悄消磨大腦的神經免疫儲備，那等到「感覺有症狀了再說」這個直覺，在神經退化的世界裡，到底值多少錢。
 
 > 🩺 **醫師觀察**：門診裡最常見的場景，是一個六十多歲的人帶著剛痊癒的帶狀皰疹後遺症神經痛進來，然後問「我現在可以打疫苗嗎？」那個時間點，某種程度上已經是亡羊補牢。讓我更感興趣的問題是：如果這個病毒幾十年來都在神經系統邊緣製造慢性發炎，我們現在對「健康」的定義，是不是低估了這些看不見的長期損耗？
+
+## 參考來源
+
+- Eyting M, Xie M, Michalik F, et al. "A natural experiment on the effect of herpes zoster vaccination on dementia." *Nature*, 2025;641(8062):438–446. DOI: 10.1038/s41586-025-08800-x（PMID: 40175543）
+- Tang E, Ray I, Arnold BF, Acharya NR. "Recombinant zoster vaccine and the risk of dementia." *Vaccine*, 2025;46:126673. DOI: 10.1016/j.vaccine.2024.126673（PMID: 39733478；450 萬人，一劑 HR 0.89、兩劑 HR 0.68）
+- Taquet M, Dercon Q, Todd JA, Harrison PJ. "The recombinant shingles vaccine is associated with lower risk of dementia." *Nature Medicine*, 2024;30(10):2777–2781. DOI: 10.1038/s41591-024-03201-5（PMID: 39053634）
+- Gilden D, Cohrs RJ, Mahalingam R, Nagel MA. "Varicella zoster virus vasculopathies: diverse clinical manifestations, laboratory features, pathogenesis, and treatment." *The Lancet Neurology*, 2009;8(8):731–740. DOI: 10.1016/S1474-4422(09)70134-6（PMID: 19608099）
+- Johnson RW, Rice AS. "Clinical practice. Postherpetic neuralgia." *New England Journal of Medicine*, 2014;371(16):1526–1533. DOI: 10.1056/NEJMcp1403062（PMID: 25317872）

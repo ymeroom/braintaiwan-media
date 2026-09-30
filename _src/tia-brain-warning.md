@@ -29,3 +29,9 @@ TIA 發作後的四十八小時，是一個人這輩子中風機率最高的窗�
 現在的研究顯示，TIA 後快速就醫並啟動治療——抗血小板或抗凝血藥物、找出病因並介入——可以將九十天中風風險降低約**八十%**。這個數字，是「不就醫」與「及時就醫」兩條路的結局差距算出來的。只要出現上述任何症狀，就算幾分鐘後完全消失，請把它當作大中風處理：叫救護車，告訴急診醫師「症狀已消失，但剛才有……」。急診的任務不是等症狀再出現，是在這個高風險窗口內把風險壓下去。
 
 > 🩺 **醫師觀察**：門診偶爾會遇到這樣的病人——他說，「三個月前好像有一次，手突然不對勁，幾分鐘就好了，以為沒事就沒來。」然後他用輪椅被推進診間，左側肢體已經偏癱。TIA 有個讓神經科醫師最難受的特質：它願意提前告訴你一次——但你得在症狀消失的那幾分鐘裡，做出「就算好了也要立刻去急診」的決定。大部分人做不到，不是因為輕忽，而是沒有人告訴過他們：「好了」，才是最需要就醫的時候。
+
+## 參考來源
+
+- Shahjouei S, Sadighi A, Chaudhary D, et al. "A 5-Decade Analysis of Incidence Trends of Ischemic Stroke After Transient Ischemic Attack: A Systematic Review and Meta-analysis." *JAMA Neurology*, 2021;78(1):77–87. DOI: 10.1001/jamaneurol.2020.3627（PMID: 33044505；68 篇研究，TIA 後 90 天缺血性中風 4.7%）
+- Johnston SC, Rothwell PM, Nguyen-Huynh MN, et al. "Validation and refinement of scores to predict very early stroke risk after transient ischaemic attack." *The Lancet*, 2007;369(9558):283–292. DOI: 10.1016/S0140-6736(07)60150-0（PMID: 17258668；ABCD2 評分）
+- Rothwell PM, Giles MF, Chandratheva A, et al. "Effect of urgent treatment of transient ischaemic attack and minor stroke on early recurrent stroke (EXPRESS study): a prospective population-based sequential comparison." *The Lancet*, 2007;370(9596):1432–1442. DOI: 10.1016/S0140-6736(07)61448-2（PMID: 17928046；及時治療使 90 天中風風險降約 80%）

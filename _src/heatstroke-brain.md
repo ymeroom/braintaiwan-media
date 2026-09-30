@@ -35,3 +35,11 @@ title: "熱中暑後，有人的大腦再也回不來了"
 有一點常被忽略：室內不一定安全。通風不良、無冷氣的老舊住宅，室內氣溫在下午可以輕易超過三十五度。靜靜坐著的老人，可能根本感覺不到自己體溫正在上升——老年人的體感較為遲鈍，對熱的感知比年輕人差，等到他們覺得「好像不舒服」，往往已是熱衰竭末期。台灣今年的熱傷害案件，有相當比例就發生在沒有冷氣的室內環境。
 
 > 🩺 **醫師觀察**：台灣今年要辦第一次高溫急難演練，這件事本身就說明了一些什麼。我們對心肺復甦術（CPR）的訓練，已累積了幾十年的社會教育；但對中暑的認識，很多人還停在「多喝水就好」的階段。大腦在高溫下被悄悄燒壞的事，不只發生在馬拉松選手身上，也每天發生在台灣每個夏天、關在家裡沒開冷氣的老人家身上——而這一筆帳，要等到幾年後的失智門診才會算清楚。
+
+## 參考來源
+
+- Epstein Y, Yanovich R. "Heatstroke." *New England Journal of Medicine*, 2019;380(25):2449–2459. DOI: 10.1056/NEJMra1810762（PMID: 31216400；定義、病生理與立即降溫）
+- Bouchama A, Abuyassin B, Lehe C, et al. "Classic and exertional heatstroke." *Nature Reviews Disease Primers*, 2022;8(1):8. DOI: 10.1038/s41572-021-00334-6（PMID: 35115565）
+- Lawton EM, Pearce H, Gabb GM. "Review article: Environmental heatstroke and long-term clinical neurological outcomes: A literature review of case reports and case series 2000–2016." *Emergency Medicine Australasia*, 2019;31(2):163–173. DOI: 10.1111/1742-6723.12990（PMID: 29851280；神經後遺症以動作障礙與小腦功能異常為主）
+- Kuo WY, Huang CC, Chen CA, et al. "Heat-related illness and dementia: a study integrating epidemiological and experimental evidence." *Alzheimer's Research & Therapy*, 2024;16(1):145. DOI: 10.1186/s13195-024-01515-7（PMID: 38961437）
+- Eco-Business，〈Taiwan plans first heat emergency drill as elderly heat injuries hit decade high〉，2025 年 12 月 5 日。[eco-business.com](https://www.eco-business.com/news/taiwan-plans-first-heat-emergency-drill-as-elderly-heat-injuries-hit-decade-high/)
