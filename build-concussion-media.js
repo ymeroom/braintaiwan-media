@@ -10,7 +10,7 @@ const DATE = '2026.06.20';
 
 const articles = [
   { md: 'concussion-what-is.md',  out: 'concussion-what-is.html',  nav: '① 腦震盪是什麼', desc: '頭撞了一下，CT 卻是正常的——腦震盪的傷在軸突，不在影像。從廷伯世界盃事件看腦震盪診斷與「第二衝擊」的風險。' },
-  { md: 'concussion-wc2026.md',   out: 'concussion-wc2026.html',   nav: '② 世界盃新制', desc: '獨立醫師評估、額外換人名額、VAR 擴權——2026 世界盃三項腦震盪防護改革，每一項針對的都是一個制度漏洞。' },
+  { md: 'concussion-wc2026.md',   out: 'concussion-wc2026.html',   nav: '② 世界盃防護', desc: '獨立評估、額外換人名額、醫療重播——世界盃從 2022 年開始用的三道腦震盪防線，每一道針對的都是一個制度漏洞。' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }

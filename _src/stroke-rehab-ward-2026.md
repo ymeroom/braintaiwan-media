@@ -35,6 +35,7 @@ title: "中風後那扇窗——七月起健保復健病房上路，神經科醫
 ## 參考來源
 
 - 聯合新聞網，〈從照顧失能轉型投注減少失能 陳亮妤：健保署首創復健病房最快7月上路〉（26 家申請、選 8 至 10 家、最長 180 天），2026 年 6 月 29 日。[udn.com](https://udn.com/news/story/7266/9594181)
+- 康健雜誌，〈長照3.0上路！出院後怎麼接復健？復健病房、中介專區補上「返家前180天」〉（試辦計畫四類收案對象與住院上限），2026 年 1 月 2 日。[commonhealth.com.tw](https://www.commonhealth.com.tw/article/93487)
 - Richards LG, Ifejika NL, Stein J, et al. "2026 Guideline for Adult Stroke Rehabilitation and Recovery: A Guideline From the American Heart Association and American Stroke Association." *Stroke*, 2026;57(10):e514–e658. DOI: 10.1161/STR.0000000000000536（PMID: 42657476）
 - Biernaskie J, Chernenko G, Corbett D. "Efficacy of rehabilitative experience declines with time after focal ischemic brain injury." *Journal of Neuroscience*, 2004;24(5):1245–1254. DOI: 10.1523/JNEUROSCI.3834-03.2004（PMID: 14762143）
 - Zeiler SR, Krakauer JW. "The interaction between training and plasticity in the poststroke brain." *Current Opinion in Neurology*, 2013;26(6):609–616. DOI: 10.1097/WCO.0000000000000025（PMID: 24136129）
