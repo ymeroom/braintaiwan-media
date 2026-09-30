@@ -40,5 +40,5 @@ BaP 神經毒性的研究目前以細胞與動物實驗為主。人體研究多�
 - [衛生福利部：食藥署說明大豆沙拉油超標油品回收處置情形（2026 年 7 月 3 日）](https://dep.mohw.gov.tw/PRO/cp-2731-87084-120.html)
 - [IARC Monographs Volume 100F：Benzo(a)pyrene](https://www.ncbi.nlm.nih.gov/books/NBK304415/)
 - [Neurotoxicity of Polycyclic Aromatic Hydrocarbons: A Systematic Mapping and Review of Neuropathological Mechanisms（2022）](https://pmc.ncbi.nlm.nih.gov/articles/PMC9331822/)
-- [Effects of subchronic benzo(a)pyrene exposure on neurotransmitter receptor gene expression in rat hippocampus related with spatial learning and memory change（2012）](https://doi.org/10.1016/j.reprotox.2011.12.001)
+- [Effects of subchronic benzo(a)pyrene exposure on neurotransmitter receptor gene expression in the rats hippocampus related with spatial learning and memory change（Toxicology, 2011）](https://doi.org/10.1016/j.tox.2011.07.012)
 - [Modification of inherent and drug-induced dopaminergic activity after exposure to benzo(a)pyrene（2007）](https://pubmed.ncbi.nlm.nih.gov/17570529/)

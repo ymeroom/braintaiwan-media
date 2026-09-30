@@ -130,8 +130,34 @@ function getUrl(file, html) {
   return extract(/<meta property="og:url" content="([^"]*)"/, html) || `${SITE}/posts/${file}`;
 }
 
+function decodeEntities(value) {
+  return value.replace(/&nbsp;/g, ' ').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+}
+
+// 文章「參考來源」清單 → schema.org citation。只照頁面原文轉換，不補不改；
+// 有 DOI／PMID／PMC／超連結的條目才附 url。
+function getCitations(html) {
+  const sec = html.match(/<h[23][^>]*>\s*參考來源\s*<\/h[23]>\s*<(ul|ol)[^>]*>([\s\S]*?)<\/\1>/);
+  if (!sec) return [];
+  return [...sec[2].matchAll(/<li[^>]*>([\s\S]*?)<\/li>/g)].map(([, li]) => {
+    const name = decodeEntities(stripTags(li));
+    // DOI 後常接中文備註「（PMID: …）」：全形括號一律視為終止；半形括號屬 DOI 本體（Lancet 類）
+    const doi = name.match(/\b(10\.\d{4,9}\/[^\s，；;、（）]+)/);
+    const pmid = name.match(/PMID\s*[:：]?\s*(\d{5,9})/i);
+    const pmc = name.match(/\b(PMC\d{5,9})\b/);
+    const href = li.match(/<a[^>]+href="(https?:\/\/[^"]+)"/);
+    const url = doi ? `https://doi.org/${doi[1].replace(/[.,]$/, '')}`
+      : pmid ? `https://pubmed.ncbi.nlm.nih.gov/${pmid[1]}/`
+      : pmc ? `https://pmc.ncbi.nlm.nih.gov/articles/${pmc[1]}/`
+      : href ? decodeEntities(href[1]) : null;
+    return { '@type': 'CreativeWork', name, ...(url && { url }) };
+  }).filter((c) => c.name.length >= 10);
+}
+
 function articleSchema(file, html, description) {
   const url = getUrl(file, html);
+  const citations = getCitations(html);
   return `<script type="application/ld+json">\n${JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -148,7 +174,8 @@ function articleSchema(file, html, description) {
     datePublished: getDate(html),
     dateModified: getDate(html),
     inLanguage: 'zh-TW',
-  }, null, 2)}\n</script>`;
+    ...(citations.length && { citation: citations }),
+  }, null, 2).replace(/<\//g, '<\\/')}\n</script>`;
 }
 
 function ensureDescriptions(file, html) {
@@ -171,9 +198,9 @@ function ensureDescriptions(file, html) {
 function ensureSchema(file, html, description) {
   const schema = articleSchema(file, html, description);
   if (html.includes('application/ld+json')) {
-    return html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, schema);
+    return html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, () => schema);
   }
-  return html.replace(/\n<style>/, `\n${schema}\n<style>`);
+  return html.replace(/\n<style>/, () => `\n${schema}\n<style>`);
 }
 
 function groupFor(file) {
