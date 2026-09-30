@@ -6,22 +6,22 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.09.29';
-const SERIES = '腦部感染與疫苗';
+const DATE = '2026.09.30';
+const SERIES = '高溫與環境暴露';
 
 const article = {
-  md:  '2026-09-29-rabies-ferret-badger-nerve.md',
-  out: '2026-09-29-rabies-ferret-badger-nerve.html',
+  md:  '2026-09-30-anticholinergic-drugs-sweating-heat.md',
+  out: '2026-09-30-anticholinergic-drugs-sweating-heat.html',
   title: '',
-  desc: '九月二十八號世界狂犬病日剛過，農業部獸醫所公布今年上半年全台驗出三十三例狂犬病陽性鼬獾、一例白鼻心，陽性疫區橫跨十縣市一百個鄉鎮。狂犬病從頭到尾都是神經科的病——病毒不搭血管，它鑽進軸突、劫持 p75NTR 的逆向運輸軌道，一路往腦幹爬。那段以月計的潛伏期，正好是醫學唯一的空檔：這是極少數被咬之後才打疫苗還來得及的疾病。',
-  tag: '狂犬病 · 時事',
+  desc: '九月的最後一天，氣象署對臺北、新北、桃園、雲林、臺南、屏東發布橙色高溫燈號——三十六度以上，還可能連三天。散熱這件事全身只靠一條線路：下視丘下令、交感神經傳達，而通往汗腺的那一支偏偏用乙醯膽鹼。於是任何抗膽鹼作用的藥都剪在同一個地方。談藥袋上寫著「口乾」、卻沒寫「不會流汗」的那一行。',
+  tag: '熱傷害與藥物 · 時事',
 };
 const related = [
-  { out: '2026-09-29-rabies-ferret-badger-nerve.html', nav: '本篇', title: '「上半年三十三隻鼬獾」——世界狂犬病日剛過，而狂犬病是極少數「被咬了之後才打疫苗還來得及」的病' },
-  { out: '2026-09-21-flu-vaccine-guillain-barre-nerve.html', nav: '疫苗與神經', title: '「打了會不會癱瘓」——流感單週十三萬人就醫，而診間裡被問最多的是疫苗跟那條神經' },
-  { out: '2026-08-12-japanese-encephalitis-brain.html', nav: '腦炎', title: '一週後死於呼吸衰竭——日本腦炎燒的不是肺，是大腦深處的神經' },
-  { out: '2026-09-01-influenza-brain-encephalopathy.html', nav: '流感腦病變', title: '「燒壞腦子」不是被燒壞的——八月流感創十年同期新高，開學第一天該盯的是那 1.7%' },
-  { out: '2026-08-24-shingles-postherpetic-neuralgia.html', nav: '病毒與神經痛', title: '疹子退了，痛還在——皮蛇疫苗補助擴大的這個夏天，該把它當成神經的病來看' },
+  { out: '2026-09-30-anticholinergic-drugs-sweating-heat.html', nav: '本篇', title: '「橙燈亮在九月的最後一天」——三十六度又回來了，而有些藥會先把你的汗關掉' },
+  { out: '2026-09-05-heat-illness-brain-emergency.html', nav: '中暑判斷', title: '「秋天了怎麼還會中暑」——氣象署說九到十一月偏暖，而中暑的判斷點從來不在溫度計上' },
+  { out: '2026-08-01-heatwave-dementia-risk.html', nav: '熱後遺症', title: '七月底台灣熱傷害已破七五六人——中暑之後，腦子沒你想的那麼快忘記' },
+  { out: '2026-08-04-tropical-night-stroke-brain.html', nav: '熱帶夜', title: '熱帶夜降不了溫的那個夜晚，腦子裡發生了什麼' },
+  { out: '2026-09-25-medication-overuse-headache.html', nav: '偏頭痛用藥', title: '「藥越吃越多，藥效卻越來越短」——偏頭痛週上線的那份名單，和一種被止痛藥養出來的頭痛' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
