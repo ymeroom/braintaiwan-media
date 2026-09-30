@@ -36,7 +36,6 @@ WBGT 是勞工安全領域幾十年前就開始使用的熱應力衡量工具，
 
 ## 參考來源
 
-- 台灣中國醫藥大學研究團隊：Association between wet-bulb globe temperature and epilepsy: a space-time-stratified case-crossover study in Taiwan，*Tropical Medicine and Health*（Springer Nature），2025 年 5 月
-- Taiwan National Health Insurance Research Database（NHIRD），2007–2017 年急診癲癇紀錄，共 187,657 筆；研究倫理核准：China Medical University Hospital IRB
-- Saver JL：Time Is Brain—Quantified，*Stroke*，2006（神經元每分鐘損失量背景參考）
-- 世界衛生組織（WHO）：Climate change, heat and health（熱、健康與氣候變遷事實手冊）
+- Chang YT, et al. "Association between wet-bulb globe temperature and epilepsy: a space-time-stratified case-crossover study in Taiwan." *Tropical Medicine and Health*, 2025;53(1):72. DOI: 10.1186/s41182-025-00755-z（PMID: 40394709；健保資料庫 2007–2017 年 187,657 次癲癇急診，lag 0 日 OR 1.083）
+- Saver JL. "Time is brain—quantified." *Stroke*, 2006;37(1):263–266. DOI: 10.1161/01.STR.0000196957.55928.ab（PMID: 16339467）（神經元每分鐘損失量背景參考）
+- 世界衛生組織（WHO），〈Climate change, heat and health〉事實手冊，2026 年 7 月 31 日更新。[who.int](https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health)

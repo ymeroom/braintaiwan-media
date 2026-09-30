@@ -32,8 +32,7 @@ title: "颱風巴威一過、氣溫炸裂，急診大血管中風為什麼翻倍
 
 ## 參考來源
 
-- 林口長庚急重症神經外科主任陳敬昌，ETtoday 健康雲，2026 年 7 月
-- 基隆長庚神經內科醫師蘇豐傑，聯合新聞網，2026 年 7 月
-- 衛生福利部熱傷害就診通報資料（2026 年 7 月 1–8 日）
-- Chang Gung University Health Information and Epidemiology Laboratory 研究團隊，"Impact of rapid temperature fluctuations on acute stroke risk: a nationwide case-crossover study from 2001 to 2020," *The Lancet Regional Health – Western Pacific*, 2025 年 4 月
-- "Climate Change Projections for Stroke Incidence in Taiwan: Impact of 2°C and 4°C Global Warming Level," *Journal of Epidemiology and Global Health*, 2024
+- Kono M, Wu WT, Lee CP, et al. "Impact of rapid temperature fluctuations on acute stroke risk: a nationwide case-crossover study from 2001 to 2020." *The Lancet Regional Health – Western Pacific*, 2025;57:101546. DOI: 10.1016/j.lanwpc.2025.101546（PMID: 40242463）
+- Wu WT, et al. "Climate Change Projections for Stroke Incidence in Taiwan: Impact of 2 °C and 4 °C Global Warming Level." *Journal of Epidemiology and Global Health*, 2024;14(3):1319–1331. DOI: 10.1007/s44197-024-00289-3
+- ETtoday 健康雲，〈連假高溫「中風個案翻倍」 醫揭夏季大量流汗、血循變慢釀危機〉（林口長庚陳敬昌醫師受訪），2026 年 7 月 5 日。[health.ettoday.net](https://health.ettoday.net/news/3195313)
+- 聯合新聞網，〈颱風前夕全台飆35度高溫 醫籲：高溫不只會導致中暑還可能腦中風〉（基隆長庚蘇豐傑醫師受訪；衛福部 7 月 1–8 日熱傷害就診 264 人次），2026 年 7 月 9 日。[udn.com](https://udn.com/news/story/7266/9617105)

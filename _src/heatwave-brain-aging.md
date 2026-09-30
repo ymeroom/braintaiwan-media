@@ -31,6 +31,7 @@ title: "每一次熱浪，你的大腦就悄悄老了幾天——台灣兩萬人
 > 臨床上常見一個現象：夏天以熱傷害進來急診的老人，即便急性期已解決、順利出院，幾個月後家屬回來說「人變了」——認知功能開始走下坡，本來認識的臉孔開始搞混。這項表觀遺傳研究給了部分解釋：身體的危機看起來解除了，但細胞裡的老化時鐘已悄悄撥快。我們還沒搞清楚這個撥快能不能撥回去，也不知道撥快幾次就超過了大腦自我修復的臨界點。
 
 ## 參考來源
-- 《Nature Climate Change》2025：熱浪長期加速老化效應（台灣 24,922 人世代研究，2008–2022，每單位累積熱浪暴露生物年齡加速約 8–11 天）
-- 表觀遺傳時鐘（DNA 甲基化）與生物年齡量測相關研究
-- 反覆熱應激與海馬迴 amyloid-β／tau 病理變化之動物實驗文獻
+
+- Chen S, Liu Y, Yi Y, et al. "Long-term impacts of heatwaves on accelerated ageing." *Nature Climate Change*, 2025;15(9):1000–1007. DOI: 10.1038/s41558-025-02407-w（台灣 24,922 人世代，2008–2022；累積熱浪暴露每增加一個四分位距，生物年齡加速 0.023–0.031 年）
+- Horvath S. "DNA methylation age of human tissues and cell types." *Genome Biology*, 2013;14(10):R115. DOI: 10.1186/gb-2013-14-10-r115（表觀遺傳時鐘背景）
+- Kuo WY, Huang CC, Chen CA, et al. "Heat-related illness and dementia: a study integrating epidemiological and experimental evidence." *Alzheimer's Research & Therapy*, 2024;16(1):145. DOI: 10.1186/s13195-024-01515-7（PMID: 38961437；熱中暑後大鼠海馬迴神經退化與類澱粉斑塊之動物實驗）

@@ -44,8 +44,8 @@ title: "那一次中暑，可能是失智的前二十年——台灣七萬人研
 
 ## 參考來源
 
-- 成功大學郭浩然教授團隊, *Alzheimer's Research & Therapy* 2024：熱傷害與失智症風險——台灣七萬人健保資料庫研究（熱傷害風險 +24%，熱中暑 +26%）
-- PMC 2026：Epidemiological characteristics of heat-related illness: a nationwide study in Taiwan
-- 衛生福利部國民健康署：熱傷害種類說明、室內中暑衛教資料（classic heatstroke 死亡率）
-- 台灣環境部 / 中央氣象署：台灣首次四十度熱浪全國緊急演習（2026 年 6 月）；七月高溫特報
-- Eco-Business / Taipei Times 報導（2026 年 7 月）：台灣老年人熱傷害達十年新高
+- Kuo WY, Huang CC, Chen CA, et al. "Heat-related illness and dementia: a study integrating epidemiological and experimental evidence." *Alzheimer's Research & Therapy*, 2024;16(1):145. DOI: 10.1186/s13195-024-01515-7（PMID: 38961437；熱傷害 70,721 人對照 282,884 人，失智 AHR 1.24，熱中暑 AHR 1.26）
+- Kuo WY, et al. "Epidemiological characteristics of heat-related illness: a nationwide study in Taiwan." *BMC Public Health*, 2025;25(1):3063. DOI: 10.1186/s12889-025-24344-1（PMID: 40993647）
+- Bouchama A, et al. "Classic and exertional heatstroke." *Nature Reviews Disease Primers*, 2022;8(1):8. DOI: 10.1038/s41572-021-00334-6（PMID: 35115565；古典型與勞動型熱中暑的區別與預後）
+- 衛生福利部國民健康署，〈熱傷害的診斷與處置〉，預防熱傷害衛教專區，2026 年更新。[hpa.gov.tw](https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=440&pid=10746)
+- Eco-Business，〈Taiwan plans first heat emergency drill as elderly heat injuries hit decade high〉（環境部：2024 年長者熱傷害 791 例，為十年前 2.5 倍），2025 年 12 月 5 日。[eco-business.com](https://www.eco-business.com/news/taiwan-plans-first-heat-emergency-drill-as-elderly-heat-injuries-hit-decade-high/)

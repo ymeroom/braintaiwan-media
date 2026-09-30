@@ -33,6 +33,9 @@ Threads 上曾有網友在清晨五點發文問「今天台灣人集體失眠嗎
 > 夏夜失眠最常被忽略的一點，是睡眠結構遭到破壞，而非只是「睡得晚」。雖然最終入睡了，但慢波睡眠比例大幅下降，類淋巴清掃遠遠不足。改善入眠最有實證支持的兩件事：睡前三十分鐘洗攝氏三十八至四十度的溫水澡，促進四肢散熱讓核心降溫；以及讓臥室在入睡前降到攝氏二十五至二十七度，而非等到上床才開冷氣。高溫期間，睡眠衛生不是舒適選項，而是大腦維護的必要條件。
 
 ## 參考來源
-- 《Nature Communications》2026：類淋巴系統（glymphatic system）在人體將 amyloid-β 與 tau 由腦清除至血漿
-- 慢波睡眠、類淋巴清除與阿茲海默症生物標記、失智風險關係之研究
-- 睡前溫水澡促進核心體溫下降、臥室降溫與入睡之睡眠衛生實證
+
+- Dagum P, Elbert DL, Giovangrandi L, et al. "The glymphatic system clears amyloid beta and tau from brain to plasma in humans." *Nature Communications*, 2026;17(1):715. DOI: 10.1038/s41467-026-68374-8（PMID: 41593094）
+- Hong H, et al. "MRI markers of cerebrospinal fluid dynamics predict dementia and mediate the impact of cardiovascular risk." *Alzheimer's & Dementia*, 2025;21(10):e70699. DOI: 10.1002/alz.70699（PMID: 41128158；劍橋大學，UK Biobank 約四萬人）
+- Xie L, Kang H, Xu Q, et al. "Sleep drives metabolite clearance from the adult brain." *Science*, 2013;342(6156):373–377. DOI: 10.1126/science.1241224（PMID: 24136970）
+- Okamoto-Mizuno K, Mizuno K. "Effects of thermal environment on sleep and circadian rhythm." *Journal of Physiological Anthropology*, 2012;31(1):14. DOI: 10.1186/1880-6805-31-14（PMID: 22738673）
+- Haghayegh S, Khoshnevis S, Smolensky MH, Diller KR, Castriotta RJ. "Before-bedtime passive body heating by warm shower or bath to improve sleep: A systematic review and meta-analysis." *Sleep Medicine Reviews*, 2019;46:124–135. DOI: 10.1016/j.smrv.2019.04.008（PMID: 31102877）

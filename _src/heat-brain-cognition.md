@@ -33,6 +33,9 @@ title: "你的大腦在三十六度時就開始打折——高溫假背後，神
 > 高溫假的討論，在台灣通常被框在「勞工保護」和「產業衝擊」之間拉鋸，鮮少有人提起另一個維度：在三十幾度的環境裡工作，做決定的那個人，他的判斷力本身就已經打了折扣——這當然也包括決定「繼續施工」或「關掉冷氣省電費」的那個人。高溫改變的不只是身體，也是評估風險的那顆大腦。
 
 ## 參考來源
-- Cedeño-Laurent 等，《PLOS Medicine》2018：熱浪期間非空調建築內年輕成人的認知功能下降
-- 室內高溫與持續注意力、工作記憶關係之環境認知科學研究
-- 衛生福利部熱傷害即時監測資料；中央氣象署高溫警戒標準
+
+- Cedeño Laurent JG, Williams A, Oulhote Y, et al. "Reduced cognitive function during a heat wave among residents of non-air-conditioned buildings: An observational study of young adults in the summer of 2016." *PLOS Medicine*, 2018;15(7):e1002605. DOI: 10.1371/journal.pmed.1002605（PMID: 29990359）
+- Hancock PA, Ross JM, Szalma JL. "A meta-analysis of performance response under thermal stressors." *Human Factors*, 2007;49(5):851–877. DOI: 10.1518/001872007X230226（PMID: 17915603）
+- Taylor L, Watkins SL, Marshall H, Dascombe BJ, Foster J. "The Impact of Different Environmental Conditions on Cognitive Function: A Focused Review." *Frontiers in Physiology*, 2016;6:372. DOI: 10.3389/fphys.2015.00372（PMID: 26779029）
+- 衛生福利部疾病管制署，〈熱傷害人次監測數據〉（即時疫情監視及預警系統），政府資料開放平臺，2026 年查詢。[data.gov.tw](https://data.gov.tw/dataset/157637)
+- 中央社，〈15縣市防高溫 新北新店午後達38.7度〉（氣象署高溫燈號分級），2026 年 6 月 21 日。[cna.com.tw](https://www.cna.com.tw/news/ahel/202606210114.aspx)
