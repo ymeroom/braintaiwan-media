@@ -32,9 +32,9 @@ OSA 聽起來像耳鼻喉科的問題，但它傷害最深的器官是大腦。
 
 ## 參考來源
 
-- 台灣睡眠醫學學會：2026 年夏季學術論壇（2026年7月4日，台北）
-- 世界新聞網：台灣成人25%罹睡眠呼吸中止症 醫：幼兒罹病恐在校園遭霸凌（2026年7月）
-- Journal of Clinical Sleep Medicine（JCSM）2020：Obstructive Sleep Apnea in Children and Adolescents and the Risk of Major Adverse Cardiovascular Events — A Nationwide Cohort Study in Taiwan
-- Frontiers in Medicine 2025：Advancements in Pediatric Obstructive Sleep Apnea: Cognitive Implications and the Role of AI in Precision Medicine
-- PMC 2024：Analysis of Cognitive Levels and Influencing Factors in Children with Obstructive Sleep Apnea
-- PMC 2025：Effectiveness of the sleep apnea-specific hypoxic burden and sleep breathing impairment index in assessing cognitive impairment in children with OSA
+- 聯合新聞網，〈我國成人25%罹睡眠呼吸中止症 醫：幼兒罹病恐在校園遭霸凌〉（2026 年台灣睡眠醫學學會夏季會），2026 年 7 月 4 日。[udn.com](https://udn.com/news/story/7266/9606699)
+- Tzeng NS, et al. "Obstructive Sleep Apnea in Children and Adolescents and the Risk of Major Adverse Cardiovascular Events: A Nationwide Cohort Study in Taiwan." *Journal of Clinical Sleep Medicine*, 2019;15(2):275–283. DOI: 10.5664/jcsm.7632（PMID: 30736877）
+- Leng Y, McEvoy CT, Allen IE, Yaffe K. "Association of Sleep-Disordered Breathing With Cognitive Function and Risk of Cognitive Impairment: A Systematic Review and Meta-analysis." *JAMA Neurology*, 2017;74(10):1237–1245. DOI: 10.1001/jamaneurol.2017.2180（PMID: 28846764）
+- Zhao B, et al. "Advancements in pediatric obstructive sleep apnea: cognitive implications and the role of AI in precision medicine." *Frontiers in Medicine*, 2025;12:1704504. DOI: 10.3389/fmed.2025.1704504（PMID: 41357513）
+- Bi J, et al. "Analysis of Cognitive Levels and Influencing Factors in Children with Obstructive Sleep Apnea." *Children*, 2024;11(12):1428. DOI: 10.3390/children11121428（PMID: 39767857）
+- Zhu S, et al. "Effectiveness of the sleep apnea-specific hypoxic burden and sleep breathing impairment index in assessing cognitive impairment in children with obstructive sleep apnea." *Frontiers in Pediatrics*, 2025;13:1628961. DOI: 10.3389/fped.2025.1628961（PMID: 40777157）

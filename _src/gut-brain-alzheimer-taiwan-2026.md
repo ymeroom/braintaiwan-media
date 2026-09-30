@@ -34,8 +34,8 @@ title: "腸道菌在悄悄保護你的大腦——台灣 439 名長者讓腸腦�
 
 ## 參考來源
 
-- 莊宜芳（Yi-Fang Chuang）等，陽明交通大學公共衛生研究所（2026）. 台灣 439 名長者腸道菌相與阿茲海默症生物標記及腦部影像研究，鑑定 59 種相關微菌種（含 *Akkermansia muciniphila* 與 β-類澱粉蛋白負荷量反比關聯）. *Alzheimer's Research & Therapy*
-- 中央社 CNA（2026 年 7 月 1 日）.〈陽明交大：腸道菌影響大腦健康 失智症研究新方向〉
-- 長庚醫療體系微菌治療中心（2026 年 7 月 17 日）. 台灣首座全年齡腸道微菌資料庫（0–93 歲、1,005 名民眾）及 AI 腸道微菌年齡預測模型. 中央社 CNA 報導
-- Xu et al.（2025）. *Akkermansia muciniphila* reduces neuroinflammation and Aβ deposition via tryptophan metabolism in the APP/PS1 mouse model. *Alzheimer's Research & Therapy*（Springer Nature）
-- Warren et al.（2026）. The microbiota–gut–brain axis in mild cognitive impairment and Alzheimer's disease: a scoping review of human studies. *Alzheimer's & Dementia*（Wiley）
+- Fan KC, Lin CC, Chiu YL, Koh SH, Liu YC, Chuang YF. "Compositional and functional gut microbiota alterations in mild cognitive impairment: links to Alzheimer's disease pathology." *Alzheimer's Research & Therapy*, 2025;17(1):122. DOI: 10.1186/s13195-025-01769-9（PMID: 40448221；輕度認知障礙 119 人、認知正常 320 人，鑑定 59 種相關菌種）
+- 中央社，〈陽明交大：腸道菌影響大腦健康 失智症研究新方向〉，2026 年 7 月 1 日。[cna.com.tw](https://www.cna.com.tw/news/ahel/202607010092.aspx)
+- 聯合新聞網，〈腸道菌與巴金森氏症有關？長庚建腸道微菌資料庫 檢驗菌相可預測健康〉（0–93 歲、1,005 人全年齡腸道微菌資料庫），2026 年 7 月 17 日。[udn.com](https://udn.com/news/story/7266/9633703)
+- Wang B, Pan M, Yang L, et al. "Akkermansia muciniphila reduces neuroinflammation and Aβ deposition via tryptophan metabolism in the APP/PS1 mouse model of Alzheimer's disease." *Alzheimer's Research & Therapy*, 2026;18(1):41. DOI: 10.1186/s13195-025-01880-x（PMID: 41715194）
+- Warren A, Wynia Z, Corr PG, et al. "The microbiota-gut-brain axis in mild cognitive impairment and Alzheimer's disease: a scoping review of human studies." *Alzheimer's & Dementia*, 2026;22(1):e71023. DOI: 10.1002/alz.71023（PMID: 41568738）

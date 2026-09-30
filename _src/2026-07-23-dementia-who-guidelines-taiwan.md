@@ -44,11 +44,9 @@ WHO 指南說的 45%，是人群層次的推論，不是說每個人都能靠改
 
 ## 參考來源
 
-- 世界衛生組織（WHO），〈New WHO guidelines: up to 45% of dementia risk could be prevented or delayed〉新聞稿，2026 年 7 月 15 日
-- 泛美衛生組織（PAHO/WHO），失智症風險因子聲明，2026 年 7 月 16 日
-- 衛生福利部，〈114 年國人十大死因統計結果〉，2026 年
-- 衛生福利部委託國家衛生研究院，〈臺灣社區失智症流行病學調查〉，2024 年
-- 康健雜誌，〈失智症帳單！台灣失智人口增速比全球快 1.5 倍〉，2026 年
-- 自由健康網，〈台灣失智症成長比全球快　血管型風險高為關鍵〉，2026 年
-- 聯合新聞網，〈台灣失智症超全球1.5倍？醫：血管型風險高　睡眠、壓力、手搖飲都中招〉，2026 年
-- Heho 健康，〈衛福部最新十大死因公布　癌症第一　女性失智與衰老躍進前十大〉，2026 年
+- World Health Organization. 〈Risk reduction of cognitive decline and dementia: WHO guidelines, second edition〉. Geneva: WHO, 2026 年 7 月 15 日。[who.int](https://www.who.int/publications/i/item/9789240123557)
+- 泛美衛生組織（PAHO/WHO），〈New WHO guidelines: up to 45% of dementia risk could be prevented or delayed〉，2026 年 7 月 16 日。[paho.org](https://www.paho.org/en/news/16-7-2026-new-who-guidelines-45-dementia-risk-could-be-prevented-or-delayed)
+- Livingston G, Huntley J, Liu KY, et al. "Dementia prevention, intervention, and care: 2024 report of the Lancet standing Commission." *The Lancet*, 2024;404(10452):572–628. DOI: 10.1016/S0140-6736(24)01296-0（PMID: 39096926；十四項可改變風險因子，合計約 45%）
+- 衛生福利部，〈國人死亡人數連續3年下降 十大死因中6項死因人數、死亡率都減少〉（114 年死因統計），2026 年 6 月 22 日。[mohw.gov.tw](https://mohw.gov.tw/cp-16-86970-1.html)
+- 衛生福利部，〈衛生福利部公布最新臺灣社區失智症流行病學調查結果〉（國衛院 109–112 年調查，65 歲以上盛行率 7.99%），2024 年 3 月 21 日。[mohw.gov.tw](https://mohw.gov.tw/cp-16-78102-1.html)
+- 聯合新聞網，〈台灣失智症超全球1.5倍？醫：血管型風險高 睡眠、壓力、手搖飲都中招〉，2026 年 6 月 7 日。[udn.com](https://udn.com/news/story/7266/9551271)

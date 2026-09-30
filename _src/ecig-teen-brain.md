@@ -35,6 +35,8 @@ title: "行政院剛拍板電子煙持有入罰，但神經科醫師最在乎的
 > 電子煙對青少年大腦的傷害不像骨折——沒有急診影像會顯示它，也沒有清楚的症狀發作時刻。它以情緒波動、注意力渙散、衝動決策的方式慢慢顯現，常被歸咎於「孩子的個性」或「青春期」。法律可以讓電子煙更難取得，但修復已被尼古丁重新佈線的神經迴路，目前沒有什麼有效的藥可以做到。
 
 ## 參考來源
-- Henderson 等，《Communications Biology》2024：尼古丁蒸氣對前額葉皮質、腹側被蓋區與伏隔核的年齡依賴性影響
-- 行政院 2026 年 6 月 25 日通過《菸害防制法》修正草案；教育部校園電子煙通報統計
-- 青少年前額葉發育與尼古丁乙醯膽鹼受體之神經毒理學文獻
+
+- Henderson BJ, et al. "Age-dependent effects of vaping on the prefrontal cortex, ventral tegmental area, and nucleus accumbens." *Communications Biology*, 2024;7(1):1553. DOI: 10.1038/s42003-024-07272-5（PMID: 39572675）
+- Goriounova NA, Mansvelder HD. "Short- and long-term consequences of nicotine exposure during adolescence for prefrontal cortex neuronal network function." *Cold Spring Harbor Perspectives in Medicine*, 2012;2(12):a012120. DOI: 10.1101/cshperspect.a012120（PMID: 22983224）
+- 聯合新聞網，〈「菸害防制法」修法 輸入、販賣電子煙最重關7年〉（行政院會 6 月 25 日通過修正草案，持有最高罰 10 萬元），2026 年 6 月 26 日。[udn.com](https://udn.com/news/story/7315/9589108)
+- 聯合新聞網，〈逾4萬青少年吸電子煙 國健署修法「持有」將沒收、最高罰10萬元〉（國教署：校園電子煙通報 2025 年 1,692 件），2026 年 6 月 23 日。[udn.com](https://udn.com/news/story/7266/9582600)

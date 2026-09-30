@@ -38,8 +38,8 @@ CAMH 研究的樣本只有二十四人，受試者感染的多是 Omicron 以前
 
 ## 參考來源
 
-- Liu et al.（2026）. Dopaminergic vulnerability in long COVID: striatal PET imaging at the brain-body interface. *eBioMedicine*（Lancet 旗下期刊），2026 年 7 月 10 日發表
-- 衛生福利部疾病管制署（2026）. 新冠疫情第 27 週監測報告（7 月 5–11 日門急診 2,811 人次，週增 34.4%；7 月 7–13 日新增 17 例本土重症）
-- Centre for Addiction and Mental Health（CAMH, 加拿大）官方新聞稿，2026 年 7 月
-- 台灣長新冠症狀調查（北市聯醫等，2022–2025 年陸續發表）：確診後腦霧盛行率約 20–30%
-- Sasso et al.（2026）. Neurological impairment in long COVID: implications for neurodegenerative disease. *Nature Reviews Neurology*
+- Liu YK, Persaud D, Vieira EL, et al. "Loss of vesicular monoamine transporter 2 in striatum of long COVID and relationship to neuropsychiatric symptoms." *eBioMedicine*, 2026;130:106339. DOI: 10.1016/j.ebiom.2026.106339（PMID: 42431745；長新冠 24 人對照健康者 24 人）
+- Guedj E, Beckman D. "Dopaminergic vulnerability in long COVID: striatal PET imaging at the brain-body interface." *eBioMedicine*, 2026;130:106369. DOI: 10.1016/j.ebiom.2026.106369（上文之評論）
+- Centre for Addiction and Mental Health（CAMH），〈New Study Provides First Evidence of Dopamine System Injury in the Brain of Long COVID Patients〉，2026 年 7 月 10 日。[camh.ca](https://www.camh.ca/en/camh-news-and-stories/rsch-new-study-provides-first-evidence-of-dopamine-system-injury-in-the-brain-of-long-covid-patients)
+- 衛生福利部疾病管制署，〈新冠疫情持續升溫 籲請民眾接種疫苗 具重症風險因子者出現疑似症狀儘速就醫〉（第 27 週門急診 2,811 人次，較前一週上升 34.4%），2026 年 7 月 14 日。[cdc.gov.tw](https://www.cdc.gov.tw/Bulletin/Detail/AAQZdiS2u2nFoJxcIj-DNA?typeid=9)
+- Sasso EM, Eaton-Fitch N, Thapaliya K, et al. "Neurological impairment in long COVID: implications for neurodegenerative disease." *Journal of Translational Medicine*, 2026. DOI: 10.1186/s12967-026-08607-y（PMID: 42432680）

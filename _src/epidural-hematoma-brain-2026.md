@@ -48,10 +48,8 @@ title: "清醒過來以為沒事——腦硬膜外出血的「清明期」是神
 
 ## 參考來源
 
-- 聯合新聞網、壹蘋新聞網、三立新聞網、Yahoo 新聞，宣明智腦硬膜外出血緊急手術報導，2026 年 7 月 19 日
-- ETtoday 健康雲，〈宣明智腦硬膜外出血 醫：多因外傷造成「未傷腦預後佳」〉，2026 年 7 月 19 日
-- 中時新聞網，〈宣明智驚傳腦出血 醫曝最大殺手 5 症狀是警訊〉，2026 年 7 月 19 日
-- 健康醫療網，〈撞到頭沒事？恐為硬腦膜外出血的清明期〉
-- 硬腦膜外血腫，維基百科中文版（清明期；Monroe-Kellie 原理）
-- Lucid interval, Wikipedia（20–50% epidural hematoma patients experience a lucid interval）
-- Bullock MR et al., 〈Surgical management of acute epidural hematomas〉, *Neurosurgery* 2006；積血超過 30 mL 或明顯中線偏移為手術指征
+- 聯合新聞網，〈宣明智傳腦出血送醫 醫曝年長者常見兩大出血原因 「這疾病」最常忽略〉，2026 年 7 月 19 日。[udn.com](https://udn.com/news/story/7266/9637113)
+- 今周刊，〈74歲宣明智腦出血手術搶命，兒親吐現況：昏迷指數3分拉到11分！〉，2026 年 7 月 19 日。[businesstoday.com.tw](https://www.businesstoday.com.tw/article/category/183027/post/202607190001/)
+- Bullock MR, Chesnut R, Ghajar J, et al. "Surgical management of acute epidural hematomas." *Neurosurgery*, 2006;58(3 Suppl):S7–S15. PMID: 16710967（Brain Trauma Foundation 指引：血腫大於 30 mL 應手術清除）
+- Ganz JC. "The lucid interval associated with epidural bleeding: evolving understanding." *Journal of Neurosurgery*, 2013;118(4):739–745. DOI: 10.3171/2012.12.JNS121264（PMID: 23330993）
+- Mokri B. "The Monro-Kellie hypothesis: applications in CSF volume depletion." *Neurology*, 2001;56(12):1746–1748. DOI: 10.1212/WNL.56.12.1746（PMID: 11425944）
