@@ -5,7 +5,11 @@ const POSTS_DIR = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
 const AUTHOR = {
   '@type': 'Person',
+  '@id': 'https://braintaiwan.com/#person', // 與 braintaiwan.com 首頁、MD 站同一位作者
   name: '施懿恩',
+  alternateName: 'Ian Shih',
+  honorificSuffix: 'M.D., Ph.D.',
+  jobTitle: '神經內科主任',
   url: 'https://braintaiwan.com/',
 };
 const PUBLISHER = {
