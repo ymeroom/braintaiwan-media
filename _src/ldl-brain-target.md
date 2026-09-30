@@ -61,6 +61,7 @@ title: "「總膽固醇正常啊」——同一個LDL 145，在五種人身上�
 > 我常覺得膽固醇這個題目最難的不是醫學，是溝通。因為它沒有症狀、沒有不舒服，而目標值又因人而異，於是「要不要吃藥」聽起來很像一件可以慢慢再說的事。但真正讓我停下來想的是那個誠實的空白：我們手上最好的證據，其實從來沒有直接為「預防第一次中風」而設計過。在這種情況下，把風險分層講清楚，可能比任何一個數字都重要。
 
 ## 參考來源
-- Li YH, Shih CL, 等. 2025 Consensus on the Clinical Pathway of Blood Cholesterol Management in Taiwan. *Acta Cardiologica Sinica* 2025;41(2):161–165.（五級風險分層與 LDL-C 目標值、危險因子定義、一級預防臨床路徑、血壓與糖化血色素目標）
-- Bushnell C, et al. 2024 Guideline for the Primary Prevention of Stroke: A Guideline From the American Heart Association/American Stroke Association. *Stroke* 2024;55:e344–e424.（statin 與首次中風之統合分析、出血性中風疑慮、無症狀頸動脈狹窄篩檢與治療建議、omega-3 補充建議）
-- Cholesterol Treatment Trialists 統合分析（經前述台灣共識引用）：LDL-C 每降低 1 mmol/L 並維持五年之心血管事件、冠心症死亡與全因死亡變化
+
+- Li YH, Shih CL. "2025 Consensus on the Clinical Pathway of Blood Cholesterol Management in Taiwan." *Acta Cardiologica Sinica*, 2025;41(2):161–165. PMID: 40123610（五級風險分層與 LDL-C 目標、危險因子定義、一級預防臨床路徑）
+- Bushnell C, et al. "2024 Guideline for the Primary Prevention of Stroke: A Guideline From the American Heart Association/American Stroke Association." *Stroke*, 2024;55(12):e344–e424. DOI: 10.1161/STR.0000000000000475（PMID: 39429201）（statin 與首次中風之統合分析、出血性中風疑慮、無症狀頸動脈狹窄、omega-3 建議）
+- Cholesterol Treatment Trialists' (CTT) Collaboration. "Efficacy and safety of more intensive lowering of LDL cholesterol: a meta-analysis of data from 170 000 participants in 26 randomised trials." *The Lancet*, 2010;376(9753):1670–1681. DOI: 10.1016/S0140-6736(10)61350-5（PMID: 21067804；LDL-C 每降 1 mmol/L 之主要血管事件、冠心症死亡與全因死亡）

@@ -55,8 +55,10 @@ title: "「我怕副作用，所以還沒開始吃」——那份痛是真的，
 > 我對這幾個試驗最在意的其實不是那些比值，而是它們無意間量到的另一件事：人在被好好對待、被認真記錄、被當成一個要一起解題的對象時，願意重新開始的比例會高到讓人意外。我一直在想，如果那60個人當初不是進了試驗，而是照一般流程回診——三分鐘、下一位——他們之中半年後會有幾個人重新開始吃藥？那個數字大概不會是一半。真正把人擋在門外的，可能從來就不只是藥本身。
 
 ## 參考來源
-- Howard JP, et al. Side Effect Patterns in a Crossover Trial of Statin, Placebo, and No Treatment. *Journal of the American College of Cardiology* 2021;78(12):1210–1222.（SAMSON 試驗：60 人隨機、49 人完成，三種瓶子設計，症狀分數 8.0／15.4／16.3，nocebo ratio 0.90，半年後 30/60 重新服藥。簡報版先發表於 *N Engl J Med* 2020;383:2182–2184）
-- Herrett E, et al. Statin treatment and muscle symptoms: series of randomised, placebo controlled n-of-1 trials. *BMJ* 2021;372:n135.（StatinWISE：200 人、六個雙盲療程，肌肉症狀分數差 −0.11、95% CI −0.36 至 0.14，三分之二重新開始長期服藥）
-- Juraschek SP, et al. Effects of Intensive Blood Pressure Treatment on Orthostatic Hypotension: A Systematic Review and Individual Participant-based Meta-analysis. *Annals of Internal Medicine* 2021;174(1):58–68.（18,466 人個別參與者資料，積極降壓組姿勢性低血壓勝算比 0.93、95% CI 0.86 至 0.99）
-- Li YH, Shih CL, 等. 2025 Consensus on the Clinical Pathway of Blood Cholesterol Management in Taiwan. *Acta Cardiologica Sinica* 2025;41(2):161–165.（低至中風險者先進行三到六個月生活型態調整）
-- 2022 Guidelines of the Taiwan Society of Cardiology and the Taiwan Hypertension Society for the Management of Hypertension. *Acta Cardiologica Sinica* 2022;38(3):225–325.（血壓達 120/80 mmHg 即應開始生活型態調整）
+
+- Howard JP, Wood FA, Finegold JA, et al. "Side Effect Patterns in a Crossover Trial of Statin, Placebo, and No Treatment." *Journal of the American College of Cardiology*, 2021;78(12):1210–1222. DOI: 10.1016/j.jacc.2021.07.022（PMID: 34531021；SAMSON 試驗：60 人隨機、49 人完成，症狀分數 8.0／15.4／16.3，nocebo ratio 0.90，半年後 30/60 重新服藥）
+- Wood FA, Howard JP, Finegold JA, et al. "N-of-1 Trial of a Statin, Placebo, or No Treatment to Assess Side Effects." *New England Journal of Medicine*, 2020;383(22):2182–2184. DOI: 10.1056/NEJMc2031173（PMID: 33196154；SAMSON 簡報版）
+- Herrett E, et al. "Statin treatment and muscle symptoms: series of randomised, placebo controlled n-of-1 trials." *BMJ*, 2021;372:n135. DOI: 10.1136/bmj.n135（PMID: 33627334；StatinWISE：200 人、六個雙盲療程，肌肉症狀分數差 −0.11、95% CI −0.36 至 0.14）
+- Juraschek SP, et al. "Effects of Intensive Blood Pressure Treatment on Orthostatic Hypotension: A Systematic Review and Individual Participant-based Meta-analysis." *Annals of Internal Medicine*, 2021;174(1):58–68. DOI: 10.7326/M20-4298（PMID: 32909814；18,466 人，積極降壓組姿勢性低血壓勝算比 0.93、95% CI 0.86 至 0.99）
+- Li YH, Shih CL. "2025 Consensus on the Clinical Pathway of Blood Cholesterol Management in Taiwan." *Acta Cardiologica Sinica*, 2025;41(2):161–165. PMID: 40123610（低至中風險者先進行三到六個月生活型態調整）
+- Wang TD, Chiang CE, Chao TH, et al. "2022 Guidelines of the Taiwan Society of Cardiology and the Taiwan Hypertension Society for the Management of Hypertension." *Acta Cardiologica Sinica*, 2022;38(3):225–325. PMID: 35673334（血壓達 120/80 mmHg 即應開始生活型態調整）

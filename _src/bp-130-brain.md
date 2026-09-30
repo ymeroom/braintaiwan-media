@@ -49,6 +49,7 @@ title: "「還沒到140，再觀察就好」——那條線四年前就已經往
 > 門診裡最常聽到的一句話是「我血壓只有高一點點」。可是血壓和腦傷害之間從來不是一條有轉折點的線，它是連續的、一路往上的。一點點，累積十年，也是十年。我比較好奇的是另一件事：那些在家量了七天、才發現自己一直低估了自己血壓的人——如果那七天沒有量，這件事會被擱置多久？
 
 ## 參考來源
-- 2022 Guidelines of the Taiwan Society of Cardiology and the Taiwan Hypertension Society for the Management of Hypertension. *Acta Cardiologica Sinica* 2022;38(3):225–325.（高血壓定義下修至 130/80、722 居家量測方案、普世血壓目標與用藥門檻）
-- Bushnell C, et al. 2024 Guideline for the Primary Prevention of Stroke: A Guideline From the American Heart Association/American Stroke Association. *Stroke* 2024;55:e344–e424.（血壓與中風預防建議、無症狀腦小血管疾病與無症狀腦梗塞）
-- 前述台灣指引所引用之抗高血壓治療統合分析：48 個隨機分派試驗、344,716 名參與者個別資料，收縮壓每降 5 mmHg 之各項終點風險變化
+
+- Wang TD, Chiang CE, Chao TH, et al. "2022 Guidelines of the Taiwan Society of Cardiology and the Taiwan Hypertension Society for the Management of Hypertension." *Acta Cardiologica Sinica*, 2022;38(3):225–325. PMID: 35673334（高血壓定義下修至 130/80、722 居家量測、血壓目標與用藥門檻）
+- Bushnell C, et al. "2024 Guideline for the Primary Prevention of Stroke: A Guideline From the American Heart Association/American Stroke Association." *Stroke*, 2024;55(12):e344–e424. DOI: 10.1161/STR.0000000000000475（PMID: 39429201）（血壓與中風預防、無症狀腦小血管疾病與無症狀腦梗塞）
+- Blood Pressure Lowering Treatment Trialists' Collaboration. "Pharmacological blood pressure lowering for primary and secondary prevention of cardiovascular disease across different levels of blood pressure: an individual participant-level data meta-analysis." *The Lancet*, 2021;397(10285):1625–1636. DOI: 10.1016/S0140-6736(21)00590-0（PMID: 33933205；48 個隨機試驗、344,716 人，收縮壓每降 5 mmHg 之終點風險）
