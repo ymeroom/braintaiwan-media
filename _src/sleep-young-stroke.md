@@ -37,6 +37,9 @@ title: "追劇三年、每晚睡四小時，那個下午右手突然舉不起來
 > 這個工程師的血管問題，應該不是那個下午突然形成的。三年、每天睡四小時、長期壓力——這是慢性負累，最後選了一個普通的下午爆發。台灣年輕型中風的比例從不到6%攀升到將近18%，這條曲線，其實早在那些熬到凌晨的夜晚就已經開始上翹了。中風黃金窗口的知識確實重要；但在窗口打開之前，漫長的每一夜，才是真正鋪路的地方。
 
 ## 參考來源
-- Saver，《Stroke》2006「Time Is Brain—Quantified」：未治療缺血性中風每分鐘約損失 190 萬個神經元
-- 睡眠不足、長工時與缺血性中風風險之流行病學研究
-- 急性缺血性中風靜脈溶栓（tPA，4.5 小時）與機械取栓（24 小時）治療時窗指引；台灣年輕型中風趨勢統計
+
+- Saver JL. "Time is brain—quantified." *Stroke*, 2006;37(1):263–266. DOI: 10.1161/01.STR.0000196957.55928.ab（PMID: 16339467）（未治療缺血性中風每分鐘約損失 190 萬個神經元）
+- Mc Carthy CE, et al. "Sleep Patterns and the Risk of Acute Stroke: Results From the INTERSTROKE International Case-Control Study." *Neurology*, 2023;100(21):e2191–e2203. DOI: 10.1212/WNL.0000000000207249（PMID: 37019662；每晚睡眠少於 5 小時，急性中風 OR 3.15）
+- Cappuccio FP, Cooper D, D'Elia L, Strazzullo P, Miller MA. "Sleep duration predicts cardiovascular outcomes: a systematic review and meta-analysis of prospective studies." *European Heart Journal*, 2011;32(12):1484–1492. DOI: 10.1093/eurheartj/ehr007（PMID: 21300732）
+- Kivimäki M, et al. "Long working hours and risk of coronary heart disease and stroke: a systematic review and meta-analysis of published and unpublished data for 603,838 individuals." *The Lancet*, 2015;386(10005):1739–1746. DOI: 10.1016/S0140-6736(15)60295-1（PMID: 26298822）
+- Prabhakaran S, et al. "2026 Guideline for the Early Management of Patients With Acute Ischemic Stroke: A Guideline From the American Heart Association/American Stroke Association." *Stroke*, 2026;57(8):e316–e436. DOI: 10.1161/STR.0000000000000513（PMID: 41582814）（靜脈溶栓 4.5 小時與機械取栓時窗）

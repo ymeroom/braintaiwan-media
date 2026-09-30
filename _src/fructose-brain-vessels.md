@@ -41,6 +41,9 @@ title: "三十八歲、血壓正常、不喝酒——她腦部 MRI 上那些白�
 > 腦小血管疾病是門診裡最常被低估的一類病灶，因為它早期沉默、影像報告容易被當成正常老化帶過。對台灣人來說，尿酸代謝偏慢的基因背景加上高果糖飲食習慣，是一個值得認真追蹤的組合。神經科的工作，有相當一部分是在這類「看起來都還好」的人身上，把那些白點說清楚——讓他們有機會在帳單還小的時候改變。
 
 ## 參考來源
-- 世界衛生組織游離糖攝取建議（每日添加糖低於總熱量 10%）
-- 果糖代謝、尿酸生成與血管內皮一氧化氮功能之醫學文獻
-- 腦小血管疾病、腦白質病變與缺血性中風、認知退化關聯之神經學研究
+
+- World Health Organization. 〈Guideline: sugars intake for adults and children〉. Geneva: WHO, 2015. ISBN 978-92-4-154902-8. [who.int](https://www.who.int/publications/i/item/9789241549028)
+- Nakagawa T, Hu H, Zharikov S, et al. "A causal role for uric acid in fructose-induced metabolic syndrome." *American Journal of Physiology – Renal Physiology*, 2006;290(3):F625–F631. DOI: 10.1152/ajprenal.00140.2005（PMID: 16234313）
+- Khosla UM, Zharikov S, Finch JL, et al. "Hyperuricemia induces endothelial dysfunction." *Kidney International*, 2005;67(5):1739–1742. DOI: 10.1111/j.1523-1755.2005.00273.x（PMID: 15840020）
+- Wardlaw JM, Smith C, Dichgans M. "Small vessel disease: mechanisms and clinical implications." *The Lancet Neurology*, 2019;18(7):684–696. DOI: 10.1016/S1474-4422(19)30079-1（PMID: 31097385）
+- Debette S, Markus HS. "The clinical importance of white matter hyperintensities on brain magnetic resonance imaging: systematic review and meta-analysis." *BMJ*, 2010;341:c3666. DOI: 10.1136/bmj.c3666（PMID: 20660506）

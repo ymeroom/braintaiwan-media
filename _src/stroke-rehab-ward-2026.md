@@ -33,5 +33,8 @@ title: "中風後那扇窗——七月起健保復健病房上路，神經科醫
 > 神經可塑性有時間限制，復健醫學知道這件事已有幾十年了——問題從來不是科學，而是照護系統有沒有讓病人在對的時間得到對的密度。七月的試辦是往正確方向走了一步；但如果一百八十天的窗口裡，復健的強度和頻率仍然不達標，那扇窗名義上開著，對大腦來說卻還是虛設的。
 
 ## 參考來源
-- 衛生福利部中央健康保險署復健病房試辦計畫（2026 年 7 月上路，最長 180 天，參考日本小倉醫院模式）
-- 中風後神經可塑性與活動依賴性復健時間窗（前 3–6 個月最活躍）相關復健醫學文獻
+
+- 聯合新聞網，〈從照顧失能轉型投注減少失能 陳亮妤：健保署首創復健病房最快7月上路〉（26 家申請、選 8 至 10 家、最長 180 天），2026 年 6 月 29 日。[udn.com](https://udn.com/news/story/7266/9594181)
+- Richards LG, Ifejika NL, Stein J, et al. "2026 Guideline for Adult Stroke Rehabilitation and Recovery: A Guideline From the American Heart Association and American Stroke Association." *Stroke*, 2026;57(10):e514–e658. DOI: 10.1161/STR.0000000000000536（PMID: 42657476）
+- Biernaskie J, Chernenko G, Corbett D. "Efficacy of rehabilitative experience declines with time after focal ischemic brain injury." *Journal of Neuroscience*, 2004;24(5):1245–1254. DOI: 10.1523/JNEUROSCI.3834-03.2004（PMID: 14762143）
+- Zeiler SR, Krakauer JW. "The interaction between training and plasticity in the poststroke brain." *Current Opinion in Neurology*, 2013;26(6):609–616. DOI: 10.1097/WCO.0000000000000025（PMID: 24136129）

@@ -33,6 +33,9 @@ RDN的定位不是取代降壓藥，而是已達藥物極限時的補充選項�
 > 高血壓這個診斷太常見，常見到很多人以為它只是「要吃藥」。但對神經科來說，它是腦中風和血管型失智症最重要的單一可修改風險因子。如果你或家人的血壓在三種藥之後還是壓不到目標，不是意志力不夠、也不是藥吃得不夠多——可能只是迴路沒斷在對的地方。
 
 ## 參考來源
-- SPYRAL HTN-ON MED 試驗 3 年追蹤結果（2025 TCT 發表）：辦公室收縮壓下降約 18.5 mmHg
-- Lewington 等，《Lancet》2002：收縮壓每升高 20 mmHg 與中風風險關係
-- 腎交感神經阻斷術（RDN）適應症與頑固型高血壓治療相關文獻
+
+- Mahfoud F, Kandzari DE, Kario K, et al. "Long-term efficacy and safety of renal denervation in the presence of antihypertensive drugs (SPYRAL HTN-ON MED): a randomised, sham-controlled trial." *The Lancet*, 2022;399(10333):1401–1410. DOI: 10.1016/S0140-6736(22)00455-X（PMID: 35390320）
+- Medtronic 新聞稿，〈Three-year SPYRAL HTN-ON MED results show sustained, 18 mmHg office-based blood pressure reductions〉（TCT 2025 發表：辦公室收縮壓 RDN 組 −18.5、假手術組 −11.7 mmHg），2025 年 10 月 26 日。[news.medtronic.com](https://news.medtronic.com/2025-10-26-Three-year-SPYRAL-HTN-ON-MED-results-show-sustained,-18-mmHg-office-based-blood-pressure-reductions)
+- Lewington S, Clarke R, Qizilbash N, Peto R, Collins R; Prospective Studies Collaboration. "Age-specific relevance of usual blood pressure to vascular mortality: a meta-analysis of individual data for one million adults in 61 prospective studies." *The Lancet*, 2002;360(9349):1903–1913. DOI: 10.1016/S0140-6736(02)11911-8（PMID: 12493255）
+- Carey RM, et al. "Resistant Hypertension: Detection, Evaluation, and Management: A Scientific Statement From the American Heart Association." *Hypertension*, 2018;72(5):e53–e90. DOI: 10.1161/HYP.0000000000000084（PMID: 30354828）
+- Wang TD, Lee YH, Chang SS, et al. "2019 Consensus Statement of the Taiwan Hypertension Society and the Taiwan Society of Cardiology on Renal Denervation for the Management of Arterial Hypertension." *Acta Cardiologica Sinica*, 2019;35(3):199–230. PMID: 31249454

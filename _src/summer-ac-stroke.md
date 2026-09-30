@@ -43,6 +43,8 @@ title: "三十七度衝進冷氣房的那一刻，血管正在發生什麼"
 > 台灣的夏季中風討論，幾乎都聚焦在中暑本身，但從臨床角度看，真正容易被忽視的反而是這些「介於」的情況——溫度還沒高到讓人叫救護車，人也沒有昏倒，只是「好像有點怪」。一個本來就有無症狀頸動脈狹窄的人，在反覆的冷熱刺激加上脫水的狀態下，其實是在對著那塊斑塊玩血壓輪盤。夏天門診開始出現更多這樣的案例，讓我覺得「進出冷氣房」這件再日常不過的事，值得被好好說一次。
 
 ## 參考來源
-- 台灣全國健保資料庫研究：日內／日間溫差與缺血性中風急診就診風險
-- 冷誘發性血壓反射、脫水與血液黏稠度對缺血性中風之生理機轉文獻
-- Saver，《Stroke》2006：中風每分鐘約損失 190 萬個神經元；FAST 中風辨識衛教
+
+- Kono M, Wu WT, Lee CP, et al. "Impact of rapid temperature fluctuations on acute stroke risk: a nationwide case-crossover study from 2001 to 2020." *The Lancet Regional Health – Western Pacific*, 2025;57:101546. DOI: 10.1016/j.lanwpc.2025.101546（PMID: 40242463；台灣健保資料庫，日溫差與驟升驟降對中風風險）
+- American College of Sports Medicine; Sawka MN, Burke LM, Eichner ER, et al. "American College of Sports Medicine position stand. Exercise and fluid replacement." *Medicine & Science in Sports & Exercise*, 2007;39(2):377–390. DOI: 10.1249/mss.0b013e31802ca597（PMID: 17277604；高溫下出汗速率與脫水）
+- Saver JL. "Time is brain—quantified." *Stroke*, 2006;37(1):263–266. DOI: 10.1161/01.STR.0000196957.55928.ab（PMID: 16339467）（中風每分鐘約損失 190 萬個神經元）
+- 聯合新聞網，〈颱風前夕全台飆35度高溫 醫籲：高溫不只會導致中暑還可能腦中風〉（基隆長庚夏季中風警示），2026 年 7 月 9 日。[udn.com](https://udn.com/news/story/7266/9617105)

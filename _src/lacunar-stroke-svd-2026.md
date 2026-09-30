@@ -38,9 +38,7 @@ title: "最常見的那種腦中風，病因可能找錯了幾十年"
 
 ## 參考來源
 
-- *Circulation* 2026；Vol. 153(23)：Implications of Cranial Arterial Stenosis and Dolichoectasia for Cerebral Small-Vessel Disease Etiopathogenesis: Findings From a Prospective Mild Stroke Cohort（前瞻性輕型中風隊列研究）
-- medRxiv 預印本（2026年1月26日）：同一研究早期版本
-- ScienceDaily：The real cause of a common stroke may have been missed for decades（2026年6月22日）
-- US Pharmacist：Study Suggests Lacunar Stroke Requires Different Treatment Approach（2026）
-- Journal of the American Heart Association 2024：Association of Intracranial Dolichoectasia and Cerebral Small Vessel Disease in Patients With Intracerebral Hemorrhage（相關研究，擴張症與腦小血管病變之關聯）
-- Journal of Stroke 2024：Association between Intracranial Arterial Dolichoectasia and Cerebral Small Vessel Disease and Its Underlying Mechanisms
+- Han F, Clancy U, Arteaga-Reyes C, et al. "Implications of Cranial Arterial Stenosis and Dolichoectasia for Cerebral Small-Vessel Disease Etiopathogenesis: Findings From a Prospective Mild Stroke Cohort." *Circulation*, 2026;153(23):1813–1826. DOI: 10.1161/CIRCULATIONAHA.126.079493（PMID: 42090170；Mild Stroke Study 3，229 人：基底動脈擴張症與腔隙性中風 OR 4.67）
+- Thiankhaw K, et al. "Association of Intracranial Dolichoectasia and Cerebral Small Vessel Disease in Patients With Intracerebral Hemorrhage." *Journal of the American Heart Association*, 2025;14(12):e039039. DOI: 10.1161/JAHA.124.039039（PMID: 40497512）
+- Zhang DP, et al. "Association between Intracranial Arterial Dolichoectasia and Cerebral Small Vessel Disease and Its Underlying Mechanisms." *Journal of Stroke*, 2020;22(2):173–184. DOI: 10.5853/jos.2019.02985（PMID: 32635683）
+- Wardlaw JM, Smith C, Dichgans M. "Small vessel disease: mechanisms and clinical implications." *The Lancet Neurology*, 2019;18(7):684–696. DOI: 10.1016/S1474-4422(19)30079-1（PMID: 31097385；腔隙性中風約占缺血性中風四分之一）
