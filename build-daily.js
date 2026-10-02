@@ -6,22 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.01';
-const SERIES = '動作障礙與巴金森';
+const DATE = '2026.10.02';
+const SERIES = '睡眠與腦血管';
 
 const article = {
-  md:  '2026-10-01-parkinson-mortality-three-causes.md',
-  out: '2026-10-01-parkinson-mortality-three-causes.html',
+  md:  '2026-10-02-insomnia-stroke-diagnosis-gap.md',
+  out: '2026-10-02-insomnia-stroke-diagnosis-gap.html',
   title: '',
-  desc: '公費流感與新冠疫苗第一階段十月一日開打，二十萬零七百九十劑加強型優先給機構裡的長者。家屬年年問的是肺炎，但成大與北護團隊用健保資料庫五萬零兩百九十位新發巴金森個案算出來的死因名單，排第一的是自殺（風險比一．七九），失智一．六九，肺炎一．五七。談情緒那條線為什麼退得比動作早，以及為什麼年輕、沒有共病的病人受影響更大。',
-  tag: '巴金森氏症 · 時事',
+  desc: '九月三十日台灣新聞報的二六%，出自歐洲神經學會主持、九月二十二日線上刊於《Sleep Medicine Reviews》的傘狀系統性回顧，涵蓋逾一百三十萬人、七個終點。但另一份只處理中風的統合分析（十七篇研究、七百六十九萬人）把失眠切成兩層：有症狀者風險比一．一六不顯著，被診斷為失眠症者一．四五。談過度警醒為什麼讓診斷那條門檻篩出風險，以及台灣就醫一百四十四萬、推估四百六十萬之間那三百多萬人落在哪一格。',
+  tag: '失眠與中風 · 時事',
 };
 const related = [
-  { out: '2026-10-01-parkinson-mortality-three-causes.html', nav: '本篇', title: '「排在第一的不是肺炎」——公費疫苗今天開打，而五萬人的台灣巴金森資料把自殺放在死因名單最前面' },
-  { out: '2026-08-23-parkinson-finger-tapping.html', nav: '早期徵兆', title: '比 OK 開合 25 下——手指操真正在看的，是動作會不會愈做愈小' },
-  { out: '2026-09-18-gait-nervous-system-mobility.html', nav: '走路這件事', title: '「平均每天四點五個」——骨鬆學會把神經健康寫進行動力指標，而走路從來就是一道大腦在算的題' },
+  { out: '2026-10-02-insomnia-stroke-diagnosis-gap.html', nav: '本篇', title: '「失眠者中風風險高二六%」——這個數字這週上了台灣新聞，而關鍵差別藏在「睡不好」與「失眠症」之間' },
   { out: '2026-09-22-sleep-glymphatic-dementia-risk.html', nav: '睡眠與退化', title: '「好眠存能量」——失智症月的主題今年押在睡眠，而幫大腦沖水的那套管路只在你睡著時全開' },
-  { out: '2026-09-30-anticholinergic-drugs-sweating-heat.html', nav: '抗帕金森藥', title: '「橙燈亮在九月的最後一天」——三十六度又回來了，而有些藥會先把你的汗關掉' },
+  { out: '2026-09-11-sleep-debt-visceral-fat-brain.html', nav: '睡眠債', title: '「補眠三天，那條線還在往上」——熬夜兩週內臟脂肪多一成一，而決定你吃什麼的是額葉' },
+  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html', nav: '腦波與睡眠', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
+  { out: '2026-08-11-stroke-csa-brain.html', nav: '中風後的呼吸', title: '中風之後，大腦忘記叫你呼吸——每十位住院患者可能就有一位在夜裡無聲地缺氧' },
+  { out: '2026-08-09-tia-small-stroke-warning.html', nav: '中風警訊', title: '「那15分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
