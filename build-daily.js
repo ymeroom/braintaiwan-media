@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.02';
-const SERIES = '睡眠與腦血管';
+const DATE = '2026.10.03';
+const SERIES = '病毒與神經';
 
 const article = {
-  md:  '2026-10-02-insomnia-stroke-diagnosis-gap.md',
-  out: '2026-10-02-insomnia-stroke-diagnosis-gap.html',
+  md:  '2026-10-03-hepatitis-c-nerve-brain.md',
+  out: '2026-10-03-hepatitis-c-nerve-brain.html',
   title: '',
-  desc: '九月三十日台灣新聞報的二六%，出自歐洲神經學會主持、九月二十二日線上刊於《Sleep Medicine Reviews》的傘狀系統性回顧，涵蓋逾一百三十萬人、七個終點。但另一份只處理中風的統合分析（十七篇研究、七百六十九萬人）把失眠切成兩層：有症狀者風險比一．一六不顯著，被診斷為失眠症者一．四五。談過度警醒為什麼讓診斷那條門檻篩出風險，以及台灣就醫一百四十四萬、推估四百六十萬之間那三百多萬人落在哪一格。',
-  tag: '失眠與中風 · 時事',
+  desc: '疾管署昨天與新北市衛生局開會釐清板橋安泰淞鶴診所的急性C型肝炎群聚：確診二十二人、召回名單一千一百一十八人，其中三百四十六人尚未採檢。肝炎的部分交給肝膽腸胃科，神經科多看一眼的理由是——冷凝球蛋白堵住供應周邊神經的微血管，以及肝臟只有輕度病變時就測得到的注意力缺損。談義大利兩百三十四人的神經傳導數據、台灣五萬八千組配對的失智發生率，以及清除病毒之後神經會往回走多少。',
+  tag: 'C肝與神經 · 時事',
 };
 const related = [
-  { out: '2026-10-02-insomnia-stroke-diagnosis-gap.html', nav: '本篇', title: '「失眠者中風風險高二六%」——這個數字這週上了台灣新聞，而關鍵差別藏在「睡不好」與「失眠症」之間' },
-  { out: '2026-09-22-sleep-glymphatic-dementia-risk.html', nav: '睡眠與退化', title: '「好眠存能量」——失智症月的主題今年押在睡眠，而幫大腦沖水的那套管路只在你睡著時全開' },
-  { out: '2026-09-11-sleep-debt-visceral-fat-brain.html', nav: '睡眠債', title: '「補眠三天，那條線還在往上」——熬夜兩週內臟脂肪多一成一，而決定你吃什麼的是額葉' },
-  { out: '2026-08-02-sleep-eeg-brain-age-dementia.html', nav: '腦波與睡眠', title: '你睡著之後，腦波在說什麼——AI 讀出睡眠裡的失智警訊' },
-  { out: '2026-08-11-stroke-csa-brain.html', nav: '中風後的呼吸', title: '中風之後，大腦忘記叫你呼吸——每十位住院患者可能就有一位在夜裡無聲地缺氧' },
-  { out: '2026-08-09-tia-small-stroke-warning.html', nav: '中風警訊', title: '「那15分鐘消失了就好了」——小中風是中風送來的第一封警告信' },
+  { out: '2026-10-03-hepatitis-c-nerve-brain.html', nav: '本篇', title: '「一千一百一十八人被叫回去抽血」——板橋那家診所的C肝群聚，神經科盯的是病毒離開肝臟以後去了哪裡' },
+  { out: '2026-09-21-flu-vaccine-guillain-barre-nerve.html', nav: '疫苗與神經', title: '「打了會不會癱瘓」——流感單週十三萬人就醫，而診間裡被問最多的是疫苗跟那條神經' },
+  { out: '2026-09-29-rabies-ferret-badger-nerve.html', nav: '病毒走神經', title: '「上半年三十三隻鼬獾」——世界狂犬病日剛過，而狂犬病是極少數「被咬了之後才打疫苗還來得及」的病' },
+  { out: '2026-08-07-dengue-brain-neuro.html', nav: '病毒與腦', title: '登革熱不只是「骨折熱」——台灣研究：每八名住院患者就有一個大腦出了事' },
+  { out: '2026-08-06-covid-brain-fog.html', nav: '腦霧', title: '台灣新冠又進流行期——大腦為每一次感染記帳，帳單現在到了' },
+  { out: '2026-07-30-long-covid-brain-fog-ampa.html', nav: '腦霧影像', title: '長新冠腦霧有了影像學答案：AMPA 受體的密度，藏在掃描圖裡' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
