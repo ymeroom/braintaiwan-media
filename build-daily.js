@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.03';
-const SERIES = '病毒與神經';
+const DATE = '2026.10.04';
+const SERIES = '頭痛與急症';
 
 const article = {
-  md:  '2026-10-03-hepatitis-c-nerve-brain.md',
-  out: '2026-10-03-hepatitis-c-nerve-brain.html',
+  md:  '2026-10-04-ed-triage-headache-thunderclap.md',
+  out: '2026-10-04-ed-triage-headache-thunderclap.html',
   title: '',
-  desc: '疾管署昨天與新北市衛生局開會釐清板橋安泰淞鶴診所的急性C型肝炎群聚：確診二十二人、召回名單一千一百一十八人，其中三百四十六人尚未採檢。肝炎的部分交給肝膽腸胃科，神經科多看一眼的理由是——冷凝球蛋白堵住供應周邊神經的微血管，以及肝臟只有輕度病變時就測得到的注意力缺損。談義大利兩百三十四人的神經傳導數據、台灣五萬八千組配對的失智發生率，以及清除病毒之後神經會往回走多少。',
-  tag: 'C肝與神經 · 時事',
+  desc: '台大醫院「民眾就醫諮詢專線」十月一日開線，同時公布的分級就醫指引把 1067 項症狀排進四個層級——46.5% 指向急診。而頭痛是最不該交給自己分流的一項：有鑑別力的不是痛的強度，是從沒痛到最痛花了幾分鐘。談渥太華規則那六個問題、刻意只有 15.3% 的特異度，以及電腦斷層在發作六小時內與六小時後的差別。',
+  tag: '頭痛紅旗 · 時事',
 };
 const related = [
-  { out: '2026-10-03-hepatitis-c-nerve-brain.html', nav: '本篇', title: '「一千一百一十八人被叫回去抽血」——板橋那家診所的C肝群聚，神經科盯的是病毒離開肝臟以後去了哪裡' },
-  { out: '2026-09-21-flu-vaccine-guillain-barre-nerve.html', nav: '疫苗與神經', title: '「打了會不會癱瘓」——流感單週十三萬人就醫，而診間裡被問最多的是疫苗跟那條神經' },
-  { out: '2026-09-29-rabies-ferret-badger-nerve.html', nav: '病毒走神經', title: '「上半年三十三隻鼬獾」——世界狂犬病日剛過，而狂犬病是極少數「被咬了之後才打疫苗還來得及」的病' },
-  { out: '2026-08-07-dengue-brain-neuro.html', nav: '病毒與腦', title: '登革熱不只是「骨折熱」——台灣研究：每八名住院患者就有一個大腦出了事' },
-  { out: '2026-08-06-covid-brain-fog.html', nav: '腦霧', title: '台灣新冠又進流行期——大腦為每一次感染記帳，帳單現在到了' },
-  { out: '2026-07-30-long-covid-brain-fog-ampa.html', nav: '腦霧影像', title: '長新冠腦霧有了影像學答案：AMPA 受體的密度，藏在掃描圖裡' },
+  { out: '2026-10-04-ed-triage-headache-thunderclap.html', nav: '本篇', title: '「1067 項症狀，近一半指向急診」——台大就醫諮詢專線十月一日上線，而頭痛是最不該自己分流的那一項' },
+  { out: '2026-09-25-medication-overuse-headache.html', nav: '止痛藥', title: '「藥越吃越多，藥效卻越來越短」——偏頭痛週上線的那份名單，和一種被止痛藥養出來的頭痛' },
+  { out: '2026-09-17-barometric-pressure-weather-headache.html', nav: '天氣頭痛', title: '「明天中南部回到三十三度」——東北季風說走就走，而有些人的頭比氣象署更早知道' },
+  { out: '2026-09-08-vestibular-migraine-dizziness.html', nav: '頭暈', title: '「檢查都正常」的那種頭暈——北榮把兩千八百人問了一遍，七成偏頭痛的人身上有前庭症狀' },
+  { out: '2026-09-04-ed-crowding-stroke-clock.html', nav: '急診時鐘', title: '「一分鐘一百九十萬顆」——急診壅塞的解方定案了，但中風的那格碼表是分開走的' },
+  { out: '2026-08-22-child-teen-headache-school.html', nav: '孩子頭痛', title: '「他只有上學才頭痛」——從 10.71% 爬到 42.64%，孩子的頭痛不是等長大就會好' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
