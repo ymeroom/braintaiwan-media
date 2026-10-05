@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.04';
-const SERIES = '頭痛與急症';
+const DATE = '2026.10.05';
+const SERIES = '失智預防與大腦保健';
 
 const article = {
-  md:  '2026-10-04-ed-triage-headache-thunderclap.md',
-  out: '2026-10-04-ed-triage-headache-thunderclap.html',
+  md:  '2026-10-05-vision-loss-dementia-adult-checkup.md',
+  out: '2026-10-05-vision-loss-dementia-adult-checkup.html',
   title: '',
-  desc: '台大醫院「民眾就醫諮詢專線」十月一日開線，同時公布的分級就醫指引把 1067 項症狀排進四個層級——46.5% 指向急診。而頭痛是最不該交給自己分流的一項：有鑑別力的不是痛的強度，是從沒痛到最痛花了幾分鐘。談渥太華規則那六個問題、刻意只有 15.3% 的特異度，以及電腦斷層在發作六小時內與六小時後的差別。',
-  tag: '頭痛紅旗 · 時事',
+  desc: '健康幣十月一日上線，首日逾二十萬人同意參加，網路上吵的是回溯——而那張值八百幣的成人預防保健表單上，眼睛從頭到尾沒被量過。2024 年刺胳針失智症委員會把「未治療的視力喪失」列進十四項可改變風險因子；美國實測遠距視力、近距視力與對比敏感度的研究，算出的可歸因比例是 19.0%，其中對比敏感度就佔 15.0%。談白內障手術後失智風險 0.71 倍、青光眼手術當對照組為什麼看不出關聯，以及量六力從 65 歲起跑、健檢從 30 歲起跑中間空掉的那三十年。',
+  tag: '失智預防 · 時事',
 };
 const related = [
-  { out: '2026-10-04-ed-triage-headache-thunderclap.html', nav: '本篇', title: '「1067 項症狀，近一半指向急診」——台大就醫諮詢專線十月一日上線，而頭痛是最不該自己分流的那一項' },
-  { out: '2026-09-25-medication-overuse-headache.html', nav: '止痛藥', title: '「藥越吃越多，藥效卻越來越短」——偏頭痛週上線的那份名單，和一種被止痛藥養出來的頭痛' },
-  { out: '2026-09-17-barometric-pressure-weather-headache.html', nav: '天氣頭痛', title: '「明天中南部回到三十三度」——東北季風說走就走，而有些人的頭比氣象署更早知道' },
-  { out: '2026-09-08-vestibular-migraine-dizziness.html', nav: '頭暈', title: '「檢查都正常」的那種頭暈——北榮把兩千八百人問了一遍，七成偏頭痛的人身上有前庭症狀' },
-  { out: '2026-09-04-ed-crowding-stroke-clock.html', nav: '急診時鐘', title: '「一分鐘一百九十萬顆」——急診壅塞的解方定案了，但中風的那格碼表是分開走的' },
-  { out: '2026-08-22-child-teen-headache-school.html', nav: '孩子頭痛', title: '「他只有上學才頭痛」——從 10.71% 爬到 42.64%，孩子的頭痛不是等長大就會好' },
+  { out: '2026-10-05-vision-loss-dementia-adult-checkup.html', nav: '本篇', title: '「十月一號以後才算」——健康幣吵到第五天還在吵回溯，而那張八百幣的健檢表單上，眼睛從頭到尾沒被量過' },
+  { out: '2026-09-10-hearing-loss-brain-aging.html', nav: '聽力', title: '「65 歲以上近四成」——第一份台灣成人聽損指引出爐，而聽不清楚耗掉的是腦子' },
+  { out: '2026-09-07-rainy-days-light-brain-mood.html', nav: '光線', title: '「連日下雨提不起勁」不是錯覺——低壓帶壓了四天，被關掉的是眼底那條不負責看見的線路' },
+  { out: '2026-09-13-midlife-vascular-dementia-free-years.html', nav: '中年', title: '「30.1 年，還是 17.5 年」——55 歲那天身上有幾個危險因子，決定你還剩多少年不失智' },
+  { out: '2026-09-22-sleep-glymphatic-dementia-risk.html', nav: '睡眠', title: '「好眠存能量」——失智症月的主題今年押在睡眠，而幫大腦沖水的那套管路只在你睡著時全開' },
+  { out: '2026-09-03-dementia-diagnosis-gap.html', nav: '診斷缺口', title: '「推估 5,778 人，確診 3,569 人」——國際失智症月開跑，中間那兩千人在哪裡' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
