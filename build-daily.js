@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.05';
-const SERIES = '失智預防與大腦保健';
+const DATE = '2026.10.06';
+const SERIES = '精神症狀與神經';
 
 const article = {
-  md:  '2026-10-05-vision-loss-dementia-adult-checkup.md',
-  out: '2026-10-05-vision-loss-dementia-adult-checkup.html',
+  md:  '2026-10-06-functional-neurological-disorder-lived-experience.md',
+  out: '2026-10-06-functional-neurological-disorder-lived-experience.html',
   title: '',
-  desc: '健康幣十月一日上線，首日逾二十萬人同意參加，網路上吵的是回溯——而那張值八百幣的成人預防保健表單上，眼睛從頭到尾沒被量過。2024 年刺胳針失智症委員會把「未治療的視力喪失」列進十四項可改變風險因子；美國實測遠距視力、近距視力與對比敏感度的研究，算出的可歸因比例是 19.0%，其中對比敏感度就佔 15.0%。談白內障手術後失智風險 0.71 倍、青光眼手術當對照組為什麼看不出關聯，以及量六力從 65 歲起跑、健檢從 30 歲起跑中間空掉的那三十年。',
-  tag: '失智預防 · 時事',
+  desc: '世界心理衛生聯盟八月十一日公布今年十月十日世界心理健康日的主題是「Lived Experiences Heard」，台灣心理健康聯盟這幾天提出心理健康不平等的三層解方，引的是衛福部的兩成五盛行率與 2025 年健保一百七十萬人就診。而神經科門診裡還有一群人卡在兩科中間：蘇格蘭 3781 位新病人的統計裡，「功能性／心理性」和頭痛、癲癇並列前三。2018 年《JAMA Neurology》說這個診斷靠的是檢查上的正向徵候，不是刪除法；2005 年《BMJ》二十七份研究一千四百六十六人算出的誤診率，七○年代後只有四%；而 2014 年的回顧裡有三成九沒有好轉，CODES 試驗的主要指標也沒達標。',
+  tag: '精神與神經 · 時事',
 };
 const related = [
-  { out: '2026-10-05-vision-loss-dementia-adult-checkup.html', nav: '本篇', title: '「十月一號以後才算」——健康幣吵到第五天還在吵回溯，而那張八百幣的健檢表單上，眼睛從頭到尾沒被量過' },
-  { out: '2026-09-10-hearing-loss-brain-aging.html', nav: '聽力', title: '「65 歲以上近四成」——第一份台灣成人聽損指引出爐，而聽不清楚耗掉的是腦子' },
-  { out: '2026-09-07-rainy-days-light-brain-mood.html', nav: '光線', title: '「連日下雨提不起勁」不是錯覺——低壓帶壓了四天，被關掉的是眼底那條不負責看見的線路' },
-  { out: '2026-09-13-midlife-vascular-dementia-free-years.html', nav: '中年', title: '「30.1 年，還是 17.5 年」——55 歲那天身上有幾個危險因子，決定你還剩多少年不失智' },
-  { out: '2026-09-22-sleep-glymphatic-dementia-risk.html', nav: '睡眠', title: '「好眠存能量」——失智症月的主題今年押在睡眠，而幫大腦沖水的那套管路只在你睡著時全開' },
-  { out: '2026-09-03-dementia-diagnosis-gap.html', nav: '診斷缺口', title: '「推估 5,778 人，確診 3,569 人」——國際失智症月開跑，中間那兩千人在哪裡' },
+  { out: '2026-10-06-functional-neurological-disorder-lived-experience.html', nav: '本篇', title: '「檢查全部正常」不是沒病——世界心理健康日的主題是「被聽見」，而神經科門診裡有一群人同時被兩邊退貨' },
+  { out: '2026-08-30-depression-somatic-symptoms-neurology.html', nav: '身體症狀', title: '先掛到神經內科的那種憂鬱——十四個國家的門診資料裡，七成的人開口講的是身體' },
+  { out: '2026-09-16-ect-induced-seizure-depression.html', nav: '電痙攣', title: '「1,718 點變成 6,839 點」——健保這個月調高電痙攣治療給付，而這個療法本身就是一場被算好的癲癇' },
+  { out: '2026-09-07-rainy-days-light-brain-mood.html', nav: '光線情緒', title: '「連日下雨提不起勁」不是錯覺——低壓帶壓了四天，被關掉的是眼底那條不負責看見的線路' },
+  { out: '2026-10-05-vision-loss-dementia-adult-checkup.html', nav: '健檢表單', title: '「十月一號以後才算」——健康幣吵到第五天還在吵回溯，而那張八百幣的健檢表單上，眼睛從頭到尾沒被量過' },
+  { out: '2026-10-04-ed-triage-headache-thunderclap.html', nav: '就醫分流', title: '「1067 項症狀，近一半指向急診」——台大就醫諮詢專線十月一日上線，而頭痛是最不該自己分流的那一項' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
