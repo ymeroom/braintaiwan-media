@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.06';
-const SERIES = '精神症狀與神經';
+const DATE = '2026.10.07';
+const SERIES = '腦部感染與疫苗';
 
 const article = {
-  md:  '2026-10-06-functional-neurological-disorder-lived-experience.md',
-  out: '2026-10-06-functional-neurological-disorder-lived-experience.html',
+  md:  '2026-10-07-enterovirus-d68-afm.md',
+  out: '2026-10-07-enterovirus-d68-afm.html',
   title: '',
-  desc: '世界心理衛生聯盟八月十一日公布今年十月十日世界心理健康日的主題是「Lived Experiences Heard」，台灣心理健康聯盟這幾天提出心理健康不平等的三層解方，引的是衛福部的兩成五盛行率與 2025 年健保一百七十萬人就診。而神經科門診裡還有一群人卡在兩科中間：蘇格蘭 3781 位新病人的統計裡，「功能性／心理性」和頭痛、癲癇並列前三。2018 年《JAMA Neurology》說這個診斷靠的是檢查上的正向徵候，不是刪除法；2005 年《BMJ》二十七份研究一千四百六十六人算出的誤診率，七○年代後只有四%；而 2014 年的回顧裡有三成九沒有好轉，CODES 試驗的主要指標也沒達標。',
-  tag: '精神與神經 · 時事',
+  desc: '疾管署十月六日疫報：上週腸病毒門急診一萬兩千六百四十三人次，仍在流行期。今年七例重症裡五例是腸病毒 D68 型，而社區檢出最多的是克沙奇 A6 型。D68 的主戰場在呼吸道、常常不長疹子，少數孩子卻在感冒後幾天出現急性無力脊髓炎——病毒挑的位置是脊髓前角，和小兒麻痺同一個地方。1999 年《New England Journal of Medicine》那四十一名孩子的紀錄，正是台灣那張重症前兆清單的來源。',
+  tag: '腦部感染 · 時事',
 };
 const related = [
-  { out: '2026-10-06-functional-neurological-disorder-lived-experience.html', nav: '本篇', title: '「檢查全部正常」不是沒病——世界心理健康日的主題是「被聽見」，而神經科門診裡有一群人同時被兩邊退貨' },
-  { out: '2026-08-30-depression-somatic-symptoms-neurology.html', nav: '身體症狀', title: '先掛到神經內科的那種憂鬱——十四個國家的門診資料裡，七成的人開口講的是身體' },
-  { out: '2026-09-16-ect-induced-seizure-depression.html', nav: '電痙攣', title: '「1,718 點變成 6,839 點」——健保這個月調高電痙攣治療給付，而這個療法本身就是一場被算好的癲癇' },
-  { out: '2026-09-07-rainy-days-light-brain-mood.html', nav: '光線情緒', title: '「連日下雨提不起勁」不是錯覺——低壓帶壓了四天，被關掉的是眼底那條不負責看見的線路' },
-  { out: '2026-10-05-vision-loss-dementia-adult-checkup.html', nav: '健檢表單', title: '「十月一號以後才算」——健康幣吵到第五天還在吵回溯，而那張八百幣的健檢表單上，眼睛從頭到尾沒被量過' },
-  { out: '2026-10-04-ed-triage-headache-thunderclap.html', nav: '就醫分流', title: '「1067 項症狀，近一半指向急診」——台大就醫諮詢專線十月一日上線，而頭痛是最不該自己分流的那一項' },
+  { out: '2026-10-07-enterovirus-d68-afm.html', nav: '本篇', title: '「七例重症裡有五例是D68」——腸病毒還在流行期，而這一型不太長疹子，它要去的是脊髓前角' },
+  { out: '2026-09-29-rabies-ferret-badger-nerve.html', nav: '狂犬病', title: '「上半年三十三隻鼬獾」——世界狂犬病日剛過，而狂犬病是極少數「被咬了之後才打疫苗還來得及」的病' },
+  { out: '2026-08-20-flu-febrile-seizure-encephalopathy.html', nav: '熱痙攣', title: '「發燒、雙眼上吊、走路不穩」——五歲女童那場流感，和一般的熱性痙攣差在哪裡' },
+  { out: '2026-09-01-influenza-brain-encephalopathy.html', nav: '流感腦病變', title: '「燒壞腦子」不是被燒壞的——八月流感創十年同期新高，開學第一天該盯的是那 1.7%' },
+  { out: '2026-08-12-japanese-encephalitis-brain.html', nav: '日本腦炎', title: '一週後死於呼吸衰竭——日本腦炎燒的不是肺，是大腦深處的神經' },
+  { out: '2026-10-06-functional-neurological-disorder-lived-experience.html', nav: '功能性障礙', title: '「檢查全部正常」不是沒病——世界心理健康日的主題是「被聽見」，而神經科門診裡有一群人同時被兩邊退貨' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
