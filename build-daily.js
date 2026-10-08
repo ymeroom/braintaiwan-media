@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.07';
-const SERIES = '腦部感染與疫苗';
+const DATE = '2026.10.08';
+const SERIES = '頭部外傷與癲癇';
 
 const article = {
-  md:  '2026-10-07-enterovirus-d68-afm.md',
-  out: '2026-10-07-enterovirus-d68-afm.html',
+  md:  '2026-10-08-drugged-driving-skull-fracture-epilepsy.md',
+  out: '2026-10-08-drugged-driving-skull-fracture-epilepsy.html',
   title: '',
-  desc: '疾管署十月六日疫報：上週腸病毒門急診一萬兩千六百四十三人次，仍在流行期。今年七例重症裡五例是腸病毒 D68 型，而社區檢出最多的是克沙奇 A6 型。D68 的主戰場在呼吸道、常常不長疹子，少數孩子卻在感冒後幾天出現急性無力脊髓炎——病毒挑的位置是脊髓前角，和小兒麻痺同一個地方。1999 年《New England Journal of Medicine》那四十一名孩子的紀錄，正是台灣那張重症前兆清單的來源。',
-  tag: '腦部感染 · 時事',
+  desc: '十月三日清晨台中雙十路口，一名依托咪酯快篩陽性的駕駛衝上天橋階梯，撞傷三名晨跑的台體大學生；其中一人顱骨凹陷性骨折，當天中午進手術室重建，醫師交代「術後可能會有短暫癲癇」。那個「短暫」在神經科有明確期限：七天以內是早期發作，七天以後才叫外傷後癲癇。Annegers 一九九八年《New England Journal of Medicine》那份研究裡，光一道顱骨骨折就足以把人從輕度搬到中度，而中度組的風險會往後延續十年。而依托咪酯在癲癇手術裡，曾經是用來「把病灶叫出來」的那支藥。',
+  tag: '頭部外傷 · 時事',
 };
 const related = [
-  { out: '2026-10-07-enterovirus-d68-afm.html', nav: '本篇', title: '「七例重症裡有五例是D68」——腸病毒還在流行期，而這一型不太長疹子，它要去的是脊髓前角' },
-  { out: '2026-09-29-rabies-ferret-badger-nerve.html', nav: '狂犬病', title: '「上半年三十三隻鼬獾」——世界狂犬病日剛過，而狂犬病是極少數「被咬了之後才打疫苗還來得及」的病' },
-  { out: '2026-08-20-flu-febrile-seizure-encephalopathy.html', nav: '熱痙攣', title: '「發燒、雙眼上吊、走路不穩」——五歲女童那場流感，和一般的熱性痙攣差在哪裡' },
-  { out: '2026-09-01-influenza-brain-encephalopathy.html', nav: '流感腦病變', title: '「燒壞腦子」不是被燒壞的——八月流感創十年同期新高，開學第一天該盯的是那 1.7%' },
-  { out: '2026-08-12-japanese-encephalitis-brain.html', nav: '日本腦炎', title: '一週後死於呼吸衰竭——日本腦炎燒的不是肺，是大腦深處的神經' },
-  { out: '2026-10-06-functional-neurological-disorder-lived-experience.html', nav: '功能性障礙', title: '「檢查全部正常」不是沒病——世界心理健康日的主題是「被聽見」，而神經科門診裡有一群人同時被兩邊退貨' },
+  { out: '2026-10-08-drugged-driving-skull-fracture-epilepsy.html', nav: '本篇', title: '「術後可能會有短暫癲癇」——毒駕撞凹的那塊顱骨，讓「短暫」和「以後」變成兩個不同的病' },
+  { out: '2026-09-27-asian-games-hbp-concussion.html', nav: '觸身球', title: '「耳膜應該沒問題」——亞運那顆砸中頭的觸身球，湯總那句話裡最該盯的其實不是耳朵' },
+  { out: '2026-08-25-flood-cleanup-head-injury-csdh.html', nav: '慢性出血', title: '水退之後才開始的那種出血——清家園撞到頭的那一下，腦子可以拖六週才喊痛' },
+  { out: '2026-09-26-seizure-vs-choking-first-aid.html', nav: '抽搐急救', title: '「食道裡沒有異物」——壽司店那場抽搐先被當成噎到，而兩種急救的方向正好相反' },
+  { out: 'heat-epilepsy-seizure-taiwan-2026.html', nav: '癲癇與熱', title: '熱到可以癲癇——台灣十八萬次急診數據說了什麼' },
+  { out: 'zombie-vape.html', nav: '喪屍煙彈', title: '孩子手指發黑，我以為他只是沒洗手——「喪屍煙彈」家長辨識指南' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
