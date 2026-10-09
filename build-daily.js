@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.08';
-const SERIES = '頭部外傷與癲癇';
+const DATE = '2026.10.09';
+const SERIES = '神經免疫疾病';
 
 const article = {
-  md:  '2026-10-08-drugged-driving-skull-fracture-epilepsy.md',
-  out: '2026-10-08-drugged-driving-skull-fracture-epilepsy.html',
+  md:  '2026-10-09-cidp-ivig-domestic-plasma.md',
+  out: '2026-10-09-cidp-ivig-domestic-plasma.html',
   title: '',
-  desc: '十月三日清晨台中雙十路口，一名依托咪酯快篩陽性的駕駛衝上天橋階梯，撞傷三名晨跑的台體大學生；其中一人顱骨凹陷性骨折，當天中午進手術室重建，醫師交代「術後可能會有短暫癲癇」。那個「短暫」在神經科有明確期限：七天以內是早期發作，七天以後才叫外傷後癲癇。Annegers 一九九八年《New England Journal of Medicine》那份研究裡，光一道顱骨骨折就足以把人從輕度搬到中度，而中度組的風險會往後延續十年。而依托咪酯在癲癇手術裡，曾經是用來「把病灶叫出來」的那支藥。',
-  tag: '頭部外傷 · 時事',
+  desc: '十月一日起，健保把國產第二代國血製劑「益康」人體免疫球蛋白靜脈注射液百分之十，開放給兩歲以上、未滿十八歲的 CIDP 病人；在這之前健保給付的兩款都是進口、且只開給成人。血液基金會執行長王宗曦的理由是供應風險：一旦短缺，臨床就無藥可用。而這個病最大的問題在被認出來之前——二○二一年《Journal of Neurology》那六十名確診病人裡，六十八點三%曾先被給過另一個診斷，漏診者平均延誤二十一點三個月，關鍵線索是沒有被辨識出來的近端無力。',
+  tag: '神經免疫 · 時事',
 };
 const related = [
-  { out: '2026-10-08-drugged-driving-skull-fracture-epilepsy.html', nav: '本篇', title: '「術後可能會有短暫癲癇」——毒駕撞凹的那塊顱骨，讓「短暫」和「以後」變成兩個不同的病' },
-  { out: '2026-09-27-asian-games-hbp-concussion.html', nav: '觸身球', title: '「耳膜應該沒問題」——亞運那顆砸中頭的觸身球，湯總那句話裡最該盯的其實不是耳朵' },
-  { out: '2026-08-25-flood-cleanup-head-injury-csdh.html', nav: '慢性出血', title: '水退之後才開始的那種出血——清家園撞到頭的那一下，腦子可以拖六週才喊痛' },
-  { out: '2026-09-26-seizure-vs-choking-first-aid.html', nav: '抽搐急救', title: '「食道裡沒有異物」——壽司店那場抽搐先被當成噎到，而兩種急救的方向正好相反' },
-  { out: 'heat-epilepsy-seizure-taiwan-2026.html', nav: '癲癇與熱', title: '熱到可以癲癇——台灣十八萬次急診數據說了什麼' },
-  { out: 'zombie-vape.html', nav: '喪屍煙彈', title: '孩子手指發黑，我以為他只是沒洗手——「喪屍煙彈」家長辨識指南' },
+  { out: '2026-10-09-cidp-ivig-domestic-plasma.html', nav: '本篇', title: '「一旦短缺，臨床就無藥可用」——健保十月一日把國產免疫球蛋白開給CIDP病童，而這個病有近七成人先被貼上別的診斷' },
+  { out: '2026-09-02-myasthenia-gravis-car-t.html', nav: '肌無力', title: '「早上還好，下午垂下來」——台灣今年寫出肌無力指引，而細胞治療正在改寫那兩成' },
+  { out: '2026-10-07-enterovirus-d68-afm.html', nav: '前角受損', title: '「七例重症裡有五例是D68」——腸病毒還在流行期，而這一型不太長疹子，它要去的是脊髓前角' },
+  { out: '2026-10-03-hepatitis-c-nerve-brain.html', nav: '周邊神經', title: '「一千一百一十八人被叫回去抽血」——板橋那家診所的C肝群聚，神經科盯的是病毒離開肝臟以後去了哪裡' },
+  { out: '2026-09-19-brain-tumor-stroke-mimic.html', nav: '診斷陷阱', title: '「隔天連手機都拿不住」——一顆四公分的腦瘤把自己演成中風，而拆穿它的是時間' },
+  { out: '2026-10-06-functional-neurological-disorder-lived-experience.html', nav: '檢查正常', title: '「檢查全部正常」不是沒病——世界心理健康日的主題是「被聽見」，而神經科門診裡有一群人同時被兩邊退貨' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
