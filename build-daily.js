@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.09';
-const SERIES = '神經免疫疾病';
+const DATE = '2026.10.10';
+const SERIES = '代謝與血管危險因子';
 
 const article = {
-  md:  '2026-10-09-cidp-ivig-domestic-plasma.md',
-  out: '2026-10-09-cidp-ivig-domestic-plasma.html',
+  md:  '2026-10-10-homocysteine-stroke-cognition.md',
+  out: '2026-10-10-homocysteine-stroke-cognition.html',
   title: '',
-  desc: '十月一日起，健保把國產第二代國血製劑「益康」人體免疫球蛋白靜脈注射液百分之十，開放給兩歲以上、未滿十八歲的 CIDP 病人；在這之前健保給付的兩款都是進口、且只開給成人。血液基金會執行長王宗曦的理由是供應風險：一旦短缺，臨床就無藥可用。而這個病最大的問題在被認出來之前——二○二一年《Journal of Neurology》那六十名確診病人裡，六十八點三%曾先被給過另一個診斷，漏診者平均延誤二十一點三個月，關鍵線索是沒有被辨識出來的近端無力。',
-  tag: '神經免疫 · 時事',
+  desc: '十月九日自由時報健康版那則健檢報導列了五項和心腦血管有關的指標：血壓、血糖、低密度脂蛋白、高密度脂蛋白，還有一個很多人報告上根本沒有這一欄的同半胱胺酸。它不是吃進來的東西，而是拆解甲硫胺酸途中的產物，兩條出口都要葉酸、B6、B12 當鑰匙。二○○二年 JAMA 那份三十項研究的合併分析顯示平均濃度低兩成五、中風風險低一成九；但把它降下來之後，心臟和腦袋給了不同的答案。',
+  tag: '代謝血管 · 時事',
 };
 const related = [
-  { out: '2026-10-09-cidp-ivig-domestic-plasma.html', nav: '本篇', title: '「一旦短缺，臨床就無藥可用」——健保十月一日把國產免疫球蛋白開給CIDP病童，而這個病有近七成人先被貼上別的診斷' },
-  { out: '2026-09-02-myasthenia-gravis-car-t.html', nav: '肌無力', title: '「早上還好，下午垂下來」——台灣今年寫出肌無力指引，而細胞治療正在改寫那兩成' },
+  { out: '2026-10-10-homocysteine-stroke-cognition.html', nav: '本篇', title: '「健檢別只看紅字」——醫師點的第五項指標不在三高裡，而它同時連著中風和腦萎縮' },
+  { out: '2026-10-09-cidp-ivig-domestic-plasma.html', nav: '神經免疫', title: '「一旦短缺，臨床就無藥可用」——健保十月一日把國產免疫球蛋白開給CIDP病童，而這個病有近七成人先被貼上別的診斷' },
   { out: '2026-10-07-enterovirus-d68-afm.html', nav: '前角受損', title: '「七例重症裡有五例是D68」——腸病毒還在流行期，而這一型不太長疹子，它要去的是脊髓前角' },
+  { out: '2026-10-06-functional-neurological-disorder-lived-experience.html', nav: '檢查正常', title: '「檢查全部正常」不是沒病——世界心理健康日的主題是「被聽見」，而神經科門診裡有一群人同時被兩邊退貨' },
   { out: '2026-10-03-hepatitis-c-nerve-brain.html', nav: '周邊神經', title: '「一千一百一十八人被叫回去抽血」——板橋那家診所的C肝群聚，神經科盯的是病毒離開肝臟以後去了哪裡' },
   { out: '2026-09-19-brain-tumor-stroke-mimic.html', nav: '診斷陷阱', title: '「隔天連手機都拿不住」——一顆四公分的腦瘤把自己演成中風，而拆穿它的是時間' },
-  { out: '2026-10-06-functional-neurological-disorder-lived-experience.html', nav: '檢查正常', title: '「檢查全部正常」不是沒病——世界心理健康日的主題是「被聽見」，而神經科門診裡有一群人同時被兩邊退貨' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
