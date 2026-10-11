@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.10';
-const SERIES = '代謝與血管危險因子';
+const DATE = '2026.10.11';
+const SERIES = '高溫與環境暴露';
 
 const article = {
-  md:  '2026-10-10-homocysteine-stroke-cognition.md',
-  out: '2026-10-10-homocysteine-stroke-cognition.html',
+  md:  '2026-10-11-mountain-cardiac-arrest-brain-hypoxia.md',
+  out: '2026-10-11-mountain-cardiac-arrest-brain-hypoxia.html',
   title: '',
-  desc: '十月九日自由時報健康版那則健檢報導列了五項和心腦血管有關的指標：血壓、血糖、低密度脂蛋白、高密度脂蛋白，還有一個很多人報告上根本沒有這一欄的同半胱胺酸。它不是吃進來的東西，而是拆解甲硫胺酸途中的產物，兩條出口都要葉酸、B6、B12 當鑰匙。二○○二年 JAMA 那份三十項研究的合併分析顯示平均濃度低兩成五、中風風險低一成九；但把它降下來之後，心臟和腦袋給了不同的答案。',
-  tag: '代謝血管 · 時事',
+  desc: '十月十日中午，台中八仙山步道四點九公里處，九人登山團裡一名六十七歲男性往後倒下，沒有呼吸心跳，同行山友當場壓了下去。消防局十二點二十三分接報，搜救人員十四點四十七分才接觸到患者，十五點零七分下撤，步道崎嶇只能靠獨輪車接力，預計十九點半抵達登山口。從倒下到離開山區約七小時，而腦袋沒有存糧——血流一停，意識十秒上下消失，幾分鐘內 ATP 見底。山上能握在手裡的只有第一段：瑞典三萬零三百八十一件院外心跳停止裡，救護車到達前有人壓胸的三十天存活率十點五%，沒有人壓的四點○%。',
+  tag: '環境暴露 · 時事',
 };
 const related = [
-  { out: '2026-10-10-homocysteine-stroke-cognition.html', nav: '本篇', title: '「健檢別只看紅字」——醫師點的第五項指標不在三高裡，而它同時連著中風和腦萎縮' },
+  { out: '2026-10-11-mountain-cardiac-arrest-brain-hypoxia.html', nav: '本篇', title: '「下午兩點四十七分才接觸到患者」——八仙山步道上倒下的那位山友，腦袋等不起這七個小時' },
+  { out: '2026-10-10-homocysteine-stroke-cognition.html', nav: '代謝血管', title: '「健檢別只看紅字」——醫師點的第五項指標不在三高裡，而它同時連著中風和腦萎縮' },
   { out: '2026-10-09-cidp-ivig-domestic-plasma.html', nav: '神經免疫', title: '「一旦短缺，臨床就無藥可用」——健保十月一日把國產免疫球蛋白開給CIDP病童，而這個病有近七成人先被貼上別的診斷' },
+  { out: '2026-10-08-drugged-driving-skull-fracture-epilepsy.html', nav: '頭部外傷', title: '「術後可能會有短暫癲癇」——毒駕撞凹的那塊顱骨，讓「短暫」和「以後」變成兩個不同的病' },
   { out: '2026-10-07-enterovirus-d68-afm.html', nav: '前角受損', title: '「七例重症裡有五例是D68」——腸病毒還在流行期，而這一型不太長疹子，它要去的是脊髓前角' },
   { out: '2026-10-06-functional-neurological-disorder-lived-experience.html', nav: '檢查正常', title: '「檢查全部正常」不是沒病——世界心理健康日的主題是「被聽見」，而神經科門診裡有一群人同時被兩邊退貨' },
-  { out: '2026-10-03-hepatitis-c-nerve-brain.html', nav: '周邊神經', title: '「一千一百一十八人被叫回去抽血」——板橋那家診所的C肝群聚，神經科盯的是病毒離開肝臟以後去了哪裡' },
-  { out: '2026-09-19-brain-tumor-stroke-mimic.html', nav: '診斷陷阱', title: '「隔天連手機都拿不住」——一顆四公分的腦瘤把自己演成中風，而拆穿它的是時間' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
