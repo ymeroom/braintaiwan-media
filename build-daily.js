@@ -6,23 +6,24 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.11';
-const SERIES = '高溫與環境暴露';
+const DATE = '2026.10.12';
+const SERIES = '飲食與神經毒性';
 
 const article = {
-  md:  '2026-10-11-mountain-cardiac-arrest-brain-hypoxia.md',
-  out: '2026-10-11-mountain-cardiac-arrest-brain-hypoxia.html',
+  md:  '2026-10-12-potato-glycoalkaloid-neurotoxicity.md',
+  out: '2026-10-12-potato-glycoalkaloid-neurotoxicity.html',
   title: '',
-  desc: '十月十日中午，台中八仙山步道四點九公里處，九人登山團裡一名六十七歲男性往後倒下，沒有呼吸心跳，同行山友當場壓了下去。消防局十二點二十三分接報，搜救人員十四點四十七分才接觸到患者，十五點零七分下撤，步道崎嶇只能靠獨輪車接力，預計十九點半抵達登山口。從倒下到離開山區約七小時，而腦袋沒有存糧——血流一停，意識十秒上下消失，幾分鐘內 ATP 見底。山上能握在手裡的只有第一段：瑞典三萬零三百八十一件院外心跳停止裡，救護車到達前有人壓胸的三十天存活率十點五%，沒有人壓的四點○%。',
-  tag: '環境暴露 · 時事',
+  desc: '食藥署十月六日公布的邊境查驗不合格名單上，一批美國報驗進口的新鮮馬鈴薯總配醣生物鹼每公斤二百四十八毫克，超出二百毫克限量約兩成四，三十三萬九千五百八十公斤整批退運或銷毀——而這批馬鈴薯外觀未發芽。配醣生物鹼不是等芽長出來才生成的，它的類固醇骨架會坐進乙醯膽鹼酯酶的活性區不走，和有機磷農藥同一條機制；一九七九年倫敦一所男校七十八名學童吃了放過長假的水煮馬鈴薯後，前半段看起來就是集體腸胃炎。'
+,
+  tag: '食安毒理 · 時事',
 };
 const related = [
-  { out: '2026-10-11-mountain-cardiac-arrest-brain-hypoxia.html', nav: '本篇', title: '「下午兩點四十七分才接觸到患者」——八仙山步道上倒下的那位山友，腦袋等不起這七個小時' },
+  { out: '2026-10-12-potato-glycoalkaloid-neurotoxicity.html', nav: '本篇', title: '「外觀未發芽」才是重點——那三百三十九公噸被攔在邊境的馬鈴薯，毒的是你突觸上的一個酵素' },
+  { out: '2026-10-11-mountain-cardiac-arrest-brain-hypoxia.html', nav: '環境暴露', title: '「下午兩點四十七分才接觸到患者」——八仙山步道上倒下的那位山友，腦袋等不起這七個小時' },
   { out: '2026-10-10-homocysteine-stroke-cognition.html', nav: '代謝血管', title: '「健檢別只看紅字」——醫師點的第五項指標不在三高裡，而它同時連著中風和腦萎縮' },
   { out: '2026-10-09-cidp-ivig-domestic-plasma.html', nav: '神經免疫', title: '「一旦短缺，臨床就無藥可用」——健保十月一日把國產免疫球蛋白開給CIDP病童，而這個病有近七成人先被貼上別的診斷' },
   { out: '2026-10-08-drugged-driving-skull-fracture-epilepsy.html', nav: '頭部外傷', title: '「術後可能會有短暫癲癇」——毒駕撞凹的那塊顱骨，讓「短暫」和「以後」變成兩個不同的病' },
   { out: '2026-10-07-enterovirus-d68-afm.html', nav: '前角受損', title: '「七例重症裡有五例是D68」——腸病毒還在流行期，而這一型不太長疹子，它要去的是脊髓前角' },
-  { out: '2026-10-06-functional-neurological-disorder-lived-experience.html', nav: '檢查正常', title: '「檢查全部正常」不是沒病——世界心理健康日的主題是「被聽見」，而神經科門診裡有一群人同時被兩邊退貨' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
