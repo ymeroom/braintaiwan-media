@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.13';
-const SERIES = '睡眠與安眠藥';
+const DATE = '2026.10.14';
+const SERIES = '失智與腦健康';
 
 const article = {
-  md:  '2026-10-13-sleeping-pill-five-hundred-million-bbti.md',
-  out: '2026-10-13-sleeping-pill-five-hundred-million-bbti.html',
+  md:  '2026-10-14-grip-strength-dementia.md',
+  out: '2026-10-14-grip-strength-dementia.html',
   title: '',
-  desc: '十月十二日公視報導健保署統計：國人去年安眠藥用量首度突破五億顆，五億零四百萬顆，平均每天一百三十八萬顆，而二○二二到二○二五的斜率是四億六千一百萬、四億七千七百萬、四億九千兩百萬然後過線。同篇新聞裡醫界端出的對策不是換一顆更安全的藥，而是「簡短失眠介入」——苯二氮平類與 Z 類藥物作用在 GABA-A 受體上，讓神經元安靜，而睡眠該做的事是另一回事。',
-  tag: '睡眠用藥 · 時事',
+  desc: '十月十四日健康版面轉得最勤的一則：復健科醫師引用十九萬人的英國生物樣本庫研究，握力每下降五公斤，男性失智風險增一成六、女性增一成四。但打開那篇刊在 JAMA Network Open 的原始論文，摘要給的是一點二○與一點一二，而女性那組的信賴區間下緣剛好壓在一點○○上。握力計量到的從來不只是手掌——它是整套神經肌肉系統的輸出讀數，而那條通往失智的線，影像上走的是小血管。',
+  tag: '失智風險 · 時事',
 };
 const related = [
-  { out: '2026-10-13-sleeping-pill-five-hundred-million-bbti.html', nav: '本篇', title: '「平均每天一百三十八萬顆」——安眠藥用量首破五億顆那天，醫界端出的替代方案不是另一顆藥' },
+  { out: '2026-10-14-grip-strength-dementia.html', nav: '本篇', title: '「握力每少五公斤」——今天那則失智新聞的數字，在原始論文裡其實有兩個版本' },
+  { out: '2026-10-13-sleeping-pill-five-hundred-million-bbti.html', nav: '睡眠用藥', title: '「平均每天一百三十八萬顆」——安眠藥用量首破五億顆那天，醫界端出的替代方案不是另一顆藥' },
   { out: '2026-10-12-potato-glycoalkaloid-neurotoxicity.html', nav: '食安毒理', title: '「外觀未發芽」才是重點——那三百三十九公噸被攔在邊境的馬鈴薯，毒的是你突觸上的一個酵素' },
   { out: '2026-10-11-mountain-cardiac-arrest-brain-hypoxia.html', nav: '環境暴露', title: '「下午兩點四十七分才接觸到患者」——八仙山步道上倒下的那位山友，腦袋等不起這七個小時' },
   { out: '2026-10-10-homocysteine-stroke-cognition.html', nav: '代謝血管', title: '「健檢別只看紅字」——醫師點的第五項指標不在三高裡，而它同時連著中風和腦萎縮' },
   { out: '2026-10-09-cidp-ivig-domestic-plasma.html', nav: '神經免疫', title: '「一旦短缺，臨床就無藥可用」——健保十月一日把國產免疫球蛋白開給CIDP病童，而這個病有近七成人先被貼上別的診斷' },
-  { out: '2026-10-02-insomnia-stroke-diagnosis-gap.html', nav: '失眠與中風', title: '「失眠者中風風險高二六%」——這個數字這週上了台灣新聞，而關鍵差別藏在「睡不好」與「失眠症」之間' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
