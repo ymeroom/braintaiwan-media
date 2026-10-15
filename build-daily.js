@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.14';
-const SERIES = '失智與腦健康';
+const DATE = '2026.10.15';
+const SERIES = '流感與腦部併發症';
 
 const article = {
-  md:  '2026-10-14-grip-strength-dementia.md',
-  out: '2026-10-14-grip-strength-dementia.html',
+  md:  '2026-10-15-influenza-encephalopathy-ane.md',
+  out: '2026-10-15-influenza-encephalopathy-ane.html',
   title: '',
-  desc: '十月十四日健康版面轉得最勤的一則：復健科醫師引用十九萬人的英國生物樣本庫研究，握力每下降五公斤，男性失智風險增一成六、女性增一成四。但打開那篇刊在 JAMA Network Open 的原始論文，摘要給的是一點二○與一點一二，而女性那組的信賴區間下緣剛好壓在一點○○上。握力計量到的從來不只是手掌——它是整套神經肌肉系統的輸出讀數，而那條通往失智的線，影像上走的是小血管。',
-  tag: '失智風險 · 時事',
+  desc: '十月十三日疾管署公布上週類流感門急診十二萬八千八百四十七人次、比前一週降百分之八點九，疫情連三週緩降；但同一份疫報新增一百四十四例重症、四十六例死亡，死亡數創今年單週新高，四十六例全是 H1N1。那組數字走的是肺炎與敗血性休克那條路線，而九月那兩名孩子走的是另一條：五歲男童沒有潛在病史、未接種疫苗，反覆發燒後意識不清與抽搐，死於流感併發急性壞死性腦病變。這條路線的破壞者不是病毒本身，是免疫反應的下游——腦脊髓液裡通常驗不到流感病毒，壞掉的是兩側視丘。',
+  tag: '流感腦病變 · 時事',
 };
 const related = [
-  { out: '2026-10-14-grip-strength-dementia.html', nav: '本篇', title: '「握力每少五公斤」——今天那則失智新聞的數字，在原始論文裡其實有兩個版本' },
+  { out: '2026-10-15-influenza-encephalopathy-ane.html', nav: '本篇', title: '「46死全為H1N1」——流感疫情連三週緩降那天，另一條併發症路線的死亡率是四成一' },
+  { out: '2026-10-14-grip-strength-dementia.html', nav: '失智風險', title: '「握力每少五公斤」——今天那則失智新聞的數字，在原始論文裡其實有兩個版本' },
   { out: '2026-10-13-sleeping-pill-five-hundred-million-bbti.html', nav: '睡眠用藥', title: '「平均每天一百三十八萬顆」——安眠藥用量首破五億顆那天，醫界端出的替代方案不是另一顆藥' },
   { out: '2026-10-12-potato-glycoalkaloid-neurotoxicity.html', nav: '食安毒理', title: '「外觀未發芽」才是重點——那三百三十九公噸被攔在邊境的馬鈴薯，毒的是你突觸上的一個酵素' },
   { out: '2026-10-11-mountain-cardiac-arrest-brain-hypoxia.html', nav: '環境暴露', title: '「下午兩點四十七分才接觸到患者」——八仙山步道上倒下的那位山友，腦袋等不起這七個小時' },
   { out: '2026-10-10-homocysteine-stroke-cognition.html', nav: '代謝血管', title: '「健檢別只看紅字」——醫師點的第五項指標不在三高裡，而它同時連著中風和腦萎縮' },
-  { out: '2026-10-09-cidp-ivig-domestic-plasma.html', nav: '神經免疫', title: '「一旦短缺，臨床就無藥可用」——健保十月一日把國產免疫球蛋白開給CIDP病童，而這個病有近七成人先被貼上別的診斷' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
