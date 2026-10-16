@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.15';
-const SERIES = '流感與腦部併發症';
+const DATE = '2026.10.16';
+const SERIES = '周邊神經與疼痛';
 
 const article = {
-  md:  '2026-10-15-influenza-encephalopathy-ane.md',
-  out: '2026-10-15-influenza-encephalopathy-ane.html',
+  md:  '2026-10-16-cryoneurolysis-intercostal-nerve.md',
+  out: '2026-10-16-cryoneurolysis-intercostal-nerve.html',
   title: '',
-  desc: '十月十三日疾管署公布上週類流感門急診十二萬八千八百四十七人次、比前一週降百分之八點九，疫情連三週緩降；但同一份疫報新增一百四十四例重症、四十六例死亡，死亡數創今年單週新高，四十六例全是 H1N1。那組數字走的是肺炎與敗血性休克那條路線，而九月那兩名孩子走的是另一條：五歲男童沒有潛在病史、未接種疫苗，反覆發燒後意識不清與抽搐，死於流感併發急性壞死性腦病變。這條路線的破壞者不是病毒本身，是免疫反應的下游——腦脊髓液裡通常驗不到流感病毒，壞掉的是兩側視丘。',
-  tag: '流感腦病變 · 時事',
+  desc: '十月十四日林口長庚說明一項新技術：手術中把肋間神經降到攝氏零下六十到八十度，讓它暫時「冬眠」，止痛可撐三到六個月，目前用於六名開心手術病人。低溫在零下二十度到零下一百度之間會讓軸突進入華勒氏退化，卻不破壞外面的神經內膜與束膜——銅芯燒斷、外皮完好，於是軸突能以每天一到兩毫米的速度循原路長回來。三到六個月不是藥效，是這段路程的長度。一百二十一人的追蹤顯示感覺恢復中位時間六個月、十二個月時九成八點三恢復，一點七％留下長期麻木。',
+  tag: '周邊神經 · 時事',
 };
 const related = [
-  { out: '2026-10-15-influenza-encephalopathy-ane.html', nav: '本篇', title: '「46死全為H1N1」——流感疫情連三週緩降那天，另一條併發症路線的死亡率是四成一' },
+  { out: '2026-10-16-cryoneurolysis-intercostal-nerve.html', nav: '本篇', title: '「零下八十度，讓神經冬眠」——長庚凍住的那條肋間神經，要花六個月才長得回來' },
+  { out: '2026-10-15-influenza-encephalopathy-ane.html', nav: '流感腦病變', title: '「46死全為H1N1」——流感疫情連三週緩降那天，另一條併發症路線的死亡率是四成一' },
   { out: '2026-10-14-grip-strength-dementia.html', nav: '失智風險', title: '「握力每少五公斤」——今天那則失智新聞的數字，在原始論文裡其實有兩個版本' },
   { out: '2026-10-13-sleeping-pill-five-hundred-million-bbti.html', nav: '睡眠用藥', title: '「平均每天一百三十八萬顆」——安眠藥用量首破五億顆那天，醫界端出的替代方案不是另一顆藥' },
   { out: '2026-10-12-potato-glycoalkaloid-neurotoxicity.html', nav: '食安毒理', title: '「外觀未發芽」才是重點——那三百三十九公噸被攔在邊境的馬鈴薯，毒的是你突觸上的一個酵素' },
   { out: '2026-10-11-mountain-cardiac-arrest-brain-hypoxia.html', nav: '環境暴露', title: '「下午兩點四十七分才接觸到患者」——八仙山步道上倒下的那位山友，腦袋等不起這七個小時' },
-  { out: '2026-10-10-homocysteine-stroke-cognition.html', nav: '代謝血管', title: '「健檢別只看紅字」——醫師點的第五項指標不在三高裡，而它同時連著中風和腦萎縮' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
