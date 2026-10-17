@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.16';
-const SERIES = '周邊神經與疼痛';
+const DATE = '2026.10.17';
+const SERIES = '頭痛與疼痛';
 
 const article = {
-  md:  '2026-10-16-cryoneurolysis-intercostal-nerve.md',
-  out: '2026-10-16-cryoneurolysis-intercostal-nerve.html',
+  md:  '2026-10-17-medication-overuse-headache.md',
+  out: '2026-10-17-medication-overuse-headache.html',
   title: '',
-  desc: '十月十四日林口長庚說明一項新技術：手術中把肋間神經降到攝氏零下六十到八十度，讓它暫時「冬眠」，止痛可撐三到六個月，目前用於六名開心手術病人。低溫在零下二十度到零下一百度之間會讓軸突進入華勒氏退化，卻不破壞外面的神經內膜與束膜——銅芯燒斷、外皮完好，於是軸突能以每天一到兩毫米的速度循原路長回來。三到六個月不是藥效，是這段路程的長度。一百二十一人的追蹤顯示感覺恢復中位時間六個月、十二個月時九成八點三恢復，一點七％留下長期麻木。',
-  tag: '周邊神經 · 時事',
+  desc: '十月十五日中央社報導，亞東醫院藥師鄭芸提醒偏頭痛患者別掉進「頭痛、吃藥、再頭痛」的循環，建議每月發作四次以上就該評估。這個循環在國際頭痛疾病分類第三版裡編號 8.2，叫藥物過度使用性頭痛：每月頭痛十五天以上、規律過度使用急性止痛藥超過三個月；單方止痛藥門檻是每月十五天，翠普登類、鴉片類與複方止痛藥降到十天。門檻算的是天數而非劑量，動物實驗顯示連續六天的翠普登會在三叉神經節留下 CGRP 上調的潛伏敏感化，並拉低誘發皮質擴散抑制的閾值。一九九七年台北調查中，慢性每日頭痛者有三分之一符合藥物過度使用；二○二二年 MOTS 試驗七百二十人則顯示，把止痛藥限制到每週兩天並不比照舊吃更好——真正改變走向的是預防用藥。',
+  tag: '頭痛與疼痛 · 時事',
 };
 const related = [
-  { out: '2026-10-16-cryoneurolysis-intercostal-nerve.html', nav: '本篇', title: '「零下八十度，讓神經冬眠」——長庚凍住的那條肋間神經，要花六個月才長得回來' },
+  { out: '2026-10-17-medication-overuse-headache.html', nav: '本篇', title: '「每月四次就該評估」——藥師說的愈吃愈痛，門檻寫在分類表第 8.2 條' },
+  { out: '2026-10-16-cryoneurolysis-intercostal-nerve.html', nav: '神經冷凍', title: '「零下八十度，讓神經冬眠」——長庚凍住的那條肋間神經，要花六個月才長得回來' },
   { out: '2026-10-15-influenza-encephalopathy-ane.html', nav: '流感腦病變', title: '「46死全為H1N1」——流感疫情連三週緩降那天，另一條併發症路線的死亡率是四成一' },
   { out: '2026-10-14-grip-strength-dementia.html', nav: '失智風險', title: '「握力每少五公斤」——今天那則失智新聞的數字，在原始論文裡其實有兩個版本' },
   { out: '2026-10-13-sleeping-pill-five-hundred-million-bbti.html', nav: '睡眠用藥', title: '「平均每天一百三十八萬顆」——安眠藥用量首破五億顆那天，醫界端出的替代方案不是另一顆藥' },
   { out: '2026-10-12-potato-glycoalkaloid-neurotoxicity.html', nav: '食安毒理', title: '「外觀未發芽」才是重點——那三百三十九公噸被攔在邊境的馬鈴薯，毒的是你突觸上的一個酵素' },
-  { out: '2026-10-11-mountain-cardiac-arrest-brain-hypoxia.html', nav: '環境暴露', title: '「下午兩點四十七分才接觸到患者」——八仙山步道上倒下的那位山友，腦袋等不起這七個小時' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
