@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.18';
-const SERIES = '腦瘤與神經腫瘤';
+const DATE = '2026.10.20';
+const SERIES = '腦中風與腦血管';
 
 const article = {
-  md:  '2026-10-18-idh-glioma-vorasidenib-seizure.md',
-  out: '2026-10-18-idh-glioma-vorasidenib-seizure.html',
+  md:  '2026-10-20-young-stroke-incidence-83.md',
+  out: '2026-10-20-young-stroke-incidence-83.html',
   title: '',
-  desc: '健保署十月二日宣布，十月一日起擴大給付七項藥品——四項癌症藥、兩項罕病藥、一項心血管藥，癌症部分約兩千六百名病人受惠、藥費挹注近二十億元，名單裡包括終生只用一次、每人八百一十九萬元的 CAR-T。腦瘤不在。台灣每年新診斷惡性腦瘤約七百多人，帶 IDH 突變的膠質瘤占兩成多，而這群人送到醫院的方式常常是一次沒有預告的癲癇：《Epilepsia》的回顧指出低階膠質瘤病程中癲癇比例六成到八成五，多數在確診前就先發作。IDH 突變讓酵素多做出 2-hydroxyglutarate，卡住所有需要 α-ketoglutarate 的去甲基酵素；INDIGO 第三期試驗三百三十一人，無惡化存活期從十一點一個月拉到二十七點七個月、風險比零點三九，癲癇從每人每年五十一點二次降到十八點二次。',
-  tag: '腦瘤與神經腫瘤 · 時事',
+  desc: '十月十六日起多家媒體轉了嘉義基督教醫院的一則門診故事：四十多歲男性，不抽菸、不喝酒、每晚十一點上床，還是中風了。標題旁常跟著「二十到五十四歲首次中風增加百分之八十三」。那個數字出自辛辛那提大學團隊九月發表於《Neurology》的研究，資料來自美國俄亥俄與肯塔基交界五個郡、一九九三到二○二○年的兩千零七十六例首次中風，發生率從每十萬人年三十三點九升到六十二點一八。研究者自己說明，資料庫裡沒有未中風的對照組，因此那些一起上升的高血壓、糖尿病與物質使用只描述了「誰在中風」。台灣自己的數字是：二十到五十歲首次中風六萬五千零九十七人，追蹤中位數九點八年後百分之二十八死亡；急性缺血性中風有百分之七十六錯過四點五小時時間窗，真正打到溶栓藥的只有百分之六點七。',
+  tag: '腦中風與腦血管 · 時事',
 };
 const related = [
-  { out: '2026-10-18-idh-glioma-vorasidenib-seizure.html', nav: '本篇', title: '「突發癲癇可能是唯一的開場」——十月健保擴大七種新藥那天，腦瘤那顆口服藥還在名單外' },
+  { out: '2026-10-20-young-stroke-incidence-83.html', nav: '本篇', title: '「每晚十一點睡，還是中風了」——那個「年輕中風增83%」的數字，算的是美國五個郡' },
+  { out: '2026-10-18-idh-glioma-vorasidenib-seizure.html', nav: '腦瘤新藥', title: '「突發癲癇可能是唯一的開場」——十月健保擴大七種新藥那天，腦瘤那顆口服藥還在名單外' },
   { out: '2026-10-17-medication-overuse-headache.html', nav: '頭痛用藥', title: '「每月四次就該評估」——藥師說的愈吃愈痛，門檻寫在分類表第 8.2 條' },
   { out: '2026-10-16-cryoneurolysis-intercostal-nerve.html', nav: '神經冷凍', title: '「零下八十度，讓神經冬眠」——長庚凍住的那條肋間神經，要花六個月才長得回來' },
   { out: '2026-10-15-influenza-encephalopathy-ane.html', nav: '流感腦病變', title: '「46死全為H1N1」——流感疫情連三週緩降那天，另一條併發症路線的死亡率是四成一' },
   { out: '2026-10-14-grip-strength-dementia.html', nav: '失智風險', title: '「握力每少五公斤」——今天那則失智新聞的數字，在原始論文裡其實有兩個版本' },
-  { out: '2026-10-13-sleeping-pill-five-hundred-million-bbti.html', nav: '睡眠用藥', title: '「平均每天一百三十八萬顆」——安眠藥用量首破五億顆那天，醫界端出的替代方案不是另一顆藥' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
