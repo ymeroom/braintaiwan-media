@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.20';
-const SERIES = '腦中風與腦血管';
+const DATE = '2026.10.21';
+const SERIES = '頭部外傷與腦震盪';
 
 const article = {
-  md:  '2026-10-20-young-stroke-incidence-83.md',
-  out: '2026-10-20-young-stroke-incidence-83.html',
+  md:  '2026-10-21-chronic-subdural-hematoma-delayed.md',
+  out: '2026-10-21-chronic-subdural-hematoma-delayed.html',
   title: '',
-  desc: '十月十六日起多家媒體轉了嘉義基督教醫院的一則門診故事：四十多歲男性，不抽菸、不喝酒、每晚十一點上床，還是中風了。標題旁常跟著「二十到五十四歲首次中風增加百分之八十三」。那個數字出自辛辛那提大學團隊九月發表於《Neurology》的研究，資料來自美國俄亥俄與肯塔基交界五個郡、一九九三到二○二○年的兩千零七十六例首次中風，發生率從每十萬人年三十三點九升到六十二點一八。研究者自己說明，資料庫裡沒有未中風的對照組，因此那些一起上升的高血壓、糖尿病與物質使用只描述了「誰在中風」。台灣自己的數字是：二十到五十歲首次中風六萬五千零九十七人，追蹤中位數九點八年後百分之二十八死亡；急性缺血性中風有百分之七十六錯過四點五小時時間窗，真正打到溶栓藥的只有百分之六點七。',
-  tag: '腦中風與腦血管 · 時事',
+  desc: '十月二十日，健康醫療網一則被多家媒體同步轉走的報導裡，基隆長庚醫院外科部主任、神經外科陳品元醫師提醒：長輩在家滑一跤、頭輕輕碰一下，當下看起來沒異狀並不等於沒事，有些人要到數週後才開始頭痛、嗜睡、講話變慢、走路不穩或單側手腳沒力。機制在於腦組織隨年齡縮小、橋靜脈被拉緊，輕微撞擊即可滲血，之後血塊周圍長出帶新生血管的新膜，漏水撐開腔室，成為一個會自己維持下去的循環。今年二月《Stroke》的美國首份人口統計清出三百五十三位成人，換算全美發生率每十萬人年十七點三例，八十五歲以上男性則是三百五十四點八例；芬蘭二十六年的追蹤裡發生率翻倍（八點二升到十七點六），八十歲以上從四十六點九爬到一百二十九點五，而病歷上查得到頭部外傷的只占五成九，使用抗凝血或抗血小板藥物的比例從兩成七升到四成九。治療上，Dex-CSDH 試驗七百四十八人顯示類固醇組六個月功能良好八成三點九、安慰劑九成○點三；EMBOLISE 的中腦膜動脈栓塞把九十天再引流率從十一點三壓到四點一，同期的 MAGIC-MT 卻只有六點七比九點九、未達顯著。',
+  tag: '頭部外傷與腦震盪 · 時事',
 };
 const related = [
-  { out: '2026-10-20-young-stroke-incidence-83.html', nav: '本篇', title: '「每晚十一點睡，還是中風了」——那個「年輕中風增83%」的數字，算的是美國五個郡' },
+  { out: '2026-10-21-chronic-subdural-hematoma-delayed.html', nav: '本篇', title: '「當下看起來沒事」——那顆幾週後才長出症狀的血腫，病歷上只有五成九查得到撞擊' },
+  { out: '2026-10-20-young-stroke-incidence-83.html', nav: '年輕中風', title: '「每晚十一點睡，還是中風了」——那個「年輕中風增83%」的數字，算的是美國五個郡' },
   { out: '2026-10-18-idh-glioma-vorasidenib-seizure.html', nav: '腦瘤新藥', title: '「突發癲癇可能是唯一的開場」——十月健保擴大七種新藥那天，腦瘤那顆口服藥還在名單外' },
   { out: '2026-10-17-medication-overuse-headache.html', nav: '頭痛用藥', title: '「每月四次就該評估」——藥師說的愈吃愈痛，門檻寫在分類表第 8.2 條' },
   { out: '2026-10-16-cryoneurolysis-intercostal-nerve.html', nav: '神經冷凍', title: '「零下八十度，讓神經冬眠」——長庚凍住的那條肋間神經，要花六個月才長得回來' },
   { out: '2026-10-15-influenza-encephalopathy-ane.html', nav: '流感腦病變', title: '「46死全為H1N1」——流感疫情連三週緩降那天，另一條併發症路線的死亡率是四成一' },
-  { out: '2026-10-14-grip-strength-dementia.html', nav: '失智風險', title: '「握力每少五公斤」——今天那則失智新聞的數字，在原始論文裡其實有兩個版本' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
