@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.21';
-const SERIES = '頭部外傷與腦震盪';
+const DATE = '2026.10.22';
+const SERIES = '高溫與環境暴露';
 
 const article = {
-  md:  '2026-10-21-chronic-subdural-hematoma-delayed.md',
-  out: '2026-10-21-chronic-subdural-hematoma-delayed.html',
+  md:  '2026-10-22-extreme-heat-air-pollution-brain.md',
+  out: '2026-10-22-extreme-heat-air-pollution-brain.html',
   title: '',
-  desc: '十月二十日，健康醫療網一則被多家媒體同步轉走的報導裡，基隆長庚醫院外科部主任、神經外科陳品元醫師提醒：長輩在家滑一跤、頭輕輕碰一下，當下看起來沒異狀並不等於沒事，有些人要到數週後才開始頭痛、嗜睡、講話變慢、走路不穩或單側手腳沒力。機制在於腦組織隨年齡縮小、橋靜脈被拉緊，輕微撞擊即可滲血，之後血塊周圍長出帶新生血管的新膜，漏水撐開腔室，成為一個會自己維持下去的循環。今年二月《Stroke》的美國首份人口統計清出三百五十三位成人，換算全美發生率每十萬人年十七點三例，八十五歲以上男性則是三百五十四點八例；芬蘭二十六年的追蹤裡發生率翻倍（八點二升到十七點六），八十歲以上從四十六點九爬到一百二十九點五，而病歷上查得到頭部外傷的只占五成九，使用抗凝血或抗血小板藥物的比例從兩成七升到四成九。治療上，Dex-CSDH 試驗七百四十八人顯示類固醇組六個月功能良好八成三點九、安慰劑九成○點三；EMBOLISE 的中腦膜動脈栓塞把九十天再引流率從十一點三壓到四點一，同期的 MAGIC-MT 卻只有六點七比九點九、未達顯著。',
-  tag: '頭部外傷與腦震盪 · 時事',
+  desc: '十月二十一日，衛福部與環境部在台北生技園區舉辦「醫療永續共創聯盟」誓師大會，兩百多個單位加入，四大合作方向裡有兩項直指神經科：空汙與健康科學研究、極端溫度與健康調適。今年六月二十九日環境部的「115年40度高溫即時調適行動」兵棋推演，情境是台北內湖、新北五股、桃園蘆竹連續三天四十度，三十四個單位參演，第一階段的初級衝擊就寫了變電所事故、區域停電與敏弱族群熱傷害送醫。熱中暑的診斷條件本身即含中樞神經功能異常，體溫調節的指揮所在下視丘。衛福部通報顯示今年七月截至二十九日熱傷害就診七百五十六人次，已多於去年整個七月的六百八十三人次。急診以外的那一段，二○一八年《PLOS Medicine》追蹤四十四位大學生跨越熱浪，無冷氣組反應時間慢百分之十三點四、加減法分數低百分之十三點三。空汙那一側更慢：台灣世代研究追蹤九萬五千六百九十位長者，基線臭氧暴露校正後風險比一點○六（一點○○至一點一二）；二○二三年《BMJ》統合分析中年均 PM2.5 每多兩微克失智風險升百分之四，信賴區間○點九九至一點○九跨過一；同年《Neurology》範圍回顧的三百六十四篇文獻裡有二百八十九篇談污染物。',
+  tag: '高溫與環境暴露 · 時事',
 };
 const related = [
-  { out: '2026-10-21-chronic-subdural-hematoma-delayed.html', nav: '本篇', title: '「當下看起來沒事」——那顆幾週後才長出症狀的血腫，病歷上只有五成九查得到撞擊' },
+  { out: '2026-10-22-extreme-heat-air-pollution-brain.html', nav: '本篇', title: '「連續三天四十度」——那場兵推把熱傷害寫進第一階段，而停電就在同一格' },
+  { out: '2026-10-21-chronic-subdural-hematoma-delayed.html', nav: '慢性血腫', title: '「當下看起來沒事」——那顆幾週後才長出症狀的血腫，病歷上只有五成九查得到撞擊' },
   { out: '2026-10-20-young-stroke-incidence-83.html', nav: '年輕中風', title: '「每晚十一點睡，還是中風了」——那個「年輕中風增83%」的數字，算的是美國五個郡' },
   { out: '2026-10-18-idh-glioma-vorasidenib-seizure.html', nav: '腦瘤新藥', title: '「突發癲癇可能是唯一的開場」——十月健保擴大七種新藥那天，腦瘤那顆口服藥還在名單外' },
   { out: '2026-10-17-medication-overuse-headache.html', nav: '頭痛用藥', title: '「每月四次就該評估」——藥師說的愈吃愈痛，門檻寫在分類表第 8.2 條' },
   { out: '2026-10-16-cryoneurolysis-intercostal-nerve.html', nav: '神經冷凍', title: '「零下八十度，讓神經冬眠」——長庚凍住的那條肋間神經，要花六個月才長得回來' },
-  { out: '2026-10-15-influenza-encephalopathy-ane.html', nav: '流感腦病變', title: '「46死全為H1N1」——流感疫情連三週緩降那天，另一條併發症路線的死亡率是四成一' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
