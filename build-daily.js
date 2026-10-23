@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.22';
-const SERIES = '高溫與環境暴露';
+const DATE = '2026.10.23';
+const SERIES = '失智症與認知退化';
 
 const article = {
-  md:  '2026-10-22-extreme-heat-air-pollution-brain.md',
-  out: '2026-10-22-extreme-heat-air-pollution-brain.html',
+  md:  '2026-10-23-young-onset-dementia-policy-3-0.md',
+  out: '2026-10-23-young-onset-dementia-policy-3-0.html',
   title: '',
-  desc: '十月二十一日，衛福部與環境部在台北生技園區舉辦「醫療永續共創聯盟」誓師大會，兩百多個單位加入，四大合作方向裡有兩項直指神經科：空汙與健康科學研究、極端溫度與健康調適。今年六月二十九日環境部的「115年40度高溫即時調適行動」兵棋推演，情境是台北內湖、新北五股、桃園蘆竹連續三天四十度，三十四個單位參演，第一階段的初級衝擊就寫了變電所事故、區域停電與敏弱族群熱傷害送醫。熱中暑的診斷條件本身即含中樞神經功能異常，體溫調節的指揮所在下視丘。衛福部通報顯示今年七月截至二十九日熱傷害就診七百五十六人次，已多於去年整個七月的六百八十三人次。急診以外的那一段，二○一八年《PLOS Medicine》追蹤四十四位大學生跨越熱浪，無冷氣組反應時間慢百分之十三點四、加減法分數低百分之十三點三。空汙那一側更慢：台灣世代研究追蹤九萬五千六百九十位長者，基線臭氧暴露校正後風險比一點○六（一點○○至一點一二）；二○二三年《BMJ》統合分析中年均 PM2.5 每多兩微克失智風險升百分之四，信賴區間○點九九至一點○九跨過一；同年《Neurology》範圍回顧的三百六十四篇文獻裡有二百八十九篇談污染物。',
-  tag: '高溫與環境暴露 · 時事',
+  desc: '十月十五日行政院通過「失智症防治照護政策綱領暨行動方案3.0」，十年計畫、十二個部會、二十一項行動方案，二○三五年要達成「失智友善台灣888」——精準診斷率、服務涵蓋率、特定場域人員失智識能率各達八成。方案裡第一次出現一行字：未滿五十歲、已經失能的年輕型失智者納入延緩病程範圍。衛福部引的流行病學調查說台灣年輕失智每年約一萬人，高齡失智者約四十萬人；十月十九日國衛院在雲林掛上「失智症研究辦公室」的牌子，報出六十五歲以上盛行率百分之七點九九、約三十九點八萬人，推估二○四一年翻倍成六十八萬。二○二一年《JAMA Neurology》統合分析收九十五項研究，三十到六十四歲年齡標準化盛行率每十萬人一百十九人。真正的差別在時間：二○一三年《Psychological Medicine》比較二百三十五位年輕型與一百六十七位晚發型，從症狀到診斷平均四點四年對二點八年，額顳葉型與發病愈輕者等得愈久。二○二四年《JAMA Neurology》用英國生物樣本庫三十五萬六千多人，從三十九個候選因子篩出十五個與年輕型失智相關，多數可改變。',
+  tag: '失智症與認知退化 · 時事',
 };
 const related = [
-  { out: '2026-10-22-extreme-heat-air-pollution-brain.html', nav: '本篇', title: '「連續三天四十度」——那場兵推把熱傷害寫進第一階段，而停電就在同一格' },
+  { out: '2026-10-23-young-onset-dementia-policy-3-0.html', nav: '本篇', title: '「未滿五十歲也算」——失智3.0把年輕失智寫進延緩病程那格，而這群人要多等一年半才拿到診斷' },
+  { out: '2026-10-22-extreme-heat-air-pollution-brain.html', nav: '高溫空汙', title: '「連續三天四十度」——那場兵推把熱傷害寫進第一階段，而停電就在同一格' },
   { out: '2026-10-21-chronic-subdural-hematoma-delayed.html', nav: '慢性血腫', title: '「當下看起來沒事」——那顆幾週後才長出症狀的血腫，病歷上只有五成九查得到撞擊' },
   { out: '2026-10-20-young-stroke-incidence-83.html', nav: '年輕中風', title: '「每晚十一點睡，還是中風了」——那個「年輕中風增83%」的數字，算的是美國五個郡' },
-  { out: '2026-10-18-idh-glioma-vorasidenib-seizure.html', nav: '腦瘤新藥', title: '「突發癲癇可能是唯一的開場」——十月健保擴大七種新藥那天，腦瘤那顆口服藥還在名單外' },
-  { out: '2026-10-17-medication-overuse-headache.html', nav: '頭痛用藥', title: '「每月四次就該評估」——藥師說的愈吃愈痛，門檻寫在分類表第 8.2 條' },
-  { out: '2026-10-16-cryoneurolysis-intercostal-nerve.html', nav: '神經冷凍', title: '「零下八十度，讓神經冬眠」——長庚凍住的那條肋間神經，要花六個月才長得回來' },
+  { out: '2026-10-14-grip-strength-dementia.html', nav: '握力與失智', title: '「握力每少五公斤」——今天那則失智新聞的數字，在原始論文裡其實有兩個版本' },
+  { out: '2026-10-05-vision-loss-dementia-adult-checkup.html', nav: '視力與失智', title: '「十月一號以後才算」——健康幣吵到第五天還在吵回溯，而那張八百幣的健檢表單上，眼睛從頭到尾沒被量過' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
