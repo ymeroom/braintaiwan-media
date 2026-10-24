@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.23';
-const SERIES = '失智症與認知退化';
+const DATE = '2026.10.24';
+const SERIES = '睡眠與大腦';
 
 const article = {
-  md:  '2026-10-23-young-onset-dementia-policy-3-0.md',
-  out: '2026-10-23-young-onset-dementia-policy-3-0.html',
+  md:  '2026-10-24-controlled-hypnotic-diversion-pharmacy-gate.md',
+  out: '2026-10-24-controlled-hypnotic-diversion-pharmacy-gate.html',
   title: '',
-  desc: '十月十五日行政院通過「失智症防治照護政策綱領暨行動方案3.0」，十年計畫、十二個部會、二十一項行動方案，二○三五年要達成「失智友善台灣888」——精準診斷率、服務涵蓋率、特定場域人員失智識能率各達八成。方案裡第一次出現一行字：未滿五十歲、已經失能的年輕型失智者納入延緩病程範圍。衛福部引的流行病學調查說台灣年輕失智每年約一萬人，高齡失智者約四十萬人；十月十九日國衛院在雲林掛上「失智症研究辦公室」的牌子，報出六十五歲以上盛行率百分之七點九九、約三十九點八萬人，推估二○四一年翻倍成六十八萬。二○二一年《JAMA Neurology》統合分析收九十五項研究，三十到六十四歲年齡標準化盛行率每十萬人一百十九人。真正的差別在時間：二○一三年《Psychological Medicine》比較二百三十五位年輕型與一百六十七位晚發型，從症狀到診斷平均四點四年對二點八年，額顳葉型與發病愈輕者等得愈久。二○二四年《JAMA Neurology》用英國生物樣本庫三十五萬六千多人，從三十九個候選因子篩出十五個與年輕型失智相關，多數可改變。',
-  tag: '失智症與認知退化 · 時事',
+  desc: '衛福部發文給藥師公會全聯會與各縣市公會，要求藥師遇到桃園觀音觀興診所開立的處方箋一律拒絕調劑，並通報地方衛生局與食藥署；該診所負責人吳容忍醫師自八月三日起被暫停處方、使用、調劑管制藥品，九月二十四日作成處分，全聯會十月六日轉知會員。四月十五日的搜索查扣史蒂諾斯兩萬一千九百二十四粒、美得眠八百四十六粒與一千六百多萬元現金，八月底桃園地檢署依毒品危害防制條例起訴，求刑十二年、併科罰金一千三百萬元。史蒂諾斯的成分 zolpidem 列第四級管制藥品，美得眠的成分 flunitrazepam（FM2）列第三級，分級看的是濫用潛勢而非藥效強弱。二○一九年四月三十日美國 FDA 替 zolpidem、eszopiclone、zaleplon 加上盒裝警語，二十六年間六十六例複雜性睡眠行為導致嚴重傷害、二十例死亡，其中六十一例是 zolpidem。Schifano 等人二○一九年分析歐洲藥品管理局通報系統，Z 類藥物誤用、濫用、依賴與戒斷通報共三萬三千二百四十筆、約六千二百四十六名病人。',
+  tag: '睡眠與大腦 · 時事',
 };
 const related = [
-  { out: '2026-10-23-young-onset-dementia-policy-3-0.html', nav: '本篇', title: '「未滿五十歲也算」——失智3.0把年輕失智寫進延緩病程那格，而這群人要多等一年半才拿到診斷' },
+  { out: '2026-10-24-controlled-hypnotic-diversion-pharmacy-gate.html', nav: '本篇', title: '「這張處方箋請不要調劑」——那間診所被查扣兩萬一千顆史蒂諾斯，而藥局櫃台成了最後一道關卡' },
+  { out: '2026-10-13-sleeping-pill-five-hundred-million-bbti.html', nav: '安眠藥用量', title: '「平均每天一百三十八萬顆」——安眠藥用量首破五億顆那天，醫界端出的替代方案不是另一顆藥' },
+  { out: '2026-10-02-insomnia-stroke-diagnosis-gap.html', nav: '失眠與中風', title: '「失眠者中風風險高二六%」——這個數字這週上了台灣新聞，而關鍵差別藏在「睡不好」與「失眠症」之間' },
+  { out: '2026-10-23-young-onset-dementia-policy-3-0.html', nav: '年輕失智', title: '「未滿五十歲也算」——失智3.0把年輕失智寫進延緩病程那格，而這群人要多等一年半才拿到診斷' },
   { out: '2026-10-22-extreme-heat-air-pollution-brain.html', nav: '高溫空汙', title: '「連續三天四十度」——那場兵推把熱傷害寫進第一階段，而停電就在同一格' },
   { out: '2026-10-21-chronic-subdural-hematoma-delayed.html', nav: '慢性血腫', title: '「當下看起來沒事」——那顆幾週後才長出症狀的血腫，病歷上只有五成九查得到撞擊' },
-  { out: '2026-10-20-young-stroke-incidence-83.html', nav: '年輕中風', title: '「每晚十一點睡，還是中風了」——那個「年輕中風增83%」的數字，算的是美國五個郡' },
-  { out: '2026-10-14-grip-strength-dementia.html', nav: '握力與失智', title: '「握力每少五公斤」——今天那則失智新聞的數字，在原始論文裡其實有兩個版本' },
-  { out: '2026-10-05-vision-loss-dementia-adult-checkup.html', nav: '視力與失智', title: '「十月一號以後才算」——健康幣吵到第五天還在吵回溯，而那張八百幣的健檢表單上，眼睛從頭到尾沒被量過' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
