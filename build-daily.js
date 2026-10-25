@@ -6,20 +6,20 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.24';
-const SERIES = '睡眠與大腦';
+const DATE = '2026.10.25';
+const SERIES = '腦部感染與疫苗';
 
 const article = {
-  md:  '2026-10-24-controlled-hypnotic-diversion-pharmacy-gate.md',
-  out: '2026-10-24-controlled-hypnotic-diversion-pharmacy-gate.html',
+  md:  '2026-10-25-enterovirus-d68-acute-flaccid-myelitis.md',
+  out: '2026-10-25-enterovirus-d68-acute-flaccid-myelitis.html',
   title: '',
-  desc: '衛福部發文給藥師公會全聯會與各縣市公會，要求藥師遇到桃園觀音觀興診所開立的處方箋一律拒絕調劑，並通報地方衛生局與食藥署；該診所負責人吳容忍醫師自八月三日起被暫停處方、使用、調劑管制藥品，九月二十四日作成處分，全聯會十月六日轉知會員。四月十五日的搜索查扣史蒂諾斯兩萬一千九百二十四粒、美得眠八百四十六粒與一千六百多萬元現金，八月底桃園地檢署依毒品危害防制條例起訴，求刑十二年、併科罰金一千三百萬元。史蒂諾斯的成分 zolpidem 列第四級管制藥品，美得眠的成分 flunitrazepam（FM2）列第三級，分級看的是濫用潛勢而非藥效強弱。二○一九年四月三十日美國 FDA 替 zolpidem、eszopiclone、zaleplon 加上盒裝警語，二十六年間六十六例複雜性睡眠行為導致嚴重傷害、二十例死亡，其中六十一例是 zolpidem。Schifano 等人二○一九年分析歐洲藥品管理局通報系統，Z 類藥物誤用、濫用、依賴與戒斷通報共三萬三千二百四十筆、約六千二百四十六名病人。',
-  tag: '睡眠與大腦 · 時事',
+  desc: '疾管署十月十三日公布第四十週（十月四日到十月十日）腸病毒門急診就診九千零一人次，較前一週下降一成二八；今年累計七例腸病毒感染併發重症、含一例死亡，其中五例是 D68 型，克沙奇 A4 型與 A16 型各一例，社區以克沙奇 A6 型最多、D68 居次。D68 的症狀以發燒、流鼻水、咳嗽為主，較少疱疹性咽峽炎或手足口症；二○一七年十二月二十六日疾管署以致醫界通函第三四二號修訂重症通報定義，納入無手足口病卻伴隨腦幹腦炎或急性無力脊髓炎的個案。九月一日公布的北部一歲多男童經三次就醫、兩度住院才驗出 D68，頸椎核磁共振顯示脊髓炎。Hixon 等人二○一九年《Viruses》回顧指出二○一四年後流行株的神經致病性與歷史株不同，病毒可沿周邊運動神經逆向軸突運輸進入中樞；Martin 等人二○一七年《Neurology》追蹤科羅拉多十二名個案，八人完成一年追蹤、六人仍有運動功能缺損。',
+  tag: '腦部感染與疫苗 · 時事',
 };
 const related = [
-  { out: '2026-10-24-controlled-hypnotic-diversion-pharmacy-gate.html', nav: '本篇', title: '「這張處方箋請不要調劑」——那間診所被查扣兩萬一千顆史蒂諾斯，而藥局櫃台成了最後一道關卡' },
-  { out: '2026-10-13-sleeping-pill-five-hundred-million-bbti.html', nav: '安眠藥用量', title: '「平均每天一百三十八萬顆」——安眠藥用量首破五億顆那天，醫界端出的替代方案不是另一顆藥' },
-  { out: '2026-10-02-insomnia-stroke-diagnosis-gap.html', nav: '失眠與中風', title: '「失眠者中風風險高二六%」——這個數字這週上了台灣新聞，而關鍵差別藏在「睡不好」與「失眠症」之間' },
+  { out: '2026-10-25-enterovirus-d68-acute-flaccid-myelitis.html', nav: '本篇', title: '「嘴巴裡沒有破洞」——腸病毒就診數在降，今年七例重症裡卻有五例是那個看起來像感冒的 D68' },
+  { out: '2026-10-15-influenza-encephalopathy-ane.html', nav: '流感腦病變', title: '「46死全為H1N1」——流感疫情連三週緩降那天，另一條併發症路線的死亡率是四成一' },
+  { out: '2026-10-24-controlled-hypnotic-diversion-pharmacy-gate.html', nav: '管制安眠藥', title: '「這張處方箋請不要調劑」——那間診所被查扣兩萬一千顆史蒂諾斯，而藥局櫃台成了最後一道關卡' },
   { out: '2026-10-23-young-onset-dementia-policy-3-0.html', nav: '年輕失智', title: '「未滿五十歲也算」——失智3.0把年輕失智寫進延緩病程那格，而這群人要多等一年半才拿到診斷' },
   { out: '2026-10-22-extreme-heat-air-pollution-brain.html', nav: '高溫空汙', title: '「連續三天四十度」——那場兵推把熱傷害寫進第一階段，而停電就在同一格' },
   { out: '2026-10-21-chronic-subdural-hematoma-delayed.html', nav: '慢性血腫', title: '「當下看起來沒事」——那顆幾週後才長出症狀的血腫，病歷上只有五成九查得到撞擊' },
