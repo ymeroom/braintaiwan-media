@@ -6,19 +6,19 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.25';
-const SERIES = '腦部感染與疫苗';
+const DATE = '2026.10.26';
+const SERIES = '飲食、酒精與神經毒性';
 
 const article = {
-  md:  '2026-10-25-enterovirus-d68-acute-flaccid-myelitis.md',
-  out: '2026-10-25-enterovirus-d68-acute-flaccid-myelitis.html',
+  md:  '2026-10-26-etomidate-space-oil-neurotoxicity.md',
+  out: '2026-10-26-etomidate-space-oil-neurotoxicity.html',
   title: '',
-  desc: '疾管署十月十三日公布第四十週（十月四日到十月十日）腸病毒門急診就診九千零一人次，較前一週下降一成二八；今年累計七例腸病毒感染併發重症、含一例死亡，其中五例是 D68 型，克沙奇 A4 型與 A16 型各一例，社區以克沙奇 A6 型最多、D68 居次。D68 的症狀以發燒、流鼻水、咳嗽為主，較少疱疹性咽峽炎或手足口症；二○一七年十二月二十六日疾管署以致醫界通函第三四二號修訂重症通報定義，納入無手足口病卻伴隨腦幹腦炎或急性無力脊髓炎的個案。九月一日公布的北部一歲多男童經三次就醫、兩度住院才驗出 D68，頸椎核磁共振顯示脊髓炎。Hixon 等人二○一九年《Viruses》回顧指出二○一四年後流行株的神經致病性與歷史株不同，病毒可沿周邊運動神經逆向軸突運輸進入中樞；Martin 等人二○一七年《Neurology》追蹤科羅拉多十二名個案，八人完成一年追蹤、六人仍有運動功能缺損。',
-  tag: '腦部感染與疫苗 · 時事',
+  desc: '教育部長鄭英耀二○二六年十月二十二日赴立法院教育及文化委員會報告校園毒品防制，指出依托咪酯（俗稱喪屍煙彈）自一一三年起已是學生接觸毒品第二名，僅次於K他命；一一四年完成五萬多班入班宣導、宣導率百分之百，一一五年截至九月再完成四萬八千多班，唾液快篩仍待《毒品危害防制條例》修法。林惠如二○二六年《Toxics》分析二○二五年一至七月東台灣查扣的四百九十六件電子煙油，四百零一件（八成零八）驗出精神作用物質，其中依托咪酯佔八成七、isopropoxate 佔兩成五四，三成五四為多成分檢體。依托咪酯為一九七○年代上市的靜脈麻醉誘導藥，作用於 GABA-A 受體；Luan 等人二○一五年《Brazilian Journal of Medical and Biological Research》隨機對照試驗顯示未預先給藥的對照組三十人中十九人（六成三三）於誘導時出現肌抽躍。Chung 等人二○二五年《Hong Kong Medical Journal》報告三名香港青少年因吸食而腎上腺功能不全，其中一名十六歲少年每週使用一次持續一個月，出現意識混亂、失眠與步態不穩；一九八四年《New England Journal of Medicine》已證實依托咪酯抑制腎上腺 11β-羥化酶。薛柏蓉與魏連忠二○二六年於《Drug Testing and Analysis》指出，煙油主角常是結構改造過的類似物，常規尿液篩檢未必驗得到。',
+  tag: '飲食、酒精與神經毒性 · 時事',
 };
 const related = [
-  { out: '2026-10-25-enterovirus-d68-acute-flaccid-myelitis.html', nav: '本篇', title: '「嘴巴裡沒有破洞」——腸病毒就診數在降，今年七例重症裡卻有五例是那個看起來像感冒的 D68' },
-  { out: '2026-10-15-influenza-encephalopathy-ane.html', nav: '流感腦病變', title: '「46死全為H1N1」——流感疫情連三週緩降那天，另一條併發症路線的死亡率是四成一' },
+  { out: '2026-10-26-etomidate-space-oil-neurotoxicity.html', nav: '本篇', title: '「僅次於K他命」——依托咪酯躍上學生接觸毒品第二名，而東台灣那批查扣煙油裡，八成七驗出它' },
+  { out: '2026-10-25-enterovirus-d68-acute-flaccid-myelitis.html', nav: '腸病毒 D68', title: '「嘴巴裡沒有破洞」——腸病毒就診數在降，今年七例重症裡卻有五例是那個看起來像感冒的 D68' },
   { out: '2026-10-24-controlled-hypnotic-diversion-pharmacy-gate.html', nav: '管制安眠藥', title: '「這張處方箋請不要調劑」——那間診所被查扣兩萬一千顆史蒂諾斯，而藥局櫃台成了最後一道關卡' },
   { out: '2026-10-23-young-onset-dementia-policy-3-0.html', nav: '年輕失智', title: '「未滿五十歲也算」——失智3.0把年輕失智寫進延緩病程那格，而這群人要多等一年半才拿到診斷' },
   { out: '2026-10-22-extreme-heat-air-pollution-brain.html', nav: '高溫空汙', title: '「連續三天四十度」——那場兵推把熱傷害寫進第一階段，而停電就在同一格' },
