@@ -6,25 +6,24 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.26';
-const SERIES = '飲食、酒精與神經毒性';
+const DATE = '2026.10.27';
+const SERIES = '代謝與血管危險因子';
 
 const article = {
-  md:  '2026-10-26-etomidate-space-oil-neurotoxicity.md',
-  out: '2026-10-26-etomidate-space-oil-neurotoxicity.html',
+  md:  '2026-10-27-oral-semaglutide-brain-appetite-absorption.md',
+  out: '2026-10-27-oral-semaglutide-brain-appetite-absorption.html',
   title: '',
-  desc: '教育部長鄭英耀二○二六年十月二十二日赴立法院教育及文化委員會報告校園毒品防制，指出依托咪酯（俗稱喪屍煙彈）自一一三年起已是學生接觸毒品第二名，僅次於K他命；一一四年完成五萬多班入班宣導、宣導率百分之百，一一五年截至九月再完成四萬八千多班，唾液快篩仍待《毒品危害防制條例》修法。林惠如二○二六年《Toxics》分析二○二五年一至七月東台灣查扣的四百九十六件電子煙油，四百零一件（八成零八）驗出精神作用物質，其中依托咪酯佔八成七、isopropoxate 佔兩成五四，三成五四為多成分檢體。依托咪酯為一九七○年代上市的靜脈麻醉誘導藥，作用於 GABA-A 受體；Luan 等人二○一五年《Brazilian Journal of Medical and Biological Research》隨機對照試驗顯示未預先給藥的對照組三十人中十九人（六成三三）於誘導時出現肌抽躍。Chung 等人二○二五年《Hong Kong Medical Journal》報告三名香港青少年因吸食而腎上腺功能不全，其中一名十六歲少年每週使用一次持續一個月，出現意識混亂、失眠與步態不穩；一九八四年《New England Journal of Medicine》已證實依托咪酯抑制腎上腺 11β-羥化酶。薛柏蓉與魏連忠二○二六年於《Drug Testing and Analysis》指出，煙油主角常是結構改造過的類似物，常規尿液篩檢未必驗得到。',
-  tag: '飲食、酒精與神經毒性 · 時事',
+  desc: '衛生福利部新營醫院肥胖專科醫師翁靖惠二○二六年十月二十六日提出口服瑞倍適的「811 口訣」：空腹八小時、約一百毫升清水整粒吞服、服後禁食禁水一小時，並指出部分患者減重不如預期源於未守空腹、飲水過量或自行將藥錠剝半。瑞倍適中文仿單規定空腹、約一百二十毫升水整粒吞服、服後三十分鐘內勿進食飲水或併服其他藥品；美國仿單載明該劑型絕對生體可用率僅約百分之零點四至百分之一。Buckley 等人二○一八年《Science Translational Medicine》指出 semaglutide 靠吸收促進劑 SNAC 在錠片貼附的胃壁局部提高酸鹼值、以穿細胞方式自胃吸收，且促進作用短暫。Gabery 等人二○二○年《JCI Insight》顯示 semaglutide 不穿越血腦障壁，而是作用於環腦室器官並擴散至下視丘弓狀核、活化 POMC/CART 神經元。Knop 等人二○二三年《The Lancet》OASIS 1 收六百六十七人，五十毫克六十八週減重百分之十五點一對安慰劑百分之二點四；Wharton 等人二○二五年《New England Journal of Medicine》OASIS 4 以二十五毫克六十四週減重百分之十三點六對百分之二點二。台灣瑞倍適核准適應症為第二型糖尿病，規格三、七、十四毫克。食藥署二○二六年七月三十日要求 semaglutide 與 tirzepatide 成分藥品補上病人用藥安全指引，體重控制用途不良反應通報累計四十八件，含癲癇、暈眩、喪失意識、暈厥與疑似眼中風。眼中風即非動脈炎性前段缺血性視神經病變：Hathaway 等人二○二四年《JAMA Ophthalmology》風險比七點六四，Cai 等人二○二五年十四個資料庫約三千七百一十萬人發生率比一點三二，Abdelaal 等人二○二六年《Ophthalmology》統合分析勝算比二點四四但跨過一、證據等級極低。',
+  tag: '代謝與血管危險因子 · 時事',
 };
 const related = [
-  { out: '2026-10-26-etomidate-space-oil-neurotoxicity.html', nav: '本篇', title: '「僅次於K他命」——依托咪酯躍上學生接觸毒品第二名，而東台灣那批查扣煙油裡，八成七驗出它' },
+  { out: '2026-10-27-oral-semaglutide-brain-appetite-absorption.html', nav: '本篇', title: '「有人為了省錢把藥錠剝半」——那顆口服瘦瘦丸的吸收率不到百分之一，而它要說服的受體長在腦子裡' },
+  { out: '2026-10-26-etomidate-space-oil-neurotoxicity.html', nav: '喪屍煙彈', title: '「僅次於K他命」——依托咪酯躍上學生接觸毒品第二名，而東台灣那批查扣煙油裡，八成七驗出它' },
   { out: '2026-10-25-enterovirus-d68-acute-flaccid-myelitis.html', nav: '腸病毒 D68', title: '「嘴巴裡沒有破洞」——腸病毒就診數在降，今年七例重症裡卻有五例是那個看起來像感冒的 D68' },
   { out: '2026-10-24-controlled-hypnotic-diversion-pharmacy-gate.html', nav: '管制安眠藥', title: '「這張處方箋請不要調劑」——那間診所被查扣兩萬一千顆史蒂諾斯，而藥局櫃台成了最後一道關卡' },
   { out: '2026-10-23-young-onset-dementia-policy-3-0.html', nav: '年輕失智', title: '「未滿五十歲也算」——失智3.0把年輕失智寫進延緩病程那格，而這群人要多等一年半才拿到診斷' },
   { out: '2026-10-22-extreme-heat-air-pollution-brain.html', nav: '高溫空汙', title: '「連續三天四十度」——那場兵推把熱傷害寫進第一階段，而停電就在同一格' },
-  { out: '2026-10-21-chronic-subdural-hematoma-delayed.html', nav: '慢性血腫', title: '「當下看起來沒事」——那顆幾週後才長出症狀的血腫，病歷上只有五成九查得到撞擊' },
 ];
-
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 function inline(s){
