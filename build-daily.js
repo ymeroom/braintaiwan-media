@@ -6,23 +6,23 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.10.27';
-const SERIES = '代謝與血管危險因子';
+const DATE = '2026.10.28';
+const SERIES = '動作障礙';
 
 const article = {
-  md:  '2026-10-27-oral-semaglutide-brain-appetite-absorption.md',
-  out: '2026-10-27-oral-semaglutide-brain-appetite-absorption.html',
+  md:  '2026-10-28-parkinson-boxing-exercise-evidence.md',
+  out: '2026-10-28-parkinson-boxing-exercise-evidence.html',
   title: '',
-  desc: '衛生福利部新營醫院肥胖專科醫師翁靖惠二○二六年十月二十六日提出口服瑞倍適的「811 口訣」：空腹八小時、約一百毫升清水整粒吞服、服後禁食禁水一小時，並指出部分患者減重不如預期源於未守空腹、飲水過量或自行將藥錠剝半。瑞倍適中文仿單規定空腹、約一百二十毫升水整粒吞服、服後三十分鐘內勿進食飲水或併服其他藥品；美國仿單載明該劑型絕對生體可用率僅約百分之零點四至百分之一。Buckley 等人二○一八年《Science Translational Medicine》指出 semaglutide 靠吸收促進劑 SNAC 在錠片貼附的胃壁局部提高酸鹼值、以穿細胞方式自胃吸收，且促進作用短暫。Gabery 等人二○二○年《JCI Insight》顯示 semaglutide 不穿越血腦障壁，而是作用於環腦室器官並擴散至下視丘弓狀核、活化 POMC/CART 神經元。Knop 等人二○二三年《The Lancet》OASIS 1 收六百六十七人，五十毫克六十八週減重百分之十五點一對安慰劑百分之二點四；Wharton 等人二○二五年《New England Journal of Medicine》OASIS 4 以二十五毫克六十四週減重百分之十三點六對百分之二點二。台灣瑞倍適核准適應症為第二型糖尿病，規格三、七、十四毫克。食藥署二○二六年七月三十日要求 semaglutide 與 tirzepatide 成分藥品補上病人用藥安全指引，體重控制用途不良反應通報累計四十八件，含癲癇、暈眩、喪失意識、暈厥與疑似眼中風。眼中風即非動脈炎性前段缺血性視神經病變：Hathaway 等人二○二四年《JAMA Ophthalmology》風險比七點六四，Cai 等人二○二五年十四個資料庫約三千七百一十萬人發生率比一點三二，Abdelaal 等人二○二六年《Ophthalmology》統合分析勝算比二點四四但跨過一、證據等級極低。',
-  tag: '代謝與血管危險因子 · 時事',
+  desc: '二○二六年諾貝爾文學獎得主、七十六歲加拿大詩人安妮．卡森每週三堂拳擊課對抗巴金森氏症，聯合報二○二六年十月十七日報導、世界日報十月二十七日轉載，雙和醫院醫師柯子翔指出拳擊可訓練神經連結、擺動幅度與平衡，但藥物治療不可取代。巴金森氏症的核心失能是基底核把動作幅度調小，外部節拍與指令可繞過內部校正。Sangarapillai 等人二○二一年《Neurorehabilitation and Neural Repair》唯一雙盲頭對頭試驗收四十人、二十週，感覺注意力訓練 PD SAFEx 的動作表現優於拳擊組且停訓後效果留存。van der Kolk 等人二○一九年《The Lancet Neurology》Park-in-Shape 讓早期病人在家有氧騎車六個月、每週三次三十至四十五分鐘，於停藥十二小時以上關期評分，動作分數差四點二分（95% CI 一點六至六點九，p＝0.0020）。Schenkman 等人二○一八年《JAMA Neurology》SPARX 二期以最大心率百分之八十至八十五的高強度組六個月僅退零點三分、對照組退三點二分，中強度組未達標。Johansson 等人二○二二年《Annals of Neurology》腦影像顯示有氧組前側紋狀體與感覺動作皮質功能性連結增強。能否改變病程仍待 SPARX3（NCT04284436，三百七十人、十八個月治療）。台灣約八萬名病人，台灣動作障礙學會二○二六年一月研討會的公眾建議為運動重在規律而非強度。',
+  tag: '動作障礙 · 時事',
 };
 const related = [
-  { out: '2026-10-27-oral-semaglutide-brain-appetite-absorption.html', nav: '本篇', title: '「有人為了省錢把藥錠剝半」——那顆口服瘦瘦丸的吸收率不到百分之一，而它要說服的受體長在腦子裡' },
+  { out: '2026-10-28-parkinson-boxing-exercise-evidence.html', nav: '本篇', title: '「教練報一個數字，她就要打出對應的那組拳」——諾貝爾文學獎得主靠拳擊對抗巴金森，而唯一的雙盲試驗裡拳擊沒有贏' },
+  { out: '2026-10-27-oral-semaglutide-brain-appetite-absorption.html', nav: '口服瘦瘦丸', title: '「有人為了省錢把藥錠剝半」——那顆口服瘦瘦丸的吸收率不到百分之一，而它要說服的受體長在腦子裡' },
   { out: '2026-10-26-etomidate-space-oil-neurotoxicity.html', nav: '喪屍煙彈', title: '「僅次於K他命」——依托咪酯躍上學生接觸毒品第二名，而東台灣那批查扣煙油裡，八成七驗出它' },
   { out: '2026-10-25-enterovirus-d68-acute-flaccid-myelitis.html', nav: '腸病毒 D68', title: '「嘴巴裡沒有破洞」——腸病毒就診數在降，今年七例重症裡卻有五例是那個看起來像感冒的 D68' },
   { out: '2026-10-24-controlled-hypnotic-diversion-pharmacy-gate.html', nav: '管制安眠藥', title: '「這張處方箋請不要調劑」——那間診所被查扣兩萬一千顆史蒂諾斯，而藥局櫃台成了最後一道關卡' },
   { out: '2026-10-23-young-onset-dementia-policy-3-0.html', nav: '年輕失智', title: '「未滿五十歲也算」——失智3.0把年輕失智寫進延緩病程那格，而這群人要多等一年半才拿到診斷' },
-  { out: '2026-10-22-extreme-heat-air-pollution-brain.html', nav: '高溫空汙', title: '「連續三天四十度」——那場兵推把熱傷害寫進第一階段，而停電就在同一格' },
 ];
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
