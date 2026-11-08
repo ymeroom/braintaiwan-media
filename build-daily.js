@@ -6,19 +6,19 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.11.07';
-const SERIES = '天氣與頭痛';
+const DATE = '2026.11.08';
+const SERIES = '情緒壓力與腦中風';
 
 const article = {
-  md:  '2026-11-07-barometric-pressure-migraine.md',
-  out: '2026-11-07-barometric-pressure-migraine.html',
+  md:  '2026-11-08-stock-crash-emotional-trigger-stroke.md',
+  out: '2026-11-08-stock-crash-emotional-trigger-stroke.html',
   title: '',
-  desc: "十一月七日各家天氣稿講的是同一波東北季風：今天、明天帶雨，八日稍歇，九日週一另一波增強，氣象署預報員曾昭誠說下週二到週三清晨最涼，北台灣白天低溫十八到二十度，氣象專家吳德榮估北部平地最低約十六度，宜蘭、花蓮這兩天防大雨。本文從神經科角度追問「變天就頭痛」這句話在資料裡剩下多少：日本獨協醫科大學 Kimoto 等人二○一一年用一整年的頭痛日記比對發作日前後兩天的氣壓，發現被對應到的是斜率而非絕對值——頭痛那天氣壓比隔天低超過五個百帕時發作變多、比兩天後高超過五個百帕時發作變少（*Internal Medicine*, 2011;50(18):1923–1928，DOI: 10.2169/internalmedicine.50.5640）；Okuma 等人二○一五年則指出相對標準大氣壓一○一三百帕下降六到十百帕時發作最密，約一○○三到一○○七百帕（*SpringerPlus*, 2015;4:790，DOI: 10.1186/s40064-015-1592-4）。但維也納 Zebenholzer 等人兩百三十八人、九十天、兩萬零五百五十三個人日的前瞻日記研究，結論是天氣影響「小而可疑」（*Cephalalgia*, 2011;31(4):391–400）；二○二五年十一月十四篇研究的系統性回顧也只在「發作頻率」這一欄看到較一致的訊號，強度零散、持續時間無關（*Cureus*, 2025;17(11):e96821）。台北社區調查的偏頭痛盛行率是百分之九點一，而氣壓是誘因清單上唯一不能移除的那一項。",
-  tag: '天氣與頭痛 · 時事',
+  desc: "十一月六日台股盤中最大跌三千七百三十七點，終場收三萬九千七百零一點、跌百分之四點五一，四萬點失守；一週累計跌五千五百一十點（百分之十二點一九），財政部宣布國安基金自十一月九日起啟動第十次安定市場任務，金管會限空措施同日上路。本文從神經科角度追問盯盤那一個小時的事：二○二二年 INTERSTROKE 用病例交叉設計收三十二國、一萬三千四百六十二位首次中風病人，比對發作前一小時與前一天同時段，發作前一小時處於生氣或情緒激動者一千二百三十三人（百分之九點二），所有中風勝算比一點三七（99% CI 1.15–1.64）、缺血性一點二二、腦出血二點零五（1.40–2.99），劇烈體力活動只與腦出血有關（一點六二，1.03–2.55）（*European Heart Journal*, 2022;43(3):202–209，DOI: 10.1093/eurheartj/ehab738）。台灣本地資料亦見同一條線：二○一二年總體資料研究指出熊市與崩盤後中風發生率較高（*Social Science & Medicine*, 2012;75(11):1974–1980），二○一五年另一組二○○○至二○○九年資料顯示融資餘額上升後第三天與第六天中風住院增加，集中於男性與四十五至七十四歲（*Journal of Urban Health*, 2015;92(5):995–1006）。台灣腦中風學會十月二十七日公布：每年新增約四萬五千名缺血性腦中風、五到六成重度失能，黃金時間內接受急性處置者僅百分之八點五。",
+  tag: '情緒壓力與腦中風 · 時事',
 };
 const related = [
-  { out: '2026-11-07-barometric-pressure-migraine.html', nav: '本篇', title: '「下週二清晨最涼」——氣象署把這波的低點排在十六度，而偏頭痛那一側在動的不是溫度，是掉下去的那幾個百帕' },
-  { out: '2026-10-17-medication-overuse-headache.html', nav: '止痛藥門檻', title: '「每月四次就該評估」——藥師說的愈吃愈痛，門檻寫在分類表第 8.2 條' },
+  { out: '2026-11-08-stock-crash-emotional-trigger-stroke.html', nav: '本篇', title: '「盤中最大跌三千七百三十七點」——國安基金週一進場，而腦血管那一側在算的是你盯著綠色螢幕的那一個小時' },
+  { out: '2026-11-07-barometric-pressure-migraine.html', nav: '氣壓與偏頭痛', title: '「下週二清晨最涼」——氣象署把這波的低點排在十六度，而偏頭痛那一側在動的不是溫度，是掉下去的那幾個百帕' },
   { out: '2026-11-06-lidong-tonic-rice-wine-alcohol-brain.html', nav: '進補與酒精', title: '「一元加購料理米酒」——立冬明天下午五點五十二分到，而那鍋燉滿一小時的酒還留著四分之一' },
   { out: '2026-11-05-prediabetes-small-fiber-neuropathy.html', nav: '血糖與神經', title: '「不到八人就一人」——國健署前天把糖尿病盛行率十三點一攤開來，而周邊神經從來不認六點五那條線' },
   { out: '2026-11-04-ultrafine-particles-olfactory-nerve-brain.html', nav: '空汙與腦', title: '「二十一點三二、二十點三五、十九點七」——林園工業區旁那三個測站的數字進不了高雄的年均，而真正鑽進腦子的那一種連秤都秤不出來' },
