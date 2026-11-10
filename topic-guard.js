@@ -39,7 +39,7 @@ const TAXONOMY = [
   { id: 'epilepsy', label: '癲癇與意識障礙',
     kw: ['癲癇', '抽搐', '痙攣', '昏迷', '暈厥', '失神', 'seizure', 'epilepsy'] },
   { id: 'movement', label: '動作障礙',
-    kw: ['帕金森', '顫抖', '手抖', '肌張力', '運動失調', '舞蹈症', '步態', 'parkinson', 'tremor'] },
+    kw: ['帕金森', '巴金森', '動作障礙', '多巴胺', '黑質', '顫抖', '手抖', '肌張力', '運動失調', '舞蹈症', '步態', 'parkinson', 'tremor'] },
   { id: 'neuro-trauma', label: '頭部外傷與腦震盪',
     kw: ['腦震盪', '頭部外傷', '硬膜下', '硬膜外', '撞擊', '跌倒', '安全帽', '頭槌', 'concussion', 'hematoma'] },
   { id: 'nutrition-toxin', label: '飲食、酒精與神經毒性',

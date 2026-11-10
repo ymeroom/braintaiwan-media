@@ -6,22 +6,22 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.11.08';
-const SERIES = '情緒壓力與腦中風';
+const DATE = '2026.11.10';
+const SERIES = '巴金森氏症與動作障礙';
 
 const article = {
-  md:  '2026-11-08-stock-crash-emotional-trigger-stroke.md',
-  out: '2026-11-08-stock-crash-emotional-trigger-stroke.html',
+  md:  '2026-11-10-parkinson-prodrome-protein-clearance.md',
+  out: '2026-11-10-parkinson-prodrome-protein-clearance.html',
   title: '',
-  desc: "十一月六日台股盤中最大跌三千七百三十七點，終場收三萬九千七百零一點、跌百分之四點五一，四萬點失守；一週累計跌五千五百一十點（百分之十二點一九），財政部宣布國安基金自十一月九日起啟動第十次安定市場任務，金管會限空措施同日上路。本文從神經科角度追問盯盤那一個小時的事：二○二二年 INTERSTROKE 用病例交叉設計收三十二國、一萬三千四百六十二位首次中風病人，比對發作前一小時與前一天同時段，發作前一小時處於生氣或情緒激動者一千二百三十三人（百分之九點二），所有中風勝算比一點三七（99% CI 1.15–1.64）、缺血性一點二二、腦出血二點零五（1.40–2.99），劇烈體力活動只與腦出血有關（一點六二，1.03–2.55）（*European Heart Journal*, 2022;43(3):202–209，DOI: 10.1093/eurheartj/ehab738）。台灣本地資料亦見同一條線：二○一二年總體資料研究指出熊市與崩盤後中風發生率較高（*Social Science & Medicine*, 2012;75(11):1974–1980），二○一五年另一組二○○○至二○○九年資料顯示融資餘額上升後第三天與第六天中風住院增加，集中於男性與四十五至七十四歲（*Journal of Urban Health*, 2015;92(5):995–1006）。台灣腦中風學會十月二十七日公布：每年新增約四萬五千名缺血性腦中風、五到六成重度失能，黃金時間內接受急性處置者僅百分之八點五。",
-  tag: '情緒壓力與腦中風 · 時事',
+  desc: "第八屆台灣國際巴金森氏症與動作障礙醫學研討會十一月六日至八日在台北國際會議中心舉行，主辦的台灣動作障礙學會今年成立二十週年，會議焦點之一是如何清除腦內異常堆積的 α-突觸核蛋白。本文從「時間」這條線追問：一九九一年 Fearnley 與 Lees 的屍腦研究算出，症狀剛出現時黑質外下側已流失百分之六十八的細胞、整個尾側黑質平均流失百分之四十八，無聲的症狀前期約五年（*Brain*, 1991;114(5):2283–2301，DOI: 10.1093/brain/114.5.2283）。Braak 二○○三年的病理分期指出堆積起點在嗅球前端與迷走神經背核，黑質要到第三期才輪到（*Neurobiology of Aging*, 2003;24(2):197–211）。二○一九年二十四個中心、一千二百八十位快速動眼期睡眠行為障礙病人的追蹤顯示，每年百分之六點三轉變、十二年累積百分之七十三點五、中位八年（*Brain*, 2019;142(3):744–759，DOI: 10.1093/brain/awz030）。另一條更長的線來自上週台灣媒體轉載的 UCLA PEG 研究：八百二十九位病人對八百二十四位對照，長期住家暴露陶斯松勝算比二點六八（一點五八到四點五五）、工作場所暴露最久者二點七四，小鼠吸入霧化陶斯松十一週後黑質酪胺酸羥化酶陽性神經元減少百分之二十六（*Molecular Neurodegeneration*, 2025;21(1):3，DOI: 10.1186/s13024-025-00915-z）。台灣二○○二至二○○九年四十歲以上盛行率上升百分之八十七點三、發生率僅上升百分之九點二（*Parkinson's Disease*, 2016;2016:8756359）。",
+  tag: '巴金森氏症與動作障礙 · 時事',
 };
 const related = [
-  { out: '2026-11-08-stock-crash-emotional-trigger-stroke.html', nav: '本篇', title: '「盤中最大跌三千七百三十七點」——國安基金週一進場，而腦血管那一側在算的是你盯著綠色螢幕的那一個小時' },
+  { out: '2026-11-10-parkinson-prodrome-protein-clearance.html', nav: '本篇', title: '「怎麼把堆在腦子裡的那個蛋白清掉」——第八屆巴金森研討會前天在台北收場，而黑質那一側的帳在手抖出現之前就扣掉了快七成' },
+  { out: '2026-11-08-stock-crash-emotional-trigger-stroke.html', nav: '情緒與中風', title: '「盤中最大跌三千七百三十七點」——國安基金週一進場，而腦血管那一側在算的是你盯著綠色螢幕的那一個小時' },
   { out: '2026-11-07-barometric-pressure-migraine.html', nav: '氣壓與偏頭痛', title: '「下週二清晨最涼」——氣象署把這波的低點排在十六度，而偏頭痛那一側在動的不是溫度，是掉下去的那幾個百帕' },
   { out: '2026-11-06-lidong-tonic-rice-wine-alcohol-brain.html', nav: '進補與酒精', title: '「一元加購料理米酒」——立冬明天下午五點五十二分到，而那鍋燉滿一小時的酒還留著四分之一' },
   { out: '2026-11-05-prediabetes-small-fiber-neuropathy.html', nav: '血糖與神經', title: '「不到八人就一人」——國健署前天把糖尿病盛行率十三點一攤開來，而周邊神經從來不認六點五那條線' },
-  { out: '2026-11-04-ultrafine-particles-olfactory-nerve-brain.html', nav: '空汙與腦', title: '「二十一點三二、二十點三五、十九點七」——林園工業區旁那三個測站的數字進不了高雄的年均，而真正鑽進腦子的那一種連秤都秤不出來' },
 ];
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
