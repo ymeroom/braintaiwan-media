@@ -6,22 +6,22 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.11.10';
-const SERIES = '巴金森氏症與動作障礙';
+const DATE = '2026.11.12';
+const SERIES = '癲癇與急診時效';
 
 const article = {
-  md:  '2026-11-10-parkinson-prodrome-protein-clearance.md',
-  out: '2026-11-10-parkinson-prodrome-protein-clearance.html',
+  md:  '2026-11-12-er-crowding-status-epilepticus.md',
+  out: '2026-11-12-er-crowding-status-epilepticus.html',
   title: '',
-  desc: "第八屆台灣國際巴金森氏症與動作障礙醫學研討會十一月六日至八日在台北國際會議中心舉行，主辦的台灣動作障礙學會今年成立二十週年，會議焦點之一是如何清除腦內異常堆積的 α-突觸核蛋白。本文從「時間」這條線追問：一九九一年 Fearnley 與 Lees 的屍腦研究算出，症狀剛出現時黑質外下側已流失百分之六十八的細胞、整個尾側黑質平均流失百分之四十八，無聲的症狀前期約五年（*Brain*, 1991;114(5):2283–2301，DOI: 10.1093/brain/114.5.2283）。Braak 二○○三年的病理分期指出堆積起點在嗅球前端與迷走神經背核，黑質要到第三期才輪到（*Neurobiology of Aging*, 2003;24(2):197–211）。二○一九年二十四個中心、一千二百八十位快速動眼期睡眠行為障礙病人的追蹤顯示，每年百分之六點三轉變、十二年累積百分之七十三點五、中位八年（*Brain*, 2019;142(3):744–759，DOI: 10.1093/brain/awz030）。另一條更長的線來自上週台灣媒體轉載的 UCLA PEG 研究：八百二十九位病人對八百二十四位對照，長期住家暴露陶斯松勝算比二點六八（一點五八到四點五五）、工作場所暴露最久者二點七四，小鼠吸入霧化陶斯松十一週後黑質酪胺酸羥化酶陽性神經元減少百分之二十六（*Molecular Neurodegeneration*, 2025;21(1):3，DOI: 10.1186/s13024-025-00915-z）。台灣二○○二至二○○九年四十歲以上盛行率上升百分之八十七點三、發生率僅上升百分之九點二（*Parkinson's Disease*, 2016;2016:8756359）。",
-  tag: '巴金森氏症與動作障礙 · 時事',
+  desc: "台大醫院副院長陳晉興十一月十日報告，急診單日來診超過三百人的天數去年八十八天、今年預估破百，中秋連假曾單日四百三十人次；當天上午六十五人在急診等床、院方已向一一九通報滿床，三十三床的內外科整合病房十二月一日試營運但初期只開十一床。本文把這則壅塞新聞換算成神經科的時間單位：二〇一五年國際抗癲癇聯盟把抽搐性癲癇持續狀態的 t1 釘在五分鐘、t2 釘在三十分鐘（*Epilepsia*, 2015;56(10):1515–1523，DOI: 10.1111/epi.13121）；二一八名難治型兒童的多中心研究顯示，第一劑苯二氮平類給得越晚，死亡率越高、越常需要持續輸注、抽搐越長、低血壓越頻繁（*JAMA Neurology*, 2018;75(4):410–418，DOI: 10.1001/jamaneurol.2017.4382）；ESETT 試驗則量出第一線無效後，左乙拉西坦、磷苯妥英與丙戊酸各約一半的病人在六十分鐘內停止抽搐，三組無差別（*New England Journal of Medicine*, 2019;381(22):2103–2113，DOI: 10.1056/NEJMoa1905795）。荷蘭三萬九千一百一十人的急診研究顯示壅塞時檢傷延遲從百分之十四點六升到百分之二十九點七、治療延遲從百分之七點三升到百分之十一點七，但十天死亡率無差異（*European Journal of Emergency Medicine*, 2016;23(5):337–343，DOI: 10.1097/MEJ.0000000000000268）。",
+  tag: '癲癇與急診時效 · 時事',
 };
 const related = [
-  { out: '2026-11-10-parkinson-prodrome-protein-clearance.html', nav: '本篇', title: '「怎麼把堆在腦子裡的那個蛋白清掉」——第八屆巴金森研討會前天在台北收場，而黑質那一側的帳在手抖出現之前就扣掉了快七成' },
+  { out: '2026-11-12-er-crowding-status-epilepticus.html', nav: '本篇', title: '「單日破三百人的天數今年會破百」——台大急診前天把這個數字攤開，而癲癇那一側的計時單位是五分鐘' },
+  { out: '2026-11-10-parkinson-prodrome-protein-clearance.html', nav: '巴金森症狀前期', title: '「怎麼把堆在腦子裡的那個蛋白清掉」——第八屆巴金森研討會前天在台北收場，而黑質那一側的帳在手抖出現之前就扣掉了快七成' },
   { out: '2026-11-08-stock-crash-emotional-trigger-stroke.html', nav: '情緒與中風', title: '「盤中最大跌三千七百三十七點」——國安基金週一進場，而腦血管那一側在算的是你盯著綠色螢幕的那一個小時' },
   { out: '2026-11-07-barometric-pressure-migraine.html', nav: '氣壓與偏頭痛', title: '「下週二清晨最涼」——氣象署把這波的低點排在十六度，而偏頭痛那一側在動的不是溫度，是掉下去的那幾個百帕' },
   { out: '2026-11-06-lidong-tonic-rice-wine-alcohol-brain.html', nav: '進補與酒精', title: '「一元加購料理米酒」——立冬明天下午五點五十二分到，而那鍋燉滿一小時的酒還留著四分之一' },
-  { out: '2026-11-05-prediabetes-small-fiber-neuropathy.html', nav: '血糖與神經', title: '「不到八人就一人」——國健署前天把糖尿病盛行率十三點一攤開來，而周邊神經從來不認六點五那條線' },
 ];
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
