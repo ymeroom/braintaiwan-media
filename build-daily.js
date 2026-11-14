@@ -6,22 +6,22 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.11.13';
-const SERIES = '失智症政策與早期辨識';
+const DATE = '2026.11.14';
+const SERIES = '產後睡眠與大腦';
 
 const article = {
-  md:  '2026-11-13-dementia-basic-act-mci.md',
-  out: '2026-11-13-dementia-basic-act-mci.html',
+  md:  '2026-11-14-maternity-leave-14-weeks-postpartum-sleep.md',
+  out: '2026-11-14-maternity-leave-14-weeks-postpartum-sleep.html',
   title: '',
-  desc: "立法院社福及衛環委員會十一月十一日逐條審查《失智症基本法》草案，整個上午只通過六個字的法條名稱；十二日續審，中央主管機關、失智症定義與輕度認知障礙是否納入保障範圍全部保留，衛福部次長呂建德同意彙整立委的十五個版本、明年一月十二日前提出綜合修正文字建議。本文把那條卡住的爭議放回神經科的數字裡：台灣全國調查顯示六十五歲以上輕度認知障礙年齡校正盛行率百分之十八點七，比失智症更常見（*PLoS ONE*, 2014;9(6):e100303，DOI: 10.1371/journal.pone.0100303）；衛福部委託國衛院的調查則給出失智症盛行率百分之七點九九。DIAN 研究一百二十八名顯性遺傳突變帶原者的時間軸顯示，腦脊髓液 β 類澱粉蛋白四十二在預期發病二十五年前就開始下降，tau 上升與海馬迴萎縮十五年前出現（*New England Journal of Medicine*, 2012;367(9):795–804，DOI: 10.1056/NEJMoa1202753）。國衛院分析指出二○二四年全台失智症診斷照護服務比率僅百分之六十七點六、十個縣市低於平均，而《Lancet》二○二四年失智症委員會報告列出的十四項可調整危險因子，估計約百分之四十五的失智症有潛力被預防或延後（*The Lancet*, 2024;404(10452):572–628，DOI: 10.1016/S0140-6736(24)01296-0）。",
-  tag: '失智症政策 · 時事',
+  desc: "十一月十三日立法院三讀通過《性別平等工作法》修正案：產假從八週延長為十四週，陪產檢及陪產假從七日增為十四日，育兒留職停薪申請期限放寬到子女滿九歲前，並新增每名子女最多六十日的育兒假，目標二○二七年元旦上路。本文把「十四週」這個數字放回醫學文獻裡：國際勞工組織二○○○年《母性保護公約》（第一八三號）第四條訂的就是不少於十四週產假、其中產後六週為強制休假。懷孕期間有睡眠障礙者產後憂鬱的勝算比為二點三六，但異質性高達 I² 百分之八十四，且僅「睡眠品質差」與第三孕期的亞組達顯著（*Archives of Women's Mental Health*, 2023;26(2):259–267，DOI: 10.1007/s00737-023-01295-3）；產後睡眠擾動與產後憂鬱的十三個觀察性研究效應量落在零點四到一點七（*Journal of Obstetric, Gynecologic and Neonatal Nursing*, 2015;44(3):350–357，DOI: 10.1111/1552-6909.12562）。台灣馬偕紀念醫院二○一四到二○一八年、一萬二千一百九十八名產婦的愛丁堡產後憂鬱量表篩檢顯示切點十分以上者占百分之十點二，預測因子包含教育程度低、未婚與無業（*Taiwanese Journal of Obstetrics and Gynecology*, 2023;62(3):406–411，DOI: 10.1016/j.tjog.2023.03.003）；而二十三篇研究的系統性回顧指出，高所得國家中有給薪且較長的產假「傾向於」與較少的產後憂鬱症狀相關，但多數研究在美國進行，且無一篇探討就業保障本身（*Archives of Women's Mental Health*, 2023;26(5):571–580，DOI: 10.1007/s00737-023-01350-z）。",
+  tag: '產後睡眠與情緒 · 時事',
 };
 const related = [
-  { out: '2026-11-13-dementia-basic-act-mci.html', nav: '本篇', title: '「兩天只通過六個字」——失智症基本法昨天卡在輕度認知障礙要不要納入，而腦子那一側的帳在症狀出現的二十五年前就開始記' },
+  { out: '2026-11-14-maternity-leave-14-weeks-postpartum-sleep.html', nav: '本篇', title: '「產假八週延至十四週」——立法院昨天三讀，而十四這個數字不是台灣算出來的，是二十六年前一份公約寫下的底線' },
+  { out: '2026-11-13-dementia-basic-act-mci.html', nav: '失智症政策', title: '「兩天只通過六個字」——失智症基本法昨天卡在輕度認知障礙要不要納入，而腦子那一側的帳在症狀出現的二十五年前就開始記' },
   { out: '2026-11-12-er-crowding-status-epilepticus.html', nav: '急診與癲癇', title: '「單日破三百人的天數今年會破百」——台大急診前天把這個數字攤開，而癲癇那一側的計時單位是五分鐘' },
   { out: '2026-11-10-parkinson-prodrome-protein-clearance.html', nav: '巴金森症狀前期', title: '「怎麼把堆在腦子裡的那個蛋白清掉」——第八屆巴金森研討會前天在台北收場，而黑質那一側的帳在手抖出現之前就扣掉了快七成' },
-  { out: '2026-11-08-stock-crash-emotional-trigger-stroke.html', nav: '情緒與中風', title: '「盤中最大跌三千七百三十七點」——國安基金週一進場，而腦血管那一側在算的是你盯著綠色螢幕的那一個小時' },
-  { out: '2026-11-07-barometric-pressure-migraine.html', nav: '氣壓與偏頭痛', title: '「下週二清晨最涼」——氣象署把這波的低點排在十六度，而偏頭痛那一側在動的不是溫度，是掉下去的那幾個百帕' },
+  { out: '2026-11-03-daytime-napping-dementia-signal.html', nav: '睡眠與認知', title: '「不小心就睡著的那一種」——長輩打瞌睡這週滾完了台灣健康版，而十年追蹤裡出事的不是睡多久' },
 ];
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
