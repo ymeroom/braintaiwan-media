@@ -6,22 +6,22 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.11.14';
-const SERIES = '產後睡眠與大腦';
+const DATE = '2026.11.15';
+const SERIES = '減重藥物與視神經';
 
 const article = {
-  md:  '2026-11-14-maternity-leave-14-weeks-postpartum-sleep.md',
-  out: '2026-11-14-maternity-leave-14-weeks-postpartum-sleep.html',
+  md:  '2026-11-15-glp1-naion-drug-injury-relief.md',
+  out: '2026-11-15-glp1-naion-drug-injury-relief.html',
   title: '',
-  desc: "十一月十三日立法院三讀通過《性別平等工作法》修正案：產假從八週延長為十四週，陪產檢及陪產假從七日增為十四日，育兒留職停薪申請期限放寬到子女滿九歲前，並新增每名子女最多六十日的育兒假，目標二○二七年元旦上路。本文把「十四週」這個數字放回醫學文獻裡：國際勞工組織二○○○年《母性保護公約》（第一八三號）第四條訂的就是不少於十四週產假、其中產後六週為強制休假。懷孕期間有睡眠障礙者產後憂鬱的勝算比為二點三六，但異質性高達 I² 百分之八十四，且僅「睡眠品質差」與第三孕期的亞組達顯著（*Archives of Women's Mental Health*, 2023;26(2):259–267，DOI: 10.1007/s00737-023-01295-3）；產後睡眠擾動與產後憂鬱的十三個觀察性研究效應量落在零點四到一點七（*Journal of Obstetric, Gynecologic and Neonatal Nursing*, 2015;44(3):350–357，DOI: 10.1111/1552-6909.12562）。台灣馬偕紀念醫院二○一四到二○一八年、一萬二千一百九十八名產婦的愛丁堡產後憂鬱量表篩檢顯示切點十分以上者占百分之十點二，預測因子包含教育程度低、未婚與無業（*Taiwanese Journal of Obstetrics and Gynecology*, 2023;62(3):406–411，DOI: 10.1016/j.tjog.2023.03.003）；而二十三篇研究的系統性回顧指出，高所得國家中有給薪且較長的產假「傾向於」與較少的產後憂鬱症狀相關，但多數研究在美國進行，且無一篇探討就業保障本身（*Archives of Women's Mental Health*, 2023;26(5):571–580，DOI: 10.1007/s00737-023-01350-z）。",
-  tag: '產後睡眠與情緒 · 時事',
+  desc: "一名五十多歲男性施打瘦瘦針「胰妥讚」四個月後，某天醒來右眼失明、左眼視力剩零點一，成為國內第一件因 GLP-1 類藥物眼部不良反應申請藥害救濟的案子：三月底申請、四月底成案、十月底送審議委員會，目前仍待處方醫院回覆疑義。食藥署統計至十一月五日，全國藥物不良反應通報系統收到三百一十四件疑似 GLP-1 類藥品不良反應，眼部疾患十二件，確診視神經缺血僅此一件；美國 FDA 十一月九日已要求整個 GLP-1 受體促效劑類別在仿單警語加上 NAION。本文把倍數放回分母裡看：七百一十人的神經眼科轉診中心回溯分析風險比 4.28、過重或肥胖族群 7.64（*JAMA Ophthalmology*, 2024;142(8):732–739，DOI: 10.1001/jamaophthalmol.2024.2296）；全丹麥四十二萬四千一百五十二名第二型糖尿病患者的全國世代研究，NAION 發生率每千人年 0.228 對 0.093、校正後風險比 2.19（*International Journal of Retina and Vitreous*, 2024;10(1):97，DOI: 10.1186/s40942-024-00620-x）；丹麥—挪威世代研究以 SGLT-2 抑制劑為對照，倍數仍在兩倍以上但絕對風險低，每萬人年 2.19 對 1.18 例（*Diabetes, Obesity and Metabolism*, 2025;27(6):3094–3103，DOI: 10.1111/dom.16316）；歐洲藥品管理局 PRAC 二○二五年六月定調 NAION 為「非常罕見」副作用，少於萬分之一。而台灣這一案卡住的地方是藥害救濟法第十三條第八款的適應症外使用，以及二○一一年加上的那道但書。",
+  tag: '減重藥物與視神經 · 時事',
 };
 const related = [
-  { out: '2026-11-14-maternity-leave-14-weeks-postpartum-sleep.html', nav: '本篇', title: '「產假八週延至十四週」——立法院昨天三讀，而十四這個數字不是台灣算出來的，是二十六年前一份公約寫下的底線' },
+  { out: '2026-11-15-glp1-naion-drug-injury-relief.html', nav: '本篇', title: '「一覺醒來右眼就看不見了」——瘦瘦針失明的國內首例這週攤上檯面，而審議委員會卡住的地方是「適應症」兩個字' },
+  { out: '2026-11-14-maternity-leave-14-weeks-postpartum-sleep.html', nav: '產假與產後睡眠', title: '「產假八週延至十四週」——立法院昨天三讀，而十四這個數字不是台灣算出來的，是二十六年前一份公約寫下的底線' },
   { out: '2026-11-13-dementia-basic-act-mci.html', nav: '失智症政策', title: '「兩天只通過六個字」——失智症基本法昨天卡在輕度認知障礙要不要納入，而腦子那一側的帳在症狀出現的二十五年前就開始記' },
   { out: '2026-11-12-er-crowding-status-epilepticus.html', nav: '急診與癲癇', title: '「單日破三百人的天數今年會破百」——台大急診前天把這個數字攤開，而癲癇那一側的計時單位是五分鐘' },
   { out: '2026-11-10-parkinson-prodrome-protein-clearance.html', nav: '巴金森症狀前期', title: '「怎麼把堆在腦子裡的那個蛋白清掉」——第八屆巴金森研討會前天在台北收場，而黑質那一側的帳在手抖出現之前就扣掉了快七成' },
-  { out: '2026-11-03-daytime-napping-dementia-signal.html', nav: '睡眠與認知', title: '「不小心就睡著的那一種」——長輩打瞌睡這週滾完了台灣健康版，而十年追蹤裡出事的不是睡多久' },
 ];
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
