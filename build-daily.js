@@ -6,23 +6,24 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.11.15';
-const SERIES = '減重藥物與視神經';
+const DATE = '2026.11.16';
+const SERIES = '低溫與腦血管';
 
 const article = {
-  md:  '2026-11-15-glp1-naion-drug-injury-relief.md',
-  out: '2026-11-15-glp1-naion-drug-injury-relief.html',
+  md:  '2026-11-16-cold-air-mass-temperature-swing-stroke.md',
+  out: '2026-11-16-cold-air-mass-temperature-swing-stroke.html',
   title: '',
-  desc: "一名五十多歲男性施打瘦瘦針「胰妥讚」四個月後，某天醒來右眼失明、左眼視力剩零點一，成為國內第一件因 GLP-1 類藥物眼部不良反應申請藥害救濟的案子：三月底申請、四月底成案、十月底送審議委員會，目前仍待處方醫院回覆疑義。食藥署統計至十一月五日，全國藥物不良反應通報系統收到三百一十四件疑似 GLP-1 類藥品不良反應，眼部疾患十二件，確診視神經缺血僅此一件；美國 FDA 十一月九日已要求整個 GLP-1 受體促效劑類別在仿單警語加上 NAION。本文把倍數放回分母裡看：七百一十人的神經眼科轉診中心回溯分析風險比 4.28、過重或肥胖族群 7.64（*JAMA Ophthalmology*, 2024;142(8):732–739，DOI: 10.1001/jamaophthalmol.2024.2296）；全丹麥四十二萬四千一百五十二名第二型糖尿病患者的全國世代研究，NAION 發生率每千人年 0.228 對 0.093、校正後風險比 2.19（*International Journal of Retina and Vitreous*, 2024;10(1):97，DOI: 10.1186/s40942-024-00620-x）；丹麥—挪威世代研究以 SGLT-2 抑制劑為對照，倍數仍在兩倍以上但絕對風險低，每萬人年 2.19 對 1.18 例（*Diabetes, Obesity and Metabolism*, 2025;27(6):3094–3103，DOI: 10.1111/dom.16316）；歐洲藥品管理局 PRAC 二○二五年六月定調 NAION 為「非常罕見」副作用，少於萬分之一。而台灣這一案卡住的地方是藥害救濟法第十三條第八款的適應症外使用，以及二○一一年加上的那道但書。",
-  tag: '減重藥物與視神經 · 時事',
+  desc: "入秋首波大陸冷氣團今天進了預報：週三起轉冷、先濕後乾，週五週六降溫最明顯，中部以北與宜花低溫十三到十六度，平地最低有機會探十一度，台北測站清晨約十四到十五度。兩天前成大醫院斗六分院急診才提醒，冬天最常見的延誤是一句「我以為」——頭暈以為沒睡好、胸悶想吐以為腸胃，一位六十多歲婦人寒流清晨說話含糊，家人發現意識不清才送醫，確診急性缺血性腦中風。國衛院團隊用健保資料庫二○○一到二○二○年、超過一百一十萬筆首次中風急診紀錄做病例交叉分析（*The Lancet Regional Health – Western Pacific*, 2025;57:101546，DOI: 10.1016/j.lanwpc.2025.101546），把日夜溫差、兩日驟升與驟降一起算進來並校正空污與降雨：兩日間驟降超過十四度時出血性中風風險約兩倍，國衛院公布時另指出兩日內驟升超過六度、缺血性中風風險提高超過兩倍；單日最低溫低於十六度，出血性中風風險約莫翻倍。本文把溫度計翻到背面看——為什麼血管對落差比對冷更敏感，以及預報上為什麼沒有「與昨日溫差」那一欄。",
+  tag: '低溫與腦中風 · 時事',
 };
 const related = [
-  { out: '2026-11-15-glp1-naion-drug-injury-relief.html', nav: '本篇', title: '「一覺醒來右眼就看不見了」——瘦瘦針失明的國內首例這週攤上檯面，而審議委員會卡住的地方是「適應症」兩個字' },
+  { out: '2026-11-16-cold-air-mass-temperature-swing-stroke.html', nav: '本篇', title: '「週三轉冷，低溫下探十一度」——首波大陸冷氣團今天進了預報，而國衛院那一百一十萬筆急診資料說，扣分的不是最低溫那一格' },
+  { out: '2026-11-15-glp1-naion-drug-injury-relief.html', nav: '瘦瘦針與視神經', title: '「一覺醒來右眼就看不見了」——瘦瘦針失明的國內首例這週攤上檯面，而審議委員會卡住的地方是「適應症」兩個字' },
   { out: '2026-11-14-maternity-leave-14-weeks-postpartum-sleep.html', nav: '產假與產後睡眠', title: '「產假八週延至十四週」——立法院昨天三讀，而十四這個數字不是台灣算出來的，是二十六年前一份公約寫下的底線' },
   { out: '2026-11-13-dementia-basic-act-mci.html', nav: '失智症政策', title: '「兩天只通過六個字」——失智症基本法昨天卡在輕度認知障礙要不要納入，而腦子那一側的帳在症狀出現的二十五年前就開始記' },
-  { out: '2026-11-12-er-crowding-status-epilepticus.html', nav: '急診與癲癇', title: '「單日破三百人的天數今年會破百」——台大急診前天把這個數字攤開，而癲癇那一側的計時單位是五分鐘' },
-  { out: '2026-11-10-parkinson-prodrome-protein-clearance.html', nav: '巴金森症狀前期', title: '「怎麼把堆在腦子裡的那個蛋白清掉」——第八屆巴金森研討會前天在台北收場，而黑質那一側的帳在手抖出現之前就扣掉了快七成' },
+  { out: '2026-10-30-stroke-888-golden-window-dido.html', nav: '中風黃金期', title: '「黃金期內只有八點五趴」——腦中風學會把三個八成寫進二○三○年的 KPI，而最難的那一段在急診門口到轉院門口之間' },
 ];
+
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 function inline(s){
