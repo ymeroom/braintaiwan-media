@@ -6,22 +6,22 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.11.17';
-const SERIES = '流感與腦部併發症';
+const DATE = '2026.11.18';
+const SERIES = '神經免疫與給付門檻';
 
 const article = {
-  md:  '2026-11-17-influenza-encephalopathy-ane-vaccine.md',
-  out: '2026-11-17-influenza-encephalopathy-ane-vaccine.html',
+  md:  '2026-11-18-nmosd-relapse-irreversible-nhi-threshold.md',
+  out: '2026-11-18-nmosd-relapse-irreversible-nhi-threshold.html',
   title: '',
-  desc: "疾管署昨天給的是一張庫存清單：截至十一月十五日公費新冠疫苗已接種一百七十四萬人次、比去年同期多三成，各縣市只剩約二十九點二萬劑，其中 Novavax 僅剩六點八萬劑，增購的十六點九萬劑最快本週五撥配。但上週二同一個單位公布的另一組數字沒那麼好看——十一月三日到九日新增一百零三例流感併發重症、三十八例死亡，本季累計六百四十五例重症、一百二十四例死亡，重症個案裡有百分之九十七點一沒接種本季流感疫苗。本文把流感的帳從肺翻到腦：美國疾管中心十五個流感季、一千八百四十名死亡兒童中有百分之九通報流感相關腦病變（MMWR 2025;74(6):91–95），二○二四至二五季一百零九例中三十七例是急性壞死性腦病變；《JAMA》二十三家醫院四十一例病例系列顯示百分之二十七死亡、存活者百分之六十三中度以上失能，而有接種紀錄者只有百分之十六打過當季疫苗。",
-  tag: '流感與腦病變 · 時事',
+  desc: "上週三聯合報登了一位泛視神經脊髓炎患者的三次發作：每次相隔約七年，前兩次只傷到單眼部分視力且治療後有恢復，第三次造成癱瘓、治完回不去。長庚醫院腦神經內科教授級主治醫師張國軒藉這個案子指向健保那道門檻——現行新藥給付要看抗體檢測、先前治療反應與復發次數，其中一項是兩年內至少兩次符合規定的復發。本文把這個病的記帳方式攤開：抗體打的是星狀細胞上的水通道蛋白四，失能一階一階掉下去而非慢慢爬升，梅約一九九九年那份追蹤裡多數復發型病人以階梯狀累積嚴重失能、三分之一死於呼吸衰竭；兩款納保藥的關鍵試驗量的都是「下一次」——N-MOmentum 在抗體陽性者把發作風險降了百分之七十七點三，SAkuraSky 的復發率是百分之二十對百分之四十三。而台灣還有更前面一層問題：誤歸類為多發性硬化症的比例在兩組資料庫分別是百分之五十五與百分之六十三點五。",
+  tag: '神經免疫與給付 · 時事',
 };
 const related = [
-  { out: '2026-11-17-influenza-encephalopathy-ane-vaccine.html', nav: '本篇', title: '「Novavax 只剩六萬八千劑」——疾管署昨天說接種人次暴增三成，而流感重症裡九成七沒打疫苗，最凶的那一刀落在視丘' },
+  { out: '2026-11-18-nmosd-relapse-irreversible-nhi-threshold.html', nav: '本篇', title: '「以為病情穩定，第三次發作卻癱瘓」——長庚醫師上週把這個案子攤開，而健保那道門檻數的是「兩年內兩次復發」' },
+  { out: '2026-11-17-influenza-encephalopathy-ane-vaccine.html', nav: '流感與腦病變', title: '「Novavax 只剩六萬八千劑」——疾管署昨天說接種人次暴增三成，而流感重症裡九成七沒打疫苗，最凶的那一刀落在視丘' },
   { out: '2026-11-16-cold-air-mass-temperature-swing-stroke.html', nav: '低溫與中風', title: '「週三轉冷，低溫下探十一度」——首波大陸冷氣團今天進了預報，而國衛院那一百一十萬筆急診資料說，扣分的不是最低溫那一格' },
   { out: '2026-11-15-glp1-naion-drug-injury-relief.html', nav: '瘦瘦針與視神經', title: '「一覺醒來右眼就看不見了」——瘦瘦針失明的國內首例這週攤上檯面，而審議委員會卡住的地方是「適應症」兩個字' },
   { out: '2026-11-14-maternity-leave-14-weeks-postpartum-sleep.html', nav: '產假與產後睡眠', title: '「產假八週延至十四週」——立法院昨天三讀，而十四這個數字不是台灣算出來的，是二十六年前一份公約寫下的底線' },
-  { out: '2026-11-13-dementia-basic-act-mci.html', nav: '失智症政策', title: '「兩天只通過六個字」——失智症基本法昨天卡在輕度認知障礙要不要納入，而腦子那一側的帳在症狀出現的二十五年前就開始記' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
