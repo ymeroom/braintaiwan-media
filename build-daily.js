@@ -6,22 +6,22 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.11.18';
-const SERIES = '神經免疫與給付門檻';
+const DATE = '2026.11.19';
+const SERIES = '神經腫瘤與給付門檻';
 
 const article = {
-  md:  '2026-11-18-nmosd-relapse-irreversible-nhi-threshold.md',
-  out: '2026-11-18-nmosd-relapse-irreversible-nhi-threshold.html',
+  md:  '2026-11-19-plexiform-neurofibroma-mek-nhi-age-limit.md',
+  out: '2026-11-19-plexiform-neurofibroma-mek-nhi-age-limit.html',
   title: '',
-  desc: "上週三聯合報登了一位泛視神經脊髓炎患者的三次發作：每次相隔約七年，前兩次只傷到單眼部分視力且治療後有恢復，第三次造成癱瘓、治完回不去。長庚醫院腦神經內科教授級主治醫師張國軒藉這個案子指向健保那道門檻——現行新藥給付要看抗體檢測、先前治療反應與復發次數，其中一項是兩年內至少兩次符合規定的復發。本文把這個病的記帳方式攤開：抗體打的是星狀細胞上的水通道蛋白四，失能一階一階掉下去而非慢慢爬升，梅約一九九九年那份追蹤裡多數復發型病人以階梯狀累積嚴重失能、三分之一死於呼吸衰竭；兩款納保藥的關鍵試驗量的都是「下一次」——N-MOmentum 在抗體陽性者把發作風險降了百分之七十七點三，SAkuraSky 的復發率是百分之二十對百分之四十三。而台灣還有更前面一層問題：誤歸類為多發性硬化症的比例在兩組資料庫分別是百分之五十五與百分之六十三點五。",
-  tag: '神經免疫與給付 · 時事',
+  desc: "台灣小兒神經醫學會理事長陳錫洲昨天把使用人數講了出來：叢狀神經纖維瘤的口服標靶藥納入健保暫時性支付時原先估五十人，現在通過審核實際在吃的超過七十人。這支藥一一四年二月起由癌症新藥基金挹注納保，是基金上路後的第一案，兩年期限即將屆滿，也是暫時性支付制度實施以來第一個要面對正式給付檢討的藥；年藥費估逾五百萬元，給付對象是三歲到未滿十八歲。本文把這顆瘤的生長方式攤開：NF1 基因管的是生長訊號的煞車，神經鞘細胞沿著周邊神經幹瀰漫地長，沒有邊界可以剝，所以外科常常使不上力；MEK 抑制劑去堵那條訊號路，SPRINT 試驗五十個孩子裡三十四人（百分之六十八）腫瘤縮掉兩成以上。國內四十九份病歷的真實世界數據約九成穩定或縮小、近八成疼痛改善。而給付那一行寫的是年齡——ReNeu 試驗裡成人確認反應百分之四十一、兒童百分之五十二，腫瘤體積最佳變化中位數分別是減少百分之四十一與四十二，而惡性周邊神經鞘腫瘤的終身風險主要在成年期變現。",
+  tag: '神經腫瘤與給付 · 時事',
 };
 const related = [
-  { out: '2026-11-18-nmosd-relapse-irreversible-nhi-threshold.html', nav: '本篇', title: '「以為病情穩定，第三次發作卻癱瘓」——長庚醫師上週把這個案子攤開，而健保那道門檻數的是「兩年內兩次復發」' },
+  { out: '2026-11-19-plexiform-neurofibroma-mek-nhi-age-limit.html', nav: '本篇', title: '「原先估五十人，現在超過七十個孩子在用」——癌藥基金首案昨天攤出成績，而給付那一行寫的是「未滿十八歲」' },
+  { out: '2026-11-18-nmosd-relapse-irreversible-nhi-threshold.html', nav: '神經免疫與給付', title: '「以為病情穩定，第三次發作卻癱瘓」——長庚醫師上週把這個案子攤開，而健保那道門檻數的是「兩年內兩次復發」' },
   { out: '2026-11-17-influenza-encephalopathy-ane-vaccine.html', nav: '流感與腦病變', title: '「Novavax 只剩六萬八千劑」——疾管署昨天說接種人次暴增三成，而流感重症裡九成七沒打疫苗，最凶的那一刀落在視丘' },
   { out: '2026-11-16-cold-air-mass-temperature-swing-stroke.html', nav: '低溫與中風', title: '「週三轉冷，低溫下探十一度」——首波大陸冷氣團今天進了預報，而國衛院那一百一十萬筆急診資料說，扣分的不是最低溫那一格' },
   { out: '2026-11-15-glp1-naion-drug-injury-relief.html', nav: '瘦瘦針與視神經', title: '「一覺醒來右眼就看不見了」——瘦瘦針失明的國內首例這週攤上檯面，而審議委員會卡住的地方是「適應症」兩個字' },
-  { out: '2026-11-14-maternity-leave-14-weeks-postpartum-sleep.html', nav: '產假與產後睡眠', title: '「產假八週延至十四週」——立法院昨天三讀，而十四這個數字不是台灣算出來的，是二十六年前一份公約寫下的底線' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
