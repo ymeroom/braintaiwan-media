@@ -6,22 +6,22 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.11.25';
-const SERIES = '頭痛與止痛藥';
+const DATE = '2026.11.26';
+const SERIES = '精神症狀與神經';
 
 const article = {
-  md:  '2026-11-25-medication-overuse-headache-painkiller-rebound.md',
-  out: '2026-11-25-medication-overuse-headache-painkiller-rebound.html',
+  md:  '2026-11-26-diagnostic-overshadowing-delirium-institution.md',
+  out: '2026-11-26-diagnostic-overshadowing-delirium-institution.html',
   title: '',
-  desc: "十一月二十一日，奇美醫院在偏頭痛病友會上攤開一個個案：三十八歲女性長年偏頭痛，止痛藥從每月幾顆一路吃到接近一百顆，頭越痛、藥越吃，藥越吃、頭越痛，診斷落在另一個病名上——藥物過度使用頭痛；漸進式減藥加上預防性藥物與針灸、並把咖啡量壓下來之後，三個月發作頻率改善約七成。神經內科主任楊浚銘給的門檻是每週急性止痛藥超過兩天就該回頭評估預防性治療，而《國際頭痛疾病分類》第三版 8.2 的條件是每月頭痛十五天以上、規律過度使用超過三個月，門檻依藥物分兩級：單方乙醯胺酚或非類固醇消炎止痛藥每月十五天，翠普登類、麥角胺類、複方止痛藥與鴉片類降到十天。Diener 等人二○一九年在《Lancet Neurology》的回顧把機制收斂成兩條路徑——三叉神經系統 CGRP 與 P 物質上升造成的中樞敏感化，以及從中腦導水管周圍灰質到延腦那套下行抑制剎車失能，結果是痛閾往下掉。台灣的樣子又不一樣：Lu 等人二○○一年台北社區調查三千三百七十七人，慢性每日頭痛一年盛行率百分之三點二；王署君與傅中玲二○○八年指出，他們頭痛門診裡有百分之二十四的藥物過度使用頭痛病人，過度使用的是感冒藥水。而 Carlsen 等人二○二○年在《JAMA Neurology》把一百二十人分三組的隨機試驗顯示，只叫病人停藥、其他什麼都不給的那一組，回到陣發型頭痛的比例只有百分之四十一點七。",
-  tag: '頭痛與止痛藥 · 時事',
+  desc: "十一月二十四日，新北地檢署指揮蘆洲警方搜索兩間立案的精神護理之家，帶回包含實際負責人在內的八名被告，二十五日下午移送複訊；檢警月中相驗遺體時，在一名死者的鞋底發現遺書、內褲上發現遺言，內容指控超收與受虐。報導裡另有一句話值得醫學上停下來看——究竟是真有凌虐，還是患者「因病情出現想像」。把新症狀歸因到既有的精神科診斷，這件事有名字：Jones、Howard 與 Thornicroft 二○○八年在《Acta Psychiatrica Scandinavica》寫下的 diagnostic overshadowing（診斷遮蔽）。神經科最怕被它蓋掉的是譫妄——Inouye 二○○六年的回顧指出譫妄的核心是注意力，急性發生、一日內起落，背後常是感染、低血鈉或藥物堆積；Han 等人二○○九年量過，急診六十五歲以上病人有百分之八點三符合譫妄，絕大多數是安靜的活動減退型，而急診醫師漏掉了百分之七十六。台灣的數字更直接：潘羿如等人二○二○年比對健保兩個世代，思覺失調症的標準化死亡比為三點六五與三點二七、平均餘命短約十五年，非自然死亡的差距在縮小，自然死亡的差距沒有動。許景琦等人今年二月用全人口資料顯示，六千六百四十二名僵直症個案全死因死亡風險二點六倍；在思覺失調症譜系內部，有僵直症者自然死亡風險高出百分之二十七，非自然死亡幾乎無差別。",
+  tag: '精神症狀與神經 · 時事',
 };
 const related = [
-  { out: '2026-11-25-medication-overuse-headache-painkiller-rebound.html', nav: '本篇', title: '「止痛藥從每月幾顆吃到接近一百顆」——奇美醫院上週攤開的那個三十八歲個案，和止痛藥為什麼會反過來製造頭痛' },
+  { out: '2026-11-26-diagnostic-overshadowing-delirium-institution.html', nav: '本篇', title: '「死者的鞋底藏著一封遺書」——蘆洲那兩間精神護理之家，和「他只是在想像」這句話在神經科的代價' },
+  { out: '2026-11-25-medication-overuse-headache-painkiller-rebound.html', nav: '止痛藥與頭痛', title: '「止痛藥從每月幾顆吃到接近一百顆」——奇美醫院上週攤開的那個三十八歲個案，和止痛藥為什麼會反過來製造頭痛' },
   { out: '2026-11-24-temperature-swing-stroke-warning-value.html', nav: '氣溫與腦血管', title: '「清晨關西六點六度，台北十六點五度」——今天鋒面又到，而國衛院在一百一十萬筆中風急診裡找出的警戒值，量的不是幾度，是差幾度' },
   { out: '2026-11-23-aging-brain-nightly-wash-slow-waves.html', nav: '睡眠與老化', title: '「睡飽7、8個小時還是累？」——昨天報紙那個問句問得對，而麻省理工十天前在半夜掃出來的答案是：六十歲後縮小的不是時數，是波' },
   { out: '2026-11-22-backward-walking-fall-lucid-interval.html', nav: '跌倒與頭部外傷', title: '「起初她還能一手掩面坐在地上」——竹縣體育場那八分鐘，和倒退走為什麼不是把走路倒過來播' },
-  { out: '2026-11-21-carbon-monoxide-delayed-neuropsychiatric-sequelae.html', nav: '一氧化碳與腦', title: '「十二起、一死四十八送醫」——消防署昨天把這波冷氣團的帳攤開，而一氧化碳最難纏的那一刀，落在出院兩週之後' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
