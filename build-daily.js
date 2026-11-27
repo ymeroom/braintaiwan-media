@@ -6,21 +6,21 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.11.26';
-const SERIES = '精神症狀與神經';
+const DATE = '2026.11.27';
+const SERIES = '動作障礙';
 
 const article = {
-  md:  '2026-11-26-diagnostic-overshadowing-delirium-institution.md',
-  out: '2026-11-26-diagnostic-overshadowing-delirium-institution.html',
+  md:  '2026-11-27-essential-tremor-misdiagnosis-focused-ultrasound.md',
+  out: '2026-11-27-essential-tremor-misdiagnosis-focused-ultrasound.html',
   title: '',
-  desc: "十一月二十四日，新北地檢署指揮蘆洲警方搜索兩間立案的精神護理之家，帶回包含實際負責人在內的八名被告，二十五日下午移送複訊；檢警月中相驗遺體時，在一名死者的鞋底發現遺書、內褲上發現遺言，內容指控超收與受虐。報導裡另有一句話值得醫學上停下來看——究竟是真有凌虐，還是患者「因病情出現想像」。把新症狀歸因到既有的精神科診斷，這件事有名字：Jones、Howard 與 Thornicroft 二○○八年在《Acta Psychiatrica Scandinavica》寫下的 diagnostic overshadowing（診斷遮蔽）。神經科最怕被它蓋掉的是譫妄——Inouye 二○○六年的回顧指出譫妄的核心是注意力，急性發生、一日內起落，背後常是感染、低血鈉或藥物堆積；Han 等人二○○九年量過，急診六十五歲以上病人有百分之八點三符合譫妄，絕大多數是安靜的活動減退型，而急診醫師漏掉了百分之七十六。台灣的數字更直接：潘羿如等人二○二○年比對健保兩個世代，思覺失調症的標準化死亡比為三點六五與三點二七、平均餘命短約十五年，非自然死亡的差距在縮小，自然死亡的差距沒有動。許景琦等人今年二月用全人口資料顯示，六千六百四十二名僵直症個案全死因死亡風險二點六倍；在思覺失調症譜系內部，有僵直症者自然死亡風險高出百分之二十七，非自然死亡幾乎無差別。",
-  tag: '精神症狀與神經 · 時事',
+  desc: "十一月二十五日，中山醫學大學附設醫院把俗稱「神波刀」的磁振導航聚焦超音波攤在媒體面前：核磁共振即時影像導引下，許多道超音波穿過頭骨匯聚到大腦深處一點，靠升溫做出很小的破壞，病人全程清醒，目前在台灣自費。機器的準度講的是毫米，但手抖最容易出錯的一步在它開機之前——Jain 等人二○○六年把連續七十一位帶著原發性顫抖症診斷轉介進來的病人重看一遍，百分之三十七診斷被改掉，其中百分之十五其實是巴金森病、百分之八是肌張力不全。分辨的起點是看那隻手當時在做什麼：原發性顫抖是動作型與姿勢型，巴金森的典型顫抖是靜止型，兩者分別跑在小腦—視丘—運動皮質環路與基底核多巴胺迴路上。神波刀瞄的是視丘的 Vim；Elias 等人二○一六年在《新英格蘭醫學期刊》的試驗裡，七十六人以三比一分組，三個月後手部顫抖分數由十八點一降到九點六、兩組差八點三分，代價是步態不穩百分之三十六、感覺異常百分之三十八。Cosgrove 等人追到第五年仍維持約四成改善。台灣臨床估計約四十萬人受原發性顫抖症困擾，單側自費約六十五萬元。",
+  tag: '動作障礙 · 時事',
 };
 const related = [
-  { out: '2026-11-26-diagnostic-overshadowing-delirium-institution.html', nav: '本篇', title: '「死者的鞋底藏著一封遺書」——蘆洲那兩間精神護理之家，和「他只是在想像」這句話在神經科的代價' },
+  { out: '2026-11-27-essential-tremor-misdiagnosis-focused-ultrasound.html', nav: '本篇', title: '「拿筷子、端水杯、扣鈕扣」——中山附醫前天把神波刀那套攤開，而手抖最容易出錯的一步，在機器開機之前' },
+  { out: '2026-11-26-diagnostic-overshadowing-delirium-institution.html', nav: '精神症狀與神經', title: '「死者的鞋底藏著一封遺書」——蘆洲那兩間精神護理之家，和「他只是在想像」這句話在神經科的代價' },
   { out: '2026-11-25-medication-overuse-headache-painkiller-rebound.html', nav: '止痛藥與頭痛', title: '「止痛藥從每月幾顆吃到接近一百顆」——奇美醫院上週攤開的那個三十八歲個案，和止痛藥為什麼會反過來製造頭痛' },
   { out: '2026-11-24-temperature-swing-stroke-warning-value.html', nav: '氣溫與腦血管', title: '「清晨關西六點六度，台北十六點五度」——今天鋒面又到，而國衛院在一百一十萬筆中風急診裡找出的警戒值，量的不是幾度，是差幾度' },
-  { out: '2026-11-23-aging-brain-nightly-wash-slow-waves.html', nav: '睡眠與老化', title: '「睡飽7、8個小時還是累？」——昨天報紙那個問句問得對，而麻省理工十天前在半夜掃出來的答案是：六十歲後縮小的不是時數，是波' },
   { out: '2026-11-22-backward-walking-fall-lucid-interval.html', nav: '跌倒與頭部外傷', title: '「起初她還能一手掩面坐在地上」——竹縣體育場那八分鐘，和倒退走為什麼不是把走路倒過來播' },
 ];
 
