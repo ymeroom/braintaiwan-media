@@ -6,22 +6,22 @@ const path = require('path');
 const SRC  = path.join(__dirname, '_src');
 const OUT  = path.join(__dirname, 'posts');
 const SITE = 'https://media.braintaiwan.com';
-const DATE = '2026.11.27';
-const SERIES = '動作障礙';
+const DATE = '2026.11.28';
+const SERIES = '代謝與血管危險因子';
 
 const article = {
-  md:  '2026-11-27-essential-tremor-misdiagnosis-focused-ultrasound.md',
-  out: '2026-11-27-essential-tremor-misdiagnosis-focused-ultrasound.html',
+  md:  '2026-11-28-glp1-weight-loss-injection-optic-nerve-naion.md',
+  out: '2026-11-28-glp1-weight-loss-injection-optic-nerve-naion.html',
   title: '',
-  desc: "十一月二十五日，中山醫學大學附設醫院把俗稱「神波刀」的磁振導航聚焦超音波攤在媒體面前：核磁共振即時影像導引下，許多道超音波穿過頭骨匯聚到大腦深處一點，靠升溫做出很小的破壞，病人全程清醒，目前在台灣自費。機器的準度講的是毫米，但手抖最容易出錯的一步在它開機之前——Jain 等人二○○六年把連續七十一位帶著原發性顫抖症診斷轉介進來的病人重看一遍，百分之三十七診斷被改掉，其中百分之十五其實是巴金森病、百分之八是肌張力不全。分辨的起點是看那隻手當時在做什麼：原發性顫抖是動作型與姿勢型，巴金森的典型顫抖是靜止型，兩者分別跑在小腦—視丘—運動皮質環路與基底核多巴胺迴路上。神波刀瞄的是視丘的 Vim；Elias 等人二○一六年在《新英格蘭醫學期刊》的試驗裡，七十六人以三比一分組，三個月後手部顫抖分數由十八點一降到九點六、兩組差八點三分，代價是步態不穩百分之三十六、感覺異常百分之三十八。Cosgrove 等人追到第五年仍維持約四成改善。台灣臨床估計約四十萬人受原發性顫抖症困擾，單側自費約六十五萬元。",
-  tag: '動作障礙 · 時事',
+  desc: "十一月二十六日，南投縣衛生局公布 GLP-1 流向專案稽查結果：七家藥局未憑醫師處方箋販售「猛健樂」，另有一家診所未設調劑處所即供藥，八家依《藥事法》查處，罰則三萬元至兩百萬元。衛福部長石崇良十一月十九日在立法院指出，GLP-1 違規樣態以「沒有醫師處方」最大宗、占四成。同月九日，美國食品藥物管理局要求所有 GLP-1 受體促效劑在仿單「警語及注意事項」加註非動脈炎性前段缺血性視神經病變（NAION），食藥署十一月十一日啟動整體安全性再評估。俗稱「眼中風」的 NAION 塞住的不在視網膜，而在視神經盤：神經纖維擠過口徑固定的鞏膜篩板，灌流不足造成腫脹、腫脹再壓迫血管，形成單眼、無痛、常在清晨發現的高度性視野缺損。Hathaway 等人二○二四年在一家轉診中心一萬六千八百二十七位病人中，糖尿病族群十七例對六例、風險比四點二八，過重與肥胖族群二十例對三例、風險比七點六四；《Diabetes Care》二○二六年人口層級資料則顯示，十萬六千八百五十八位 GLP-1 起始者一年內十四例（每十萬人十八點五例）對四十一萬六千三百六十九位 DPP-4 抑制劑起始者五十三例（每十萬人七點二例），調整後風險比二點五六；FDA 彙整一百二十六項試驗、十三萬四千餘人共撈出十五例可能 NAION，發生率每十萬人年六點四對三點八。超出的風險集中在較年輕者、男性、曾吸菸者與糖化血色素下降幅度大的人。",
+  tag: '代謝與血管 · 時事',
 };
 const related = [
-  { out: '2026-11-27-essential-tremor-misdiagnosis-focused-ultrasound.html', nav: '本篇', title: '「拿筷子、端水杯、扣鈕扣」——中山附醫前天把神波刀那套攤開，而手抖最容易出錯的一步，在機器開機之前' },
+  { out: '2026-11-28-glp1-weight-loss-injection-optic-nerve-naion.html', nav: '本篇', title: '「七家藥局、一家診所，沒有處方箋就把針遞出去」——南投前天攤開那份稽查名單，而瘦瘦針這個月被加上的那條警語，寫的是一條神經' },
+  { out: '2026-11-27-essential-tremor-misdiagnosis-focused-ultrasound.html', nav: '動作障礙', title: '「拿筷子、端水杯、扣鈕扣」——中山附醫前天把神波刀那套攤開，而手抖最容易出錯的一步，在機器開機之前' },
   { out: '2026-11-26-diagnostic-overshadowing-delirium-institution.html', nav: '精神症狀與神經', title: '「死者的鞋底藏著一封遺書」——蘆洲那兩間精神護理之家，和「他只是在想像」這句話在神經科的代價' },
   { out: '2026-11-25-medication-overuse-headache-painkiller-rebound.html', nav: '止痛藥與頭痛', title: '「止痛藥從每月幾顆吃到接近一百顆」——奇美醫院上週攤開的那個三十八歲個案，和止痛藥為什麼會反過來製造頭痛' },
   { out: '2026-11-24-temperature-swing-stroke-warning-value.html', nav: '氣溫與腦血管', title: '「清晨關西六點六度，台北十六點五度」——今天鋒面又到，而國衛院在一百一十萬筆中風急診裡找出的警戒值，量的不是幾度，是差幾度' },
-  { out: '2026-11-22-backward-walking-fall-lucid-interval.html', nav: '跌倒與頭部外傷', title: '「起初她還能一手掩面坐在地上」——竹縣體育場那八分鐘，和倒退走為什麼不是把走路倒過來播' },
 ];
 
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
